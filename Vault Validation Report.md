@@ -22,7 +22,7 @@ PASS — all wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the current Markdown vault after the addition of the Canto-span case study, construction-level worked example, pending-review SLE-GE pilot baseline, and two immutable PR-body snapshots.
+This report describes the current Markdown vault after the addition of the Canto-span case study, construction-level worked example, locked SLE-GE pilot baseline, and two immutable PR-body snapshots.
 
 `manifest.json` remains the immutable manifest of the original ZIP import. Its 42-note and 182-wikilink counts describe that imported baseline, not later repository additions.
 
