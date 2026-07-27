@@ -115,30 +115,30 @@ Domain: corpus linguistics, historical linguistics, annotation, and language-res
 
 | Rule | Primary communication problem | Independent support | Evidence status |
 |---|---|---|---|
-| SLE-LR-001 | Multiple assertions hide inference and scope | ER-01, ER-04 | direct + convergent |
-| SLE-LR-002 | Ambiguous antecedent | ER-01, ER-04 | convergent |
-| SLE-LR-003 | Synonym variation creates concept drift | ER-01, ER-04, ER-08 | direct + convergent |
-| SLE-LR-004 | Undefined terms prevent consistent interpretation | ER-01, ER-04, ER-08 | direct + convergent |
-| SLE-LR-005 | Comparison lacks baseline or measure | ER-06, ER-07 | convergent |
-| SLE-LR-006 | Negation or quantifier scope changes claim | ER-01, ER-04 | pilot rationale + convergent |
-| SLE-LR-007 | Reader acts before seeing applicability condition | ER-01, ER-06 | convergent |
-| SLE-LR-008 | Multi-action instructions hide skipped or failed steps | ER-01, ER-06, ER-10 | convergent |
-| SLE-LR-009 | Modal variation obscures conformance force | ER-01, ER-03 | direct |
-| SLE-LR-010 | Data and interpretation are conflated | ER-06, ER-07, ER-10 | convergent |
-| SLE-LR-011 | Evidence wording overstates inference | ER-06, ER-07 | pilot rationale + convergent |
-| SLE-LR-012 | Claim scope expands beyond sampled domain | ER-06, ER-07, ER-08, ER-09 | direct + convergent |
-| SLE-LR-013 | Judgment result cannot be interpreted or reproduced | ER-06, ER-07 | direct |
-| SLE-LR-014 | Absence claim hides search sensitivity | ER-06, ER-07, ER-10 | convergent |
-| SLE-LR-015 | Attestation is treated as stronger evidence | ER-06, ER-07, ER-08 | pilot rationale + convergent |
-| SLE-LR-016 | Tool output is treated as language evidence | ER-06, ER-07, ER-08, ER-10 | cross-domain rationale |
-| SLE-LR-017 | Limitation or counterexample is detached from claim | ER-06, ER-07 | direct + convergent |
-| SLE-LR-018 | Reader cannot map evidence to claim | ER-01, ER-05, ER-06, ER-07 | direct + convergent |
-| SLE-LR-019 | Example provenance is misread | ER-02, ER-04, ER-05 | convergent |
-| SLE-LR-020 | Judgment symbols vary across traditions | ER-02, ER-04 | field-specific convergence |
-| SLE-LR-021 | Relative references break after editing | ER-01, ER-02, ER-04, ER-05 | direct + convergent |
-| SLE-LR-022 | Gloss conventions or analysis layers are unclear | ER-02, ER-04 | direct |
-| SLE-LR-023 | Dataset or transformation cannot be identified | ER-06, ER-08, ER-09, ER-10 | direct + convergent |
-| SLE-LR-024 | Stylistic conformance is mistaken for scientific validity | ER-03, ER-06, ER-07 | standards boundary + research boundary |
+| SLE-RULE-0001 | Multiple assertions hide inference and scope | ER-01, ER-04 | direct + convergent |
+| SLE-RULE-0002 | Ambiguous antecedent | ER-01, ER-04 | convergent |
+| SLE-RULE-0004 | Synonym variation creates concept drift | ER-01, ER-04, ER-08 | direct + convergent |
+| SLE-RULE-0005 | Undefined terms prevent consistent interpretation | ER-01, ER-04, ER-08 | direct + convergent |
+| SLE-RULE-0006 | Comparison lacks baseline or measure | ER-06, ER-07 | convergent |
+| SLE-RULE-0007 | Negation or quantifier scope changes claim | ER-01, ER-04 | pilot rationale + convergent |
+| SLE-RULE-0016 | Reader acts before seeing applicability condition | ER-01, ER-06 | convergent |
+| SLE-RULE-0017 | Multi-action instructions hide skipped or failed steps | ER-01, ER-06, ER-10 | convergent |
+| SLE-RULE-0008 | Modal variation obscures conformance force | ER-01, ER-03 | direct |
+| SLE-RULE-0019 | Data and interpretation are conflated | ER-06, ER-07, ER-10 | convergent |
+| SLE-RULE-0020 | Evidence wording overstates inference | ER-06, ER-07 | pilot rationale + convergent |
+| SLE-RULE-0003 | Claim scope expands beyond sampled domain | ER-06, ER-07, ER-08, ER-09 | direct + convergent |
+| SLE-RULE-0010 | Judgment result cannot be interpreted or reproduced | ER-06, ER-07 | direct |
+| SLE-RULE-0021 | Absence claim hides search sensitivity | ER-06, ER-07, ER-10 | convergent |
+| SLE-RULE-0009 | Attestation is treated as stronger evidence | ER-06, ER-07, ER-08 | pilot rationale + convergent |
+| SLE-RULE-0015 | Tool output is treated as language evidence | ER-06, ER-07, ER-08, ER-10 | cross-domain rationale |
+| SLE-RULE-0022 | Limitation or counterexample is detached from claim | ER-06, ER-07 | direct + convergent |
+| SLE-RULE-0023 | Reader cannot map evidence to claim | ER-01, ER-05, ER-06, ER-07 | direct + convergent |
+| SLE-RULE-0011 | Example provenance is misread | ER-02, ER-04, ER-05 | convergent |
+| SLE-RULE-0012 | Judgment symbols vary across traditions | ER-02, ER-04 | field-specific convergence |
+| SLE-RULE-0013 | Relative references break after editing | ER-01, ER-02, ER-04, ER-05 | direct + convergent |
+| SLE-RULE-0024 | Gloss conventions or analysis layers are unclear | ER-02, ER-04 | direct |
+| SLE-RULE-0014 | Dataset or transformation cannot be identified | ER-06, ER-08, ER-09, ER-10 | direct + convergent |
+| SLE-RULE-0018 | Stylistic conformance is mistaken for scientific validity | ER-03, ER-06, ER-07 | standards boundary + research boundary |
 
 ## Cross-domain coverage
 
