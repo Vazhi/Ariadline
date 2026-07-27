@@ -45,7 +45,7 @@ The six TSV SHA-256 values were recalculated over the exact UTF-8 file bytes wit
 
 Every `frozen_reference` identifies one or more exact commit-pinned files or exact SLE commit-owned notes. Authority descriptions remain in the separate `source_or_canonical_owner` field.
 
-The main fixture index, structured manifest, `Terminology Control`, and `Term Inventory` now state the corrected non-normative authority boundary. PR #21 remains draft until every human-readable fixture part carries the same explicit notice.
+The fixture index, all six human-readable parts, the structured manifest, `Terminology Control`, and `Term Inventory` explicitly state the corrected non-normative authority boundary. The accidental temporary file is absent from the final branch diff.
 
 The repository does not require an executable checker or termbase validator for completion of the SLE reference artifact. Any future validator is optional tooling and must be authorized as a separate project.
 
