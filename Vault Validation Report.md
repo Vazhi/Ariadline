@@ -9,6 +9,7 @@ tags:
   - validation
   - vault
 ---
+
 # Vault Validation Report
 
 - Markdown notes: 54
@@ -22,7 +23,7 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the branch after the addition, review repair, and authority-scope correction of the 48-entry Canto-span vocabulary stress-test fixture.
+This report describes the branch after the addition, review repair, authority-scope correction, and boundary cleanup of the 46-entry Canto-span vocabulary stress-test fixture.
 
 The package is non-normative test material. It does not define the SLE for Linguistics reference specification and does not make Canto-span a gold standard.
 
@@ -39,15 +40,17 @@ Relative to merged `main`, issue #3 adds seven uniquely named Markdown notes and
 
 All referenced basenames are present. Six TSV part exports and one TSV manifest are non-Markdown structured test files and do not change the note count.
 
-The 48 Markdown entries and 48 TSV rows were compared by entry ID and required field. The review repair adds `provisional_reaudit` and `provisional`, corrects `research_pending`, and updates exact frozen references in both representations.
+The 46 Markdown entries and 46 TSV rows were compared by entry ID and required field. The fixture includes all seven frozen Canto-span status literals and keeps status, readiness, availability, runtime, and authorization separate.
 
-The six TSV SHA-256 values were recalculated over the exact UTF-8 file bytes with LF line endings and one terminal newline. The manifest records that hash contract. All six recorded hashes reproduce for the reviewed entry content.
+`source snapshot` and `release proxy` were removed because they are SLE test-run methods rather than Canto-span-specific vocabulary. They remain preserved in issue #11 and the locked pilot records.
 
-Every `frozen_reference` identifies one or more exact commit-pinned files or exact SLE commit-owned notes. Authority descriptions remain in the separate `source_or_canonical_owner` field.
+The six TSV SHA-256 values use the exact UTF-8 file bytes with LF line endings and one terminal newline. Five unchanged hashes continue to reproduce. The revised provenance part contains only `CS-TERM-0046` and reproduces as `9ef0ccca6ca9208e92ae82b90ff8ae05e4590bfd68215add6cdf4be343cf1604`.
+
+Every fixture `frozen_reference` identifies one or more exact commit-pinned Canto-span files. Authority descriptions remain in the separate `source_or_canonical_owner` field.
 
 The fixture index, all six human-readable parts, the structured manifest, `Terminology Control`, and `Term Inventory` explicitly state the corrected non-normative authority boundary. The accidental temporary file is absent from the final branch diff.
 
-The repository does not require an executable checker or termbase validator for completion of the SLE reference artifact. Any future validator is optional tooling and must be authorized as a separate project.
+The repository does not require an executable checker or terminology validator for completion of the SLE reference artifact. Any future validator is optional tooling and must be authorized as a separate project.
 
 ## Duplicate basenames
 
