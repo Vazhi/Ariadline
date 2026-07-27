@@ -95,3 +95,7 @@ Automated readability formulas can supplement the evaluation. They cannot establ
 ## Iteration rule
 
 A rule that does not improve a target metric, or that causes unacceptable precision loss, must be revised, limited to a profile, or removed.
+
+## Active grammar-engineering baseline
+
+The first grammar-engineering test run uses [[SLE-GE Canto-span Pilot Baseline v0.1]]. That note freezes the external source materials, reader questions, semantic-equivalence safeguards, measures, and decision outcomes before paired rewriting begins.
