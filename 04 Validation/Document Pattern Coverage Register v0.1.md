@@ -17,7 +17,9 @@ tags:
 
 This register reviews the proposed patterns in [[SLE for Linguistics Document Patterns v0.1]].
 
-It records intended coverage, known gaps, neutrality risks, and evaluation requirements. It does not certify that the patterns are universally valid or final.
+It records intended coverage, known gaps, neutrality risks, conformance risks, and evaluation requirements. It does not certify that the patterns are universally valid or final.
+
+Conformance semantics are defined in [[Profiles and Conformance]]. Exact profile mappings are defined in [[SLE Profile Applicability Register v0.1]].
 
 Canto-span is not an authority in this register. It may later supply one bounded test case only.
 
@@ -36,7 +38,7 @@ Canto-span is not an authority in this register. It may later supply one bounded
 | SLE-PATTERN-0009 | Computational-linguistics system description | Describe system behavior and evaluation | NLP, speech, computational modeling, tool development |
 | SLE-PATTERN-0010 | Language-resource documentation | Document reusable resources | corpora, archives, databases, treebanks, lexicons |
 | SLE-PATTERN-0011 | Methods or procedure document | Specify repeatable work | research methods, transcription, annotation, editorial procedure |
-| SLE-PATTERN-0012 | Research summary | Give a bounded concise account | abstracts, executive summaries, literature and project summaries |
+| SLE-PATTERN-0012 | Research summary | Give a bounded concise account | abstracts, literature and project summaries |
 | SLE-PATTERN-0013 | Limitation and open-question record | Preserve unresolved boundaries | all methods and document genres |
 | SLE-PATTERN-0014 | Editorial change or revision note | Explain controlled changes | standards, grammars, datasets, guidelines, dictionaries |
 
@@ -81,11 +83,13 @@ Before stabilization, evaluation must include:
 - translated and multilingual documents;
 - signed-language research;
 - community-authored and community-reviewed documentation;
-- traditions in which argument, evidence, or citation order differs from the proposed shared order;
-- documents that use non-Latin scripts, mixed writing systems, or transcription systems;
+- traditions in which argument, evidence, or citation order differs from the recommended default sequence;
+- documents using non-Latin scripts, mixed writing systems, or transcription systems;
 - research in which access restrictions prevent full public provenance disclosure.
 
-The required distinctions may remain stable even when the preferred heading order changes. Evaluation must distinguish a true comprehension benefit from an English rhetorical preference.
+The required information relationships may remain stable even when the rhetorical order changes. Reordering is not a waiver condition by itself.
+
+Evaluation must distinguish a true comprehension benefit from an English rhetorical preference.
 
 ## Genre-combination review
 
@@ -115,33 +119,63 @@ Evaluation must test whether combined patterns cause duplication, contradictory 
 | current coverage vs intended coverage | 0009, 0010, 0013, 0014 | represented; proposed |
 | limitation vs uninvestigated area | all research patterns | represented; proposed |
 
-## Conformance-model review
+## Conformance-result review
 
-The proposed states are:
+The proposed results are:
 
-- **SLE-Prepared** — author self-review;
-- **SLE-Reviewed** — independent human editorial review;
-- **SLE-Evaluated** — defined reader, author-preservation, translation, or expert evaluation.
-
-These states are intentionally human-first. They do not require software.
+- **conforms**;
+- **conforms with declared waivers**;
+- **does not conform**;
+- **not determined**.
 
 Risks requiring evaluation:
 
-1. **Status inflation:** readers may interpret *Reviewed* or *Evaluated* as scientific approval.
-2. **Reviewer variability:** two reviewers may apply a qualitative pattern differently.
-3. **Author burden:** detailed pattern review may be excessive for short notes or examples.
-4. **Publisher mismatch:** journal structures may conflict with the proposed order.
-5. **False completeness:** use of all headings may hide weak evidence rather than improve communication.
-6. **Access inequality:** independent review may be unavailable to individual or community researchers.
+1. **False certification:** readers may treat a communication result as scientific approval.
+2. **Reviewer variability:** different reviewers may apply qualitative controls differently.
+3. **Waiver inflation:** repeated waivers may hide an unsuitable control.
+4. **Not-determined misuse:** incomplete reviews may be presented as near-passing results.
+5. **Access inequality:** independent review may be unavailable to individual or community researchers.
 
-Safeguards in the proposed chapter:
+Safeguards:
 
-- conformance applies to a stated document or part;
+- result is bounded to a stated conformance object;
+- result is separate from review method and evaluation records;
+- unresolved applicable nonconformities prevent a **conforms** result;
 - a declaration must not certify truth or method;
-- headings are optional;
-- permitted omissions and waivers are explicit;
-- SLE-Evaluated names the type of evaluation rather than implying universal approval;
 - tools are optional aids only.
+
+## Review-method review
+
+Review methods include author self-review, independent editorial review, and other declared human methods.
+
+The method records who checked the text. It does not indicate pass or fail.
+
+Evaluation must test whether a self-review record is sufficiently auditable and whether independent-review expectations create disproportionate access barriers.
+
+## Typed-evaluation review
+
+Reader comprehension, author meaning preservation, translation, accessibility, domain-expert review, theory neutrality, method neutrality, genre combination, and authoring burden are separate evaluation types.
+
+They are not interchangeable levels.
+
+Every evaluation record must identify:
+
+- type;
+- exact document scope or sample;
+- method;
+- participant or evaluator role;
+- date;
+- findings and limitations.
+
+Evaluation of representative passages must not be presented as evaluation of the entire document.
+
+## Profile auditability review
+
+The profile applicability register maps each profile to exact rule IDs and a profile-set version.
+
+A declaration must identify the profile-set version and preserve an exact record of conditional rules that were applied or judged not applicable.
+
+Evaluation must test whether two reviewers reconstruct the same applicable rule set from the same profile declaration and text.
 
 ## Waiver-model review
 
@@ -154,21 +188,21 @@ A waiver records a communication departure. It must not conceal:
 - a theoretical disagreement;
 - an unresolved data conflict.
 
-Those matters belong in the document's content as limitations, alternatives, or open questions.
-
 Evaluation must test whether the waiver record is proportionate for short documents and whether publisher-level waivers can be reused without becoming hidden local standards.
 
 ## Versioning review
 
-The proposed pattern IDs are stable and version-independent.
+Version class follows compatibility effect.
 
-The major/minor/patch model applies to the public reference artifact, but this remains a governance proposal. Before stabilization, reviewers must test:
+A new rule, pattern element, or clarification is major when it changes an existing profile's obligations or prior conformance outcomes. It is minor only when optional or otherwise backward-compatible. Patch changes cannot alter obligations or review results.
 
-- whether a new required pattern element is always backward-compatible;
-- whether changes to examples can change normative interpretation;
-- whether conformance-state changes require a major release;
+Before stabilization, reviewers must test:
+
+- whether compatibility can be determined consistently;
+- whether transition mechanisms preserve prior declarations explicitly;
+- whether profile mapping changes always receive appropriate migration treatment;
 - how translated editions relate to the controlling version;
-- how corrections to harmful or misleading guidance should be released rapidly.
+- how urgent corrections are released without misclassification.
 
 ## Known omissions
 
@@ -184,39 +218,43 @@ The v0.1 catalogue does not yet define a dedicated pattern for:
 - peer reviews;
 - project-management records.
 
-Some of these may be covered by combinations of existing patterns. Others may require a new pattern or informative annex after evidence and testing.
+Some may be covered by combinations of existing patterns. Others may require a new pattern or informative annex after evidence and testing.
 
 ## Evaluation matrix
-
-Each pattern must be tested through at least the applicable procedures below.
 
 | Evaluation | Question |
 |---|---|
 | reader reconstruction | Can readers identify purpose, scope, direct result, interpretation, and limitation? |
-| author meaning preservation | Does applying the pattern preserve the author's intended claim and evidential force? |
-| authoring burden | Does the pattern require unnecessary repetition or documentation? |
-| domain-expert review | Does the pattern preserve legitimate field conventions and distinctions? |
-| theory-neutrality review | Does the wording favor one framework without necessity? |
+| alternative order | Do non-English or field-specific rhetorical orders preserve recoverable relationships? |
+| author meaning preservation | Does applying the pattern preserve intended claim and evidential force? |
+| authoring burden | Does the pattern require unnecessary repetition or process? |
+| domain-expert review | Does the pattern preserve legitimate field conventions? |
+| theory-neutrality review | Does wording favor one framework without necessity? |
 | method-neutrality review | Does the pattern privilege one evidence source or inferential method? |
 | translation review | Can the distinctions be expressed naturally outside English? |
 | accessibility review | Can readers with different expertise levels navigate the document? |
-| genre-combination review | Can multiple patterns combine without duplication or conflict? |
-| waiver review | Do omissions remain visible without creating excessive process? |
+| genre-combination review | Can patterns combine without duplication or conflict? |
+| profile reconstruction | Do reviewers derive the same exact rule set? |
+| conformance-result review | Do reviewers separate pass/fail result from review process? |
+| waiver review | Do omissions remain visible without excessive process? |
 
 ## Stabilization gates
 
-A pattern cannot become stable until:
+A pattern or conformance control cannot become stable until:
 
 1. at least two substantially different linguistic domains have tested it;
-2. author and reader results show a communication benefit or consistency benefit;
+2. author and reader results show a communication or consistency benefit;
 3. no material loss of linguistic meaning remains unresolved;
 4. theory and method reviews find no unjustified universalization;
 5. translation or multilingual review identifies no unmanageable English-specific dependency;
-6. permitted omissions and waivers work in realistic documents;
-7. the pattern's required distinctions and conformance effect are clear.
+6. alternative rhetorical orders remain conforming when relationships are recoverable;
+7. permitted omissions and waivers work in realistic documents;
+8. profiles resolve to reproducible rule sets;
+9. conformance result, review method, and evaluation records remain distinguishable;
+10. versioning decisions follow compatibility effect consistently.
 
 ## Disposition
 
-All 14 patterns, three conformance states, the waiver model, and the versioning model remain **proposed**.
+All 14 patterns, four conformance results, review-method guidance, typed evaluation records, the profile mappings, waiver model, and versioning model remain **proposed**.
 
 The register supports issue #5's first auditable draft. It does not authorize publication as a stable standard.
