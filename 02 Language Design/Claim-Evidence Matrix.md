@@ -20,7 +20,7 @@ The matrix helps writers distinguish observation, attestation, judgment, general
 
 It prevents a writer from presenting different evidential or communicative functions as if they were interchangeable.
 
-The normative controls are in [[SLE for Linguistics Language Rules v0.1]]. The candidate-code decisions are in [[Claim Function Decision Register v0.1]].
+The normative controls are in [[SLE for Linguistics Language Rules v0.1]]. The candidate-function decisions are in [[Claim Function Decision Register v0.1]].
 
 ## Editorial functions
 
@@ -28,7 +28,7 @@ The normative controls are in [[SLE for Linguistics Language Rules v0.1]]. The c
 |---|---|
 | Observation | source or object, method, unit, result, scope |
 | Attestation | exact form or item, source, location or retrieval method, context |
-| Judgment result | task, scale or categories, population, item scope, result |
+| Judgment result | task, response system, population, item scope, result |
 | Generalization | target domain, boundary, evidence basis, counterevidence policy |
 | Analysis | assumptions or framework, analyzed material, inferential relation |
 | Hypothesis | proposed relation, prediction, falsifier or revision condition |
@@ -42,7 +42,7 @@ The normative controls are in [[SLE for Linguistics Language Rules v0.1]]. The c
 
 Visible codes such as `[OBS]`, `[ATT]`, or `[ANA]` are optional editorial aids.
 
-Basic SLE conformance does not require visible labels. A profile may use labels for a defined workflow, but the labels do not establish that a claim is supported.
+Basic SLE conformance does not require visible labels. A profile may use labels for a defined workflow, but labels do not establish that a claim is supported.
 
 ## Separation rule
 
@@ -55,10 +55,18 @@ Do not combine different functions when the combination hides an inference.
 **Controlled draft**
 
 > The corpus contains three tokens of the construction.  
-> These tokens show that the construction is attested in this corpus.  
-> The tokens do not establish that the construction is productive.
+> These tokens establish that the construction is attested in this corpus.  
+> The tokens do not by themselves establish productivity.
 
 See [[Attestation and Productivity]].
+
+## Evidence wording
+
+Evidence wording must not overstate the relationship between evidence and conclusion.
+
+SLE does not define a universal hierarchy for *shows*, *supports*, *suggests*, *is consistent with*, *does not establish*, and *contradicts*. Their force can vary across disciplines, methods, and argument types.
+
+A document should define an evidence expression when its force is important and not clear from context. The editor should identify the direct result, inference, assumptions, alternatives, and limitations.
 
 ## Evidence records
 
@@ -87,4 +95,4 @@ Tool output establishes what the tool did under a specified state and configurat
 
 The pilot should test paired uncontrolled and controlled passages across multiple linguistic domains.
 
-The evaluation must test whether readers identify the intended claim and evidence relation without requiring visible function labels.
+The evaluation must test whether readers identify the intended claim and evidence relation without requiring visible function labels or a fixed evidence-verb scale.
