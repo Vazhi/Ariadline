@@ -43,6 +43,7 @@ tags:
 
 ## Implementation
 
+- [[SLE for Linguistics Document Patterns v0.1]]
 - [[Profiles and Conformance]]
 - [[Authoring and Conformance Tools]]
 - [[Corpus and Annotation Interoperability]]
@@ -54,6 +55,7 @@ tags:
 - [[Pilot Study Design]]
 - [[Quality Metrics and Acceptance Gates]]
 - [[Independent SLE Rule Evidence Register v0.1]]
+- [[Document Pattern Coverage Register v0.1]]
 - [[SLE-GE Canto-span Pilot Baseline v0.1]]
 
 ## Case studies
@@ -74,13 +76,16 @@ tags:
 - [[Rule Inventory]]
 - [[Term Inventory]]
 - [[Claim Function Decision Register v0.1]]
+- [[SLE Profile Applicability Register v0.1]]
 
-## Templates
+## Templates and examples
 
 - [[SLE Rule Proposal Template]]
 - [[SLE Term Entry Template]]
 - [[SLE Test Case Template]]
 - [[SLE Change Request Template]]
+- [[SLE Document Pattern Outlines v0.1]]
+- [[SLE Document Pattern Example Bank v0.1]]
 
 ## Reference
 
@@ -94,10 +99,11 @@ tags:
 3. Confirm the layered design in [[SLE Architecture]].
 4. Build the first [[Controlled Vocabulary Plan|term list]] and [[Grammar and Style Rule Plan|rule set]].
 5. Define [[Claim-Evidence Matrix|evidence language]] and [[Linguistic Examples and Glossing|example conventions]].
-6. Publish an internal [[Pilot Specification Outline|v0.1 pilot]].
-7. Run [[Pilot Study Design|controlled evaluations]].
-8. Apply the [[Quality Metrics and Acceptance Gates|acceptance gates]].
-9. Release through [[Governance and Change Control|governed change control]].
+6. Define [[SLE for Linguistics Document Patterns v0.1|document patterns and conformance guidance]].
+7. Publish an internal [[Pilot Specification Outline|v0.1 pilot]].
+8. Run [[Pilot Study Design|controlled evaluations]].
+9. Apply the [[Quality Metrics and Acceptance Gates|acceptance gates]].
+10. Release through [[Governance and Change Control|governed change control]].
 
 ## Key concepts
 
