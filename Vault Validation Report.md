@@ -11,8 +11,8 @@ tags:
 ---
 # Vault Validation Report
 
-- Markdown notes: 43
-- Wikilinks checked: 218
+- Markdown notes: 44
+- Wikilinks checked: 240
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -22,7 +22,7 @@ PASS — all wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the current Markdown vault after the addition of the Canto-span case study.
+This report describes the current Markdown vault after the addition of the Canto-span case study and construction-level worked example.
 
 `manifest.json` remains the immutable manifest of the original ZIP import. Its 42-note and 182-wikilink counts describe that imported baseline, not later repository additions.
 
