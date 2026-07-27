@@ -52,6 +52,7 @@ tags:
 - [[Evaluation Framework]]
 - [[Pilot Study Design]]
 - [[Quality Metrics and Acceptance Gates]]
+- [[SLE-GE Canto-span Pilot Baseline v0.1]]
 
 ## Case studies
 
