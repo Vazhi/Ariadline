@@ -17,25 +17,32 @@ tags:
 id: SLE-RULE-XXXX
 title:
 class:
-profile:
+applicability:
 status: proposed
 proposer:
 date:
 related_terms: []
-related_tests: []
+related_evidence: []
+related_evaluations: []
 ```
 
 ## Normative text
 
 Write the proposed rule with **must**, **must not**, **should**, **should not**, or an explicitly non-normative form.
 
-## Problem
+## Communication problem
 
-Describe the documented interpretation, consistency, translation, or review problem.
+Describe the documented interpretation, consistency, translation, review, or reproducibility problem.
 
 ## Scope
 
-State the document types, profiles, and contexts to which the rule applies.
+State the document types, linguistic domains, methods, and contexts to which the rule applies.
+
+## Independent justification
+
+Identify evidence from more than one relevant linguistic domain or document type.
+
+Explain why the source supports the communication control. Do not treat a project-local practice as general evidence.
 
 ## Rationale
 
@@ -56,16 +63,25 @@ Explain why the rule is expected to solve the problem.
 -  
 -  
 
-## Precision risks
+## Precision and neutrality risks
 
-Identify possible loss of theoretical, evidential, or descriptive information.
+Identify possible loss of theoretical, evidential, descriptive, cultural, or methodological information.
 
-## Verification
+State whether the rule could favor one linguistic theory, research method, language, writing tradition, or project structure.
 
-- human check:
-- automated check:
-- checker severity:
-- waiver method:
+## Human verification
+
+- editorial check:
+- reader interpretation task:
+- author meaning-preservation task:
+- cross-domain expert review:
+- exception or waiver method:
+
+## Optional tooling note
+
+State whether an optional tool could assist an editor.
+
+Tool feasibility is not required for rule adoption. Tool availability is not required for conformance.
 
 ## Evaluation evidence
 
@@ -74,3 +90,13 @@ Link to [[Evaluation Framework|study results]], reviewer notes, and test cases.
 ## Compatibility
 
 State whether the rule changes prior SLE conformance.
+
+## Disposition
+
+Record one decision after review:
+
+- adopt;
+- revise;
+- defer;
+- reject;
+- retire.
