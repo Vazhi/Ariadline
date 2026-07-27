@@ -98,3 +98,9 @@ Avoid circular definitions and undefined superordinate terms.
 ## Acceptance test
 
 A controlled term is successful when independent readers map its uses to the intended concept with high agreement. See [[Evaluation Framework]].
+
+## Non-normative Canto-span stress-test fixture
+
+[[Canto-span Pilot Termbase v0.1]] is a project-specific vocabulary fixture used to test whether independently proposed SLE rules preserve difficult distinctions. It is not the SLE controlled vocabulary and does not establish normative terms or definitions.
+
+Canto-span cannot define SLE. A general SLE term requires independent justification across linguistic subfields, methods, theories, languages, and document genres.

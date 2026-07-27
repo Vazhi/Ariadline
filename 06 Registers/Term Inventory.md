@@ -39,3 +39,7 @@ tags:
 | SLE-TERM-0024 | system behavior | proposed | Output or action of a specified software system and configuration. | Not automatically a language fact. |
 
 See [[Terminology Control]] and use [[SLE Term Entry Template]] for full records.
+
+## Non-normative test fixtures
+
+[[Canto-span Pilot Termbase v0.1]] contains 46 Canto-span-specific entries for stress-testing independently proposed SLE rules. It is not part of the normative SLE term inventory and cannot supply general SLE definitions without separate cross-domain justification.
