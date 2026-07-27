@@ -1,41 +1,72 @@
 ---
-title: "Canto-span Pilot Termbase v0.1"
-type: termbase
+title: "Canto-span Vocabulary Stress-Test Fixture v0.1"
+type: test-fixture
 status: proposed
+normative_status: non-normative
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 aliases:
-  - "SLE-GE Canto-span Termbase"
-  - "Canto-span Termbase"
+  - "Canto-span Pilot Termbase v0.1"
+  - "Canto-span Vocabulary Fixture"
 tags:
   - sle
-  - terminology
+  - test-fixture
   - canto-span
-  - grammar-engineering
-  - pilot
+  - terminology
+  - non-normative
 ---
 
-# Canto-span Pilot Termbase v0.1
+# Canto-span Vocabulary Stress-Test Fixture v0.1
 
-> [!abstract] Purpose
-> This termbase controls 48 high-risk project meanings for the Canto-span SLE-GE pilot. It separates identity, ontology, linguistic status, evidence, corpus review, panel evidence, runtime behavior, verification, workflow, readiness, release, and authorization.
+> [!warning] Non-normative test material
+> This package records Canto-span-specific vocabulary for stress-testing future SLE for Linguistics rules. It does not define SLE terminology, establish normative writing rules, or make Canto-span a model that other linguistic projects must copy.
 
-## Authority and scope
+## Purpose
 
-- External baseline: `Vazhi/canto-span` at `c9dd631739734a5ab886f0b667db9888b0add13b`
+The fixture records 48 project-local meanings that are easy to collapse in documentation. The entries cover identity, ontology, linguistic status, evidence, corpus review, panel evidence, runtime behavior, verification, workflow, readiness, release, authorization, and provenance.
+
+The fixture has three permitted uses:
+
+1. identify difficult communication problems;
+2. test whether an independently proposed SLE rule preserves important distinctions;
+3. support a later, separate effort to apply the completed SLE reference specification to Canto-span documentation.
+
+It must not be used as normative evidence for SLE.
+
+## Authority boundary
+
+Canto-span is not a gold standard. No term, status system, workflow, ontology, schema, or governance rule in this fixture enters normative SLE merely because Canto-span uses it.
+
+A general SLE rule or term requires independent justification across linguistic subfields, methods, theories, languages, document genres, and project types.
+
+The intended direction of influence is:
+
+```text
+independent SLE design and multi-domain validation
+        ↓
+SLE for Linguistics reference specification
+        ↓
+optional later application to Canto-span documentation
+```
+
+The fixture must not create the reverse dependency.
+
+## Test scope
+
+- External test baseline: `Vazhi/canto-span` at `c9dd631739734a5ab886f0b667db9888b0add13b`
 - Entry count: **48**
 - Human-readable package: this index and its six linked parts
-- Machine-readable export: `06 Registers/Canto-span Pilot Termbase v0.1.tsv` manifest plus six part TSV files
-- Status: **proposed for pilot v0.1**
+- Structured mirror: `06 Registers/Canto-span Pilot Termbase v0.1.tsv` manifest plus six part TSV files
+- Status: **non-normative stress-test fixture v0.1**
 
-This termbase is project-scoped. It is not a universal linguistic ontology. It does not change Canto-span identity, status, evidence, runtime behavior, workflow, readiness, release state, or authorization.
+The structured mirror exists only to reproduce and compare this test material. Machine-readable files are not required for the eventual SLE reference specification.
 
-Each entry contains a preferred term, concept ID, definition, scope, allowed variants, excluded interpretations, example, source or canonical owner, frozen reference, and change status.
+Each entry contains a preferred local designation, concept ID, project-local definition, scope, allowed variants, excluded interpretations, example, source or project-local owner, frozen test reference, and change status.
 
 See [[Terminology Control]], [[Term Inventory]], [[Canto-span Case Study]], and [[SLE-GE Canto-span Pilot Baseline v0.1]].
 
-## Termbase parts
+## Fixture parts
 
 | Part | Entries |
 |---|---:|
@@ -47,9 +78,11 @@ See [[Terminology Control]], [[Term Inventory]], [[Canto-span Case Study]], and 
 | [[Canto-span Termbase — Provenance and Release]] | 3 |
 | **Total** | **48** |
 
-## Required separations
+The legacy filenames retain the word `Termbase` for branch continuity. The normative status is controlled by this index and by the explicit notice in each part.
 
-| Dimension | Controlled term | Must remain separate from |
+## Stress-test separations
+
+| Project-local dimension | Fixture term | Must remain separate from |
 |---|---|---|
 | Permanent identity | construction identity | canonical name, status, runtime, readiness |
 | Linguistic evidence | linguistic status | availability, runtime recognition, authorization |
@@ -59,39 +92,43 @@ See [[Terminology Control]], [[Term Inventory]], [[Canto-span Case Study]], and 
 | Repository action | merge authorization | passing checks, review readiness, ownership |
 | Publication action | release authorization | merge authorization, release metadata, release proxy |
 
-## Representation rule for the pilot
+These distinctions are test cases. Future SLE may preserve, combine, rename, or reject them after independent review.
 
-The six Markdown parts are the human-readable record. The TSV manifest and six TSV parts are the machine-readable mirror. Both forms must change in the same pull request.
+## Representation rule for the fixture
 
-This arrangement is a pilot workaround. The current SLE infrastructure does not specify whether the human or machine representation is canonical, and it does not provide a termbase generator or validator.
+The six Markdown parts are the human-readable test record. The TSV manifest and six TSV parts are a structured mirror. Both forms must change in the same pull request while this fixture is maintained.
+
+This local maintenance rule does not establish a general SLE requirement for machine-readable terminology.
 
 ## Reference contract
 
-- `source_or_canonical_owner` identifies the authority for the controlled meaning. It may name a dynamic owner class, such as the current status note or matching work claim.
-- `frozen_reference` identifies the exact artifact used to verify the pilot definition.
+- `source_or_canonical_owner` identifies the Canto-span or SLE pilot record that owns the local meaning.
+- `frozen_reference` identifies the exact artifact used to verify the fixture entry.
 - A Canto-span frozen reference must use `owner/repository@commit:path` and name a file, not only a directory.
 - An SLE frozen reference must identify a commit-owned note at a fixed repository commit.
 - Multiple exact artifacts are separated with ` | `.
 - Free-text placeholders, directory-only paths, and mutable collaboration pages are not valid frozen references.
 
-This contract separates authority from reproducibility. A frozen reference does not become the canonical owner of the external project state.
+A frozen reference supports reproducibility of the fixture. It does not transfer authority to SLE and does not make the referenced project state normative.
 
 ## Change control
 
-- Preserve a concept ID when only the preferred designation changes.
-- Create a new concept ID when the controlled meaning changes materially.
+- Preserve a concept ID when only the local preferred designation changes.
+- Create a new concept ID when the project-local meaning changes materially.
 - Record every change status.
-- Do not silently import a Canto-span state change into this frozen pilot termbase.
+- Do not silently import a Canto-span state change into the frozen fixture.
+- Do not promote a fixture entry into normative SLE without a separate independent decision and evidence record.
 
 ## Validation requirements
 
 - 48 unique entry IDs.
 - 48 unique concept IDs.
-- 48 unique preferred terms within this scope.
-- The Markdown and TSV records agree.
+- 48 unique preferred local terms within this fixture.
+- The Markdown and TSV fixture records agree.
 - All `frozen_reference` values satisfy the reference contract.
+- Every fixture part states its non-normative status.
 - All vault wikilinks resolve.
 
 ## Blockers and deviations
 
-Issue #11 records the package decomposition, missing canonical-representation rule, absence of an executable generator or termbase validator, and the formal issue #3 amendment that permits the case-study link to remain one-directional in pilot v0.1.
+Issue #11 records the historical authority inversion, software-first scope drift, package decomposition, lack of a fixture generator or validator, and the formal issue #3 navigation amendment.
