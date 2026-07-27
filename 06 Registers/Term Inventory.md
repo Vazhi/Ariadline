@@ -39,3 +39,7 @@ tags:
 | SLE-TERM-0024 | system behavior | proposed | Output or action of a specified software system and configuration. | Not automatically a language fact. |
 
 See [[Terminology Control]] and use [[SLE Term Entry Template]] for full records.
+
+## Profile termbases
+
+The first project-scoped extension is [[Canto-span Pilot Termbase v0.1]]. Its 46 entries narrow high-risk grammar-engineering meanings without changing the core inventory or claiming universal applicability.
