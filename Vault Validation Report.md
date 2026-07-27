@@ -12,8 +12,8 @@ tags:
 
 # Vault Validation Report
 
-- Markdown notes: 54
-- Wikilinks checked: 286
+- Markdown notes: 57
+- Wikilinks checked: 311
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -23,34 +23,77 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the branch after the addition, review repair, authority-scope correction, and boundary cleanup of the 46-entry Canto-span vocabulary stress-test fixture.
+This report describes the branch after the first independent, prose-first SLE for Linguistics language-rule draft and its review repairs.
 
-The package is non-normative test material. It does not define the SLE for Linguistics reference specification and does not make Canto-span a gold standard.
+The branch adds:
 
-`manifest.json` remains the immutable manifest of the original ZIP import. Its 42-note and 182-wikilink counts describe that imported baseline, not later repository additions.
+- [[SLE for Linguistics Language Rules v0.1]];
+- [[Independent SLE Rule Evidence Register v0.1]];
+- [[Claim Function Decision Register v0.1]].
 
-## Validation method
+It also revises the rule inventory, rule-proposal template, grammar and style plan, claim-evidence matrix, normative-language note, linguistic-example guidance, and map of content.
 
-Relative to merged `main`, issue #3 adds seven uniquely named Markdown notes and 18 wikilinks:
+## Count method
 
-- ten links in the fixture index;
-- one backlink in each of the six fixture parts;
-- one link from `Terminology Control`;
-- one link from `Term Inventory`.
+Merged `main` contained 54 Markdown notes and 286 wikilinks.
 
-All referenced basenames are present. Six TSV part exports and one TSV manifest are non-Markdown structured test files and do not change the note count.
+This branch adds three uniquely named Markdown notes containing 13 wikilinks. Revised existing notes add a net 12 wikilinks. The resulting totals are 57 Markdown notes and 311 wikilinks.
 
-The 46 Markdown entries and 46 TSV rows were compared by entry ID and required field. The fixture includes all seven frozen Canto-span status literals and keeps status, readiness, availability, runtime, and authorization separate.
+External web references in the evidence register are ordinary Markdown links and are not included in the wikilink total.
 
-`source snapshot` and `release proxy` were removed because they are SLE test-run methods rather than Canto-span-specific vocabulary. They remain preserved in issue #11 and the locked pilot records.
+## Rule-set validation
 
-The six TSV SHA-256 values use the exact UTF-8 file bytes with LF line endings and one terminal newline. Five unchanged hashes continue to reproduce. The revised provenance part contains only `CS-TERM-0046` and reproduces as `9ef0ccca6ca9208e92ae82b90ff8ae05e4590bfd68215add6cdf4be343cf1604`.
+- The normative draft contains 24 proposed rule IDs from `SLE-RULE-0001` through `SLE-RULE-0024`.
+- The rule inventory contains the same 24 IDs exactly once.
+- No competing `SLE-LR-*` namespace remains.
+- Every rule remains `proposed`; no rule is represented as stable or published.
+- Every rule has normative text, a boundary or rationale, an editorial check, and a traceable evidence disposition.
 
-Every fixture `frozen_reference` identifies one or more exact commit-pinned Canto-span files. Authority descriptions remain in the separate `source_or_canonical_owner` field.
+## Review-repair validation
 
-The fixture index, all six human-readable parts, the structured manifest, `Terminology Control`, and `Term Inventory` explicitly state the corrected non-normative authority boundary. The accidental temporary file is absent from the final branch diff.
+### Evidence traceability
 
-The repository does not require an executable checker or terminology validator for completion of the SLE reference artifact. Any future validator is optional tooling and must be authorized as a separate project.
+The evidence register now contains 11 independent source records with exact heading, section, or page locators.
+
+Each rule mapping distinguishes:
+
+1. evidence that a communication problem exists;
+2. evidence for an equivalent control;
+3. an SLE-local hypothesis or unresolved design choice.
+
+The register no longer labels a rule `direct` or `cross-domain` solely from a broad source summary. Sources from one research community are not counted as independent cross-domain convergence by themselves.
+
+### Normative verbal forms
+
+SLE-RULE-0008 now controls declaration and consistent function mapping. It does not require all SLE documents to choose **must** rather than **shall**.
+
+The draft records ISO’s **shall** convention and IETF BCP 14’s **MUST/SHALL** convention as alternatives. The final preferred requirement form remains an evaluation question.
+
+### Evidence wording
+
+SLE-RULE-0020 now controls overstatement of inferential force without defining a universal hierarchy for *shows*, *supports*, *suggests*, *is consistent with*, *does not establish*, and *contradicts*.
+
+The earlier fixed lexical hierarchy is withdrawn and explicitly deferred for cross-domain evaluation.
+
+### Example provenance
+
+SLE-RULE-0011 now uses four independent dimensions:
+
+- source or origin;
+- collection context;
+- modification status;
+- production method.
+
+Multiple descriptors may apply to one example. `System-produced item` is defined without implying attestation, acceptability, grammaticality, or analytical validity.
+
+## Authority and scope validation
+
+- Canto-span is named only as a later non-normative stress test.
+- No Canto-span term, status, ontology, workflow, or governance rule supplies normative justification.
+- Visible claim labels are optional.
+- Machine-readable headers and automated checking are not required.
+- The rule inventory and proposal template use human editorial and evaluation procedures.
+- SLE conformance is explicitly separated from linguistic truth, analytical correctness, ethical adequacy, and methodological validity.
 
 ## Duplicate basenames
 
