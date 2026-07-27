@@ -76,6 +76,7 @@ tags:
 - [[Rule Inventory]]
 - [[Term Inventory]]
 - [[Claim Function Decision Register v0.1]]
+- [[SLE Profile Applicability Register v0.1]]
 
 ## Templates and examples
 
