@@ -78,7 +78,7 @@ The note reports zero eligible panel responses and zero usable judgments for cri
 
 ### Negative and boundary testing
 
-The note identifies a standard executable test file and records positive and boundary counts. This supports implementation review without treating tests as independent linguistic evidence.
+The note identifies a standard executable test file, records positive and boundary counts, and marks the negative tests as passing. This supports implementation review without treating tests as independent linguistic evidence.
 
 ## Remaining communication problems
 
@@ -131,7 +131,7 @@ The note reports one speaker record, but zero eligible panel responses under the
 
 ### CP-06 — Runtime success can overshadow unresolved linguistic work
 
-The runtime is active and the standard tests pass, while the status remains `research_pending`, the negative-boundary inventory is incomplete, and code-document reconciliation is pending.
+The runtime is active and the note marks the negative tests as passing. The status remains `research_pending`, the negative-boundary inventory is incomplete, code-document reconciliation is pending, and the current Definition-of-Done implementation review is not complete.
 
 **SLE improvement:** every system-result block must end with a statement of what the result does not establish.
 
@@ -196,9 +196,10 @@ These statements describe the candidate scope. They do not state that the profil
 
 > The runtime recognizes the legacy label at the baseline version. [SYS]  
 > The construction test file contains ten positive cases and two boundary cases. [SYS]  
-> All twelve listed executable cases pass according to the note. [SYS]  
-> These results establish implementation behavior for the tested inputs. [OBS]  
-> These results do not establish speaker acceptance, canonical analysis, or productivity. [LIM]
+> The note marks the negative tests as passing. [SYS]  
+> The note does not record a complete current Definition-of-Done assessment of focused tests, rendering, regression, or held-out evaluation. [STA]  
+> The recorded results describe implementation metadata and tested behavior only. [OBS]  
+> They do not establish speaker acceptance, canonical analysis, or productivity. [LIM]
 
 ### Current disposition
 
