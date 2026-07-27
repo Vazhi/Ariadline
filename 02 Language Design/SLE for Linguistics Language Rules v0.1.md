@@ -52,7 +52,7 @@ Visible claim labels are not required. Authors may use optional labels during dr
 
 # A. Sentence, reference, and terminology
 
-## SLE-LR-001 — One principal message
+## SLE-RULE-0001 — One principal message
 
 **Rule:** Each sentence must have one identifiable principal assertion, question, or instruction.
 
@@ -72,7 +72,7 @@ A sentence may contain a condition, qualification, or contrast when that materia
 
 **Evidence:** ER-01, ER-02, ER-04.
 
-## SLE-LR-002 — Clear reference
+## SLE-RULE-0002 — Clear reference
 
 **Rule:** A pronoun, demonstrative, or other referring expression must identify one intended antecedent in the local context.
 
@@ -90,7 +90,7 @@ A sentence may contain a condition, qualification, or contrast when that materia
 
 **Evidence:** ER-01, ER-04.
 
-## SLE-LR-003 — Stable preferred term
+## SLE-RULE-0004 — Stable preferred term
 
 **Rule:** A document must use one preferred term for one controlled concept.
 
@@ -110,7 +110,7 @@ A writer must not alternate technical synonyms only for stylistic variety.
 
 **Evidence:** ER-01, ER-04, ER-08.
 
-## SLE-LR-004 — Defined technical term
+## SLE-RULE-0005 — Defined technical term
 
 **Rule:** A technical term must be defined before the term is used in a conformance-critical or claim-critical passage, unless the document links to a controlling definition.
 
@@ -130,7 +130,7 @@ A definition must state the relevant scope and the criteria that distinguish the
 
 **Evidence:** ER-01, ER-04, ER-08.
 
-## SLE-LR-005 — Explicit comparison
+## SLE-RULE-0006 — Explicit comparison
 
 **Rule:** A comparative claim must identify the compared items, the comparison dimension, and the relevant measure or basis.
 
@@ -148,7 +148,7 @@ A definition must state the relevant scope and the criteria that distinguish the
 
 **Evidence:** ER-06, ER-07.
 
-## SLE-LR-006 — Clear logical scope
+## SLE-RULE-0007 — Clear logical scope
 
 **Rule:** The scope of negation, quantification, restriction, and exception must be unambiguous.
 
@@ -172,7 +172,7 @@ or
 
 # B. Procedures and normative text
 
-## SLE-LR-007 — Condition before action
+## SLE-RULE-0016 — Condition before action
 
 **Rule:** In an instruction, a condition that determines whether an action applies must appear before the action or in a clearly labelled applicability statement.
 
@@ -190,7 +190,7 @@ or
 
 **Evidence:** ER-01, ER-06.
 
-## SLE-LR-008 — One action per instruction
+## SLE-RULE-0017 — One action per instruction
 
 **Rule:** A procedural step should require one principal action.
 
@@ -211,7 +211,7 @@ When actions must occur as one inseparable operation, the instruction may contai
 
 **Evidence:** ER-01, ER-06, ER-10.
 
-## SLE-LR-009 — Consistent normative verbs
+## SLE-RULE-0008 — Consistent normative verbs
 
 **Rule:** Normative text must use **must**, **must not**, **should**, **should not**, **may**, and **can** only with the meanings defined in this document.
 
@@ -233,7 +233,7 @@ A writer must not use **may** to mean capability or **can** to mean permission i
 
 # C. Claims, evidence, and scope
 
-## SLE-LR-010 — Observation separate from interpretation
+## SLE-RULE-0019 — Observation separate from interpretation
 
 **Rule:** A document must distinguish a directly recorded result from an interpretation of that result.
 
@@ -251,7 +251,7 @@ The distinction may be expressed in separate sentences, clauses, headings, or ta
 
 **Evidence:** ER-06, ER-07, ER-10.
 
-## SLE-LR-011 — Evidence verb matches force
+## SLE-RULE-0020 — Evidence verb matches force
 
 **Rule:** A writer must select an evidence verb whose stated force does not exceed the relationship between the evidence and the conclusion.
 
@@ -278,7 +278,7 @@ Use these default distinctions:
 
 **Evidence:** ER-06, ER-07.
 
-## SLE-LR-012 — Scope of generalization
+## SLE-RULE-0003 — Scope of generalization
 
 **Rule:** A generalization must identify the population, language variety, register, dataset, time period, or other domain that limits the claim.
 
@@ -298,7 +298,7 @@ A scope statement must be near the claim that it limits.
 
 **Evidence:** ER-06, ER-07, ER-08, ER-09.
 
-## SLE-LR-013 — Judgment method
+## SLE-RULE-0010 — Judgment method
 
 **Rule:** A reported speaker or annotator judgment must identify the task, response scale or categories, participant or annotator population, item scope, and reported result.
 
@@ -316,7 +316,7 @@ A scope statement must be near the claim that it limits.
 
 **Evidence:** ER-06, ER-07.
 
-## SLE-LR-014 — Bounded negative claim
+## SLE-RULE-0021 — Bounded negative claim
 
 **Rule:** A claim that a form, pattern, result, or effect was not found must state the search or test space and a relevant sensitivity limit.
 
@@ -334,7 +334,7 @@ A scope statement must be near the claim that it limits.
 
 **Evidence:** ER-06, ER-07, ER-10.
 
-## SLE-LR-015 — Attestation is not productivity
+## SLE-RULE-0009 — Attestation is not productivity
 
 **Rule:** A document must not infer productivity, frequency, acceptability, or grammatical status from attestation alone.
 
@@ -350,7 +350,7 @@ A scope statement must be near the claim that it limits.
 
 **Evidence:** ER-06, ER-07, ER-08.
 
-## SLE-LR-016 — System behavior is not a language fact
+## SLE-RULE-0015 — System behavior is not a language fact
 
 **Rule:** A statement about software output must identify the relevant system, version or state, input, and configuration when these details affect the result.
 
@@ -368,7 +368,7 @@ A writer must not present system behavior as direct evidence of speaker knowledg
 
 **Evidence:** ER-06, ER-07, ER-08, ER-10.
 
-## SLE-LR-017 — Limitations and counterevidence
+## SLE-RULE-0022 — Limitations and counterevidence
 
 **Rule:** A document must state a known limitation or material counterexample when omitting it could change the interpretation of a central claim.
 
@@ -386,7 +386,7 @@ The statement must identify which claim is affected and how the limitation chang
 
 **Evidence:** ER-06, ER-07.
 
-## SLE-LR-018 — Claim-support connection
+## SLE-RULE-0023 — Claim-support connection
 
 **Rule:** A central claim must identify its supporting evidence or analysis through local prose, a citation, a stable example identifier, a table or figure reference, or another explicit cross-reference.
 
@@ -406,7 +406,7 @@ A reader must not have to infer which evidence supports which claim.
 
 # D. Linguistic examples and data
 
-## SLE-LR-019 — Example provenance
+## SLE-RULE-0011 — Example provenance
 
 **Rule:** A linguistic example must be identified as attested, constructed, adapted, elicited, or generated when the distinction affects interpretation.
 
@@ -428,7 +428,7 @@ or
 
 **Evidence:** ER-02, ER-04, ER-05.
 
-## SLE-LR-020 — Defined judgment notation
+## SLE-RULE-0012 — Defined judgment notation
 
 **Rule:** A document that uses judgment symbols or category labels must define their meanings or link to a controlling definition.
 
@@ -438,7 +438,7 @@ A document must not assume that `*`, `?`, `??`, and `#` have identical meanings 
 
 **Evidence:** ER-02, ER-04.
 
-## SLE-LR-021 — Stable example identifier
+## SLE-RULE-0013 — Stable example identifier
 
 **Rule:** A central linguistic example, dataset item, table, and figure must have a stable identifier when the document refers to it more than once.
 
@@ -456,7 +456,7 @@ A reference should use the identifier rather than only a relative expression suc
 
 **Evidence:** ER-01, ER-02, ER-04, ER-05.
 
-## SLE-LR-022 — Interlinear glossing declaration
+## SLE-RULE-0024 — Interlinear glossing declaration
 
 **Rule:** A document that uses interlinear morpheme-by-morpheme glosses must follow the Leipzig Glossing Rules or declare the alternative convention.
 
@@ -470,7 +470,7 @@ The object-language line, segmentation, gloss line, and translation must remain 
 
 **Evidence:** ER-02, ER-04.
 
-## SLE-LR-023 — Dataset and transformation identity
+## SLE-RULE-0014 — Dataset and transformation identity
 
 **Rule:** A claim based on a dataset or language resource must identify the dataset, relevant version or access state, and material preprocessing, exclusion, normalization, or transformation steps.
 
@@ -488,7 +488,7 @@ The object-language line, segmentation, gloss line, and translation must remain 
 
 # E. Conformance boundary
 
-## SLE-LR-024 — Conformance does not certify truth
+## SLE-RULE-0018 — Conformance does not certify truth
 
 **Rule:** A conformance statement must not imply that SLE has verified the truth, acceptability, grammaticality, theoretical correctness, ethical adequacy, or methodological validity of the linguistic content.
 
