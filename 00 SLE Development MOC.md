@@ -77,13 +77,14 @@ tags:
 - [[Term Inventory]]
 - [[Claim Function Decision Register v0.1]]
 
-## Templates
+## Templates and examples
 
 - [[SLE Rule Proposal Template]]
 - [[SLE Term Entry Template]]
 - [[SLE Test Case Template]]
 - [[SLE Change Request Template]]
 - [[SLE Document Pattern Outlines v0.1]]
+- [[SLE Document Pattern Example Bank v0.1]]
 
 ## Reference
 
