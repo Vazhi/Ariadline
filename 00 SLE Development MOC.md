@@ -56,6 +56,7 @@ tags:
 ## Case studies
 
 - [[Canto-span Case Study]]
+- [[Canto-span A-not-A Worked Example]]
 
 ## Governance and delivery
 
