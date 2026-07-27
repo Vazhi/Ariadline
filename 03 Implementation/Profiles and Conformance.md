@@ -1,7 +1,7 @@
 ---
 title: "Profiles and Conformance"
 type: implementation
-status: draft
+status: revised
 created: 2026-07-27
 updated: 2026-07-27
 aliases:
@@ -15,71 +15,167 @@ tags:
 ---
 # Profiles and Conformance
 
-## Reason for profiles
+## Purpose
 
-Different documents require different controls. An annotation manual needs strict [[Normative Language|normative language]]. A research discussion needs richer qualification and theoretical terminology.
+Conformance states how a declared document or document part was reviewed against a stated version of SLE for Linguistics.
+
+Conformance does not certify linguistic truth, theoretical correctness, methodological validity, ethical adequacy, speaker acceptability, or software quality.
+
+The proposed document patterns and detailed conformance guidance are in [[SLE for Linguistics Document Patterns v0.1]].
+
+## Conformance object
+
+The conformance object must be identifiable.
+
+It can be:
+
+- a complete document;
+- a named section or chapter;
+- an annotation guideline;
+- a set of entries;
+- a resource guide;
+- another bounded text artifact.
+
+Conformance does not automatically extend to an entire project, repository, dataset, theory, research program, publication series, or software system.
+
+## Human-readable conformance is sufficient
+
+Basic conformance does not require:
+
+- YAML or another machine-readable header;
+- repository metadata;
+- a checker;
+- a software schema;
+- a public termbase;
+- a project-specific workflow.
+
+A document can conform through ordinary prose and human editorial review.
 
 ## Proposed profiles
 
+Profiles select applicable rule groups. They do not define linguistic theories, methods, or document genres.
+
 ### SLE-Core
 
-Applies the minimum rules for:
+Applies the general controls for:
 
-- terminology consistency;
-- referential clarity;
-- one principal claim per sentence;
-- explicit scope;
-- defined abbreviations.
+- one principal message;
+- clear reference;
+- explicit scope and comparison;
+- stable and defined terminology;
+- clear logical relations;
+- claim-support connections;
+- conformance boundaries.
 
 ### SLE-Research
 
-Adds:
+Adds controls for:
 
-- [[Claim-Evidence Matrix|claim classes]];
-- evidence-strength wording;
-- limitation statements;
-- example provenance;
-- explicit constructed-versus-attested status.
+- observation and interpretation;
+- claim scope and evidence force;
+- judgments and negative claims;
+- attestation and stronger inferences;
+- limitations, alternatives, and counterevidence;
+- linguistic examples and provenance;
+- dataset and transformation identity;
+- system behavior versus language claims.
 
-### SLE-Data
+### SLE-Resource
 
-Adds:
+Adds controls for:
 
-- stable data identifiers;
-- metadata fields;
-- example and gloss conventions;
-- dataset and query versioning;
-- machine-readable exports.
+- stable identifiers;
+- resource scope and version;
+- source and derived representations;
+- annotation and transformation history;
+- rights, consent, access, citation, and known issues where applicable.
+
+Machine-readable exports are optional and are not part of basic profile conformance.
 
 ### SLE-Procedure
 
-For annotation and workflow instructions. Adds:
+Adds controls for:
 
-- strict *must/should/may/can* meanings;
-- one action per instruction;
-- explicit conditions;
-- ordered steps;
-- validation outcomes.
+- declared normative verbal forms;
+- conditions before actions;
+- one principal action per step when practical;
+- ordered procedures;
+- exceptions, waivers, escalation, and completion criteria.
 
-## Conformance levels
+## Relationship between profiles and patterns
 
-- **Level A — Declared:** version, profile, and termbase are identified.
-- **Level B — Reviewed:** a trained reviewer completed a checklist.
-- **Level C — Checked:** approved software checks passed, with documented exceptions.
-- **Level D — Validated:** the document also passed project-specific user or adjudication tests.
+A profile selects rule groups. A pattern organizes a communicative purpose.
 
-## Conformance statement
+For example:
 
-A conformance statement must identify:
+- a corpus study can use SLE-Research with SLE-PATTERN-0004;
+- an annotation guide can use SLE-Procedure and SLE-Research with SLE-PATTERN-0007;
+- a resource guide can use SLE-Resource with SLE-PATTERN-0010;
+- a theoretical article can use SLE-Research with SLE-PATTERN-0003.
+
+A document may use a pattern without declaring a profile. A publisher or project may define an extension that combines profiles and patterns.
+
+## Proposed conformance states
+
+### SLE-Prepared
+
+The author applied the relevant SLE rules and patterns and completed a self-review.
+
+### SLE-Reviewed
+
+A human reviewer who did not author the reviewed passage checked the applicable rules and pattern elements. Material waivers and unresolved issues are recorded.
+
+### SLE-Evaluated
+
+The document or representative passages also underwent a defined reader, author-preservation, translation, accessibility, or domain-expert evaluation.
+
+The declaration must name the evaluation type. *Evaluated* does not mean scientifically validated.
+
+## Optional conformance declaration
+
+A declaration may use ordinary prose. It should identify:
 
 - SLE version;
-- profile;
-- termbase version;
-- extensions;
-- waived rules;
-- checker version;
-- review date.
+- conformance object;
+- applicable profile or profiles when declared;
+- applicable document-pattern IDs;
+- conformance state;
+- material extensions and waivers;
+- review date;
+- controlling terminology source when required for interpretation.
 
-## No false certification
+Example:
 
-A checker result alone must not be called full conformance unless the profile defines full conformance as fully machine-verifiable.
+> Sections 2–4 were reviewed against SLE for Linguistics v0.1 using SLE-Research and SLE-PATTERN-0004. The review covered claim scope, corpus provenance, evidence wording, and limitations. Two material waivers are listed in Appendix A. The review was completed on 2026-07-27.
+
+A declaration must not imply that SLE verified the content's truth or scientific quality.
+
+## Waivers
+
+A material waiver must identify:
+
+1. affected rule or pattern element;
+2. affected text or scope;
+3. reason;
+4. interpretation or consistency risk;
+5. mitigation or alternative control;
+6. approval when required by a declared extension;
+7. review or expiry condition when appropriate.
+
+A waiver addresses communication conformance. It must not be used to hide missing evidence, a method defect, an ethical problem, a theoretical disagreement, or an unresolved data conflict.
+
+## Extensions
+
+A local extension must:
+
+- identify the SLE version it extends;
+- distinguish local requirements from SLE requirements;
+- preserve core distinctions or declare an incompatibility;
+- avoid presenting one theory, language, method, or workflow as universal;
+- define how a document declares the extension.
+
+## Optional tools
+
+A tool may assist terminology, cross-reference, or editorial review.
+
+A tool result is not a separate or superior conformance state. Tool availability is not required for ordinary SLE conformance.
