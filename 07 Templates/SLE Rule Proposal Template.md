@@ -1,7 +1,7 @@
 ---
 title: "SLE Rule Proposal Template"
 type: template
-status: draft
+status: revised
 created: 2026-07-27
 updated: 2026-07-27
 tags:
@@ -22,31 +22,44 @@ status: proposed
 proposer:
 date:
 related_terms: []
-related_evidence: []
-related_evaluations: []
+related_tests: []
 ```
 
 ## Normative text
 
-Write the proposed rule with **must**, **must not**, **should**, **should not**, or an explicitly non-normative form.
+Write the proposed rule with a declared requirement, prohibition, recommendation, or explicitly non-normative form.
 
-## Communication problem
+Do not assume that **must**, **shall**, or another requirement form has already been selected for the final reference artifact. Link to the controlling verbal-form declaration.
 
-Describe the documented interpretation, consistency, translation, review, or reproducibility problem.
+## Problem
+
+Describe the documented interpretation, consistency, translation, or review problem.
 
 ## Scope
 
-State the document types, linguistic domains, methods, and contexts to which the rule applies.
-
-## Independent justification
-
-Identify evidence from more than one relevant linguistic domain or document type.
-
-Explain why the source supports the communication control. Do not treat a project-local practice as general evidence.
+State the document types, profiles, and contexts to which the rule applies.
 
 ## Rationale
 
 Explain why the rule is expected to solve the problem.
+
+## Independent evidence
+
+Separate the evidence roles.
+
+### Problem evidence
+
+Identify exact source passages showing that the communication problem exists.
+
+### Control evidence
+
+Identify exact source passages that use or recommend an equivalent control. State when no direct control evidence exists.
+
+### SLE-local hypothesis
+
+State which part of the proposed rule is an SLE design hypothesis rather than an inherited or independently established control.
+
+Do not label two sources from one research community as cross-domain convergence by themselves.
 
 ## Compliant examples
 
@@ -63,25 +76,25 @@ Explain why the rule is expected to solve the problem.
 -  
 -  
 
-## Precision and neutrality risks
+## Precision risks
 
-Identify possible loss of theoretical, evidential, descriptive, cultural, or methodological information.
+Identify possible loss of theoretical, evidential, methodological, or descriptive information.
 
-State whether the rule could favor one linguistic theory, research method, language, writing tradition, or project structure.
+## Neutrality review
+
+- theories considered:
+- methods considered:
+- languages or writing traditions considered:
+- possible English-specific bias:
+- possible workflow-specific bias:
 
 ## Human verification
 
-- editorial check:
 - reader interpretation task:
 - author meaning-preservation task:
+- editorial consistency task:
 - cross-domain expert review:
-- exception or waiver method:
-
-## Optional tooling note
-
-State whether an optional tool could assist an editor.
-
-Tool feasibility is not required for rule adoption. Tool availability is not required for conformance.
+- waiver or documented exception method:
 
 ## Evaluation evidence
 
@@ -90,13 +103,3 @@ Link to [[Evaluation Framework|study results]], reviewer notes, and test cases.
 ## Compatibility
 
 State whether the rule changes prior SLE conformance.
-
-## Disposition
-
-Record one decision after review:
-
-- adopt;
-- revise;
-- defer;
-- reject;
-- retire.
