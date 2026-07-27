@@ -12,8 +12,8 @@ tags:
 
 # Vault Validation Report
 
-- Markdown notes: 61
-- Wikilinks checked: 328
+- Markdown notes: 62
+- Wikilinks checked: 346
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -23,14 +23,15 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the issue #5 branch after the addition of proposed SLE for Linguistics document patterns, reusable outlines, a cross-domain example bank, coverage review, and human-first conformance and versioning guidance.
+This report describes the issue #5 branch after the addition of proposed SLE for Linguistics document patterns, reusable outlines, a cross-domain example bank, coverage review, an auditable profile register, and human-first conformance and versioning guidance.
 
 The branch adds:
 
 - [[SLE for Linguistics Document Patterns v0.1]];
 - [[SLE Document Pattern Outlines v0.1]];
 - [[SLE Document Pattern Example Bank v0.1]];
-- [[Document Pattern Coverage Register v0.1]].
+- [[Document Pattern Coverage Register v0.1]];
+- [[SLE Profile Applicability Register v0.1]].
 
 It also revises [[Profiles and Conformance]], [[Pilot Specification Outline]], [[Governance and Change Control]], [[Versioning and Release Model]], and the map of content.
 
@@ -38,17 +39,14 @@ It also revises [[Profiles and Conformance]], [[Pilot Specification Outline]], [
 
 Merged `main` contained 57 Markdown notes and 311 wikilinks.
 
-This branch adds four uniquely named Markdown notes containing six wikilinks.
+The original issue #5 branch added four notes and reached 61 notes and 328 wikilinks.
 
-Revised existing notes add a net eleven wikilinks:
+The blocker repair:
 
-- map of content: +5;
-- pilot specification outline: +2;
-- profiles and conformance: -1;
-- validation report: +5;
-- governance and versioning notes: no net change.
+- adds one profile-applicability note containing two wikilinks;
+- adds a net sixteen wikilinks across the map, pattern chapter, profiles, pilot outline, coverage register, governance, versioning, outlines, and this validation report.
 
-The resulting totals are 61 Markdown notes and 328 wikilinks.
+The resulting totals are 62 Markdown notes and 346 wikilinks.
 
 Ordinary Markdown web links are not included in the wikilink total.
 
@@ -59,7 +57,10 @@ Ordinary Markdown web links are not included in the wikilink total.
 - The outline collection mirrors the same 14 IDs once each.
 - The coverage register lists the same 14 IDs once each.
 - No pattern is represented as stable or published.
-- Each pattern states a communicative purpose, expected information order, required distinctions, minimum editorial checks, and permitted omissions.
+- Each pattern states a communicative purpose, recommended sequence, required distinctions, minimum editorial checks, and permitted omissions.
+- The chapter states that sequence is a recommended default, not an English-order requirement.
+- Alternative order remains conforming when applicable information relationships and distinctions are recoverable.
+- Reordering alone does not require a waiver.
 
 ## Example-bank validation
 
@@ -101,17 +102,48 @@ The catalogue covers:
 
 The coverage register records missing dedicated patterns and requires evaluation across phonetics, formal and functional traditions, sociolinguistics, conversation analysis, lexicography, signed-language research, community documentation, and multilingual scholarly traditions before stabilization.
 
-## Conformance validation
+## Conformance-result validation
 
-The revised conformance model is human-first:
+The repaired conformance model separates three records.
 
-- `SLE-Prepared` — author self-review;
-- `SLE-Reviewed` — independent human editorial review;
-- `SLE-Evaluated` — a named reader, author-preservation, translation, accessibility, or domain-expert evaluation.
+### Result
+
+- **conforms**;
+- **conforms with declared waivers**;
+- **does not conform**;
+- **not determined**.
+
+An unresolved applicable nonconformity prevents a **conforms** result.
+
+### Review method
+
+- author self-review;
+- independent editorial review;
+- another defined human review method.
+
+A review method records who checked the text. It does not imply pass or fail.
+
+### Typed evaluation record
+
+Reader comprehension, author meaning preservation, translation, accessibility, domain-expert review, neutrality, genre combination, and authoring burden are recorded separately by type and exact scope or sample.
+
+Evaluation of representative passages does not imply evaluation of the full document.
 
 Basic conformance does not require YAML, repository metadata, software, schemas, or machine-readable exports.
 
-Conformance applies to a declared text artifact or part. It does not automatically certify an entire project, repository, dataset, theory, method, or software system.
+## Profile auditability validation
+
+The profile register defines `SLE-PROFILE-SET-0.1` and maps SLE-Core, SLE-Research, SLE-Resource, and SLE-Procedure to exact rule IDs.
+
+A profile declaration must:
+
+- identify the profile-set version;
+- identify the conformance object;
+- resolve each included conditional rule as applied or not applicable;
+- identify added local rules and applicable waivers;
+- record result and review method.
+
+Two reviewers using the same profile-set version therefore start from the same candidate rule set.
 
 ## Waiver and extension validation
 
@@ -119,19 +151,23 @@ A material waiver records the affected rule or pattern element, text scope, reas
 
 The guidance explicitly prevents waivers from concealing unsupported claims, missing evidence, ethical problems, method defects, data conflicts, or theoretical disagreements.
 
-Local extensions must identify their controlling SLE version and distinguish local requirements from core SLE.
+Local extensions must identify controlling SLE and profile-set versions, distinguish local requirements from core SLE, and list affected rule IDs.
 
 ## Versioning validation
 
-- Stable pattern identifiers do not encode version numbers.
-- Major, minor, and patch changes are defined by normative and compatibility effects.
+- Stable pattern and rule identifiers do not encode version numbers.
+- Major, minor, and patch changes are classified by compatibility effect.
+- A new mandatory obligation in an existing profile is major when it can change prior conformance outcomes.
+- Minor changes are optional or otherwise backward-compatible.
+- Patch changes cannot alter obligations, applicability, profile membership, or review results.
+- A documented transition mechanism may preserve prior declarations without misclassifying a breaking change.
 - The readable reference edition is controlling.
 - Machine-readable products and tools are optional supporting products with separately declared compatibility.
-- Translation and localized-edition requirements preserve normative function without requiring English syntax or heading order.
+- Translation requirements preserve normative function without requiring English syntax, headings, or recommended sequence.
 
 ## Authority and scope validation
 
-- Canto-span does not define any pattern, profile, conformance state, waiver, or versioning rule.
+- Canto-span does not define any pattern, profile, conformance result, review method, evaluation type, waiver, or versioning rule.
 - Canto-span is named only as one possible later non-authoritative stress test.
 - Project-management genres are outside the core pattern catalogue.
 - Human-readable outlines are sufficient for ordinary drafting and review.
