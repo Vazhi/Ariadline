@@ -12,8 +12,8 @@ tags:
 
 # Vault Validation Report
 
-- Markdown notes: 60
-- Wikilinks checked: 320
+- Markdown notes: 61
+- Wikilinks checked: 328
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -23,12 +23,13 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the issue #5 branch after the addition of proposed SLE for Linguistics document patterns, reusable outlines, coverage review, and human-first conformance and versioning guidance.
+This report describes the issue #5 branch after the addition of proposed SLE for Linguistics document patterns, reusable outlines, a cross-domain example bank, coverage review, and human-first conformance and versioning guidance.
 
 The branch adds:
 
 - [[SLE for Linguistics Document Patterns v0.1]];
 - [[SLE Document Pattern Outlines v0.1]];
+- [[SLE Document Pattern Example Bank v0.1]];
 - [[Document Pattern Coverage Register v0.1]].
 
 It also revises [[Profiles and Conformance]], [[Pilot Specification Outline]], [[Governance and Change Control]], [[Versioning and Release Model]], and the map of content.
@@ -37,16 +38,17 @@ It also revises [[Profiles and Conformance]], [[Pilot Specification Outline]], [
 
 Merged `main` contained 57 Markdown notes and 311 wikilinks.
 
-This branch adds three uniquely named Markdown notes containing four wikilinks.
+This branch adds four uniquely named Markdown notes containing six wikilinks.
 
-Revised existing notes add a net five wikilinks:
+Revised existing notes add a net eleven wikilinks:
 
-- map of content: +4;
+- map of content: +5;
 - pilot specification outline: +2;
 - profiles and conformance: -1;
+- validation report: +5;
 - governance and versioning notes: no net change.
 
-The resulting totals are 60 Markdown notes and 320 wikilinks.
+The resulting totals are 61 Markdown notes and 328 wikilinks.
 
 Ordinary Markdown web links are not included in the wikilink total.
 
@@ -58,7 +60,25 @@ Ordinary Markdown web links are not included in the wikilink total.
 - The coverage register lists the same 14 IDs once each.
 - No pattern is represented as stable or published.
 - Each pattern states a communicative purpose, expected information order, required distinctions, minimum editorial checks, and permitted omissions.
-- The catalogue includes compliant and noncompliant examples from descriptive, theoretical, corpus, fieldwork, and computational settings.
+
+## Example-bank validation
+
+The example bank contains paired uncontrolled and controlled drafts from:
+
+- descriptive grammar;
+- theoretical syntax or semantics;
+- corpus and variation research;
+- elicitation or judgment research;
+- fieldwork documentation;
+- annotation guidance;
+- lexicography;
+- computational linguistics;
+- language-resource documentation;
+- research summaries;
+- limitation records;
+- editorial revision notes.
+
+The bank states that its examples are constructed editorial test material, not linguistic evidence. It requires evaluation for reader interpretation, author meaning preservation, and added or lost meaning.
 
 ## Genre and method coverage
 
