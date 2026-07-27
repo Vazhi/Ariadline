@@ -100,3 +100,7 @@ Collect comments about:
 - terms that lose distinctions;
 - cases where short sentences damage cohesion;
 - cases where repetition improves or harms readability.
+
+## SLE-GE Canto-span test run
+
+The grammar-engineering pilot is governed by [[SLE-GE Canto-span Pilot Baseline v0.1]]. Its material inventory and reader questions are fixed before paired rewriting. Blockers, workarounds, and deviations from the proposed SLE infrastructure are study results and must be included in the authoring-burden analysis.
