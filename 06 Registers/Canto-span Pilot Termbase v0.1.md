@@ -26,7 +26,7 @@ tags:
 - External baseline: `Vazhi/canto-span` at `c9dd631739734a5ab886f0b667db9888b0add13b`
 - Entry count: **46**
 - Human-readable package: this index and its six linked parts
-- Machine-readable export: `06 Registers/Canto-span Pilot Termbase v0.1.tsv`
+- Machine-readable export: `06 Registers/Canto-span Pilot Termbase v0.1.tsv` manifest plus six part TSV files
 - Status: **proposed for pilot v0.1**
 
 This termbase is project-scoped. It is not a universal linguistic ontology. It does not change Canto-span identity, status, evidence, runtime behavior, workflow, readiness, release state, or authorization.
@@ -61,7 +61,7 @@ See [[Terminology Control]], [[Term Inventory]], [[Canto-span Case Study]], and 
 
 ## Representation rule for the pilot
 
-The six Markdown parts are the human-readable record. The TSV file is the machine-readable mirror. Both forms must change in the same pull request.
+The six Markdown parts are the human-readable record. The TSV manifest and six TSV parts are the machine-readable mirror. Both forms must change in the same pull request.
 
 This arrangement is a pilot workaround. The current SLE infrastructure does not specify whether the human or machine representation is canonical, and it does not provide a termbase generator or validator.
 
@@ -82,4 +82,4 @@ This arrangement is a pilot workaround. The current SLE infrastructure does not 
 
 ## Blockers and deviations
 
-Issue #11 records the package decomposition, missing canonical-representation rule, and absence of an executable generator or termbase validator.
+Issue #11 records the package decomposition, missing canonical-representation rule, absence of an executable generator or termbase validator, and the deferred reciprocal edit to the large case-study note.
