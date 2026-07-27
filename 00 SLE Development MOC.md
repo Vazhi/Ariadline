@@ -32,6 +32,7 @@ tags:
 
 ## Language design
 
+- [[SLE for Linguistics Language Rules v0.1]]
 - [[Terminology Control]]
 - [[Controlled Vocabulary Plan]]
 - [[Grammar and Style Rule Plan]]
@@ -52,6 +53,7 @@ tags:
 - [[Evaluation Framework]]
 - [[Pilot Study Design]]
 - [[Quality Metrics and Acceptance Gates]]
+- [[Independent SLE Rule Evidence Register v0.1]]
 - [[SLE-GE Canto-span Pilot Baseline v0.1]]
 
 ## Case studies
@@ -71,6 +73,7 @@ tags:
 - [[Decision Log]]
 - [[Rule Inventory]]
 - [[Term Inventory]]
+- [[Claim Function Decision Register v0.1]]
 
 ## Templates
 
