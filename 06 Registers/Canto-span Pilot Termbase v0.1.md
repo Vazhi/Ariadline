@@ -24,7 +24,7 @@ tags:
 
 ## Purpose
 
-The fixture records 48 project-local meanings that are easy to collapse in documentation. The entries cover identity, ontology, linguistic status, evidence, corpus review, panel evidence, runtime behavior, verification, workflow, readiness, release, authorization, and provenance.
+The fixture records 46 Canto-span-specific meanings that are easy to collapse in documentation. The entries cover identity, ontology, linguistic status, evidence, corpus review, panel evidence, runtime behavior, verification, workflow, readiness, release authorization, and provenance.
 
 The fixture has three permitted uses:
 
@@ -55,14 +55,14 @@ The fixture must not create the reverse dependency.
 ## Test scope
 
 - External test baseline: `Vazhi/canto-span` at `c9dd631739734a5ab886f0b667db9888b0add13b`
-- Entry count: **48**
+- Entry count: **46**
 - Human-readable package: this index and its six linked parts
 - Structured mirror: `06 Registers/Canto-span Pilot Termbase v0.1.tsv` manifest plus six part TSV files
 - Status: **non-normative stress-test fixture v0.1**
 
 The structured mirror exists only to reproduce and compare this test material. Machine-readable files are not required for the eventual SLE reference specification.
 
-Each entry contains a preferred local designation, concept ID, project-local definition, scope, allowed variants, excluded interpretations, example, source or project-local owner, frozen test reference, and change status.
+Each entry contains a preferred local designation, concept ID, project-local definition, scope, allowed variants, excluded interpretations, example, project-local owner or source, frozen test reference, and change status.
 
 See [[Terminology Control]], [[Term Inventory]], [[Canto-span Case Study]], and [[SLE-GE Canto-span Pilot Baseline v0.1]].
 
@@ -75,8 +75,8 @@ See [[Terminology Control]], [[Term Inventory]], [[Canto-span Case Study]], and 
 | [[Canto-span Termbase — Corpus and Panel]] | 8 |
 | [[Canto-span Termbase — Runtime and Verification]] | 4 |
 | [[Canto-span Termbase — Workflow and Authorization]] | 6 |
-| [[Canto-span Termbase — Provenance and Release]] | 3 |
-| **Total** | **48** |
+| [[Canto-span Termbase — Provenance and Release]] | 1 |
+| **Total** | **46** |
 
 The legacy filenames retain the word `Termbase` for branch continuity. The normative status is controlled by this index and by the explicit notice in each part.
 
@@ -90,7 +90,7 @@ The legacy filenames retain the word `Termbase` for branch continuity. The norma
 | Work selection | available construction / parked construction | status, retirement, agent availability |
 | Research prioritization | discovery readiness | promotion, assignment, authorization |
 | Repository action | merge authorization | passing checks, review readiness, ownership |
-| Publication action | release authorization | merge authorization, release metadata, release proxy |
+| Publication action | release authorization | merge authorization, passing release checks, version metadata |
 
 These distinctions are test cases. Future SLE may preserve, combine, rename, or reject them after independent review.
 
@@ -102,10 +102,9 @@ This local maintenance rule does not establish a general SLE requirement for mac
 
 ## Reference contract
 
-- `source_or_canonical_owner` identifies the Canto-span or SLE pilot record that owns the local meaning.
+- `source_or_canonical_owner` identifies the Canto-span record or record class that owns the local meaning.
 - `frozen_reference` identifies the exact artifact used to verify the fixture entry.
-- A Canto-span frozen reference must use `owner/repository@commit:path` and name a file, not only a directory.
-- An SLE frozen reference must identify a commit-owned note at a fixed repository commit.
+- A frozen reference must use `owner/repository@commit:path` and name a file, not only a directory.
 - Multiple exact artifacts are separated with ` | `.
 - Free-text placeholders, directory-only paths, and mutable collaboration pages are not valid frozen references.
 
@@ -121,9 +120,9 @@ A frozen reference supports reproducibility of the fixture. It does not transfer
 
 ## Validation requirements
 
-- 48 unique entry IDs.
-- 48 unique concept IDs.
-- 48 unique preferred local terms within this fixture.
+- 46 unique entry IDs.
+- 46 unique concept IDs.
+- 46 unique preferred local terms within this fixture.
 - The Markdown and TSV fixture records agree.
 - All `frozen_reference` values satisfy the reference contract.
 - Every fixture part states its non-normative status.
@@ -131,4 +130,4 @@ A frozen reference supports reproducibility of the fixture. It does not transfer
 
 ## Blockers and deviations
 
-Issue #11 records the historical authority inversion, software-first scope drift, package decomposition, lack of a fixture generator or validator, and the formal issue #3 navigation amendment.
+Issue #11 preserves the removed SLE test-run methods `source snapshot` and `release proxy`, records the historical authority inversion and software-first scope drift, and documents the package and navigation deviations.
