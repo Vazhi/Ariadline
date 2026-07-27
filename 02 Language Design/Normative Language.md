@@ -15,45 +15,72 @@ tags:
 
 ## Purpose
 
-[[Normative Language]] gives consistent meanings to requirements, recommendations, permissions, capabilities, and possibilities.
+[[Normative Language]] supports consistent distinctions among requirements, prohibitions, recommendations, permissions, capabilities, and factual possibilities.
 
 The proposed normative rule is SLE-RULE-0008 in [[SLE for Linguistics Language Rules v0.1]].
 
-## SLE verbal forms
+## Function before form
 
-| Form | SLE meaning |
+A normative document must first declare which verbal forms express these functions:
+
+| Function | Meaning |
 |---|---|
-| **must** | requirement for SLE conformance |
-| **must not** | prohibition |
-| **should** | recommendation; a documented reason can justify an exception |
-| **should not** | discouraged practice |
-| **may** | permission |
-| **can** | capability or factual possibility, not permission |
+| requirement | necessary for declared conformance |
+| prohibition | forbidden for declared conformance |
+| recommendation | preferred, but a justified exception is possible |
+| discouraged practice | normally avoided, but a justified exception is possible |
+| permission | an allowed option |
+| capability or possibility | what an actor, system, or situation can do or permit factually |
 
-These are SLE-local meanings. SLE uses **must** for its requirements. It does not copy another standard's exact choice of requirement verb.
+The declared forms must be used consistently when a difference affects conformance.
 
-## Modal rule
+## Requirement-form decision
 
-Do not use *may* and *can* interchangeably in normative text.
+SLE v0.1 uses **must** and **must not** inside its own draft rule statements. This is a draft-local editorial convention, not a final universal SLE requirement.
 
-Do not use an undefined alternative modal when the sentence expresses a requirement, recommendation, permission, or capability.
+Two established alternatives are under comparison:
 
-A quotation may preserve the source wording.
+- ISO drafting practice uses **shall** for a requirement, **should** for a recommendation, **may** for permission, and **can** for capability or possibility.
+- IETF BCP 14 treats **MUST** and **SHALL** as requirement terms, **SHOULD** as a recommendation term, and **MAY** as permission or optionality.
 
-## Evidence verbs
+The final SLE reference artifact must select a preferred requirement form only after reader testing, translation review, and comparison across linguistic document types. A profile may link to another declared normative-language system when that choice is explicit.
 
-The proposed evidence-strength distinctions are:
+## Permission and capability
 
-| Phrase | Intended force |
-|---|---|
-| **shows** | The stated conclusion follows directly under the declared method and scope. |
-| **supports** | The evidence increases confidence but is not sufficient alone. |
-| **suggests** | The evidence gives a preliminary reason to consider the conclusion. |
-| **is consistent with** | The evidence does not contradict the conclusion, and alternatives remain. |
-| **does not establish** | The evidence is insufficient for the stated conclusion. |
-| **contradicts** | The evidence conflicts with a stated prediction under declared assumptions. |
+Do not use the same form for permission and capability when the distinction affects interpretation.
 
-These phrases remain proposed pending cross-domain reader and author evaluation.
+**Ambiguous**
+
+> An annotator can omit this field with approval.
+
+**Declared permission**
+
+> An annotator may omit this field with approval.
+
+A quotation may preserve source wording.
+
+## Evidence wording
+
+SLE-RULE-0020 requires evidence wording not to overstate the relationship between evidence and conclusion.
+
+SLE v0.1 does **not** define a universal lexical hierarchy for:
+
+- *shows*;
+- *supports*;
+- *suggests*;
+- *is consistent with*;
+- *does not establish*;
+- *contradicts*.
+
+These expressions can vary by discipline, method, argument type, and local convention. A document should define an evidence expression when its intended force is important and not clear from context.
+
+Editors should ask:
+
+1. What result was directly obtained?
+2. What inference connects that result to the conclusion?
+3. Which assumptions are required?
+4. Which reasonable alternatives remain?
+5. Does the chosen wording conceal those alternatives?
 
 ## Review expressions
 
@@ -71,11 +98,11 @@ Review these expressions when they lack a defined basis:
 - often;
 - rarely.
 
-These expressions are not automatically prohibited. They require a defined comparison, measure, source, or uncertainty function when the interpretation depends on one.
+They are not automatically prohibited. They require a defined comparison, measure, source, or uncertainty function when interpretation depends on one.
 
 ## Quantification
 
-Prefer explicit counts, proportions, ranges, or defined categories when they are available and relevant.
+Prefer explicit counts, proportions, ranges, or defined categories when available and relevant.
 
 **Weak**
 
@@ -85,10 +112,10 @@ Prefer explicit counts, proportions, ranges, or defined categories when they are
 
 > Eight of ten participants rated the form 4 or 5 on the five-point scale.
 
-A qualitative study may use a non-numeric description when the method and basis are stated.
+A qualitative study may use a non-numeric description when its method and basis are stated.
 
 ## Formal proof
 
-Use *prove* for a formal proof or when a declared field-specific inferential method licenses that term.
+Use *prove* for a formal proof or when a declared inferential method licenses that term.
 
-Empirical data usually show a bounded result, support a claim, suggest a possibility, contradict a prediction, or fail to establish a stronger conclusion.
+For empirical claims, state the bounded result and the inference without importing an untested universal evidence-verb scale.
