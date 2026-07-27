@@ -39,7 +39,7 @@ A function can help a writer identify missing information. It does not determine
 | GEN | generalization | adopt | A claim extending beyond individual records; scope and boundary must be explicit. |
 | ANA | analysis | adopt | An interpretation under stated assumptions or a framework. |
 | HYP | hypothesis | adopt | A provisional claim linked to predicted observations or possible falsifiers. |
-| NEG | negative claim | merge | Treat as a polarity and evidence-boundary property of observation or generalization, governed by SLE-LR-014. |
+| NEG | negative claim | merge | Treat as a polarity and evidence-boundary property of observation or generalization, governed by SLE-RULE-0021. |
 | SYS | system behavior | adopt | Output or action of a specified tool, version, input, and configuration. |
 | DEF | definition | adopt | A controlled statement of term scope and distinguishing criteria. |
 | LIM | limitation | adopt | A statement that narrows the scope, force, or applicability of another claim. |
