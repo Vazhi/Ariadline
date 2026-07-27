@@ -13,9 +13,11 @@ tags:
 
 ## Purpose
 
-Governance protects the meaning, neutrality, usability, and version history of the SLE for Linguistics reference artifact.
+Governance protects the meaning, neutrality, usability, auditability, and version history of the SLE for Linguistics reference artifact.
 
 A project inconvenience, software limitation, or one-domain preference does not by itself justify a normative change.
+
+Conformance semantics are defined in [[Profiles and Conformance]]. Exact profile mappings are controlled by [[SLE Profile Applicability Register v0.1]].
 
 ## Governance roles
 
@@ -24,7 +26,7 @@ A project inconvenience, software limitation, or one-domain preference does not 
 Responsibilities:
 
 - manage public editions;
-- maintain rule, pattern, term, and decision registers;
+- maintain rule, pattern, term, profile, and decision registers;
 - prevent undocumented normative changes;
 - publish compatibility and migration information;
 - distinguish the controlling reference text from optional supporting products.
@@ -36,7 +38,7 @@ Include reviewers from multiple subfields, theoretical traditions, methods, lang
 Responsibilities:
 
 - identify theory- or method-specific bias;
-- review definitions, rules, patterns, examples, and omissions;
+- review definitions, rules, patterns, examples, omissions, and profile mappings;
 - determine whether a problem is general, domain-specific, or local;
 - protect necessary linguistic distinctions.
 
@@ -49,11 +51,13 @@ Responsibilities:
 - report comprehension and consistency problems;
 - test author meaning preservation and authoring burden;
 - evaluate document patterns and waivers;
+- test whether profiles resolve to the same rule set;
+- test whether conformance results are distinguished from review methods and evaluation activities;
 - propose profile, translation, accessibility, or publisher needs.
 
 Tool developers may contribute optional implementation feedback. Tool feasibility is not a criterion for normative adoption.
 
-## Rule and pattern states
+## Rule, pattern, and profile states
 
 Use these states:
 
@@ -65,13 +69,15 @@ Use these states:
 
 A proposed or revised item must not be described as established SLE practice.
 
+A profile-set version controls an exact rule mapping. Changing that mapping is a normative change and must receive a compatibility classification.
+
 ## Change process
 
 1. Submit [[SLE Change Request Template|a change request]].
-2. Identify affected rules, patterns, terms, profiles, conformance states, translations, examples, and annexes.
+2. Identify affected rules, patterns, terms, profile mappings, conformance results, review methods, evaluation types, translations, examples, and annexes.
 3. State the communication problem and its scope.
 4. Provide independent evidence, examples, and alternatives appropriate to the proposed change.
-5. Test reader benefit, author meaning preservation, authoring burden, theory neutrality, method neutrality, and translation effects as applicable.
+5. Test reader benefit, author meaning preservation, authoring burden, theory neutrality, method neutrality, profile reconstruction, conformance interpretation, and translation effects as applicable.
 6. Record dissent, uncertainty, and unresolved risks.
 7. Record the decision in [[Decision Log]].
 8. Update the human reference text and all controlling registers before release.
@@ -84,13 +90,13 @@ Optional tools and machine-readable exports may be updated after the controlling
 A decision record must state:
 
 - issue and affected identifiers;
-- current rule or pattern;
+- current rule, pattern, or profile mapping;
 - proposed alternatives;
 - evidence and exact source locations;
-- evaluation results;
+- evaluation results and exact evaluated scope;
 - selected action;
 - dissent or uncertainty;
-- theory, method, language, translation, accessibility, and authoring-burden risks where relevant;
+- theory, method, language, translation, accessibility, profile, conformance, and authoring-burden risks where relevant;
 - compatibility effect;
 - required migration;
 - review date and responsible role.
@@ -111,9 +117,35 @@ Canto-span-specific findings can inform a later adoption guide. They cannot beco
 
 ## Conflict-of-framework rule
 
-A change must not present one theoretical framework, analytical ontology, evidence source, or research workflow as neutral when the control depends on it.
+A change must not present one theoretical framework, analytical ontology, evidence source, research workflow, rhetorical order, or evaluation method as neutral when the control depends on it.
 
 A necessary framework-specific control belongs in a declared extension or informative example unless independent review supports a broader formulation.
+
+## Conformance governance
+
+A conformance result records whether the applicable communication controls are met.
+
+A review method records who checked the text.
+
+A typed evaluation record describes a specific evaluation and its exact scope or sample.
+
+Governance must prevent these three records from being collapsed into a single level or badge.
+
+A review or evaluation cannot by itself create a passing conformance result. An unresolved applicable nonconformity must remain visible.
+
+## Profile governance
+
+A profile declaration must identify a profile-set version and resolve to exact rule IDs.
+
+A profile change must state:
+
+- prior and new rule mappings;
+- conditional-rule changes;
+- effect on prior conformance results;
+- migration requirement;
+- whether a new optional profile is preferable to changing an existing profile.
+
+Two declarations using the same profile and profile-set version must refer to the same candidate rule set.
 
 ## Waiver governance
 
@@ -143,9 +175,11 @@ A waiver must not conceal an unsupported claim, missing evidence, ethical proble
 An extension must identify:
 
 - controlling SLE version;
+- controlling profile-set version;
 - responsible publisher, community, or project;
 - local requirements and their justification;
-- affected rules and patterns;
+- added, replaced, or excluded rule IDs;
+- affected patterns;
 - compatibility with core SLE;
 - declaration method;
 - review and retirement process.
@@ -158,10 +192,10 @@ Publish as appropriate:
 
 - change requests;
 - decisions;
-- rule and pattern histories;
+- rule, pattern, and profile histories;
 - deprecated and retired controls;
 - compatibility and migration guidance;
-- evaluation summaries;
+- evaluation summaries with bounded scope;
 - accepted extensions.
 
 Personal, confidential, restricted, or community-controlled research data must remain outside the public record unless disclosure is authorized.
