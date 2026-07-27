@@ -1,6 +1,7 @@
 ---
-title: "Canto-span Pilot Termbase v0.1 — Identity and Governance"
-type: termbase-part
+title: "Canto-span Vocabulary Stress-Test Fixture v0.1 — Identity and Governance"
+type: test-fixture-part
+normative_status: non-normative
 status: proposed
 version: "0.1"
 created: 2026-07-27
@@ -9,12 +10,13 @@ tags:
   - sle
   - terminology
   - canto-span
-  - termbase-part
+  - test-fixture-part
+  - non-normative
 ---
 
-# Canto-span Pilot Termbase v0.1 — Identity and Governance
+# Canto-span Vocabulary Stress-Test Fixture v0.1 — Identity and Governance
 
-Part of [[Canto-span Pilot Termbase v0.1]]. These meanings are project-scoped and do not form a universal linguistic ontology.
+Part of [[Canto-span Pilot Termbase v0.1]]. **Non-normative test material:** these entries record Canto-span-specific meanings for stress-testing independently proposed SLE rules. They do not define SLE terminology or requirements.
 
 ## CS-TERM-0001 — construction identity
 
