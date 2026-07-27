@@ -1,7 +1,7 @@
 ---
 title: "SLE-GE Canto-span Pilot Baseline v0.1"
 type: validation-baseline
-status: locked
+status: pending_review
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
@@ -19,17 +19,18 @@ tags:
 # SLE-GE Canto-span Pilot Baseline v0.1
 
 > [!abstract] Purpose
-> This note freezes the source materials, reader questions, measures, safeguards, and decision outcomes for the first Canto-span SLE-GE test run. It must be fixed before paired rewriting begins.
+> This note freezes the source materials, reader questions, measures, safeguards, and decision outcomes for the first Canto-span SLE-GE test run. It must be accepted and locked before paired rewriting begins.
 
 ## Baseline status
 
 - Baseline version: **0.1**
-- Lock state: **locked for material selection and question design**
+- Lifecycle state: **pending review**
+- Intended lock event: acceptance of the final PR head for issue #2
 - Baseline date: **2026-07-27**
 - External repository: `Vazhi/canto-span`
 - Frozen commit: [`c9dd631739734a5ab886f0b667db9888b0add13b`](https://github.com/Vazhi/canto-span/commit/c9dd631739734a5ab886f0b667db9888b0add13b)
 - Parent SLE issue: [#1](https://github.com/Vazhi/simplified-linguistic-english/issues/1)
-- Baseline issue: [#2](https://github.com/Vazhi/simplified-linguistic-english/issues/2)
+- Baseline issue and amendment: [#2](https://github.com/Vazhi/simplified-linguistic-english/issues/2)
 - Deviation ledger: [#11](https://github.com/Vazhi/simplified-linguistic-english/issues/11)
 
 This note is an SLE research instrument. It is not a current-state owner for Canto-span. All copied values are dated observations from the frozen commit.
@@ -46,12 +47,13 @@ A workaround is evidence about a gap. It is not evidence that the current SLE al
 ## Authority and reproducibility rules
 
 1. Commit-pinned file URLs are the primary references for repository files.
-2. A pull-request example must identify its PR number and associated head or merge commit.
+2. Mutable collaboration text used as study material must have an immutable snapshot with source URL, capture date, associated commit, and content hash.
 3. Volatile Canto-span values must include the baseline date and canonical owner.
-4. A source excerpt must not become a second canonical owner.
+4. A source excerpt or snapshot must not become a second canonical owner.
 5. A later Canto-span change does not modify this baseline.
-6. A material change to this baseline requires version `0.2` or later and must occur before paired rewriting begins.
-7. After paired rewriting begins, additions are recorded as a new study wave rather than silently changing this baseline.
+6. A material change before lock requires a reviewed amendment to version 0.1.
+7. A material change after lock requires version `0.2` or a new study wave.
+8. After paired rewriting begins, additions cannot be inserted silently into the same wave.
 
 See [[Governance and Change Control]] and [[Versioning and Release Model]].
 
@@ -68,24 +70,24 @@ See [[Governance and Change Control]] and [[Versioning and Release Model]].
 
 ### Construction-note sample
 
-The sample uses four notes from each of the three sufficiently populated active statuses. It deliberately varies construction family, evidence maturity, and claim layer.
+The twelve-note sample represents every populated current linguistic status. It minimizes repeated construction families while retaining different evidence maturity and claim-layer problems.
 
 | ID | Frozen status | Permanent code | Legacy note label | Frozen source | Sampling reason |
 |---|---|---:|---|---|---|
 | CON-01 | `research_pending` | AA01 | `ANotAQuestion` | [`grammar/research_pending/ANotAQuestion.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/research_pending/ANotAQuestion.md) | Question structure; canonical-name versus legacy-label conflict; existing worked example. |
 | CON-02 | `research_pending` | AA11 | `ChangeIntoPredicate` | [`grammar/research_pending/ChangeIntoPredicate.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/research_pending/ChangeIntoPredicate.md) | Lexeme-specific narrowing and competing result analyses. |
 | CON-03 | `research_pending` | AB11 | `NominalPredicateClause` | [`grammar/research_pending/NominalPredicateClause.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/research_pending/NominalPredicateClause.md) | Measure predication, misleading broad label, and evidence-bound scope. |
-| CON-04 | `research_pending` | AB30 | `PostverbalZoPerfectiveVP` | [`grammar/research_pending/PostverbalZoPerfectiveVP.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/research_pending/PostverbalZoPerfectiveVP.md) | Mature corpus packet, active panel links, parser evidence, and promotion blockers. |
+| CON-04 | `research_pending` | AB30 | `PostverbalZoPerfectiveVP` | [`grammar/research_pending/PostverbalZoPerfectiveVP.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/research_pending/PostverbalZoPerfectiveVP.md) | Mature corpus packet, panel links, parser evidence, and promotion blockers. |
 | CON-05 | `unsupported_generalization` | AA02 | `AcceptabilityANotA` | [`grammar/unsupported_generalization/AcceptabilityANotA.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/unsupported_generalization/AcceptabilityANotA.md) | Acceptability terminology and a narrow lexical boundary under a broad label. |
 | CON-06 | `unsupported_generalization` | AA12 | `ClassifierObjectNP` | [`grammar/unsupported_generalization/ClassifierObjectNP.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/unsupported_generalization/ClassifierObjectNP.md) | Role-specific runtime wrapper versus role-neutral NP analysis. |
-| CON-07 | `unsupported_generalization` | AA93 | `MotionGoalVP` | [`grammar/unsupported_generalization/MotionGoalVP.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/unsupported_generalization/MotionGoalVP.md) | Source, goal, deictic, abstract, and purpose boundaries. |
-| CON-08 | `unsupported_generalization` | AB64 | `SourceMotionClause` | [`grammar/unsupported_generalization/SourceMotionClause.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/unsupported_generalization/SourceMotionClause.md) | Broad family claim with incomplete exact boundaries. |
-| CON-09 | `parser_heuristic` | AA13 | `ClauseRelationEdge` | [`grammar/parser_heuristic/ClauseRelationEdge.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/parser_heuristic/ClauseRelationEdge.md) | Internal relation representation that must not become a language claim. |
-| CON-10 | `parser_heuristic` | AA14 | `ClauseRelationGraph` | [`grammar/parser_heuristic/ClauseRelationGraph.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/parser_heuristic/ClauseRelationGraph.md) | Internal aggregate and graph terminology. |
-| CON-11 | `parser_heuristic` | AA16 | `ClauseSpan` | [`grammar/parser_heuristic/ClauseSpan.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/parser_heuristic/ClauseSpan.md) | Neutral span representation and system-language boundary. |
-| CON-12 | `parser_heuristic` | AB22 | `PolarQuestionFrame` | [`grammar/parser_heuristic/PolarQuestionFrame.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/parser_heuristic/PolarQuestionFrame.md) | Narrow final-咩 system frame under a broad legacy label. |
+| CON-07 | `unsupported_generalization` | AA93 | `MotionGoalVP` | [`grammar/unsupported_generalization/MotionGoalVP.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/unsupported_generalization/MotionGoalVP.md) | Goal, source, deictic, abstract, and purpose boundaries. |
+| CON-08 | `parser_heuristic` | AA13 | `ClauseRelationEdge` | [`grammar/parser_heuristic/ClauseRelationEdge.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/parser_heuristic/ClauseRelationEdge.md) | Internal relation representation that must not become a language claim. |
+| CON-09 | `parser_heuristic` | AA16 | `ClauseSpan` | [`grammar/parser_heuristic/ClauseSpan.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/parser_heuristic/ClauseSpan.md) | Neutral span representation and system-language boundary. |
+| CON-10 | `parser_heuristic` | AB22 | `PolarQuestionFrame` | [`grammar/parser_heuristic/PolarQuestionFrame.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/parser_heuristic/PolarQuestionFrame.md) | Narrow final-咩 system frame under a broad legacy label. |
+| CON-11 | `lexicalized_only` | AA65 | `FormulaDiscourseUnit` | [`grammar/lexicalized_only/FormulaDiscourseUnit.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/lexicalized_only/FormulaDiscourseUnit.md) | Tests bounded formula inventories, discourse function, and resistance to productive generalization. |
+| CON-12 | `lexicalized_only` | AB81 | `VocativeAddressTerm` | [`grammar/lexicalized_only/VocativeAddressTerm.md`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/grammar/lexicalized_only/VocativeAddressTerm.md) | Tests lexical inventory scope, address function, and incomplete runtime reconciliation. |
 
-#### Sampling limitation
+#### Sampling coverage and limits
 
 At the frozen baseline, the current note inventory contains:
 
@@ -97,7 +99,7 @@ At the frozen baseline, the current note inventory contains:
 - 0 `provisional_reaudit`;
 - 0 `provisional`.
 
-The twelve-note sample does not estimate performance for empty statuses or the two-record `lexicalized_only` stratum. A future wave may add the rare stratum through a versioned baseline amendment before rewriting begins.
+The sample includes all two `lexicalized_only` records and examples from every other populated status. It cannot estimate performance for empty statuses. The unequal sample sizes are deliberate coverage sampling, not a prevalence estimate.
 
 ### Identity, corpus, panel, PR, and release-facing materials
 
@@ -106,15 +108,13 @@ The twelve-note sample does not estimate performance for empty statuses or the t
 | ID-01 | permanent identity registry | [`data/construction-identities.json`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/data/construction-identities.json) | Tests UUID, code, canonical name, legacy alias, claim layer, profile, and lifecycle distinctions. |
 | COR-01 | corpus-review ledger | [`review-packets/corpus-review/AB30/candidate-ledger.json`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/review-packets/corpus-review/AB30/candidate-ledger.json) | Tests retrieval versus classification, stable candidates, totals, and evidence limits. |
 | PAN-01 | native-panel state | [`review-packets/native-panel/active-v2/panel-review-state.json`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/review-packets/native-panel/active-v2/panel-review-state.json) | Tests instrument version, eligibility, item-level usable judgments, and historical-versus-current evidence. |
-| PR-01 | substantive pull-request summary | [PR #209](https://github.com/Vazhi/canto-span/pull/209), merged as [`c9dd631739734a5ab886f0b667db9888b0add13b`](https://github.com/Vazhi/canto-span/commit/c9dd631739734a5ab886f0b667db9888b0add13b) | Tests whether a technical change report separates implementation scope from linguistic and governance effects. |
+| PR-01 | immutable substantive-PR summary snapshot | [[Canto-span PR 209 Summary Snapshot]] | Tests whether a technical change report separates implementation scope from linguistic and governance effects. |
 | REL-01A | release metadata proxy | [`manifest.json`](https://github.com/Vazhi/canto-span/blob/c9dd631739734a5ab886f0b667db9888b0add13b/manifest.json) | Provides the frozen runtime version and deployment metadata. |
-| REL-01B | release-facing handoff proxy | [PR #177](https://github.com/Vazhi/canto-span/pull/177), head `2bcc773c383fbf615f22d348b7ae5b5f936f96bd`, merge `2d62d9f15d32e2137d372f0b9c97db17a43757d6` | Tests version, validation, protected state, and release-facing claims. It is not labelled as an original release note. |
+| REL-01B | immutable release-facing handoff snapshot | [[Canto-span PR 177 Summary Snapshot]] | Tests version, validation, protected state, and release-facing claims. It is not an original release note. |
 
-No standalone release-note document was located at the frozen baseline. REL-01A and REL-01B therefore form an explicit proxy pair. This deviation is recorded in issue #11 and must not be hidden in the paired corpus.
+No standalone release-note document exists at the frozen baseline. Issue #2 was amended before paired rewriting to permit the explicit REL-01A and REL-01B proxy set. The proxy must remain labelled as a proxy, and its limits must be included in the paired corpus and final analysis.
 
 ## State dimensions that must remain separate
-
-Participants must be able to distinguish these dimensions:
 
 | Dimension | Direct question |
 |---|---|
@@ -137,7 +137,7 @@ A result in one dimension must not be used as a direct answer for another dimens
 
 ## Locked reader questions
 
-The reader-question set is locked for baseline version 0.1.
+The reader-question set is fixed for baseline version 0.1. The baseline lifecycle remains pending review until the complete material set is accepted.
 
 1. What is the canonical name of the construction or governed object?
 2. Which label is only a legacy runtime, note, or compatibility label?
@@ -158,7 +158,7 @@ The reader-question set is locked for baseline version 0.1.
 17. Is the PR merge-authorized at the stated head?
 18. Is a release or deployment action authorized?
 19. Is the statement an observation, attestation, judgment, generalization, analysis, system result, requirement, decision, current-state fact, or limitation?
-20. Is a cited record current authority or historical provenance?
+20. Is a cited record current authority, immutable snapshot, or historical provenance?
 21. Which state dimensions changed?
 22. Which adjacent state dimensions explicitly did not change?
 
@@ -269,17 +269,22 @@ The following test-run findings are recorded in issue #11:
 - DEV-010 — local `gh` workflow unavailable;
 - DEV-011 — no pilot-baseline template;
 - DEV-012 — no standard cross-repository source-pinning rule;
-- DEV-013 — no rare-stratum sampling guidance;
+- DEV-013 — rare-stratum and within-family sampling guidance was absent;
 - DEV-014 — no branch-aware vault validator;
 - DEV-015 — connector limitation for patching large existing notes;
-- DEV-016 — no standalone release-note artifact located.
+- DEV-016 — no standalone release-note artifact located;
+- DEV-017 — mutable collaboration pages required immutable snapshot records;
+- DEV-018 — baseline lifecycle states were underspecified.
+
+DEV-013 was mitigated by including both rare populated records and reducing within-family redundancy. DEV-016 was mitigated through the reviewed issue amendment and an explicit proxy set. DEV-017 was mitigated through hashed snapshots. DEV-018 remains visible until this baseline changes from `pending_review` to `locked`.
 
 These deviations must be included in authoring-cost and infrastructure-burden analysis. A platform limitation must not be misclassified as an SLE language-design failure.
 
 ## Change control
 
-- Baseline version 0.1 is locked when the PR for issue #2 is merged.
-- A correction before paired rewriting begins requires a documented version increment.
+- Baseline version 0.1 remains `pending_review` until the complete material set and final PR head are accepted.
+- The accepted pre-merge head must change the lifecycle state to `locked`.
+- A correction after lock but before paired rewriting requires a documented version increment.
 - After rewriting begins, the selected materials and reader questions cannot change within the same study wave.
 - A source that disappears remains identified by its frozen commit path and recorded metadata.
 - A proxy can be replaced with an original artifact only through a baseline amendment before rewriting begins.
