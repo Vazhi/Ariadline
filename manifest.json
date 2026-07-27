@@ -1,0 +1,220 @@
+{
+  "vault": "SLE_Development_Plan_Obsidian",
+  "created": "2026-07-27",
+  "note_count": 42,
+  "wikilink_count": 182,
+  "duplicate_basenames": {},
+  "broken_wikilinks": [],
+  "files": [
+    {
+      "path": "00 SLE Development MOC.md",
+      "bytes": 2499,
+      "sha256": "b73860a2d25f9eacb10fa0dce1c32fe30834530691799544d36a403018d770b7"
+    },
+    {
+      "path": "01 Foundation/Design Principles.md",
+      "bytes": 2226,
+      "sha256": "b6669b70ec13fff2e3e7b10cc28034fad97801f2ed8da0b7929de88868443545"
+    },
+    {
+      "path": "01 Foundation/Project Charter.md",
+      "bytes": 2498,
+      "sha256": "3ce5dd13762ce66765f89e966c71073aae3d13f26274e7888a4acf092b0b3798"
+    },
+    {
+      "path": "01 Foundation/SLE Architecture.md",
+      "bytes": 2145,
+      "sha256": "762e7198607cc15b37c981974cfe03b0264cd8b518b62d6ba7728648780b17af"
+    },
+    {
+      "path": "01 Foundation/Scope and Non-Goals.md",
+      "bytes": 2272,
+      "sha256": "a32b25ee2dcc28a7c1530e074e87bdc5ed4264813abe08bb7029b747e14ca58c"
+    },
+    {
+      "path": "01 Foundation/Users and Use Cases.md",
+      "bytes": 2503,
+      "sha256": "c3d0bc1c4c4b0051750e129c818e01611370dc79aae8a1d1024474e35a701e2f"
+    },
+    {
+      "path": "02 Language Design/Ambiguity and Referential Clarity.md",
+      "bytes": 1686,
+      "sha256": "a4d56af0ff678b7b4c99d4e6ade468d3872ccbad53172881c57c5412b721033c"
+    },
+    {
+      "path": "02 Language Design/Claim-Evidence Matrix.md",
+      "bytes": 2432,
+      "sha256": "4f4acb54ed1a456ba3e1cfbcb73a033886152593d6cf20f19616f36cc70d866c"
+    },
+    {
+      "path": "02 Language Design/Controlled Vocabulary Plan.md",
+      "bytes": 2572,
+      "sha256": "9246b1a46e26207bf5e8d881897257f3685b73d9058eaef0ecd1b5786f4dd504"
+    },
+    {
+      "path": "02 Language Design/Grammar and Style Rule Plan.md",
+      "bytes": 2974,
+      "sha256": "b31f54423e2d7bb40240b3fcea4f932812410ea6302db47a999e9c231c9af72e"
+    },
+    {
+      "path": "02 Language Design/Linguistic Examples and Glossing.md",
+      "bytes": 2038,
+      "sha256": "121001dc18a1c7c1e1963c93fb9fc7ad0f60b5ee343e8801e7cd1adcd050d3f6"
+    },
+    {
+      "path": "02 Language Design/Normative Language.md",
+      "bytes": 2181,
+      "sha256": "5c91ce499cc34575666b13b5136a53c053ad18fcd3657e66039d0e76d748a342"
+    },
+    {
+      "path": "02 Language Design/Terminology Control.md",
+      "bytes": 2198,
+      "sha256": "1a9f3e500b19eb755d67589aa36ef97bbffcba494dac51627b8762af7a30894b"
+    },
+    {
+      "path": "03 Implementation/Authoring and Conformance Tools.md",
+      "bytes": 2022,
+      "sha256": "b33b8bcbdba870aaf9bf9c078face9cfd9ee7bc60886af428391852bee3f0226"
+    },
+    {
+      "path": "03 Implementation/Corpus and Annotation Interoperability.md",
+      "bytes": 1763,
+      "sha256": "8a579460e7b764a0955c7cc86a266b27fe5395ba582e044400ee1ea3eeab45ad"
+    },
+    {
+      "path": "03 Implementation/Pilot Specification Outline.md",
+      "bytes": 1898,
+      "sha256": "eb1f353a823ea8903c5f034650ee67df75b5cc1cbd1dcf198db90ecc0e538562"
+    },
+    {
+      "path": "03 Implementation/Profiles and Conformance.md",
+      "bytes": 1926,
+      "sha256": "686212d18216a8d85716b0a3f17f376acd775234dab5424a41f3ac4a49a859ef"
+    },
+    {
+      "path": "04 Validation/Evaluation Framework.md",
+      "bytes": 1999,
+      "sha256": "9c200a0a662c9003a539fdcb8c25749363b3b62d0be4f2534499a134cabdcf97"
+    },
+    {
+      "path": "04 Validation/Pilot Study Design.md",
+      "bytes": 1964,
+      "sha256": "c5310f307b9e10818f7a36cde3b5e65126c254110e2c2a2d2b364322c33f0675"
+    },
+    {
+      "path": "04 Validation/Quality Metrics and Acceptance Gates.md",
+      "bytes": 2106,
+      "sha256": "ff07f2b02b8e4d5be530c62de519a5b6f7fb93db2b74874b80273a268a267a92"
+    },
+    {
+      "path": "05 Governance/Development Roadmap.md",
+      "bytes": 2604,
+      "sha256": "69b5c6d69e9c6486a40130675b2e260cc17857bd05b6887fcad651d1057879bd"
+    },
+    {
+      "path": "05 Governance/Governance and Change Control.md",
+      "bytes": 1888,
+      "sha256": "265cd54841859e336e65b136bf2161a7972ea2b538358b52207e0a03093fa16b"
+    },
+    {
+      "path": "05 Governance/Risks and Open Questions.md",
+      "bytes": 2290,
+      "sha256": "c96d89c452d770ccc9baead97b48b160340bdc23361b0746cac2b820acc16858"
+    },
+    {
+      "path": "05 Governance/Versioning and Release Model.md",
+      "bytes": 1424,
+      "sha256": "8536256268ed266522e6fdf0c74ac6301f6a6ac4126f40e911b99602c3cf6dd2"
+    },
+    {
+      "path": "06 Registers/Decision Log.md",
+      "bytes": 1881,
+      "sha256": "26ad1edd2b33cb7736a7865ee4e4d3d8b2a883c75ab61749cc78215ef497c1e2"
+    },
+    {
+      "path": "06 Registers/Rule Inventory.md",
+      "bytes": 2810,
+      "sha256": "03355ea75c5cc436d8e35837e62341cb471cac5e35db921f88d240fc6ea5f89e"
+    },
+    {
+      "path": "06 Registers/Term Inventory.md",
+      "bytes": 3700,
+      "sha256": "4958fb2ad8225af722c1777261aa396ebc9b07dec144bc055bbc4d39b440d98d"
+    },
+    {
+      "path": "07 Templates/SLE Change Request Template.md",
+      "bytes": 862,
+      "sha256": "93dd512f7ebcf61ccd4be386f5bb92c3aaf6f9b74828459fecd50f02613c7636"
+    },
+    {
+      "path": "07 Templates/SLE Rule Proposal Template.md",
+      "bytes": 1188,
+      "sha256": "b1eb4dec678e566d21e5d6ae1d739de3a05a4ad5485f15a96005a0fd59a12815"
+    },
+    {
+      "path": "07 Templates/SLE Term Entry Template.md",
+      "bytes": 837,
+      "sha256": "af3ee715ea1752dd34f8e21a7b2cb64bf84a91d997bcb12dd840e971db03166b"
+    },
+    {
+      "path": "07 Templates/SLE Test Case Template.md",
+      "bytes": 835,
+      "sha256": "cc64b1815ce6bad28227cc2f326265e19d1ce30ef0c2db5b7ea5f0e4a80c4ee5"
+    },
+    {
+      "path": "08 Reference/Ambiguity.md",
+      "bytes": 449,
+      "sha256": "4baa35de168725b30ae63db7a59aae19816d6b616fa916f743c0a217c2a9fcc7"
+    },
+    {
+      "path": "08 Reference/Attestation and Productivity.md",
+      "bytes": 645,
+      "sha256": "0f9245d5dcfa0fe343ece1db3a20cc3a0165b064e2ac8d70ae1e69b9f4379749"
+    },
+    {
+      "path": "08 Reference/Conformance.md",
+      "bytes": 444,
+      "sha256": "20ff97fa4f0616135b032743d029fe293a33552057f539e7e2bf9041b9c82024"
+    },
+    {
+      "path": "08 Reference/Controlled Natural Language.md",
+      "bytes": 846,
+      "sha256": "caf2597318bd25464d06e4cf5161314a2ca2528c3f0ca21c440c8022bdf1c4d8"
+    },
+    {
+      "path": "08 Reference/Glossary.md",
+      "bytes": 1625,
+      "sha256": "8718ea299e1de324bb353b7855bd220db57c532649de4b822cb8cf95da40206c"
+    },
+    {
+      "path": "08 Reference/Linguistic Example.md",
+      "bytes": 436,
+      "sha256": "a40a6e09015fa0ef4f4bcd0808e72d8ccf215b67db7d703a72d28861434b7e81"
+    },
+    {
+      "path": "08 Reference/SLE Profile.md",
+      "bytes": 441,
+      "sha256": "a758b0401de35e0bbf65fe1c66827ee01e480bceaec5661ca04dc42b95371d03"
+    },
+    {
+      "path": "08 Reference/Simplified Linguistic English.md",
+      "bytes": 682,
+      "sha256": "d963fa25693067e849b6b0f0348503da505434ea3e35acda0e368d4a57238bf2"
+    },
+    {
+      "path": "08 Reference/Standards and Sources.md",
+      "bytes": 3525,
+      "sha256": "b6b776bf0f31e2300010ca78c102b3a0cfb40b2d85b047394a3680d3e30cc81c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 981,
+      "sha256": "9fac50555536b3a200227f8ae726b3bf0e05f1d0378152e3bf58e9a1be4bf31a"
+    },
+    {
+      "path": "Vault Validation Report.md",
+      "bytes": 430,
+      "sha256": "e1c0b1bd408fbca49d7c49aa28ef7ad7f23f6885fe86f7779ec9c98a90ca9b12"
+    }
+  ]
+}
