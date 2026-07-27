@@ -1,7 +1,7 @@
 ---
 title: "SLE-GE Canto-span Pilot Baseline v0.1"
 type: validation-baseline
-status: pending_review
+status: locked
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
@@ -24,8 +24,8 @@ tags:
 ## Baseline status
 
 - Baseline version: **0.1**
-- Lifecycle state: **pending review**
-- Intended lock event: acceptance of the final PR head for issue #2
+- Lifecycle state: **locked**
+- Lock authorization: re-review of PR #20 at head `cbcd9cd26c9f669b9c8f4e7b2565a8a042924edd` found no remaining material blocker
 - Baseline date: **2026-07-27**
 - External repository: `Vazhi/canto-span`
 - Frozen commit: [`c9dd631739734a5ab886f0b667db9888b0add13b`](https://github.com/Vazhi/canto-span/commit/c9dd631739734a5ab886f0b667db9888b0add13b)
@@ -137,7 +137,7 @@ A result in one dimension must not be used as a direct answer for another dimens
 
 ## Locked reader questions
 
-The reader-question set is fixed for baseline version 0.1. The baseline lifecycle remains pending review until the complete material set is accepted.
+The reader-question set is locked for baseline version 0.1.
 
 1. What is the canonical name of the construction or governed object?
 2. Which label is only a legacy runtime, note, or compatibility label?
@@ -276,15 +276,14 @@ The following test-run findings are recorded in issue #11:
 - DEV-017 — mutable collaboration pages required immutable snapshot records;
 - DEV-018 — baseline lifecycle states were underspecified.
 
-DEV-013 was mitigated by including both rare populated records and reducing within-family redundancy. DEV-016 was mitigated through the reviewed issue amendment and an explicit proxy set. DEV-017 was mitigated through hashed snapshots. DEV-018 remains visible until this baseline changes from `pending_review` to `locked`.
+DEV-013 was mitigated by including both rare populated records and reducing within-family redundancy. DEV-016 was mitigated through the reviewed issue amendment and an explicit proxy set. DEV-017 was mitigated through hashed snapshots. DEV-018 was mitigated by defining and applying the `pending_review` to `locked` transition.
 
 These deviations must be included in authoring-cost and infrastructure-burden analysis. A platform limitation must not be misclassified as an SLE language-design failure.
 
 ## Change control
 
-- Baseline version 0.1 remains `pending_review` until the complete material set and final PR head are accepted.
-- The accepted pre-merge head must change the lifecycle state to `locked`.
-- A correction after lock but before paired rewriting requires a documented version increment.
+- Baseline version 0.1 is locked on the final pre-merge head after blocker-resolution re-review.
+- Any material change after this lock requires a documented version increment.
 - After rewriting begins, the selected materials and reader questions cannot change within the same study wave.
 - A source that disappears remains identified by its frozen commit path and recorded metadata.
 - A proxy can be replaced with an original artifact only through a baseline amendment before rewriting begins.
