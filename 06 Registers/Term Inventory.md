@@ -40,6 +40,6 @@ tags:
 
 See [[Terminology Control]] and use [[SLE Term Entry Template]] for full records.
 
-## Profile termbases
+## Non-normative test fixtures
 
-The first project-scoped extension is [[Canto-span Pilot Termbase v0.1]]. Its 46 entries narrow high-risk grammar-engineering meanings without changing the core inventory or claiming universal applicability.
+[[Canto-span Pilot Termbase v0.1]] contains 48 Canto-span-specific entries for stress-testing independently proposed SLE rules. It is not part of the normative SLE term inventory and cannot supply general SLE definitions without separate cross-domain justification.
