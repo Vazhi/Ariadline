@@ -53,6 +53,10 @@ tags:
 - [[Pilot Study Design]]
 - [[Quality Metrics and Acceptance Gates]]
 
+## Case studies
+
+- [[Canto-span Case Study]]
+
 ## Governance and delivery
 
 - [[Governance and Change Control]]
