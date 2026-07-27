@@ -98,3 +98,7 @@ Avoid circular definitions and undefined superordinate terms.
 ## Acceptance test
 
 A controlled term is successful when independent readers map its uses to the intended concept with high agreement. See [[Evaluation Framework]].
+
+## Active grammar-engineering pilot termbase
+
+The Canto-span test run uses [[Canto-span Pilot Termbase v0.1]]. It defines project-scoped meanings for identity, status, evidence, runtime, workflow, readiness, release, and authorization. The termbase does not impose those meanings outside its declared profile.
