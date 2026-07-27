@@ -16,7 +16,9 @@ tags:
 
 These outlines support the proposed patterns in [[SLE for Linguistics Document Patterns v0.1]].
 
-They are human-readable drafting aids. Authors may rename, combine, reorder, or omit headings when the required distinctions remain recoverable.
+They are human-readable drafting aids. Authors may rename, combine, reorder, or omit headings when the required information relationships and distinctions remain recoverable.
+
+The listed sequence is a recommended default. Reordering alone does not require a waiver.
 
 No outline requires YAML, repository metadata, software, or a project-specific workflow.
 
@@ -26,31 +28,19 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Phenomenon and scope
 
-(Name the form or category. Identify the language, variety, register, population, or dataset boundary.)
-
 ## Defining and diagnostic properties
-
-(State the criteria used to identify the phenomenon. Separate observations from analytical assumptions.)
 
 ## Form and distribution
 
-(Describe forms, positions, combinations, restrictions, and frequencies where relevant.)
-
 ## Meaning or function
 
-(State semantic, pragmatic, discourse, or interactional functions when supported.)
-
-## Examples
-
-(Provide stable identifiers, provenance, glosses, translations, and judgment information as applicable.)
+## Examples and provenance
 
 ## Variation and exceptions
 
-(State speaker, regional, social, register, diachronic, or contextual variation and uncertain cases.)
+## Relation to other descriptions or analyses
 
-## Relation to other analyses
-
-(Identify nearby categories, prior descriptions, and unresolved boundaries.)
+## Unresolved questions
 
 # SLE-PATTERN-0002 — Construction or phenomenon description
 
@@ -58,15 +48,13 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Observable configuration
 
-## Inclusion criteria
-
-## Exclusion criteria
+## Inclusion and exclusion criteria
 
 ## Core examples and contrasts
 
-## Evidence for frequency, productivity, acceptability, or variation
+## Evidence for stronger properties
 
-(Omit a category that is not claimed. Attestation alone does not establish these stronger properties.)
+(Omit frequency, productivity, acceptability, or grammatical-status claims that are not made.)
 
 ## Proposed interpretation
 
@@ -78,9 +66,7 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Analytical question
 
-## Framework and assumptions
-
-(Define notation and theory-specific terms or link to controlling definitions.)
+## Framework, assumptions, and notation
 
 ## Empirical target and scope
 
@@ -101,8 +87,6 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 ## Research question and scope
 
 ## Corpus identity and composition
-
-(Name the corpus, release or access state, relevant subcorpus, genres, time periods, and populations.)
 
 ## Query and sampling method
 
@@ -128,11 +112,7 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Participants or consultants
 
-(Include only details relevant to interpretation and permitted by ethics and consent.)
-
-## Task, stimuli, and context
-
-## Response system
+## Task, stimuli, context, and response system
 
 ## Exclusions and quality controls
 
@@ -174,13 +154,9 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Purpose and scope
 
-## Unit of annotation
+## Unit of annotation and prerequisites
 
-## Prerequisites
-
-## Label definitions
-
-## Decision boundaries
+## Label definitions and decision boundaries
 
 ## Decision procedure
 
@@ -234,9 +210,7 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Baselines and comparison conditions
 
-## Evaluation measures
-
-## Direct results
+## Evaluation measures and direct results
 
 ## Error analysis
 
@@ -244,7 +218,7 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Linguistic-claim boundary
 
-(State explicitly what the system result does and does not establish about language or speakers.)
+(State what the system result does and does not establish about language or speakers.)
 
 # SLE-PATTERN-0010 — Language-resource documentation
 
@@ -254,9 +228,7 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Sources, consent, rights, and access
 
-## Content and structure
-
-## Formats and stable identifiers
+## Content, structure, formats, and identifiers
 
 ## Annotation and transformation history
 
@@ -272,9 +244,7 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Purpose and applicability
 
-## Prerequisites and materials
-
-## Roles and responsibilities
+## Prerequisites, materials, roles, and responsibilities
 
 ## Definitions and normative verbal forms
 
@@ -344,7 +314,7 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 ## Compatibility effect
 
-(State whether prior documents remain conformant.)
+(State whether prior documents retain the same conformance result under the new edition.)
 
 ## Migration or reader action
 
@@ -352,11 +322,31 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 # Optional conformance declaration
 
-A declaration can use ordinary prose.
+Use the result and review terminology in [[Profiles and Conformance]]. Resolve profile names through [[SLE Profile Applicability Register v0.1]].
 
-> This [document or section] was [prepared/reviewed/evaluated] against SLE for Linguistics [version] using [pattern IDs]. The review covered [scope]. The following material waivers or extensions apply: [list or none]. The review date was [date].
+> This [document or section] [conforms / conforms with declared waivers / does not conform / has a result not determined] against SLE for Linguistics [version]. The conformance object is [scope]. The review used [profile-set version and profiles, or exact rule IDs] and [pattern IDs]. Review method: [author self-review / independent editorial review / other defined method]. The applicable-rule record is [location]. Material waivers or extensions: [list or none]. Review date: [date].
 
 Do not use this statement to imply that SLE verified the linguistic analysis, research method, ethical adequacy, or truth of the conclusions.
+
+# Typed evaluation record
+
+## Evaluation type
+
+(Reader comprehension, author meaning preservation, translation or localization, accessibility, domain expert, theory neutrality, method neutrality, genre combination, or authoring burden.)
+
+## Exact evaluated scope or sample
+
+## Method and task
+
+## Participant or evaluator role
+
+## Date
+
+## Findings and limitations
+
+## Proposed change or follow-up
+
+An evaluation of a sample does not apply automatically to the full document.
 
 # Material waiver record
 
@@ -374,9 +364,27 @@ Do not use this statement to imply that SLE verified the linguistic analysis, re
 
 ## Approval
 
-(Only when the applicable profile or publisher requires it.)
+(Only when the applicable extension or publisher requires it.)
 
 ## Review or expiry condition
+
+# Profile applicability record
+
+Use the controlling profile-set version and record every included conditional rule.
+
+## SLE version
+
+## Profile-set version
+
+## Selected profiles
+
+## Conditional rules applied
+
+## Conditional rules not applicable
+
+## Added local rules from extensions
+
+## Applicable waived rules
 
 # Pattern-selection note
 
