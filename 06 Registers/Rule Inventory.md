@@ -11,30 +11,46 @@ tags:
 ---
 # Rule Inventory
 
-| ID | Short name | Class | Profile | Status | Checker status | Source note |
+The inventory tracks proposed normative rules for the human-readable SLE for Linguistics reference specification.
+
+Verification refers to editorial or study procedures. It does not imply that software is required.
+
+| ID | Short name | Class | Applicability | Status | Primary verification | Source note |
 |---|---|---|---|---|---|---|
-| SLE-RULE-0001 | One principal claim | syntactic | Core | proposed | warning | [[Grammar and Style Rule Plan]] |
-| SLE-RULE-0002 | Clear antecedent | referential | Core | proposed | partial | [[Ambiguity and Referential Clarity]] |
-| SLE-RULE-0003 | Explicit claim scope | epistemic | Core | proposed | partial | [[Design Principles]] |
-| SLE-RULE-0004 | Stable preferred term | lexical | Core | proposed | checkable | [[Terminology Control]] |
-| SLE-RULE-0005 | Define ambiguous technical terms | lexical | Core | proposed | partial | [[Terminology Control]] |
-| SLE-RULE-0006 | Explicit comparison set | referential | Core | proposed | warning | [[Ambiguity and Referential Clarity]] |
-| SLE-RULE-0007 | Clear negation scope | syntactic | Core | proposed | warning | [[Grammar and Style Rule Plan]] |
-| SLE-RULE-0008 | Normative modal meanings | normative | Procedure | proposed | checkable | [[Normative Language]] |
-| SLE-RULE-0009 | Separate attestation and productivity | epistemic | Research | proposed | partial | [[Claim-Evidence Matrix]] |
-| SLE-RULE-0010 | Identify judgment method | data-presentational | Research | proposed | partial | [[Claim-Evidence Matrix]] |
-| SLE-RULE-0011 | Identify constructed examples | data-presentational | Research | proposed | checkable | [[Linguistic Examples and Glossing]] |
-| SLE-RULE-0012 | Define judgment symbols | data-presentational | Research | proposed | checkable | [[Linguistic Examples and Glossing]] |
-| SLE-RULE-0013 | Stable example identifiers | data-presentational | Data | proposed | checkable | [[Linguistic Examples and Glossing]] |
-| SLE-RULE-0014 | State dataset and version | data-presentational | Data | proposed | partial | [[Corpus and Annotation Interoperability]] |
-| SLE-RULE-0015 | Separate system output from language claim | epistemic | Research | proposed | partial | [[Claim-Evidence Matrix]] |
-| SLE-RULE-0016 | Conditions before actions | document-structural | Procedure | proposed | partial | [[Grammar and Style Rule Plan]] |
-| SLE-RULE-0017 | One action per instruction | document-structural | Procedure | proposed | warning | [[Profiles and Conformance]] |
-| SLE-RULE-0018 | Declare conformance basis | document-structural | All | proposed | checkable | [[Profiles and Conformance]] |
+| SLE-RULE-0001 | One principal message | sentence | all prose | proposed | reader interpretation | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0002 | Clear reference | referential | all prose | proposed | antecedent review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0003 | Scope of generalization | epistemic | research claims | proposed | scope identification | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0004 | Stable preferred term | terminology | all documents | proposed | terminology audit | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0005 | Defined technical term | terminology | claim-critical terms | proposed | definition application | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0006 | Explicit comparison | referential | comparative claims | proposed | comparison reconstruction | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0007 | Clear logical scope | sentence | negation and quantification | proposed | paraphrase test | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0008 | Consistent normative verbs | normative | procedures and conformance | proposed | modal-function review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0009 | Attestation is not productivity | epistemic | corpus and example claims | proposed | inference review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0010 | Judgment method | method reporting | judgments | proposed | method completeness | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0011 | Example provenance | data presentation | linguistic examples | proposed | provenance review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0012 | Defined judgment notation | data presentation | judgment symbols and labels | proposed | notation-definition review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0013 | Stable example identifier | cross-reference | repeated examples and objects | proposed | reference stability | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0014 | Dataset and transformation identity | method reporting | data-based claims | proposed | reproducibility review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0015 | System behavior is not a language fact | epistemic | tool-assisted work | proposed | claim-source review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0016 | Condition before action | procedure | instructions | proposed | action-order test | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0017 | One action per instruction | procedure | instructions | proposed | step-independence test | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0018 | Conformance does not certify truth | conformance | conformance statements | proposed | boundary review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0019 | Observation separate from interpretation | epistemic | research claims | proposed | claim decomposition | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0020 | Evidence verb matches force | epistemic | evidence statements | proposed | alternative-explanation test | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0021 | Bounded negative claim | epistemic | absence and null-result claims | proposed | sensitivity review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0022 | Limitations and counterevidence | epistemic | central claims | proposed | overgeneralization review | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0023 | Claim-support connection | document structure | central claims | proposed | evidence mapping | [[SLE for Linguistics Language Rules v0.1]] |
+| SLE-RULE-0024 | Interlinear glossing declaration | data presentation | interlinear glosses | proposed | convention review | [[SLE for Linguistics Language Rules v0.1]] |
 
-## Checker-status meanings
+## Status meanings
 
-- **checkable:** deterministic or near-deterministic automated check;
-- **partial:** software can identify candidates, but a human decides;
-- **warning:** heuristic detection only;
-- **human:** no reliable automated method is currently planned.
+- **proposed:** drafted for evaluation; not yet stable;
+- **revised:** changed after evidence or user testing;
+- **stable:** accepted into a published specification version;
+- **retired:** retained for history but no longer normative.
+
+## Verification policy
+
+A rule must be evaluated through appropriate human procedures, including reader interpretation, author meaning-preservation review, editorial consistency review, and cross-domain expert review.
+
+Optional tools may assist an editor, but tool feasibility is not an adoption criterion and tool availability is not required for conformance.
