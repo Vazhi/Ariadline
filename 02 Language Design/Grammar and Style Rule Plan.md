@@ -1,7 +1,7 @@
 ---
 title: "Grammar and Style Rule Plan"
 type: design-plan
-status: draft
+status: revised
 created: 2026-07-27
 updated: 2026-07-27
 tags:
@@ -12,84 +12,107 @@ tags:
 ---
 # Grammar and Style Rule Plan
 
+## Current normative draft
+
+The first independent rule tranche is in [[SLE for Linguistics Language Rules v0.1]].
+
+The draft is prose-first and written for a future human reference artifact. It does not require software, machine-readable headers, or Canto-span practices.
+
 ## Rule-development policy
 
-Sentence-length and grammar restrictions are hypotheses until user testing supports them. The pilot can use provisional limits, but the final standard must not copy a limit from another domain without evidence.
+A grammar or style restriction remains a hypothesis until:
 
-## Candidate core rules
+1. independent sources identify the communication problem;
+2. the rule has cross-domain linguistic relevance;
+3. reader testing shows improved interpretation or consistency;
+4. author testing shows that intended meaning is preserved;
+5. theoretical and methodological review finds no unjustified bias.
 
-### G-01 — State one principal claim per sentence
+The final standard must not copy a rule or numeric limit from another domain without evidence that it works for linguistic writing.
 
-A sentence can contain necessary conditions or qualifications, but it must have one identifiable main assertion.
+## Candidate controls retained in v0.1
+
+### One principal message
+
+Each sentence has one identifiable principal assertion, question, or instruction.
+
+### Clear reference
+
+A referring expression identifies one intended antecedent.
+
+### Conditions before actions
+
+A reader encounters the applicability condition before the procedural action.
+
+### Stable technical terms
+
+A document uses one preferred term for one controlled concept.
+
+### Explicit comparisons
+
+A comparative claim identifies the compared items, dimension, and measure or basis.
+
+### Clear logical scope
+
+Negation, quantification, restriction, and exception have an unambiguous scope.
+
+### Central claims in finite prose
+
+Authors should prefer finite clauses when dense nominalization hides an actor, method, evidence relation, or degree of certainty.
+
+This preference is guidance, not a universal prohibition on nominalization.
+
+## Controls not adopted as universal rules
+
+### Fixed sentence-length limit
+
+SLE v0.1 does not define a maximum sentence length.
+
+Sentence length can be an editorial review signal, but a long sentence is not nonconforming only because of its word count. A short sentence can still be ambiguous or overloaded.
+
+### Mandatory active voice
+
+SLE v0.1 does not require active voice in all contexts.
+
+Active voice is useful when the actor matters. Passive voice is permitted when the actor is unknown, irrelevant, intentionally backgrounded, or already established.
+
+### Universal nominalization ban
+
+Nominalizations are permitted when they express an established concept clearly. Rewrite only when the nominalization hides a relation needed for interpretation.
+
+### Mandatory visible claim labels
+
+Visible labels can support drafting or teaching, but they are not required for basic conformance. See [[Claim Function Decision Register v0.1]].
+
+## Candidate editing example
 
 **Uncontrolled**
 
 > Although the construction occurs in the corpus, it is infrequent and may be restricted to older speakers, which shows that it is not productive.
 
-**Candidate SLE**
+**Controlled draft**
 
 > The construction occurs in the corpus.  
 > It is infrequent in this dataset.  
 > The current data suggest a possible age restriction.  
 > The data do not establish that the construction is unproductive.
 
-### G-02 — Give each pronoun a clear antecedent
-
-Do not use *it*, *this*, *that*, *they*, or *which* when more than one antecedent is plausible. See [[Ambiguity and Referential Clarity]].
-
-### G-03 — Put conditions before instructions or annotation actions
-
-> If the token is a clitic, apply Rule M-12.
-
-### G-04 — Use active voice when the agent is important
-
-> Two annotators reviewed each token.
-
-Passive voice remains permitted when the agent is unknown, irrelevant, or intentionally backgrounded.
-
-### G-05 — Avoid hidden coordination
-
-Do not use one verb to make different claims about coordinated objects when the relationship is unclear.
-
-### G-06 — Repeat a technical noun when repetition prevents ambiguity
-
-Do not replace a controlled term with a loose synonym only for stylistic variety.
-
-### G-07 — Mark comparison sets
-
-State what two forms, populations, datasets, or analyses are compared.
-
-### G-08 — Make negation scope clear
-
-Prefer separate sentences when *not*, *only*, or *unless* can have more than one scope.
-
-### G-09 — Avoid noun stacks that conceal relations
-
-Replace a long noun sequence with explicit prepositional or clausal relations.
-
-### G-10 — Use finite clauses for central claims
-
-Dense nominalizations can hide the agent, evidence, or degree of certainty.
-
-## Sentence-length pilot
-
-Test, rather than assume, the following provisional thresholds:
-
-- procedures and annotation instructions: target 20 words;
-- descriptive prose: target 25 words;
-- definitions: target 30 words when necessary.
-
-A sentence over the target is not automatically nonconforming. The checker should request review when the sentence also contains multiple clauses, unclear reference, or more than one claim.
+The revision separates attestation, frequency, a possible population restriction, and a productivity inference.
 
 ## Rule evidence
 
 Each rule proposal must include:
 
 - documented failure cases;
-- expected benefit;
+- independent cross-domain justification;
+- expected reader benefit;
 - known costs;
-- exceptions;
-- human evaluation;
-- checker feasibility.
+- exceptions and boundary cases;
+- precision and neutrality risks;
+- reader interpretation evidence;
+- author meaning-preservation evidence;
+- cross-domain expert review.
 
-Use [[SLE Rule Proposal Template]].
+Optional tool support can be recorded, but tool feasibility is not an adoption criterion.
+
+Use [[SLE Rule Proposal Template]] and record adopted rule IDs in [[Rule Inventory]].
