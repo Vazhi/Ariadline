@@ -1,0 +1,15 @@
+schema	sle-ge-canto-span-termbase-manifest-v0.1
+version	0.1
+status	proposed
+entry_count	46
+external_repository	Vazhi/canto-span
+external_commit	c9dd631739734a5ab886f0b667db9888b0add13b
+external_baseline_date	2026-07-27
+field_schema	entry_id | concept_id | preferred_term | definition | scope | allowed_variants | excluded_interpretations | example | source_or_canonical_owner | frozen_reference | change_status
+part_id	markdown_path	tsv_path	entry_count	entry_ids	sha256
+identity-governance	06 Registers/Canto-span Termbase — Identity and Governance.md	06 Registers/Canto-span Termbase — Identity and Governance.tsv	11	CS-TERM-0001..0010; CS-TERM-0023	07f885d34305f44cb7a926cd5f0be8c8351031b72fb38cfa2e600b9f93529bc7
+status-evidence	06 Registers/Canto-span Termbase — Status and Evidence.md	06 Registers/Canto-span Termbase — Status and Evidence.tsv	14	CS-TERM-0011..0022; CS-TERM-0024..0025	0163729a31294023af468f12151a0c4002b5c5c1c70783a93779a8cb84abfc17
+corpus-panel	06 Registers/Canto-span Termbase — Corpus and Panel.md	06 Registers/Canto-span Termbase — Corpus and Panel.tsv	8	CS-TERM-0026..0033	a91f85e158b35dacd2f9086d7e82833a9e31c7edaedce4f7ac40ef4816efd816
+runtime-verification	06 Registers/Canto-span Termbase — Runtime and Verification.md	06 Registers/Canto-span Termbase — Runtime and Verification.tsv	4	CS-TERM-0034..0037	9f5d5980793fa5c7252585423204b98ab9c3d2588992b9ab0696a0dae337e65e
+workflow-authorization	06 Registers/Canto-span Termbase — Workflow and Authorization.md	06 Registers/Canto-span Termbase — Workflow and Authorization.tsv	6	CS-TERM-0038..0043	fd80a651ad9665c79a9a6f7326e653d8799ea41b83bc4fb67f5299549d1dc259
+provenance-release	06 Registers/Canto-span Termbase — Provenance and Release.md	06 Registers/Canto-span Termbase — Provenance and Release.tsv	3	CS-TERM-0044..0046	e35bd49289a36b582beb3a44b73f6cd9792929a5bb35b1b93383768923cc7387
