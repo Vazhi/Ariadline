@@ -1,7 +1,7 @@
 ---
 title: "Pilot Specification Outline"
 type: implementation-plan
-status: draft
+status: revised
 created: 2026-07-27
 updated: 2026-07-27
 tags:
@@ -11,91 +11,134 @@ tags:
 ---
 # Pilot Specification Outline
 
-## SLE v0.1 contents
+## Purpose
 
-The first pilot should be small enough to evaluate and large enough to produce meaningful text.
+The pilot assembles an auditable proposed reference artifact for human evaluation. It is not a software implementation and it is not a stabilized standard.
+
+## Proposed v0.1 contents
 
 ### Part 1 — Introduction
 
-- purpose;
-- users;
-- scope;
-- conformance declaration;
-- definitions.
+- purpose and users;
+- scope and non-goals;
+- authority and neutrality boundaries;
+- normative verbal-form declaration;
+- definitions;
+- relationship between rules, patterns, profiles, and extensions.
 
-### Part 2 — Core writing rules
+### Part 2 — Language rules
 
-Target: 15–20 candidate rules.
+Use the proposed rules in [[SLE for Linguistics Language Rules v0.1]].
 
-Priority areas:
+Each rule must include:
 
-- one principal claim per sentence;
-- explicit scope;
-- clear antecedents;
-- explicit comparison sets;
-- controlled negation;
-- direct definitions;
-- stable terminology.
+- stable ID;
+- normative or recommended text;
+- scope and non-scope;
+- rationale;
+- compliant and noncompliant examples;
+- exceptions or boundaries;
+- human editorial check;
+- exact evidence reference;
+- status and unresolved evaluation needs.
 
-### Part 3 — Evidence and claim rules
+### Part 3 — Document patterns
 
-Target: 8–12 rules.
+Use [[SLE for Linguistics Document Patterns v0.1]] and [[SLE Document Pattern Outlines v0.1]].
 
-Priority areas:
+The pattern catalogue must cover multiple linguistic purposes without requiring one section schema. It must include:
 
-- observation versus analysis;
-- attestation versus productivity;
-- judgment reporting;
-- negative evidence;
-- software behavior;
-- limitations;
-- evidence verbs.
+- expected information order;
+- required distinctions;
+- example, glossing, citation, uncertainty, and limitation practices where applicable;
+- permitted omissions;
+- minimum editorial checks;
+- optional conformance declarations;
+- waiver and extension guidance.
 
-### Part 4 — Linguistic examples
+### Part 4 — Terminology
 
-Target: 8–10 rules.
+Publish only terminology required to interpret the reference artifact consistently.
 
-Priority areas:
+The core term list must remain independent of Canto-span. Project-specific termbases may appear as non-normative test or adoption material.
 
-- identifiers;
-- language and variety;
-- source status;
-- constructed examples;
-- judgment symbols;
-- gloss abbreviations;
-- adaptations.
+### Part 5 — Conformance
 
-### Part 5 — Controlled termbase
+Define:
 
-Target: 75–125 entries.
+- conformance object;
+- optional SLE-Core, SLE-Research, SLE-Resource, and SLE-Procedure profiles;
+- SLE-Prepared, SLE-Reviewed, and SLE-Evaluated states;
+- human editorial checklist;
+- optional prose declarations;
+- waiver and extension records;
+- conformance-versus-truth boundary.
 
-The first entries should focus on high-confusion terms and evidence phrases, not broad lexical coverage.
+Software checks are optional aids and do not create a superior conformance state.
 
-### Part 6 — Conformance
+### Part 6 — Governance and versioning
 
-- SLE-Core profile;
-- SLE-Research profile;
-- manual checklist;
-- checker-supported subset;
-- waiver process.
+Define:
+
+- rule and pattern states;
+- stable identifiers;
+- change control;
+- generalization gates;
+- version compatibility;
+- translation and localized-edition policy;
+- public change and migration records.
 
 ### Annexes
 
-- compliant examples;
-- noncompliant examples;
+Possible informative annexes:
+
+- compliant and noncompliant examples;
 - boundary cases;
-- termbase;
-- change-request form;
-- test corpus.
+- reusable outlines;
+- evidence and coverage registers;
+- human review forms;
+- evaluation materials;
+- translation notes;
+- optional project-documentation patterns.
 
-## Minimum corpus for the pilot
+Annexes must state whether they are normative or informative.
 
-- 100 original linguistic passages;
-- 100 controlled rewrites;
-- 50 annotation instructions;
-- 50 example blocks;
-- 50 deliberate boundary or failure cases.
+## Evaluation corpus
 
-## Exit condition
+The pilot evaluation set should contain representative passages from:
 
-Publish v0.1 only after every rule has a rationale, examples, tests, and an assigned status in [[Rule Inventory]].
+- descriptive grammar;
+- theoretical analysis;
+- corpus research;
+- elicitation and experimental judgment work;
+- fieldwork and language documentation;
+- sociolinguistics and discourse or conversation analysis;
+- phonetics and laboratory phonology;
+- lexicography;
+- annotation guidelines;
+- computational linguistics;
+- language-resource documentation;
+- signed-language research;
+- academic traditions and author communities beyond English-dominant publishing.
+
+The evaluation set should include original passages, controlled revisions, boundary cases, justified omissions, and rejected rewrites that lose necessary meaning.
+
+Canto-span may supply a small non-authoritative subset after independent rules and patterns exist.
+
+## Exit condition for a proposed pilot edition
+
+A proposed pilot edition can be published for evaluation when:
+
+1. every included rule and pattern has a stable ID and proposed status;
+2. each normative item states its scope, boundaries, and editorial check;
+3. evidence and unsupported specificity are distinguishable;
+4. all required internal links resolve;
+5. the human-readable edition is complete without software or machine-readable metadata;
+6. known domain, theory, method, language, and translation gaps are recorded;
+7. the edition clearly states that it is not stabilized.
+
+## Stabilization boundary
+
+No rule, pattern, profile, conformance state, or term becomes stable merely because it appears in the pilot.
+
+Stabilization requires the evidence, reader benefit, author meaning preservation, authoring-burden, neutrality, translation, and compatibility gates defined by governance and validation records.
