@@ -142,3 +142,16 @@ A constructed pair can test a procedure. It cannot establish that a rule improve
 Revise, limit, make optional, move, or remove a rule or pattern when evaluation shows material meaning loss, unacceptable burden, unjustified theory or language bias, unstable review decisions, or false certification risk.
 
 No-change and insufficient-evidence decisions are valid outcomes.
+
+## Issue #9 operational package
+
+The human study is controlled by:
+
+- [[Multi-Domain Reader and Author Evaluation Protocol v0.1]];
+- [[Evaluation Material and Task Register v0.1]];
+- [[Participant Sampling and Recruitment Plan v0.1]];
+- [[Evaluation Data Dictionary and Privacy Plan v0.1]];
+- [[Preregistered Analysis and Decision Plan v0.1]];
+- [[Evaluation Execution Status v0.1]].
+
+These records prepare execution but do not create participant results. The current valid project recommendation remains `not determined — study not executed`.
