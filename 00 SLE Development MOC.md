@@ -3,7 +3,7 @@ title: "SLE Development MOC"
 type: moc
 status: draft
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-07-28
 aliases:
   - "SLE MOC"
   - "Simplified Linguistic English MOC"
@@ -56,6 +56,11 @@ tags:
 - [[Quality Metrics and Acceptance Gates]]
 - [[Independent SLE Rule Evidence Register v0.1]]
 - [[Document Pattern Coverage Register v0.1]]
+- [[Multi-Domain SLE Evaluation Corpus v0.1]]
+- [[Evaluation Corpus Coverage Matrix v0.1]]
+- [[Semantic Equivalence Review Record v0.1]]
+- [[SLE Evaluation Corpus Bias Assessment v0.1]]
+- [[Canto-span Evaluation Subset v0.1]]
 - [[SLE-GE Canto-span Pilot Baseline v0.1]]
 
 ## Case studies
@@ -86,6 +91,7 @@ tags:
 - [[SLE Change Request Template]]
 - [[SLE Document Pattern Outlines v0.1]]
 - [[SLE Document Pattern Example Bank v0.1]]
+- [[SLE Semantic Equivalence Review Template v0.1]]
 
 ## Reference
 
@@ -100,10 +106,11 @@ tags:
 4. Build the first [[Controlled Vocabulary Plan|term list]] and [[Grammar and Style Rule Plan|rule set]].
 5. Define [[Claim-Evidence Matrix|evidence language]] and [[Linguistic Examples and Glossing|example conventions]].
 6. Define [[SLE for Linguistics Document Patterns v0.1|document patterns and conformance guidance]].
-7. Publish an internal [[Pilot Specification Outline|v0.1 pilot]].
-8. Run [[Pilot Study Design|controlled evaluations]].
-9. Apply the [[Quality Metrics and Acceptance Gates|acceptance gates]].
-10. Release through [[Governance and Change Control|governed change control]].
+7. Build [[Multi-Domain SLE Evaluation Corpus v0.1|the multi-domain evaluation corpus]].
+8. Publish an internal [[Pilot Specification Outline|v0.1 pilot]].
+9. Run [[Pilot Study Design|controlled evaluations]].
+10. Apply the [[Quality Metrics and Acceptance Gates|acceptance gates]].
+11. Release through [[Governance and Change Control|governed change control]].
 
 ## Key concepts
 

@@ -1,9 +1,9 @@
 ---
 title: "Evaluation Framework"
 type: validation
-status: draft
+status: revised
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-07-28
 tags:
   - sle
   - validation
@@ -15,87 +15,143 @@ tags:
 
 Does SLE improve understanding and consistency while preserving the intended linguistic content?
 
+The first controlled materials are in [[Multi-Domain SLE Evaluation Corpus v0.1]]. The corpus is constructed test material and cannot answer the central question without human evaluation.
+
 ## Evaluation dimensions
 
 ### Comprehension
 
 Measure whether readers identify:
 
-- the main claim;
-- the evidence type;
+- the principal claim or instruction;
+- the evidence or method relation;
 - the scope;
 - the level of certainty;
 - the relevant limitation;
-- the antecedent of references.
+- the antecedent of references;
+- the difference between observation, interpretation, hypothesis, and conclusion.
+
+### Author meaning preservation
+
+The source author or an authorized proxy compares the uncontrolled and controlled versions for:
+
+- polarity;
+- quantification;
+- scope and population;
+- temporal and version reference;
+- evidential force;
+- certainty and modality;
+- causal or correlational relation;
+- theoretical commitment;
+- method and task identity;
+- example or data status;
+- limitations, exceptions, and access boundaries;
+- normative force in procedures.
+
+Initial item-level results are recorded in [[Semantic Equivalence Review Record v0.1]].
 
 ### Authoring performance
 
 Measure:
 
 - time to write or revise;
-- number of rule violations;
-- number of unintended meaning changes;
+- number and severity of unintended meaning changes;
 - perceived difficulty;
-- need for specialist support.
+- need for specialist support;
+- cohesion and naturalness;
+- repetition or fragmentation introduced by rule application;
+- ability to record justified non-applicability, waiver, or disagreement.
 
 ### Review and adjudication
 
 Measure:
 
-- reviewer agreement;
+- reviewer agreement on applicable rule IDs;
+- agreement on conformance result;
 - terminology conflicts;
 - unresolved references;
-- evidence-class disagreements;
-- time to approve a passage.
+- evidence-relation disagreements;
+- semantic-equivalence disagreements;
+- time to complete review;
+- frequency of `not determined` outcomes.
 
-### Machine assistance
+### Translation and multilingual evaluation
 
-Measure:
+Measure separately:
 
-- precision and recall for each checker rule;
-- false-positive burden;
-- missed high-severity ambiguities;
-- consistency across editor integrations.
+- preservation of normative function;
+- preservation of linguistic terminology and category boundaries;
+- natural rhetorical order;
+- translator and domain-expert agreement;
+- whether an English-specific control creates distortion or burden.
 
-### Content preservation
+A translated passage must identify exact scope and direction. Review of a translation must not be generalized to a language or scholarly tradition.
 
-Expert reviewers compare the uncontrolled and SLE versions for:
+### Accessibility and reader diversity
 
-- polarity;
-- quantification;
-- scope;
-- evidential force;
-- theoretical commitment;
-- example status.
+Include readers with different:
+
+- linguistic subfields;
+- experience levels;
+- primary scholarly languages;
+- familiarity with controlled language;
+- access needs;
+- relationships to the documented language or community.
+
+### Optional tool assistance
+
+A tool may assist counting, terminology search, cross-reference checking, or rule review.
+
+Tool performance is an implementation measure, not a condition for SLE completeness or human conformance. A tool result does not replace semantic-equivalence or reader testing.
 
 ## Comparison design
 
-Use paired or randomized comparisons between:
+Use paired or randomized comparisons among:
 
-- original prose;
-- expert-edited plain prose;
-- SLE-controlled prose.
+1. uncontrolled prose;
+2. expert-edited plain prose;
+3. proposed SLE-controlled prose.
 
-This separation tests whether benefits come from SLE controls rather than editing quality alone.
+This separation tests whether any benefit comes from SLE controls rather than ordinary editing quality alone.
 
-## User groups
+For each item, randomization must not hide:
 
-Include:
+- source authority;
+- fictional or authentic status;
+- permission and access restrictions;
+- relevant language, method, or theory context.
 
-- experienced linguists;
-- graduate students;
-- linguists who use English as an additional language;
-- corpus or annotation workers;
-- technical readers outside the subfield.
+## Corpus coverage policy
+
+Coverage and imbalance are recorded in [[Evaluation Corpus Coverage Matrix v0.1]]. Bias and representativeness limits are recorded in [[SLE Evaluation Corpus Bias Assessment v0.1]].
+
+The corpus must not support a broad effectiveness claim when:
+
+- one project, institution, language, theory, or method dominates;
+- authentic author meaning has not been confirmed;
+- non-English-original and translated material is absent;
+- only successful rewrites are retained;
+- short passages are generalized to full documents.
+
+## Canto-span boundary
+
+[[Canto-span Evaluation Subset v0.1]] is one non-authoritative stress-test subset. Its findings can identify adoption problems or candidate general issues. They cannot define SLE or satisfy independent coverage requirements.
 
 ## Evidence policy
 
-Automated readability formulas can supplement the evaluation. They cannot establish comprehension or scientific accuracy.
+Automated readability formulas, length counts, and reviewer checklists can supplement the evaluation. They cannot establish comprehension, semantic equivalence, scientific accuracy, community acceptability, or theoretical neutrality.
+
+A constructed pair can test an evaluation procedure. It cannot establish that a rule improves authentic writing.
 
 ## Iteration rule
 
-A rule that does not improve a target metric, or that causes unacceptable precision loss, must be revised, limited to a profile, or removed.
+A rule or pattern must be revised, limited, made optional, moved to an extension, or removed when evaluation shows that it:
 
-## Active grammar-engineering baseline
+- does not improve the stated communication outcome;
+- causes material meaning loss;
+- creates unacceptable authoring burden;
+- privileges one theory, method, language, or rhetorical tradition without justification;
+- produces unstable reviewer decisions;
+- encourages false conformance or scientific-certification claims.
 
-The first grammar-engineering test run uses [[SLE-GE Canto-span Pilot Baseline v0.1]]. That note freezes the external source materials, reader questions, semantic-equivalence safeguards, measures, and decision outcomes before paired rewriting begins.
+No-change is also a valid decision when the evidence is insufficient.

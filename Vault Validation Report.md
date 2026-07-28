@@ -3,17 +3,16 @@ title: "Vault Validation Report"
 type: report
 status: complete
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-07-28
 tags:
   - sle
   - validation
   - vault
 ---
-
 # Vault Validation Report
 
-- Markdown notes: 62
-- Wikilinks checked: 346
+- Markdown notes: 68
+- Wikilinks checked: 388
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -23,108 +22,111 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the issue #5 branch after the addition of proposed SLE for Linguistics document patterns, reusable outlines, a cross-domain example bank, coverage review, an auditable profile register, and human-first conformance and versioning guidance.
+This report describes the issue #6 branch after the addition of a versioned multi-domain SLE evaluation corpus, coverage matrix, semantic-equivalence records, bias assessment, and bounded Canto-span subset.
 
 The branch adds:
+
+- [[Multi-Domain SLE Evaluation Corpus v0.1]];
+- [[Evaluation Corpus Coverage Matrix v0.1]];
+- [[Semantic Equivalence Review Record v0.1]];
+- [[SLE Evaluation Corpus Bias Assessment v0.1]];
+- [[Canto-span Evaluation Subset v0.1]];
+- [[SLE Semantic Equivalence Review Template v0.1]].
+
+It revises [[Evaluation Framework]] and [[Pilot Study Design]] for multi-domain, multilingual, author-preservation, and full-document evaluation.
+
+The previously merged reference artifacts remain linked and unchanged in authority:
 
 - [[SLE for Linguistics Document Patterns v0.1]];
 - [[SLE Document Pattern Outlines v0.1]];
 - [[SLE Document Pattern Example Bank v0.1]];
 - [[Document Pattern Coverage Register v0.1]];
-- [[SLE Profile Applicability Register v0.1]].
-
-It also revises [[Profiles and Conformance]], [[Pilot Specification Outline]], [[Governance and Change Control]], [[Versioning and Release Model]], and the map of content.
+- [[SLE Profile Applicability Register v0.1]];
+- [[Profiles and Conformance]];
+- [[Pilot Specification Outline]];
+- [[Governance and Change Control]];
+- [[Versioning and Release Model]].
 
 ## Count method
 
-Merged `main` contained 57 Markdown notes and 311 wikilinks.
+Merged `main` contained 62 Markdown notes and 346 wikilinks.
 
-The original issue #5 branch added four notes and reached 61 notes and 328 wikilinks.
+This branch:
 
-The blocker repair:
+- adds 6 uniquely named Markdown notes containing 19 wikilinks;
+- adds 7 wikilinks to the map of content;
+- replaces one prior evaluation-framework link with 5 corpus links, for a net increase of 4;
+- replaces one prior pilot-study link with 5 corpus links, for a net increase of 4;
+- adds 8 net links to this validation report.
 
-- adds one profile-applicability note containing two wikilinks;
-- adds a net sixteen wikilinks across the map, pattern chapter, profiles, pilot outline, coverage register, governance, versioning, outlines, and this validation report.
+The resulting totals are 68 Markdown notes and 388 wikilinks.
 
-The resulting totals are 62 Markdown notes and 346 wikilinks.
+Ordinary Markdown web links and plain rule, pattern, profile, corpus, and item IDs are not included in the wikilink total.
 
-Ordinary Markdown web links are not included in the wikilink total.
+## Corpus identity validation
 
-## Review-blocker validation
+- Corpus ID: `SLE-EVAL-CORPUS-0.1`.
+- Independent item IDs: `SLE-EVAL-0001` through `SLE-EVAL-0016`.
+- Canto-span item IDs: `SLE-EVAL-CS-0001` and `SLE-EVAL-CS-0002`.
+- Total paired items: 18.
+- Independent items: 16.
+- Canto-span items: 2, or 11.1%.
+- Duplicate evaluation item IDs: 0.
+- Every item identifies provenance, domain, method, framework, language context, genre, pattern, rule IDs, uncontrolled passage, controlled alternative, structural change, equivalence result, and risk.
 
-### Information order
+## Source and authority validation
 
-- Pattern sequences are recommended defaults.
-- Conformance depends on recoverable information relationships and required distinctions.
-- Alternative field-, language-, publisher-, or tradition-specific order remains conforming.
-- Reordering alone does not require a waiver.
+- All 16 independent items are explicitly labelled project-constructed fictional evaluation material.
+- Named languages and theories are contexts, not evidence.
+- The corpus supplies test material rather than normative justification.
+- No item may be cited as a fact about a named language, community, theory, dataset, or method.
+- Canto-span is stored under a separate namespace and file.
+- Canto-span cannot satisfy an independent coverage requirement or define SLE.
+- No machine-readable representation is required.
 
-### Conformance semantics
+## Coverage validation
 
-The model separates:
+The independent corpus includes contexts involving descriptive grammar, theoretical syntax, functional and interactional analysis, corpus variation, typology, field elicitation, judgment research, lexicography, signed-language documentation, annotation, computational linguistics, language-resource publication, learner explanation, phonetics, conversation analysis, and collaborative terminology decisions.
 
-1. **result** — conforms, conforms with declared waivers, does not conform, or not determined;
-2. **review method** — author self-review, independent editorial review, or another defined human method;
-3. **typed evaluation record** — reader comprehension, author meaning preservation, translation, accessibility, domain expertise, neutrality, genre combination, or authoring burden with exact scope or sample.
+Language contexts include Cantonese, English, Spanish, Arabic varieties, Turkish, Japanese, Swahili, Korean, Māori, American Sign Language, Finnish, and multilingual work.
 
-An unresolved applicable nonconformity prevents a **conforms** result. Evaluation of representative passages does not imply evaluation of the full document.
+The matrix explicitly records overrepresentation of English metalanguage, constructed short passages, research-report genres, explicit quantitative scope, and current-rule-driven item design.
 
-### Profile auditability
+## Semantic-equivalence validation
 
-The profile register defines `SLE-PROFILE-SET-0.1` and maps SLE-Core, SLE-Research, SLE-Resource, and SLE-Procedure to exact rule IDs.
+- Project-internal pre-review results: 18.
+- Provisionally equivalent: 11.
+- Equivalent with recorded uncertainty: 7.
+- Accepted not-equivalent alternatives: 0.
+- Independently reviewed items: 0.
+- Source-author-confirmed items: 0 because all v0.1 items are constructed.
 
-A profile declaration identifies the profile-set version and resolves included conditional rules as applied or not applicable.
+The record requires rejected, failed, and not-determined rewrites to remain visible in later corpus versions.
 
-### Compatibility-based versioning
+A controlled alternative is compared against its detailed item brief. Several alternatives are intentionally not equivalent to a literal universal or overstrong reading of the uncontrolled sentence. This boundary is recorded rather than hidden.
 
-- Major, minor, and patch changes are classified by compatibility effect.
-- A new mandatory obligation in an existing profile is major when it can change prior conformance outcomes.
-- Minor changes are optional or otherwise backward-compatible.
-- Patch changes cannot alter obligations, applicability, profile membership, or review results.
-- A documented transition mechanism must preserve prior declarations explicitly.
+## Bias and representativeness validation
 
-## Pattern-catalogue validation
+The assessment states that v0.1 is suitable for internal rule auditing and procedure testing only.
 
-- The catalogue defines 14 proposed pattern IDs from `SLE-PATTERN-0001` through `SLE-PATTERN-0014`.
-- Each ID appears once as a catalogue section heading.
-- The outline collection mirrors the same 14 IDs once each.
-- The coverage register lists the same 14 IDs once each.
-- No pattern is represented as stable or published.
-- Each pattern states a communicative purpose, recommended sequence, required distinctions, minimum editorial checks, and permitted omissions.
+Before broad effectiveness or stabilization claims, later corpus versions require authentic independent passages, non-English-original material, translation review, community-governed contributions, full-document samples, rejected rewrite cases, and direct glossing tests.
 
-## Example-bank validation
+No source project may supply most authentic evaluated passages in a representative corpus.
 
-The example bank contains paired uncontrolled and controlled drafts from descriptive grammar, theory, corpus and variation research, elicitation, fieldwork, annotation, lexicography, computational linguistics, language-resource documentation, research summaries, limitation records, and editorial revision notes.
+## Human-first evaluation validation
 
-The bank states that its examples are constructed editorial test material, not linguistic evidence. It requires evaluation for reader interpretation, author meaning preservation, and added or lost meaning.
+The revised framework and pilot plan test:
 
-## Genre and method coverage
+- reader claim reconstruction;
+- author meaning preservation;
+- review agreement;
+- translation and rhetorical order;
+- accessibility and reader diversity;
+- authoring burden and cohesion;
+- annotation and procedure use;
+- full-document and combined-pattern behavior.
 
-The catalogue covers descriptive grammar, phenomenon description, theory, corpus studies, elicitation, fieldwork, annotation, lexicography, computational linguistics, language resources, methods, summaries, limitations, and revision notes.
-
-The coverage register records missing dedicated patterns and requires evaluation across phonetics, formal and functional traditions, sociolinguistics, conversation analysis, signed-language research, community documentation, and multilingual scholarly traditions before stabilization.
-
-## Human-first boundary
-
-Basic conformance does not require YAML, repository metadata, software, schemas, or machine-readable exports.
-
-Conformance applies to a declared text artifact or part. It does not automatically certify an entire project, repository, dataset, theory, method, or software system.
-
-## Waiver and extension validation
-
-A material waiver records the affected rule or pattern element, text scope, reason, risk, mitigation, approval when required, and review condition.
-
-Waivers cannot conceal unsupported claims, missing evidence, ethical problems, method defects, data conflicts, or theoretical disagreements.
-
-Local extensions identify controlling SLE and profile-set versions, distinguish local requirements from core SLE, and list affected rule IDs.
-
-## Authority and scope validation
-
-- Canto-span does not define any pattern, profile, conformance result, review method, evaluation type, waiver, or versioning rule.
-- Canto-span is named only as one possible later non-authoritative stress test.
-- Project-management genres are outside the core pattern catalogue.
-- The readable reference edition remains controlling.
-- SLE conformance remains separate from linguistic truth, analytical correctness, ethical adequacy, and methodological validity.
+Optional tools cannot replace human review or semantic-equivalence testing.
 
 ## Duplicate basenames
 
