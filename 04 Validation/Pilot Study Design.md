@@ -13,175 +13,80 @@ tags:
 
 ## Material baseline
 
-The first internal material set is [[Multi-Domain SLE Evaluation Corpus v0.1]].
+The first internal material set is [[Multi-Domain SLE Evaluation Corpus v0.1]]. It is constructed procedure-testing material, not a representative sample.
 
-The corpus contains constructed passages for procedure testing. It is not a representative sample of linguistic writing and cannot support effectiveness claims before authentic independent material is added.
+Each condition for one item must derive from the same authorized meaning brief:
 
-Every pair must pass the review process in [[Semantic Equivalence Review Record v0.1]] before reader or author testing.
+1. defective or uncontrolled draft;
+2. expert-edited plain alternative;
+3. proposed SLE-controlled alternative.
 
-## Study 1 — Claim interpretation
+A constructed item can enter reader-task piloting after its controlled alternative internally matches the brief. Independent preservation remains `not determined` and must remain visible.
 
-### Material
+Authentic effectiveness or author-preservation testing requires an authorized source meaning record and independent review under [[Semantic Equivalence Review Record v0.1]].
 
-Use matched passages that contain:
+## Study 1 — Claim reconstruction
 
-- attestation claims;
-- productivity or grammatical-status claims;
-- negative evidence;
-- speaker or annotator judgments;
-- parser or model behavior;
-- theoretical analyses;
-- limitations and competing interpretations.
+Participants identify the principal claim, direct evidence, inference, scope, certainty, limitations, competing analysis, and claim type.
 
-### Conditions
+Primary outcome: accuracy relative to the authorized brief.
 
-1. uncontrolled prose;
-2. expert-edited plain prose;
-3. proposed SLE-controlled prose.
-
-### Tasks
-
-Participants identify:
-
-- what the data or method directly establish;
-- what remains an inference;
-- the scope of the claim;
-- the stated limitation;
-- any competing analysis;
-- whether the passage makes a linguistic, system, procedural, or resource claim.
-
-### Primary outcome
-
-Accuracy of claim reconstruction without loss of intended evidential force.
+Do not score agreement with the controlled alternative itself as the correct answer unless that alternative has been independently confirmed.
 
 ## Study 2 — Referential and logical ambiguity
 
-Use passages with:
+Use passages that test reference, coordination, negation, quantification, comparison, exception scope, and condition–action order.
 
-- pronoun or demonstrative reference;
-- coordination;
-- negation;
-- quantification;
-- comparison;
-- exception scope;
-- condition and action order.
-
-Measure:
-
-- selected interpretation;
-- confidence;
-- reading time;
-- need to reread;
-- reviewer agreement on whether a rewrite is necessary.
+Measure selected interpretation, confidence, reading time, rereading, and reviewer agreement.
 
 ## Study 3 — Annotation and procedure use
 
-Participants apply uncontrolled and controlled instructions to the same item set.
+Participants apply alternative instructions to the same fictional item set.
 
-Measure:
+Measure action accuracy, agreement, completion time, questions, inappropriate escalation, and false certainty.
 
-- action or annotation accuracy;
-- inter-annotator agreement;
-- completion time;
-- questions raised;
-- inappropriate escalation;
-- false certainty caused by underspecified conditions.
+Local operational details belong to the authorized brief. They must not be misrepresented as universal SLE requirements.
 
-A procedure item must state which local operational details are part of the fictional brief and which controls are proposed SLE requirements.
+## Study 4 — Authoring cost and preservation
 
-## Study 4 — Authoring cost and meaning preservation
+Writers revise short authentic or authorized constructed passages.
 
-Writers revise a short methods, grammar, resource, or theoretical passage under each style condition.
+Measure writing time, brief preservation, unintended additions or deletions, burden, cohesion, naturalness, waiver or non-applicability use, and preference.
 
-Measure:
-
-- writing time;
-- preserved claims;
-- unintended additions or deletions;
-- perceived burden;
-- cohesion and naturalness;
-- need for waivers or non-applicability records;
-- post-task preference and reason.
-
-The source author or an authorized proxy must review authentic passages before the controlled alternative is accepted.
+For authentic passages, the source author or legitimate proxy must confirm the meaning record before a controlled alternative is accepted.
 
 ## Study 5 — Translation and rhetorical order
 
-Use non-English-original passages and independently translated versions.
+Use non-English-original passages and independently reviewed translations.
 
-Compare:
+Compare original order, order-preserving translation, and a translation reorganized under a proposed SLE pattern.
 
-- original rhetorical order;
-- a translation that preserves that order;
-- a translation reorganized under a proposed SLE pattern.
+Measure meaning and normative-function preservation, naturalness, reader reconstruction, disagreement, and burden.
 
-Measure:
-
-- preservation of normative function and linguistic meaning;
-- naturalness;
-- reader reconstruction;
-- translator and domain-expert disagreement;
-- whether reordering creates benefit, loss, or unnecessary burden.
-
-Alternative rhetorical order remains conforming when the required information relationships are recoverable.
+Alternative order remains conforming when required information relationships remain recoverable.
 
 ## Study 6 — Full-document and combined-pattern use
 
-Apply proposed patterns to full sections or documents that combine multiple purposes.
+Apply rules and patterns to full sections or documents with multiple purposes.
 
-Measure:
-
-- duplication;
-- contradictory ordering;
-- cross-reference burden;
-- consistency of profile applicability;
-- conformance-result reconstruction;
-- whether short-passage benefits persist at document scale.
+Measure duplication, ordering conflict, cross-reference burden, profile reconstruction, conformance-result reconstruction, cohesion, and whether short-passage effects persist.
 
 ## Sampling policy
 
-The pilot must not claim universal effectiveness from one institution, project, subfield, language, theory, method, or publication tradition.
+Do not claim universal effectiveness from one institution, project, subfield, language, theory, method, or publication tradition.
 
-Report participant:
+Report participant subfield, theory and method experience, primary scholarly language, English use, community relationship when relevant, controlled-language experience, and accessibility needs.
 
-- linguistic subfield;
-- method and theory experience;
-- primary scholarly language;
-- English use;
-- community or language relationship when relevant;
-- prior controlled-language experience;
-- accessibility needs relevant to the task.
-
-Corpus imbalance is controlled by [[Evaluation Corpus Coverage Matrix v0.1]] and [[SLE Evaluation Corpus Bias Assessment v0.1]].
+Corpus imbalance is recorded in [[Evaluation Corpus Coverage Matrix v0.1]] and [[SLE Evaluation Corpus Bias Assessment v0.1]].
 
 ## Analysis plan
 
-Predefine:
-
-- primary outcomes;
-- exclusion rules;
-- minimum sample;
-- statistical or qualitative analysis method;
-- equivalence or non-inferiority margin for precision preservation;
-- correction for multiple secondary outcomes when applicable;
-- disagreement and `not determined` handling;
-- rule-level stop conditions for material meaning loss.
+Predefine primary outcomes, exclusion rules, minimum sample, analysis method, preservation threshold, secondary-outcome correction, disagreement handling, `not determined` handling, and rule-level stop conditions for material loss.
 
 ## Qualitative review
 
-Collect comments about:
-
-- rules that feel unnatural;
-- terms that lose necessary distinctions;
-- cases where sentence splitting damages cohesion;
-- cases where repetition improves or harms readability;
-- theory- or method-specific wording;
-- English-specific rhetorical assumptions;
-- missing source information that the author cannot reasonably provide;
-- cases where plain editing performs as well as or better than SLE.
+Collect comments about unnatural rules, lost distinctions, damaged cohesion, repetition, theory- or method-specific wording, English rhetorical assumptions, unavailable source information, and cases where ordinary editing performs as well as or better than SLE.
 
 ## Canto-span boundary
 
-[[Canto-span Evaluation Subset v0.1]] is a bounded project-local stress test. Its two items must not be used to satisfy independent language, theory, method, genre, or source coverage.
-
-Canto-span findings are recorded first as adoption findings. A finding can affect core SLE only after independent multi-domain support and the normal governance process.
+[[Canto-span Evaluation Subset v0.1]] is a bounded project-local stress test. It cannot satisfy independent coverage or define SLE.
