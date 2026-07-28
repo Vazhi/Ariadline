@@ -11,8 +11,8 @@ tags:
 ---
 # Vault Validation Report
 
-- Markdown notes: 72
-- Wikilinks checked: 400
+- Markdown notes: 77
+- Wikilinks checked: 444
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -22,9 +22,9 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the repaired issue #6 branch after the addition and review of an internal constructed evaluation corpus.
+This report describes issue #7 on top of the corrected internal evaluation-corpus baseline.
 
-Core corpus records:
+Corpus and preservation records remain:
 
 - [[Multi-Domain SLE Evaluation Corpus v0.1]]
 - [[Evaluation Corpus Items 0001–0004 v0.1]]
@@ -32,9 +32,6 @@ Core corpus records:
 - [[Evaluation Corpus Items 0009–0012 v0.1]]
 - [[Evaluation Corpus Items 0013–0016 v0.1]]
 - [[Canto-span Evaluation Subset v0.1]]
-
-Supporting records:
-
 - [[Evaluation Corpus Coverage Matrix v0.1]]
 - [[Semantic Equivalence Review Record v0.1]]
 - [[SLE Evaluation Corpus Bias Assessment v0.1]]
@@ -42,79 +39,86 @@ Supporting records:
 - [[Evaluation Framework]]
 - [[Pilot Study Design]]
 
-Previously merged reference artifacts remain controlling for their proposed scope:
+Issue #7 adds:
 
-- [[SLE for Linguistics Document Patterns v0.1]]
-- [[SLE Document Pattern Outlines v0.1]]
-- [[SLE Document Pattern Example Bank v0.1]]
-- [[Document Pattern Coverage Register v0.1]]
-- [[SLE Profile Applicability Register v0.1]]
-- [[Profiles and Conformance]]
-- [[Pilot Specification Outline]]
-- [[Governance and Change Control]]
-- [[Versioning and Release Model]]
+- [[SLE Editorial Conformance Checklist v0.1]]
+- [[SLE Rule Test Case Catalog v0.1]]
+- [[Human Review Boundary Register v0.1]]
+- [[SLE Rule Traceability Matrix v0.1]]
+- [[Optional Automation Notes for SLE Review v0.1]]
 
 ## Count method
 
-The original issue #6 branch contained 68 notes and 388 wikilinks.
+Merged `main` contained 72 Markdown notes and 400 wikilinks.
 
-The blocker repair:
+The branch:
 
-- adds four uniquely named corpus-part notes;
-- adds four links from the corpus index to those parts;
-- adds one link from each new part back to the corpus index;
-- adds four links to the new parts in this validation report;
-- leaves the link totals of the revised Canto-span, review, coverage, bias, framework, and pilot records unchanged.
+- adds five uniquely named Markdown notes containing 34 wikilinks;
+- adds five links to the map of content;
+- adds five links to the new records in this validation report.
 
-Result: 72 notes and 400 wikilinks.
+Result: 77 notes and 444 wikilinks.
 
-Ordinary Markdown links and plain rule, pattern, profile, corpus, brief, and item IDs are not included in the wikilink total.
+Ordinary Markdown links and plain rule, pattern, profile, item, and brief IDs are not included in the wikilink total.
 
-## Corpus identity validation
+## Checklist validation
 
-- Corpus ID: `SLE-EVAL-CORPUS-0.1`.
-- Independent items: `SLE-EVAL-0001` through `SLE-EVAL-0016`.
-- Canto-span items: `SLE-EVAL-CS-0001` and `SLE-EVAL-CS-0002`.
-- Meaning briefs: `SLE-BRIEF-0001` through `SLE-BRIEF-0016` and two `SLE-BRIEF-CS-*` records.
-- Total paired items: 18.
-- Canto-span share: 2 of 18, or 11.1%.
-- Duplicate item or brief IDs: 0.
+- The checklist contains exactly one row for each rule from `SLE-RULE-0001` through `SLE-RULE-0024`.
+- Every row supplies a human-readable control, risk, review question, permitted boundary, and substantive-review boundary.
+- A reviewer can apply the checklist without software or machine-readable metadata.
+- Item outcomes distinguish Pass, Fail, Borderline, Not applicable, Justified exception, Waived, and Not determined.
+- Borderline or unclear authorized meaning cannot silently produce a passing conformance result.
+- Final conformance result remains separate from review method, typed evaluation, and independent preservation.
 
-Every item records full rule and pattern IDs, an authorized brief, both passages, word and sentence counts and deltas, terminology and structure changes, passage-to-brief results, literal relation, independent preservation state, and risk.
+## Test-case validation
 
-## Meaning-preservation validation
+- Rule IDs represented: 24.
+- Pass cases: 24.
+- Fail cases: 24.
+- Borderline cases: 24.
+- Justified-exception cases: 24.
+- Total classified constructed cases: 96.
+- The catalog states that the cases are constructed prompts, not linguistic facts or independently preserved rewrites.
+- Authentic multilingual and full-document testing remain gaps.
 
-- Controlled alternatives internally matching their constructed briefs: 18.
-- Uncontrolled drafts not matching their briefs: 14.
-- Uncontrolled drafts ambiguous relative to their briefs: 4.
-- Literally equivalent pairs: 0.
-- Independent preservation confirmations: 0.
-- Independent preservation results `not determined`: 18.
+## Review-boundary validation
 
-The corpus no longer calls a controlled alternative equivalent to a materially different uncontrolled draft. Brief matching, literal equivalence, and independent preservation are separate results.
+The boundary register separates communication review from:
 
-## Representation validation
+- authentic author or community meaning authority;
+- linguistic truth and grammaticality;
+- theory and method validity;
+- ethics and access authority;
+- translation and accessibility quality;
+- software correctness.
 
-- All independent items are project-constructed English prose.
-- Authentic external excerpts: 0.
-- Non-English-original passages: 0.
-- Independently reviewed translations: 0.
-- Source-author or community confirmations: 0.
-- Real-language fictional forms and claims were replaced with anonymized illustrative contexts.
+Meaning-changing edits require an authorized meaning record or a `not determined` outcome.
 
-The corpus supports internal domain, method, framework, genre, and rule prompts only. It does not claim authentic multilingual or community representation.
+## Traceability validation
 
-## Canto-span boundary
+Every proposed rule maps to:
 
-- Canto-span remains in a separate file and ID namespace.
-- It cannot define SLE or satisfy independent coverage.
-- Both Canto-span items have declared briefs, exact full IDs, length records, and independent results of `not determined`.
+- independent rationale;
+- one checklist item;
+- four classified cases;
+- principal internal audit items or an explicit gap;
+- a substantive-review boundary.
 
-## Bias and evaluation boundary
+Corpus mappings are described as constructed brief-based audit prompts. Their independent preservation remains `not determined`. `SLE-RULE-0024` retains an explicit direct-coverage gap.
 
-The revised records prohibit effectiveness and stabilization claims from v0.1. Later gates require authentic independent passages, non-English-original materials, translation review, community authority, full-document samples, rejected alternatives, and direct glossing tests.
+## Optional automation boundary
 
-Optional software cannot replace authorized meaning, independent human review, reader testing, author review, translation review, or community review.
+[[Optional Automation Notes for SLE Review v0.1]] is informative and outside the core reference artifact.
+
+Tools may flag text. They cannot create conformance, establish authorized meaning, confirm preservation, or certify substantive content.
+
+## Authority validation
+
+- The checklist does not create or change rules.
+- Canto-span supplies no controlling rationale or checklist case.
+- Evaluation-corpus items are test material, not normative evidence.
+- No software is required for human review.
+- No rule becomes stable because a checklist row or constructed case exists.
 
 ## Duplicate basenames
 
