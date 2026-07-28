@@ -17,45 +17,85 @@ tags:
 
 These checks are informative automation support for [[Evaluation Operations Dry-Run Package v0.1]]. They do not amend [[Multi-Domain Reader and Author Evaluation Protocol v0.1]], [[Evaluation Data Dictionary and Privacy Plan v0.1]], or human decisions under issues #30 through #35.
 
-## Validation classes
+## Validation families
 
-| Code | Automated check | Human decision still required |
-|---|---|---|
-| `FORBIDDEN_IDENTIFIER_FIELD` | participant rows do not contain direct-identifier field names | disclosure risk and lawful data handling |
-| `BROKEN_PARTICIPANT_FK` | trial or finding participant IDs resolve | participant eligibility and consent |
-| `BROKEN_MATERIAL_FK` | conditions and trials resolve to registered materials | source permission and authority |
-| `BROKEN_TRIAL_FK` | responses, scores, and preservation rows resolve | validity of the recorded response |
-| `REQUIRED_CONDITION_MISSING` | registered P/S conditions exist | whether P and S are fair and meaning-preserving |
-| `PROHIBITED_U_CONDITION` | U occurs only when `u_admissible=yes` | whether an authorized U baseline is justified |
-| `DUPLICATE_MEANING_EXPOSURE` | one participant does not see multiple wording conditions for one meaning record | whether other contamination exists |
-| `MASK_LEAK` | condition codes use opaque `MX###` form | whether wording or interface reveals condition |
-| `SCORING_UNMASKED` | scoring records state masked review | whether masking was maintained in practice |
-| `PRESERVATION_NOT_CONFIRMED` | confirmatory-ready P/S does not carry a non-preserved state | authentic preservation judgment |
-| `NOT_DETERMINED_AS_SUCCESS` | `not determined` is not recoded as success | resolution or continued uncertainty |
-| `POST_WITHDRAWAL_TRIAL` | no assignment occurs after recorded withdrawal | actual withdrawal handling |
-| `CANTO_PARTICIPANT_CAP` | Canto-span contributor share is at most 10% | independence and recruitment fairness |
-| `CANTO_TRIAL_CAP` | Canto-span trial share is at most 10% | interpretation of the bounded arm |
-| `TASK_CONDITION_REGISTRATION` | publication tasks register P and S | task validity and estimand choice |
-| `UNIVERSAL_U_REQUIREMENT` | U is not mandatory for every task | whether U is useful for a specific task |
+The committed expected-code manifest lists all 34 validation classes exercised by the negative fixture.
+
+### Evidence and privacy boundary
+
+- `NOT_SYNTHETIC`
+- `EVIDENCE_BOUNDARY`
+- `AUTHENTICITY_BOUNDARY`
+- `FORBIDDEN_IDENTIFIER_FIELD`
+
+### Table, identifier, and foreign-key integrity
+
+- `MISSING_TABLE_ROWS`
+- `INVALID_PARTICIPANT_ID`
+- `DUPLICATE_PARTICIPANT_ID`
+- `INVALID_TRIAL_ID`
+- `DUPLICATE_TRIAL_ID`
+- `BROKEN_PARTICIPANT_FK`
+- `BROKEN_MATERIAL_FK`
+- `BROKEN_TRIAL_FK`
+- `CONDITION_MEANING_MISMATCH`
+- `MEANING_RECORD_MISMATCH`
+- `DUPLICATE_DEVIATION_ID`
+
+### Condition and exposure integrity
+
+- `UNIVERSAL_U_REQUIREMENT`
+- `TASK_CONDITION_REGISTRATION`
+- `PROHIBITED_U_REGISTRATION`
+- `REQUIRED_CONDITION_MISSING`
+- `UNREGISTERED_TRIAL_CONDITION`
+- `PROHIBITED_U_CONDITION`
+- `DUPLICATE_MEANING_EXPOSURE`
+- `CONDITION_IMBALANCE`
+- `ORDER_IMBALANCE`
+
+### Masking and scoring integrity
+
+- `MASK_LEAK`
+- `DUPLICATE_MASK_CODE`
+- `MASK_CODE_MISMATCH`
+- `SCORING_UNMASKED`
+
+`MASK_CODE_MISMATCH` compares each trial’s opaque code with the exact code registered for that material and condition. A different valid-looking `MX###` value does not pass.
+
+### Preservation and lifecycle integrity
+
+- `PRESERVATION_NOT_CONFIRMED`
+- `NOT_DETERMINED_AS_SUCCESS`
+- `NOT_DETERMINED_DOWNGRADED`
+- `POST_WITHDRAWAL_TRIAL`
+
+### Bounded-arm integrity
+
+- `CANTO_PARTICIPANT_CAP`
+- `CANTO_TRIAL_CAP`
+
+## Balance rule
+
+For the synthetic valid fixture:
+
+- each core material receives an equal or near-equal P/S allocation;
+- the absolute P/S difference for one material is at most 1;
+- the absolute P/S difference at one order position is at most 1;
+- U rows are excluded from the P/S balance calculation;
+- Canto-span rows remain separately capped.
+
+These are fixture checks, not proof that a real schedule is statistically adequate.
 
 ## Expected fixtures
 
 The valid fixture must produce zero findings.
 
-The intentionally invalid fixture must exercise at least:
+The intentionally invalid fixture must trigger every code in `expected_invalid_codes.json`. The comparison is exact:
 
-- direct identifier leakage;
-- missing foreign keys;
-- duplicate meaning exposure;
-- prohibited U use;
-- mask leakage;
-- missing P or S registration;
-- invalid preservation readiness;
-- `not determined` converted to success;
-- post-withdrawal assignment;
-- Canto-span cap violations.
-
-The expected-code file verifies coverage. Extra findings are allowed when one injected fault causes more than one valid diagnostic.
+- a missing expected code fails the self-test;
+- an unexpected code also fails the self-test;
+- row-level finding counts may vary when one injected fault affects several records, but the distinct code set must remain exact.
 
 ## Severity
 
@@ -63,9 +103,9 @@ Automation findings are pipeline diagnostics, not participant harms or research 
 
 Suggested operational severity:
 
-- blocker: broken IDs, direct identifier fields, prohibited U, missing P/S, mask leak, post-withdrawal trial;
-- major: invalid preservation readiness, Canto-span cap violation, repeated meaning exposure;
-- warning: imbalance or non-critical metadata omission;
+- blocker: broken IDs, direct identifier fields, prohibited U, missing P/S, mask mismatch or leak, post-withdrawal trial;
+- major: invalid preservation readiness, Canto-span cap violation, repeated meaning exposure, material or order imbalance;
+- warning: non-critical metadata omission;
 - informational: synthetic-only notices.
 
 A human must decide whether a real-study finding requires exclusion, repair, deviation reporting, suspension, or a new issue.
@@ -74,9 +114,9 @@ A human must decide whether a real-study finding requires exclusion, repair, dev
 
 `validate_dry_run.py` returns:
 
-- `0` for a valid fixture;
-- `1` when unanticipated findings exist without an expected-code comparison;
-- `0` when all expected invalid codes are detected;
-- `2` when the intentionally invalid fixture fails to trigger one or more expected codes.
+- `0` for a valid fixture with no expected-code comparison;
+- `1` when findings exist without an expected-code comparison;
+- `0` for an expected-invalid run only when actual and expected code sets match exactly;
+- `2` when the expected-invalid run has a missing or unexpected code.
 
-A passing expected-invalid run means only that the validator detected its test faults.
+A passing expected-invalid run means only that the validator detected the exact synthetic fault classes registered for that fixture version.
