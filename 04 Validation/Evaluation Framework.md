@@ -13,145 +13,132 @@ tags:
 
 ## Central question
 
-Does SLE improve understanding and consistency while preserving the intended linguistic content?
+Does SLE improve understanding and consistency while preserving authorized linguistic meaning?
 
-The first controlled materials are in [[Multi-Domain SLE Evaluation Corpus v0.1]]. The corpus is constructed test material and cannot answer the central question without human evaluation.
+The first controlled materials are in [[Multi-Domain SLE Evaluation Corpus v0.1]]. They are constructed internal audit material and cannot answer the central question without independent human evaluation.
+
+## Meaning authority before comparison
+
+Every evaluation item must identify an authorized meaning record before passages are compared.
+
+For constructed items, the project brief is the authority only for the fictional item. For authentic items, the authority must be the source author, controlling publication context, community authority, or another legitimate proxy.
+
+Evaluate separately:
+
+1. uncontrolled draft against authorized meaning;
+2. controlled alternative against authorized meaning;
+3. literal passage-to-passage relation;
+4. independent preservation confirmation.
+
+A defective uncontrolled draft and a controlled alternative can be literally non-equivalent. Do not call this semantic equivalence. The item can still test which passage helps readers recover the authorized meaning.
+
+Initial item records are in [[Semantic Equivalence Review Record v0.1]].
 
 ## Evaluation dimensions
 
-### Comprehension
+### Reader comprehension
 
 Measure whether readers identify:
 
 - the principal claim or instruction;
 - the evidence or method relation;
-- the scope;
-- the level of certainty;
-- the relevant limitation;
-- the antecedent of references;
-- the difference between observation, interpretation, hypothesis, and conclusion.
+- scope and population;
+- certainty and evidential force;
+- limitations;
+- reference antecedents;
+- observation, interpretation, hypothesis, and conclusion;
+- normative force in procedures.
 
-### Author meaning preservation
+### Author or authority meaning preservation
 
-The source author or an authorized proxy compares the uncontrolled and controlled versions for:
+Review:
 
 - polarity;
 - quantification;
-- scope and population;
-- temporal and version reference;
-- evidential force;
-- certainty and modality;
+- scope, population, time, dataset, and version;
+- evidential force and certainty;
 - causal or correlational relation;
-- theoretical commitment;
-- method and task identity;
+- theoretical and methodological commitment;
 - example or data status;
-- limitations, exceptions, and access boundaries;
-- normative force in procedures.
+- limitations, exclusions, rights, consent, and access boundaries;
+- terminology and category boundaries;
+- normative force.
 
-Initial item-level results are recorded in [[Semantic Equivalence Review Record v0.1]].
+Any possible material unresolved change receives `not determined`.
 
 ### Authoring performance
 
 Measure:
 
-- time to write or revise;
-- number and severity of unintended meaning changes;
+- writing and revision time;
+- unintended meaning changes;
 - perceived difficulty;
-- need for specialist support;
+- specialist support required;
 - cohesion and naturalness;
-- repetition or fragmentation introduced by rule application;
-- ability to record justified non-applicability, waiver, or disagreement.
+- repetition or fragmentation;
+- justified non-applicability, waiver, and disagreement handling.
 
 ### Review and adjudication
 
 Measure:
 
-- reviewer agreement on applicable rule IDs;
+- agreement on applicable rule IDs;
+- agreement on passage-to-brief results;
 - agreement on conformance result;
-- terminology conflicts;
-- unresolved references;
-- evidence-relation disagreements;
-- semantic-equivalence disagreements;
+- terminology and evidence-relation conflicts;
 - time to complete review;
-- frequency of `not determined` outcomes.
+- frequency and cause of `not determined` outcomes.
 
 ### Translation and multilingual evaluation
 
 Measure separately:
 
-- preservation of normative function;
-- preservation of linguistic terminology and category boundaries;
+- normative-function preservation;
+- terminology and category preservation;
 - natural rhetorical order;
-- translator and domain-expert agreement;
-- whether an English-specific control creates distortion or burden.
+- translator, source-author, community, and domain-expert agreement;
+- distortion or burden caused by English-specific controls.
 
-A translated passage must identify exact scope and direction. Review of a translation must not be generalized to a language or scholarly tradition.
+A translation review applies only to the exact passage and direction reviewed.
 
 ### Accessibility and reader diversity
 
-Include readers with different:
-
-- linguistic subfields;
-- experience levels;
-- primary scholarly languages;
-- familiarity with controlled language;
-- access needs;
-- relationships to the documented language or community.
+Include readers with different subfields, experience levels, primary scholarly languages, controlled-language familiarity, access needs, and relationships to documented communities.
 
 ### Optional tool assistance
 
-A tool may assist counting, terminology search, cross-reference checking, or rule review.
-
-Tool performance is an implementation measure, not a condition for SLE completeness or human conformance. A tool result does not replace semantic-equivalence or reader testing.
+Tools may assist counting, terminology search, cross-reference checking, or rule review. Tool results do not replace human meaning-preservation, reader, author, translator, or community review.
 
 ## Comparison design
 
-Use paired or randomized comparisons among:
+Use randomized or counterbalanced comparisons among:
 
-1. uncontrolled prose;
-2. expert-edited plain prose;
-3. proposed SLE-controlled prose.
+1. uncontrolled draft;
+2. expert-edited plain alternative;
+3. proposed SLE-controlled alternative.
 
-This separation tests whether any benefit comes from SLE controls rather than ordinary editing quality alone.
+All conditions must derive from the same authorized meaning record. This tests SLE controls against ordinary editing rather than against a deliberately different claim.
 
-For each item, randomization must not hide:
-
-- source authority;
-- fictional or authentic status;
-- permission and access restrictions;
-- relevant language, method, or theory context.
+Randomization must not hide source authority, construction status, permission, access restrictions, or relevant context.
 
 ## Corpus coverage policy
 
-Coverage and imbalance are recorded in [[Evaluation Corpus Coverage Matrix v0.1]]. Bias and representativeness limits are recorded in [[SLE Evaluation Corpus Bias Assessment v0.1]].
+Coverage is recorded in [[Evaluation Corpus Coverage Matrix v0.1]]. Bias is recorded in [[SLE Evaluation Corpus Bias Assessment v0.1]].
 
-The corpus must not support a broad effectiveness claim when:
-
-- one project, institution, language, theory, or method dominates;
-- authentic author meaning has not been confirmed;
-- non-English-original and translated material is absent;
-- only successful rewrites are retained;
-- short passages are generalized to full documents.
+Do not make broad effectiveness claims when authentic meaning is unconfirmed, non-English-original material is absent, only successful alternatives are retained, one source dominates, or short passages are generalized to full documents.
 
 ## Canto-span boundary
 
-[[Canto-span Evaluation Subset v0.1]] is one non-authoritative stress-test subset. Its findings can identify adoption problems or candidate general issues. They cannot define SLE or satisfy independent coverage requirements.
+[[Canto-span Evaluation Subset v0.1]] is a non-authoritative stress-test subset. It cannot define SLE or satisfy independent coverage.
 
 ## Evidence policy
 
-Automated readability formulas, length counts, and reviewer checklists can supplement the evaluation. They cannot establish comprehension, semantic equivalence, scientific accuracy, community acceptability, or theoretical neutrality.
+Readability formulas, length counts, and checklists can supplement evaluation. They cannot establish comprehension, meaning preservation, scientific accuracy, community acceptability, or theoretical neutrality.
 
-A constructed pair can test an evaluation procedure. It cannot establish that a rule improves authentic writing.
+A constructed pair can test a procedure. It cannot establish that a rule improves authentic writing.
 
 ## Iteration rule
 
-A rule or pattern must be revised, limited, made optional, moved to an extension, or removed when evaluation shows that it:
+Revise, limit, make optional, move, or remove a rule or pattern when evaluation shows material meaning loss, unacceptable burden, unjustified theory or language bias, unstable review decisions, or false certification risk.
 
-- does not improve the stated communication outcome;
-- causes material meaning loss;
-- creates unacceptable authoring burden;
-- privileges one theory, method, language, or rhetorical tradition without justification;
-- produces unstable reviewer decisions;
-- encourages false conformance or scientific-certification claims.
-
-No-change is also a valid decision when the evidence is insufficient.
+No-change and insufficient-evidence decisions are valid outcomes.
