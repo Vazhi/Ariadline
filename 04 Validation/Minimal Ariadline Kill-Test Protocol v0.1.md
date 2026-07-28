@@ -25,7 +25,7 @@ Before participant exposure:
 
 - every source must have a legitimate use and authority record;
 - every P and S condition must undergo independent meaning-preservation review;
-- scoring and adjudication must be frozen;
+- task constructs, scoring keys, and adjudication rules must be frozen;
 - accessibility and withdrawal procedures must be approved;
 - the analysis plan and sample target must receive human statistical review;
 - an immutable registration record must exist.
@@ -56,17 +56,33 @@ A passage is eligible only when:
 - protected or identifying information is excluded;
 - scoring communication does not require reviewers to settle the underlying linguistic theory.
 
-Record rejected candidates so selection cannot silently favor Ariadline.
+Record rejected candidates and the selection rationale so selection cannot silently favor Ariadline.
+
+## Shared rule-neutral brief
+
+Before editor assignment, freeze one shared packet for P and S. It must include:
+
+- the same source passage and authorized meaning-record versions;
+- purpose, intended readership, permitted editing scope, constraints, and allowed resources;
+- one rule-neutral description of the authentic communication risk;
+- protected terminology, quotations, access boundaries, and information that editors must not add;
+- the same timing and `not determined` route.
+
+The shared risk brief must not contain `SLE-RULE-*` IDs, Ariadline terminology, expected condition direction, or a condition-specific diagnosis.
+
+An independent coordinator may preregister candidate-rule applicability for later analysis. That mapping is restricted administrative metadata and is not shown to either editor, task designer, reader, scorer, or preservation reviewer before the relevant records are frozen.
 
 ## Conditions
 
 ### P — ordinary expert editing
 
-A qualified editor receives the passage, authorized meaning record, purpose, readership, and ordinary editorial brief. The editor does not receive the candidate rules. P must represent competent normal practice.
+A qualified editor receives the shared rule-neutral packet and an ordinary editorial brief. The editor does not receive the candidate rules. P must represent competent normal practice.
 
 ### S — Ariadline candidate-core editing
 
-The legacy condition code `S` is retained for compatibility with the evaluation data model. A comparably qualified editor receives the same information and resources as P, plus the 12-rule candidate core and passage-specific applicability decisions.
+The legacy condition code `S` is retained for compatibility with the evaluation data model. A comparably qualified editor receives the same shared packet and professional resources as P, plus the 12-rule candidate core.
+
+The S editor determines and records rule applicability during editing. The editor does not receive the coordinator’s preregistered applicability mapping.
 
 S must not receive extra substantive information.
 
@@ -74,15 +90,17 @@ S must not receive extra substantive information.
 
 U is optional and non-primary. Use it only when the unedited source is independently authorized and the task separately registers its purpose. U cannot replace S-versus-P.
 
-## Fairness controls
+## Fairness and contamination controls
 
-- Separate P and S editors when practical.
+- One editor must not produce both P and S for the same passage or meaning record.
+- An editor must not see the other condition’s output, action log, unresolved-question record, or preservation result.
+- When an editor works in both conditions across different passages, condition and order must be counterbalanced and contamination risk recorded.
 - Match or record expertise, language background, subfield familiarity, and editing time.
 - Do not reveal the expected direction of results.
-- Give both conditions the same meaning record and source information.
+- Give both conditions the same meaning record, neutral risk brief, source information, constraints, and resources.
 - Allow `not determined` when authorized meaning is insufficient.
-- Mask condition labels from readers and scorers.
-- Prevent exposure to both P and S for one meaning record.
+- Mask condition labels from readers, scorers, adjudicators, and preservation reviewers.
+- Prevent each participant from seeing both P and S for one meaning record.
 - Record deviations and information leaks.
 
 ## Meaning-preservation gate
@@ -98,7 +116,13 @@ A passage-condition pair cannot enter reader testing until independent review co
 - theory- or community-sensitive terminology;
 - permissions and access boundaries.
 
-Use `preserved`, `not preserved`, or `not determined`. A material preservation failure excludes the condition from benefit analysis and remains an adverse result.
+Use `preserved`, `not preserved`, or `not determined`.
+
+- Any critical or major non-preservation requires overall `not preserved`.
+- Any unresolved material dimension requires overall `not determined`, unless another material dimension already requires `not preserved`.
+- Overall `preserved` is permitted only when every applicable material dimension is preserved and any minor or editorial difference is explicitly confirmed nonmaterial.
+
+A material preservation failure excludes the condition from benefit analysis and remains an adverse result. If either member of a P/S pair is `not preserved` or `not determined`, that pair cannot enter the primary benefit comparison.
 
 ## Planning sample
 
@@ -106,9 +130,9 @@ The initial planning range is approximately 20–30 readers or editorial reviewe
 
 Human statistical review under issue #34 must decide whether the design can answer the registered question.
 
-## Tasks
+## Tasks and scoring
 
-Use only tasks required by the registered passage risk, such as:
+Use only tasks required by the registered rule-neutral passage risk, such as:
 
 - reconstruct the central claim and scope;
 - identify supporting evidence;
@@ -117,9 +141,11 @@ Use only tasks required by the registered passage risk, such as:
 - distinguish software behavior from a language claim;
 - identify provenance and material transformation;
 - rate naturalness, cohesion, repetition, fragmentation, and burden;
-- classify rule applicability and outcome.
+- classify communication outcomes.
 
 Do not require every task for every passage.
+
+Task constructs and scoring keys must be derived from the source, authorized meaning record, and shared neutral risk brief. Freeze them before task designers or scorers examine condition outputs, editor logs, condition identities, or participant outcomes. Rule IDs, condition mappings, editor identities, and action logs remain restricted administrative metadata.
 
 ## Outcomes
 
