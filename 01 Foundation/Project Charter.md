@@ -13,7 +13,7 @@ tags:
 
 ## Working name
 
-**Ariadline (Ariadline)** is the working name. The project must perform a naming and acronym review before public release because **Ariadline** has other established meanings.
+**Ariadline** is the project name. It refers to an experimental framework for clear and accountable linguistic reporting. Public materials should pair the name with a descriptive subtitle until its purpose is widely understood.
 
 ## Problem statement
 

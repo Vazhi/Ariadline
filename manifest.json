@@ -1,220 +1,485 @@
 {
-  "vault": "SLE_Development_Plan_Obsidian",
+  "vault": "Ariadline_Development_Plan_Obsidian",
   "created": "2026-07-27",
-  "note_count": 42,
-  "wikilink_count": 182,
+  "note_count": 95,
+  "wikilink_count": 609,
   "duplicate_basenames": {},
   "broken_wikilinks": [],
   "files": [
     {
       "path": "00 Ariadline Development MOC.md",
-      "bytes": 2499,
-      "sha256": "b73860a2d25f9eacb10fa0dce1c32fe30834530691799544d36a403018d770b7"
-    },
-    {
-      "path": "01 Foundation/Design Principles.md",
-      "bytes": 2226,
-      "sha256": "b6669b70ec13fff2e3e7b10cc28034fad97801f2ed8da0b7929de88868443545"
-    },
-    {
-      "path": "01 Foundation/Project Charter.md",
-      "bytes": 2498,
-      "sha256": "3ce5dd13762ce66765f89e966c71073aae3d13f26274e7888a4acf092b0b3798"
+      "bytes": 4957,
+      "sha256": "4e991f7463b27cfa75c4e06094189be60e88cb84d47cb117f768c5e741e7252d"
     },
     {
       "path": "01 Foundation/Ariadline Architecture.md",
-      "bytes": 2145,
-      "sha256": "762e7198607cc15b37c981974cfe03b0264cd8b518b62d6ba7728648780b17af"
+      "bytes": 2205,
+      "sha256": "55321199de8a807566c33994d06e2350d96b47a009f5feaed0d029b408500157"
+    },
+    {
+      "path": "01 Foundation/Design Principles.md",
+      "bytes": 2244,
+      "sha256": "4d56da33cf35a2a31437dbd4b940112b617c3e546f037fa9e03c3ad6ad99aa0d"
+    },
+    {
+      "path": "01 Foundation/Project Charter.md",
+      "bytes": 2590,
+      "sha256": "8b9ba3ed8abe5d24db370966dff529d89db8e490d1b43e9bcc426934c6f13000"
     },
     {
       "path": "01 Foundation/Scope and Non-Goals.md",
-      "bytes": 2272,
-      "sha256": "a32b25ee2dcc28a7c1530e074e87bdc5ed4264813abe08bb7029b747e14ca58c"
+      "bytes": 2296,
+      "sha256": "46af62ac7b116a5b47617a5034ecc503dee0843870b55f54bb151f99f06cd352"
     },
     {
       "path": "01 Foundation/Users and Use Cases.md",
-      "bytes": 2503,
-      "sha256": "c3d0bc1c4c4b0051750e129c818e01611370dc79aae8a1d1024474e35a701e2f"
+      "bytes": 2557,
+      "sha256": "e0bbf8d84e9441ece56ef3cdf5ba65d34f14c36a4574e93e900d021add2c1d1b"
+    },
+    {
+      "path": "01 Reference Draft/Ariadline Reference Artifact v0.1 Draft.md",
+      "bytes": 13587,
+      "sha256": "33fb8c76e4c19ea08d2087226293b32cf2833d7c2df938598cdf1408218b012b"
+    },
+    {
+      "path": "01 Reference Draft/Ariadline Reference Publication Map v0.1.md",
+      "bytes": 4869,
+      "sha256": "fa93f8994d06f09946a7ad223542a6177a769ea5b1140ca98efbf5d5c5c75c41"
     },
     {
       "path": "02 Language Design/Ambiguity and Referential Clarity.md",
-      "bytes": 1686,
-      "sha256": "a4d56af0ff678b7b4c99d4e6ade468d3872ccbad53172881c57c5412b721033c"
+      "bytes": 1692,
+      "sha256": "c09e0379bf701f0240c2dad625356967038069d9db053d7a4ed8b76c47a990af"
+    },
+    {
+      "path": "02 Language Design/Ariadline Language Rules v0.1.md",
+      "bytes": 22584,
+      "sha256": "c20a32705f2087b9c36522e4160304d51dbad280cf8d0bc77d20ef0c1ac9919d"
     },
     {
       "path": "02 Language Design/Claim-Evidence Matrix.md",
-      "bytes": 2432,
-      "sha256": "4f4acb54ed1a456ba3e1cfbcb73a033886152593d6cf20f19616f36cc70d866c"
+      "bytes": 3890,
+      "sha256": "e19f0f8e3b11d34e9c6ceb96b95547283be28ab6941302d3646d41ee0a827053"
     },
     {
       "path": "02 Language Design/Controlled Vocabulary Plan.md",
-      "bytes": 2572,
-      "sha256": "9246b1a46e26207bf5e8d881897257f3685b73d9058eaef0ecd1b5786f4dd504"
+      "bytes": 2584,
+      "sha256": "e0bb36e5d6c6a3eecbe00c569ff3325cd26099d87987e05f58acab455959dacd"
     },
     {
       "path": "02 Language Design/Grammar and Style Rule Plan.md",
-      "bytes": 2974,
-      "sha256": "b31f54423e2d7bb40240b3fcea4f932812410ea6302db47a999e9c231c9af72e"
+      "bytes": 3900,
+      "sha256": "391eb4bbd56d6265a4ee29d03f300d8cffe6b6268ff26787c04909c6dc1f6b95"
     },
     {
       "path": "02 Language Design/Linguistic Examples and Glossing.md",
-      "bytes": 2038,
-      "sha256": "121001dc18a1c7c1e1963c93fb9fc7ad0f60b5ee343e8801e7cd1adcd050d3f6"
+      "bytes": 4729,
+      "sha256": "8da32cea04b3e870333293ce11c13f01d3b100dfeb1d37cb5f902bab8a9c752c"
     },
     {
       "path": "02 Language Design/Normative Language.md",
-      "bytes": 2181,
-      "sha256": "5c91ce499cc34575666b13b5136a53c053ad18fcd3657e66039d0e76d748a342"
+      "bytes": 3941,
+      "sha256": "11f24319341a23bd94d86ecf1c12b26df5dea39bf8350435a7da67b6942d4e65"
     },
     {
       "path": "02 Language Design/Terminology Control.md",
-      "bytes": 2198,
-      "sha256": "1a9f3e500b19eb755d67589aa36ef97bbffcba494dac51627b8762af7a30894b"
+      "bytes": 2713,
+      "sha256": "512a83c51831b6d961b0cbd382d0095053ad809e96641d999ba7b2f3dc575d39"
+    },
+    {
+      "path": "03 Implementation/Ariadline Document Patterns v0.1.md",
+      "bytes": 21487,
+      "sha256": "48c4ed2b9a657869f4d03b09f339ad0eee0966a35b461c1b3bf52d9e807db4aa"
+    },
+    {
+      "path": "03 Implementation/Ariadline Editorial Conformance Checklist v0.1.md",
+      "bytes": 14723,
+      "sha256": "5f8468d27718cbf4e5d61b39be7531e29b1cc3171e0a419aa9cd737147ab5a5e"
     },
     {
       "path": "03 Implementation/Authoring and Conformance Tools.md",
-      "bytes": 2022,
-      "sha256": "b33b8bcbdba870aaf9bf9c078face9cfd9ee7bc60886af428391852bee3f0226"
+      "bytes": 2028,
+      "sha256": "5460ab5db832fb0937de31ac966264bb205ed60d253dc5789103116033e72df1"
     },
     {
       "path": "03 Implementation/Corpus and Annotation Interoperability.md",
-      "bytes": 1763,
-      "sha256": "8a579460e7b764a0955c7cc86a266b27fe5395ba582e044400ee1ea3eeab45ad"
+      "bytes": 1787,
+      "sha256": "b1f542546a310637b8ea87d891271cb743472ebd663b4657c406ddfe4b1aabb3"
     },
     {
       "path": "03 Implementation/Pilot Specification Outline.md",
-      "bytes": 1898,
-      "sha256": "eb1f353a823ea8903c5f034650ee67df75b5cc1cbd1dcf198db90ecc0e538562"
+      "bytes": 5391,
+      "sha256": "c149e3f8990423461bf8c86489d04e01f46c371d6234607916974e8e1121cb00"
     },
     {
       "path": "03 Implementation/Profiles and Conformance.md",
-      "bytes": 1926,
-      "sha256": "686212d18216a8d85716b0a3f17f376acd775234dab5424a41f3ac4a49a859ef"
+      "bytes": 8629,
+      "sha256": "ffd56cde87913c73da03b3d7a7bd0ef94b825ba31c8ccae24374d209e47d5a18"
+    },
+    {
+      "path": "04 Validation/Ariadline Evaluation Corpus Bias Assessment v0.1.md",
+      "bytes": 5972,
+      "sha256": "06424776e6693c792153d5e73c54b153be79b04ab5dac4f7abcdec0c3d4b56b4"
+    },
+    {
+      "path": "04 Validation/Ariadline Rule Test Case Catalog v0.1.md",
+      "bytes": 11569,
+      "sha256": "8925fea62cac95964c3308b7b092f985498df330219e67a5333f0f8cae4a6cb7"
+    },
+    {
+      "path": "04 Validation/Ariadline-GE Canto-span Pilot Baseline v0.1.md",
+      "bytes": 19512,
+      "sha256": "679156be3da3dd957957b839aa3bfc7d7c9582e86063cf0c993cb6e4142e79be"
+    },
+    {
+      "path": "04 Validation/Canto-span Evaluation Subset v0.1.md",
+      "bytes": 5879,
+      "sha256": "7a1ea7755cecf5a6fc0afcc1def44cc91536d11fc9a7d4d3410d55bd071c6445"
+    },
+    {
+      "path": "04 Validation/Condition Development and Preservation Review Worksheet v0.1.md",
+      "bytes": 3818,
+      "sha256": "20e591b09820c86b401d434afea55668ac67299c6f1e662094ce17031f2212b0"
+    },
+    {
+      "path": "04 Validation/Document Pattern Coverage Register v0.1.md",
+      "bytes": 12965,
+      "sha256": "67d046a870d29186c5b844a0596fc6d39dfc31486af18a2bb00e851c42e936f2"
+    },
+    {
+      "path": "04 Validation/Evaluation Corpus Coverage Matrix v0.1.md",
+      "bytes": 7828,
+      "sha256": "0226dfa73c6bae1a91914c065084f50fbb79fabff0e7483f463cf3730a67d742"
+    },
+    {
+      "path": "04 Validation/Evaluation Corpus Items 0001–0004 v0.1.md",
+      "bytes": 8035,
+      "sha256": "a5a24c92c1dcea6833c21bd874eee74ddefb08a5a81f4ae0aa7983dae4be912b"
+    },
+    {
+      "path": "04 Validation/Evaluation Corpus Items 0005–0008 v0.1.md",
+      "bytes": 8189,
+      "sha256": "a500e8baf45d6b94e6e3a1118ca4db4a1c9aba066c9a46658fc46ce80b189237"
+    },
+    {
+      "path": "04 Validation/Evaluation Corpus Items 0009–0012 v0.1.md",
+      "bytes": 8424,
+      "sha256": "cf03be9e8353e2565c497db7105d7e1a66e554d77295582927727cfaa96106e0"
+    },
+    {
+      "path": "04 Validation/Evaluation Corpus Items 0013–0016 v0.1.md",
+      "bytes": 8297,
+      "sha256": "968bd82db4bbe92dc1e473a3c122372f66005af439aae9a807ef4dcd0a0b7871"
+    },
+    {
+      "path": "04 Validation/Evaluation Data Dictionary and Privacy Plan v0.1.md",
+      "bytes": 8518,
+      "sha256": "12ed1a16ab24e6a059b4949a3b1c5c07171095dc2fc07a4f222c53aa815b1249"
+    },
+    {
+      "path": "04 Validation/Evaluation Execution Status v0.1.md",
+      "bytes": 6304,
+      "sha256": "6920014def800b55d34b60bdc3ba068f98c2a7e9a7f4ccb30f993f905f8fdd38"
     },
     {
       "path": "04 Validation/Evaluation Framework.md",
-      "bytes": 1999,
-      "sha256": "9c200a0a662c9003a539fdcb8c25749363b3b62d0be4f2534499a134cabdcf97"
+      "bytes": 6640,
+      "sha256": "f4770f9595381b671edd976fa51322dc079baece0e4b9b82d31b223c1008532d"
+    },
+    {
+      "path": "04 Validation/Evaluation Material and Task Register v0.1.md",
+      "bytes": 9466,
+      "sha256": "88b04df97262f7a3289979f1982dc2ff1a8256323f5e90eb6f2ad3409469511e"
+    },
+    {
+      "path": "04 Validation/Evaluation Operations Dry-Run Package v0.1.md",
+      "bytes": 5483,
+      "sha256": "3a8636cc782ef1ed5a528eb3de7a2416d5c158370dcb621b83ed5ffee1cfc8fc"
+    },
+    {
+      "path": "04 Validation/Evaluation Operations Validation Rules v0.1.md",
+      "bytes": 3911,
+      "sha256": "caf51b30a7e66272b059a42fd9754b3a9ad3aab5c64dade5bfacaa6182ce2367"
+    },
+    {
+      "path": "04 Validation/Human Review Boundary Register v0.1.md",
+      "bytes": 6232,
+      "sha256": "3c6788001b9ac0ee3797c18bc8fa117a8f858c3754e843762117fb722104005e"
+    },
+    {
+      "path": "04 Validation/Independent Ariadline Rule Evidence Register v0.1.md",
+      "bytes": 17209,
+      "sha256": "08aeb7ca2d431849ff1507a585e26916a5ca8811631cd4b371b7a94b171b4d09"
+    },
+    {
+      "path": "04 Validation/Material Intake and Authority Ledger Template v0.1.md",
+      "bytes": 3449,
+      "sha256": "ccab4b3591404d34eb4a47a7d7ba8dcbede2ca50014786f4a1a391dce417446f"
+    },
+    {
+      "path": "04 Validation/Multi-Domain Ariadline Evaluation Corpus v0.1.md",
+      "bytes": 3856,
+      "sha256": "1faa22ebdbf92bc14fa0e0efb7892101aa6994c9e9cf250af0e07ce130bc75f0"
+    },
+    {
+      "path": "04 Validation/Multi-Domain Reader and Author Evaluation Protocol v0.1.md",
+      "bytes": 13857,
+      "sha256": "3ed8679fb471a0652e9fafe45d5412c1c6dc5aac10efdefce8440018d7062a7a"
+    },
+    {
+      "path": "04 Validation/Operational Pilot Randomization Plan v0.1.md",
+      "bytes": 3894,
+      "sha256": "7e37504f90c497428b09196856a3672a47bb62cecd18583627a473d7497ce63c"
+    },
+    {
+      "path": "04 Validation/Participant Flow and Deviation Report Template v0.1.md",
+      "bytes": 3499,
+      "sha256": "8e965f890ccb4a338528ae9eacf1276a82e95a01ea96561f54a90b2b81395b71"
+    },
+    {
+      "path": "04 Validation/Participant Sampling and Recruitment Plan v0.1.md",
+      "bytes": 7575,
+      "sha256": "1b021f9989d3dd88928945f7d54ea4ce19a70a0690db8193c76100da02ed5daa"
     },
     {
       "path": "04 Validation/Pilot Study Design.md",
-      "bytes": 1964,
-      "sha256": "c5310f307b9e10818f7a36cde3b5e65126c254110e2c2a2d2b364322c33f0675"
+      "bytes": 5658,
+      "sha256": "4262da2187dcf44de2ceb6c24abe9eccf5d7942bd2e852a1c7d27a054a95e0a7"
+    },
+    {
+      "path": "04 Validation/Preregistered Analysis and Decision Plan v0.1.md",
+      "bytes": 14350,
+      "sha256": "741440d655ecdf94ff289393b1ac88f33d962953fefa515dc1f7184455f1a407"
     },
     {
       "path": "04 Validation/Quality Metrics and Acceptance Gates.md",
-      "bytes": 2106,
-      "sha256": "ff07f2b02b8e4d5be530c62de519a5b6f7fb93db2b74874b80273a268a267a92"
+      "bytes": 5613,
+      "sha256": "c350ee958167ac123c57775f10dd34d5a118ade7da1257d8d8e73e07ac10feda"
+    },
+    {
+      "path": "04 Validation/Semantic Equivalence Review Record v0.1.md",
+      "bytes": 4980,
+      "sha256": "e6f374bc36149fe7510c61633be9bc5b7d13e839492ae45d519bf5a09e633f06"
+    },
+    {
+      "path": "04 Validation/Source Snapshots/Canto-span PR 177 Summary Snapshot.md",
+      "bytes": 4002,
+      "sha256": "f2319227d22cbf444f7f08a2fbe98de8bf292f476ed320ccce07184e23bed6d2"
+    },
+    {
+      "path": "04 Validation/Source Snapshots/Canto-span PR 209 Summary Snapshot.md",
+      "bytes": 3900,
+      "sha256": "14cbe7fb863ed91137529509298b058a439650e9492fb094e8b5814bc8d6e774"
+    },
+    {
+      "path": "04 Validation/Synthetic Evaluation Operations Fixture v0.1.md",
+      "bytes": 3339,
+      "sha256": "7c058a9b1582ab0d0b86206e644ff7a2a22b4c1a346801b3483dc8fc51c6f45a"
     },
     {
       "path": "05 Governance/Development Roadmap.md",
-      "bytes": 2604,
-      "sha256": "69b5c6d69e9c6486a40130675b2e260cc17857bd05b6887fcad651d1057879bd"
+      "bytes": 2616,
+      "sha256": "5eb640691e57c49ded3c2755504775176d3e49b5784abf84c40e3aa9767d5b39"
     },
     {
       "path": "05 Governance/Governance and Change Control.md",
-      "bytes": 1888,
-      "sha256": "265cd54841859e336e65b136bf2161a7972ea2b538358b52207e0a03093fa16b"
+      "bytes": 7568,
+      "sha256": "9317c2ff7de5743b87e18e0e8b8879e0c5a901077a2c7282756b407c985f2bf3"
     },
     {
       "path": "05 Governance/Risks and Open Questions.md",
-      "bytes": 2290,
-      "sha256": "c96d89c452d770ccc9baead97b48b160340bdc23361b0746cac2b820acc16858"
+      "bytes": 2388,
+      "sha256": "67ca94eb76d28b96ff5b077085c861489e6a072c42557296a45eefff2197d18e"
     },
     {
       "path": "05 Governance/Versioning and Release Model.md",
-      "bytes": 1424,
-      "sha256": "8536256268ed266522e6fdf0c74ac6301f6a6ac4126f40e911b99602c3cf6dd2"
+      "bytes": 6639,
+      "sha256": "71b9b9bf933a035315f96c7044da806f80e5bd270b597ac0ca14010ae0141d73"
+    },
+    {
+      "path": "06 Registers/Ariadline Profile Applicability Register v0.1.md",
+      "bytes": 5145,
+      "sha256": "85cef80b68d64aef1c5bd77821727a279a82bb7e47d5bfe9f28d3464581653fc"
+    },
+    {
+      "path": "06 Registers/Ariadline Reference Change and Deferral Log v0.1.md",
+      "bytes": 6243,
+      "sha256": "352ce44fd67717fd6f89208b70f639adc63ee3b04f289f10f6e2321016e51dd2"
+    },
+    {
+      "path": "06 Registers/Ariadline Rule Traceability Matrix v0.1.md",
+      "bytes": 7007,
+      "sha256": "751c2947dc1f413e0fee0ca26c35795d7371535c12088663aea5be7c11127cb1"
+    },
+    {
+      "path": "06 Registers/Ariadline Rule and Pattern Index v0.1.md",
+      "bytes": 4575,
+      "sha256": "09bdff338a037fd32920fc2c32440048faac3ccdee5e670266211619614ed2ea"
+    },
+    {
+      "path": "06 Registers/Canto-span Pilot Termbase v0.1.md",
+      "bytes": 6350,
+      "sha256": "5da84a303e32273c9c86e530580b3c2e993d37ab3b1b88bfe37a7de0622607b3"
+    },
+    {
+      "path": "06 Registers/Canto-span Termbase — Corpus and Panel.md",
+      "bytes": 6531,
+      "sha256": "8f3344de28d3a80b00365aa240e10c6f5a558efcea6b90856994815984978801"
+    },
+    {
+      "path": "06 Registers/Canto-span Termbase — Identity and Governance.md",
+      "bytes": 8532,
+      "sha256": "03adb54224e5fa098ac44b1b2447d52d7756e5bd97975ef6811410e9645b1edc"
+    },
+    {
+      "path": "06 Registers/Canto-span Termbase — Provenance and Release.md",
+      "bytes": 1434,
+      "sha256": "988cf9ad83610cae25ae440993660f7dce0227a3882a42d0c7865953c44fb219"
+    },
+    {
+      "path": "06 Registers/Canto-span Termbase — Runtime and Verification.md",
+      "bytes": 3451,
+      "sha256": "e34b5d9c6ac6df9ef7517329f929349b6ecca35d050c0be0954f9d3233d3b689"
+    },
+    {
+      "path": "06 Registers/Canto-span Termbase — Status and Evidence.md",
+      "bytes": 12026,
+      "sha256": "38bfb1c7cf4ef97592b897549fc782c54bf5965dffe3f1b5136ba1a28a96884d"
+    },
+    {
+      "path": "06 Registers/Canto-span Termbase — Workflow and Authorization.md",
+      "bytes": 5010,
+      "sha256": "1d4a39c49632818959d1f60248bfa02c4e5623464ac9a634401af67f5baa1dcf"
+    },
+    {
+      "path": "06 Registers/Claim Function Decision Register v0.1.md",
+      "bytes": 5784,
+      "sha256": "6b2f1bb3cf11569fe3ca65cee5aecaf036933bdfe9d819143595fb9f833a4db3"
     },
     {
       "path": "06 Registers/Decision Log.md",
-      "bytes": 1881,
-      "sha256": "26ad1edd2b33cb7736a7865ee4e4d3d8b2a883c75ab61749cc78215ef497c1e2"
+      "bytes": 1905,
+      "sha256": "bf5a29304c287e32c5dc3c76185224b640b6365fe2d7bb7da76086202a9f0084"
     },
     {
       "path": "06 Registers/Rule Inventory.md",
-      "bytes": 2810,
-      "sha256": "03355ea75c5cc436d8e35837e62341cb471cac5e35db921f88d240fc6ea5f89e"
+      "bytes": 4812,
+      "sha256": "4af19739bc5324fe0ded1d4286ef6177596f4d5c7bf5b157dfce421b35017440"
     },
     {
       "path": "06 Registers/Term Inventory.md",
-      "bytes": 3700,
-      "sha256": "4958fb2ad8225af722c1777261aa396ebc9b07dec144bc055bbc4d39b440d98d"
+      "bytes": 4029,
+      "sha256": "f4e84716713cb46cc5e1fe1fd115733ca702d4d332032873a76f6e6886580687"
     },
     {
       "path": "07 Templates/Ariadline Change Request Template.md",
-      "bytes": 862,
-      "sha256": "93dd512f7ebcf61ccd4be386f5bb92c3aaf6f9b74828459fecd50f02613c7636"
+      "bytes": 880,
+      "sha256": "59b13a007c81b637937ad5d4086e5039bc00ede09ab2a16c2fb3ab78f304792b"
+    },
+    {
+      "path": "07 Templates/Ariadline Document Pattern Example Bank v0.1.md",
+      "bytes": 8031,
+      "sha256": "5c2bf6e358c930f8910fcc7b6f1a06f2bd333051329bf2159832986372de9bea"
+    },
+    {
+      "path": "07 Templates/Ariadline Document Pattern Outlines v0.1.md",
+      "bytes": 8517,
+      "sha256": "2010082785ade566b007c1bc7b0ac3130e0cd2ce71b4319b6fb60f50dd22c634"
     },
     {
       "path": "07 Templates/Ariadline Rule Proposal Template.md",
-      "bytes": 1188,
-      "sha256": "b1eb4dec678e566d21e5d6ae1d739de3a05a4ad5485f15a96005a0fd59a12815"
+      "bytes": 2263,
+      "sha256": "41dfa668b3765e80d7531c66724835dc666019aa83fbfb09f7120e9e5c840fad"
+    },
+    {
+      "path": "07 Templates/Ariadline Semantic Equivalence Review Template v0.1.md",
+      "bytes": 4856,
+      "sha256": "0edb47abc879a19eed545c90242b62bd521d8b6a03fcfb72174bf92e0d744c8f"
     },
     {
       "path": "07 Templates/Ariadline Term Entry Template.md",
-      "bytes": 837,
-      "sha256": "af3ee715ea1752dd34f8e21a7b2cb64bf84a91d997bcb12dd840e971db03166b"
+      "bytes": 861,
+      "sha256": "2abaf77cfaad332cdae3454f8ef662eddece105ddac9e7b1c111065d1a1d5ac1"
     },
     {
       "path": "07 Templates/Ariadline Test Case Template.md",
-      "bytes": 835,
-      "sha256": "cc64b1815ce6bad28227cc2f326265e19d1ce30ef0c2db5b7ea5f0e4a80c4ee5"
+      "bytes": 853,
+      "sha256": "57a830af0abbac959f7f711d3e5f7f11372e91109248a8cc6b812d69c0108f95"
     },
     {
       "path": "08 Reference/Ambiguity.md",
-      "bytes": 449,
-      "sha256": "4baa35de168725b30ae63db7a59aae19816d6b616fa916f743c0a217c2a9fcc7"
-    },
-    {
-      "path": "08 Reference/Attestation and Productivity.md",
-      "bytes": 645,
-      "sha256": "0f9245d5dcfa0fe343ece1db3a20cc3a0165b064e2ac8d70ae1e69b9f4379749"
-    },
-    {
-      "path": "08 Reference/Conformance.md",
-      "bytes": 444,
-      "sha256": "20ff97fa4f0616135b032743d029fe293a33552057f539e7e2bf9041b9c82024"
-    },
-    {
-      "path": "08 Reference/Controlled Natural Language.md",
-      "bytes": 846,
-      "sha256": "caf2597318bd25464d06e4cf5161314a2ca2528c3f0ca21c440c8022bdf1c4d8"
-    },
-    {
-      "path": "08 Reference/Glossary.md",
-      "bytes": 1625,
-      "sha256": "8718ea299e1de324bb353b7855bd220db57c532649de4b822cb8cf95da40206c"
-    },
-    {
-      "path": "08 Reference/Linguistic Example.md",
-      "bytes": 436,
-      "sha256": "a40a6e09015fa0ef4f4bcd0808e72d8ccf215b67db7d703a72d28861434b7e81"
+      "bytes": 461,
+      "sha256": "70e3b5151cb39901ebe822c910ccd43ee2bf9a3f660214ca9af2d1d2c0cbed53"
     },
     {
       "path": "08 Reference/Ariadline Profile.md",
-      "bytes": 441,
-      "sha256": "a758b0401de35e0bbf65fe1c66827ee01e480bceaec5661ca04dc42b95371d03"
+      "bytes": 471,
+      "sha256": "6bdd463a0480c6ec0ec5a67435876d0354f7cf0fb6f30786fe7b17e0ddf605f9"
     },
     {
       "path": "08 Reference/Ariadline.md",
-      "bytes": 682,
-      "sha256": "d963fa25693067e849b6b0f0348503da505434ea3e35acda0e368d4a57238bf2"
+      "bytes": 666,
+      "sha256": "8fd5c722032e6adab1dcbd2791cf41da117df05fb05122818ae2440ebac41214"
+    },
+    {
+      "path": "08 Reference/Attestation and Productivity.md",
+      "bytes": 651,
+      "sha256": "8a44e95869b09835c35cf408f247e5eb2437809a36a0f2cee9fc78eeebb8cd14"
+    },
+    {
+      "path": "08 Reference/Conformance.md",
+      "bytes": 468,
+      "sha256": "017011d810102387758e45615f8fdef98b94035dc9b582794760bba11c39cbfc"
+    },
+    {
+      "path": "08 Reference/Controlled Natural Language.md",
+      "bytes": 864,
+      "sha256": "52bfe79ad84e85873b012061ab75ea65fd7d03eacf960c51006c51ec2c4865c0"
+    },
+    {
+      "path": "08 Reference/Glossary.md",
+      "bytes": 6533,
+      "sha256": "aa8fd1051e65eff505c5a5805a4bb154a34c639cdf6ac37f4e55590a54e63950"
+    },
+    {
+      "path": "08 Reference/Linguistic Example.md",
+      "bytes": 448,
+      "sha256": "2381fcf8950e83a46b3f2c428882657f200987c69b5cba4771df12edfe774a90"
+    },
+    {
+      "path": "08 Reference/Optional Automation Notes for Ariadline Review v0.1.md",
+      "bytes": 3385,
+      "sha256": "2a7e8b6002f106637b2220bba0ce3b434a5cc52e861e7a83f008c1bdc78da730"
     },
     {
       "path": "08 Reference/Standards and Sources.md",
-      "bytes": 3525,
-      "sha256": "b6b776bf0f31e2300010ca78c102b3a0cfb40b2d85b047394a3680d3e30cc81c"
+      "bytes": 3561,
+      "sha256": "81d7b771843caff1443958da383bbdc6cc8c9260641a27030ef23d54cc89186a"
+    },
+    {
+      "path": "09 Case Studies/Canto-span A-not-A Worked Example.md",
+      "bytes": 16237,
+      "sha256": "951e6d93a27c8adfd8285aa2e9819d4c993d6ebfeb65d8fb3ad1872f0ac340b9"
+    },
+    {
+      "path": "09 Case Studies/Canto-span Case Study.md",
+      "bytes": 36571,
+      "sha256": "53997a39a82ae11187783ac874bb72fa67390bb0ef7d2f555a8dd7e97f9b6f3f"
     },
     {
       "path": "README.md",
-      "bytes": 981,
-      "sha256": "9fac50555536b3a200227f8ae726b3bf0e05f1d0378152e3bf58e9a1be4bf31a"
+      "bytes": 1027,
+      "sha256": "86aba345c1d37b0ca04d96d178d51ad4d59e1ae5f2629da07a453714318c9417"
     },
     {
       "path": "Vault Validation Report.md",
-      "bytes": 430,
-      "sha256": "e1c0b1bd408fbca49d7c49aa28ef7ad7f23f6885fe86f7779ec9c98a90ca9b12"
+      "bytes": 6790,
+      "sha256": "def7392e8f906b9617d57401da1d412cade4d51d0d83e442e31c8d6dc6a52853"
+    },
+    {
+      "path": "tools/evaluation/Evaluation Dry-Run Tool Instructions.md",
+      "bytes": 1934,
+      "sha256": "54fc231189a1c8785734730b04fa5219ad96f8ddc0c7b27e9f6d6a84839fb97a"
     }
   ]
 }

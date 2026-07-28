@@ -40,7 +40,7 @@ This note is an Ariadline research instrument. It is not a current-state owner f
 The test run has two objectives:
 
 1. determine whether a proposed Ariadline Grammar Engineering Profile helps readers interpret Canto-span documentation;
-2. discover where the current proposed [[Ariadline|Ariadline]] notes, profiles, templates, and repository infrastructure are insufficient.
+2. discover where the current proposed [[Ariadline]] notes, profiles, templates, and repository infrastructure are insufficient.
 
 A workaround is evidence about a gap. It is not evidence that the current Ariadline already supported the task.
 

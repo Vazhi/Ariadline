@@ -3,7 +3,7 @@ version	0.1
 status	proposed
 normative_status	non-normative
 purpose	stress-test independently proposed Ariadline rules against Canto-span-specific distinctions
-authority_boundary	fixture entries do not define SLE terminology or normative requirements
+authority_boundary	fixture entries do not define Ariadline terminology or normative requirements
 entry_count	46
 external_repository	Vazhi/canto-span
 external_commit	c9dd631739734a5ab886f0b667db9888b0add13b

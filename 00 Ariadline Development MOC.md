@@ -6,7 +6,6 @@ created: 2026-07-27
 updated: 2026-07-28
 aliases:
   - "Ariadline MOC"
-  - "Ariadline MOC"
 tags:
   - ariadline
   - moc

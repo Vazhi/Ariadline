@@ -130,9 +130,9 @@ The draft has not established:
 
 See [[Evaluation Framework]], [[Pilot Study Design]], [[Ariadline Evaluation Corpus Bias Assessment v0.1]], and [[Human Review Boundary Register v0.1]].
 
-## Naming risk
+## Naming decision
 
-**Ariadline** is a working abbreviation with other established meanings. A naming and acronym review is required before public release.
+The project name is **Ariadline**. Public materials should pair it with a descriptive subtitle until the name is established. Naming and intellectual-property review remains part of release governance.
 
 ## Change history
 

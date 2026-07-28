@@ -11,7 +11,7 @@ tags:
 ---
 # Ariadline Development Plan
 
-This vault is a project plan for the development of **Ariadline (Ariadline)**.
+This vault develops **Ariadline**, an experimental framework for clear and accountable linguistic reporting.
 
 Start with [[00 Ariadline Development MOC]].
 

@@ -47,11 +47,11 @@ A linguistics-wide termbase can become too large to govern.
 
 **Control:** maintain a small core plus profile and project modules.
 
-## R-07 — Acronym collision
+## R-07 — Brand ambiguity
 
-**Ariadline** already has other meanings in medicine, education, and other contexts.
+The coined name **Ariadline** does not immediately explain the project’s purpose to every reader.
 
-**Control:** conduct a naming review before public branding.
+**Control:** pair the name with a descriptive subtitle and maintain a documented naming and intellectual-property review.
 
 ## R-08 — English-centered design
 

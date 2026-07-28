@@ -18,7 +18,7 @@ tags:
 # Canto-span A-not-A Worked Example
 
 > [!abstract] Purpose
-> This note applies the target [[Ariadline|Ariadline]] system to one live Canto-span construction record. It shows how Ariadline could make identity, linguistic scope, evidence, software behavior, and unresolved questions easier to distinguish without weakening Canto-span governance.
+> This note applies the target [[Ariadline]] system to one live Canto-span construction record. It shows how Ariadline could make identity, linguistic scope, evidence, software behavior, and unresolved questions easier to distinguish without weakening Canto-span governance.
 
 This note extends [[Canto-span Case Study]] with a construction-level example.
 

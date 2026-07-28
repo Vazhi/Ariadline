@@ -17,7 +17,7 @@ tags:
 # Canto-span Case Study
 
 > [!abstract] Purpose
-> This case study evaluates how the Canto-span Cantonese grammar-engineering project could improve by adopting a mature form of [[Ariadline|Ariadline (Ariadline)]]. It treats Canto-span as an advanced pilot project, not as an example of weak governance.
+> This case study evaluates how the Canto-span Cantonese grammar-engineering project could improve by adopting a mature form of [[Ariadline]]. It treats Canto-span as an advanced pilot project, not as an example of weak governance.
 
 ## Status of this case study
 

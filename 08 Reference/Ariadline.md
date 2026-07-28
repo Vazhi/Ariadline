@@ -13,7 +13,7 @@ tags:
 ---
 # Ariadline
 
-**Ariadline (Ariadline)** is the working name for the controlled language planned in this vault.
+**Ariadline** is the project name for the experimental linguistic reporting framework developed in this vault.
 
 Ariadline aims to make linguistic writing:
 
