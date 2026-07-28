@@ -11,46 +11,50 @@ tags: [ariadline, evaluation, rehearsal, report]
 
 ## Result
 
-The deterministic rehearsal completed successfully on the exact fixture and validator sources prepared for issue #55.
+The deterministic rehearsal completed successfully on the exact fixture, manifest, and validator sources prepared for issue #55.
 
 - valid fixture: `valid`, 0 findings;
 - invalid fixture: `expected_failures_detected`;
-- invalid-fixture findings: 23;
-- distinct expected diagnostic classes: 17;
-- missing expected classes: 0;
-- unexpected diagnostic classes: 0.
+- invalid-fixture findings: 50;
+- distinct diagnostic classes: 27;
+- missing expected `(code, path)` findings: 0;
+- unexpected `(code, path)` findings: 0.
 
 ## Valid-path behavior
 
 The valid fixture demonstrates that the represented procedure can:
 
-- retain a structurally eligible fictional P/S pair when both conditions are comparable and derive to `preserved`;
-- keep reader exposure blocked even for that eligible pair while human launch gates remain unresolved;
-- exclude a pair when one condition derives to `not preserved`;
-- exclude a pair when one condition derives to `not determined`;
-- preserve failed and unresolved outcomes as adverse records;
-- keep the rehearsal non-launchable while human gates remain unresolved;
+- require complete case, P/S condition, output-hash, scoring-key, and preservation records;
+- retain a structurally eligible fictional P/S pair only when fairness, masking, freeze, comparability, and preservation controls all pass;
+- simulate reader exposure for one explicitly selected eligible pair after fictional gate states are marked `approved`;
+- retain excluded `not preserved` and `not determined` pairs without making the selected eligible pair structurally unlaunchable;
+- keep failed and unresolved outcomes visible as adverse records;
 - keep parent issue #9 unchanged;
 - limit claims to procedure validation.
+
+The `approved` gate values are fictional state markers used only to test launch-set logic. They do not represent human approval.
 
 ## Negative-path behavior
 
 The invalid fixture confirms detection of:
 
+- missing fixture, case, condition, output-hash, scoring-key, and preservation information;
 - false evidence and study-state claims;
-- missing human gates;
+- missing or invalid human-gate states;
+- duplicate case identity and invalid comparability;
 - same-record editor carryover;
-- mismatched shared packets;
+- mismatched or missing shared packets;
 - restricted scorer metadata leakage;
-- late scoring-key freeze;
-- invalid preservation aggregation;
-- invalid pair eligibility and reader exposure;
-- reader exposure before human launch gates pass;
+- late or incomplete scoring-key freeze;
+- invalid preservation dimensions and aggregation;
+- contaminated or failed pairs marked benefit-eligible;
+- ineligible pairs selected for launch;
+- reader exposure for unselected, ineligible, or launch-unready pairs;
 - hidden adverse outcomes;
 - promotion of `not determined`;
 - attempted launch and parent-study advancement.
 
-See [[Ariadline Kill-Test Synthetic Case Register v0.1]] for the exact diagnostic classes.
+See [[Ariadline Kill-Test Synthetic Case Register v0.1]] and the expected-findings JSON for the exact identities.
 
 ## Limits
 
