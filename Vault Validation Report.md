@@ -11,8 +11,8 @@ tags:
 ---
 # Vault Validation Report
 
-- Markdown notes: 95
-- Wikilinks checked: 613
+- Markdown notes: 99
+- Wikilinks checked: 637
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -22,7 +22,7 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the issue #36 synthetic evaluation-operations dry-run package on top of the merged issue #9 preparation package.
+This report describes the issue #49 minimal core and adversarial kill-test package on top of the merged issue #36 synthetic operations package.
 
 The assembled reference package remains:
 
@@ -73,110 +73,82 @@ Issue #36 adds:
 - [[Synthetic Evaluation Operations Fixture v0.1]]
 - [[Evaluation Dry-Run Tool Instructions]]
 
+Issue #49 adds:
+
+- [[SLE Candidate Test Core Register v0.1]]
+- [[SLE Rule Deferral Register v0.1]]
+- [[Minimal SLE Kill-Test Protocol v0.1]]
+- [[SLE Kill-Test Decision Matrix v0.1]]
+
 ## Count method
 
-Merged `main` contained 87 Markdown notes and 574 wikilinks.
+Merged `main` contained 95 Markdown notes and 613 wikilinks.
 
-The merged baseline count already includes the issue #9 links from [[Evaluation Framework]], [[Pilot Study Design]], and [[Quality Metrics and Acceptance Gates]].
+The issue #49 branch:
 
-The issue #36 branch:
+- adds four uniquely named Markdown notes containing 16 wikilinks;
+- adds four links to the map of content;
+- adds four links to this validation report.
 
-- adds eight uniquely named Markdown notes containing 23 wikilinks;
-- adds eight links to the map of content;
-- replaces the prior 29-link validation report with this 37-link report, for a net increase of eight.
-
-Result: 95 Markdown notes and 613 wikilinks.
-
-The eight Markdown notes are seven readable validation or template records and one uniquely named tool-instruction note. Python and JSON files are not included in the Markdown-note count.
+Result: 99 Markdown notes and 637 wikilinks.
 
 Ordinary Markdown links and plain rule, pattern, profile, material, participant, condition, question, issue, path, and version IDs are not included in the wikilink total.
 
-## Synthetic execution validation
+## Minimal-core validation
 
-The reviewed implementation layer was exercised locally against the original dry-run base API after blocker repair.
+The package accounts for all 24 proposed rules:
 
-- deterministic seed: `20260728`;
-- valid fixture: zero findings;
-- expected invalid-code coverage: 34 of 34;
-- missing expected codes: 0;
-- unexpected codes: 0;
-- expected-invalid success requires exact distinct-code agreement.
+- 12 rules enter the candidate reader-benefit core;
+- 11 rules are deferred to profiles or optional guidance;
+- `SLE-RULE-0018` remains a governance safeguard outside the reader-benefit core.
 
-The valid and invalid JSON fixtures are generated outputs. The 34-code expected manifest is committed. Regeneration is deterministic under the recorded seed and source version.
+The candidate register does not change the proposed normative rule set or current profile mappings.
 
-## Data-model validation
+## Kill-test validation
 
-The generator populates every operational table defined by the evaluation data plan:
+The planning protocol records:
 
-- participants;
-- materials;
-- conditions;
-- trials;
-- responses;
-- scoring;
-- preservation;
-- qualitative findings;
-- protocol deviations.
+- 10 to 12 authentic authorized passages;
+- at least three substantially different subfields or research practices;
+- no subfield contributing more than half of the passages;
+- competent ordinary expert editing as P;
+- candidate-core editing as S;
+- optional U only when separately authorized and registered;
+- independent meaning-preservation review before reader exposure;
+- approximately 20 to 30 readers or reviewers as a non-frozen planning range;
+- no more than three primary outcomes before launch;
+- rule-level benefit, burden, naturalness, cohesion, repetition, fragmentation, agreement, and bias records;
+- explicit adversarial cases where P solves the problem or S creates a new problem.
 
-All records are visibly fictional. No authentic passage, real participant, contact record, consent form, restricted material, or human approval is included.
+## Decision validation
 
-## Condition and assignment validation
+The matrix permits:
 
-The reviewed valid dry run demonstrates:
+- retain as candidate core;
+- move to a profile;
+- revise and retest;
+- remove;
+- continue with a narrowed core;
+- reconceive as guidance, reporting framework, or profiles;
+- stop formal universal controlled-language development;
+- insufficient evidence.
 
-- 20 active fictional participants and one separately retained withdrawn row;
-- 16 exposures for every core material;
-- task-specific required condition sets;
-- P and S availability for publication-relevant synthetic tasks;
-- U limited to an admissible reader baseline;
-- 6 P, 6 S, and 4 U assignments for that baseline;
-- 8 P and 8 S assignments for every other core material;
-- P/S difference at most 1 for every order position;
-- no participant exposure to multiple wording conditions from one meaning record;
-- exact agreement between trial masks and registered material-condition masks;
-- masked scoring records;
-- no post-withdrawal assignments;
-- Canto-span contributor and trial shares below 10%;
-- `not determined` retained rather than converted to success.
-
-These are structural tests only. They do not establish that P or S preserves authentic meaning or that a real assignment is fair, accessible, or scientifically valid.
-
-## Invalid-fixture validation
-
-The intentionally invalid fixture exercises all 34 registered validation classes across:
-
-- evidence and authenticity boundaries;
-- missing tables;
-- invalid and duplicate identifiers;
-- broken participant, material, and trial references;
-- condition and trial meaning mismatches;
-- universal, missing, unregistered, and prohibited conditions;
-- duplicate meaning exposure;
-- condition and order imbalance;
-- mask leakage, duplication, and registered-mask mismatch;
-- unmasked scoring;
-- invalid preservation readiness and uncertainty downgrading;
-- post-withdrawal assignment;
-- duplicate deviations;
-- Canto-span participant and trial cap violations.
-
-One injected fault can create several row-level findings. The distinct code set, not the total row count, controls the self-test. Missing and unexpected codes both fail the expected-invalid command.
+Meaning-preservation failure cannot be offset by average benefit. A package-level benefit cannot hide a harmful rule. Null, mixed, adverse, and stop results remain valid.
 
 ## Human authority boundary
 
-The dry run cannot:
+The issue #49 package cannot:
 
-- approve oversight, consent, privacy, retention, or accessibility;
-- grant material permission;
-- identify legitimate source, translator, publisher, or community authority;
-- certify meaning preservation;
-- freeze statistical choices or preregister the study;
-- recruit or supervise participants;
-- classify rules from human evidence;
-- advance the study state beyond preparation;
-- support a `publish`, `revise`, or `stop` recommendation.
-
-Human issues #30 through #35 remain open.
+- acquire or authorize authentic material;
+- identify legitimate meaning authority;
+- certify preservation;
+- approve oversight, consent, privacy, accessibility, or retention;
+- recruit participants;
+- justify or freeze a sample size;
+- preregister the study;
+- classify rules from participant evidence;
+- change normative rule or profile status;
+- close parent issue #9 or human issues #30 through #35.
 
 ## Duplicate basenames
 
