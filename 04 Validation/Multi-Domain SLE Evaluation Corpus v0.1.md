@@ -38,6 +38,19 @@ The controlled alternative can enter later testing only when it matches the auth
 - Permitted use: internal rule auditing, evaluation-procedure design, and blocker discovery
 - Prohibited use: effectiveness, representativeness, authentic multilingual coverage, or stabilization claims
 
+## Mechanical count convention
+
+The v0.1 pair audits use one reproducible editorial count convention:
+
+- a word is a Unicode letter-or-number run;
+- an internal apostrophe or hyphen remains part of the word when surrounded by word characters;
+- punctuation otherwise separates words;
+- a comma-grouped number such as `1,100` is counted as two numeric runs under this mechanical convention;
+- a sentence is counted at a displayed terminal period, question mark, or exclamation mark;
+- headings, labels, and audit notes are excluded from passage counts.
+
+These counts describe surface change only. They do not establish readability, cohesion, or improvement.
+
 ## Independent item parts
 
 - [[Evaluation Corpus Items 0001–0004 v0.1]]
