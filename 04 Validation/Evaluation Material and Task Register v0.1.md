@@ -17,7 +17,7 @@ tags:
 
 This register controls which materials may enter the human study defined in [[Multi-Domain Reader and Author Evaluation Protocol v0.1]].
 
-A registered item is not automatically valid for confirmatory analysis. The item must pass its authorization, preservation, permission, and scoring gates.
+A registered item is not automatically valid for confirmatory analysis. The item must pass its authorization, permission, task-specific condition, preservation, and scoring gates.
 
 ## Material classes
 
@@ -48,7 +48,8 @@ Required properties:
 - exact passage and version identity;
 - permission and access status;
 - authorized meaning record;
-- independently reviewed condition variants;
+- registered task type and required condition set;
+- independently reviewed P and S variants when those variants are required;
 - source-domain, theory, method, language, and genre metadata.
 
 Only valid `AUTH` items may support the main publication decision.
@@ -63,7 +64,8 @@ Required properties:
 - translator role;
 - bilingual or multilingual review;
 - normative-function and terminology review;
-- rhetorical-order notes.
+- rhetorical-order notes;
+- registered P/S comparison and any separately justified source-order baseline.
 
 ### `FULL` — full-section or full-document material
 
@@ -73,7 +75,8 @@ Required properties:
 - multiple interacting claims or instructions;
 - at least two applicable document patterns or a justified single-pattern full section;
 - authorized meaning and structure record;
-- permission for participant use.
+- permission for participant use;
+- registered P/S comparison and any optional U baseline.
 
 ### `CS` — Canto-span supplementary material
 
@@ -81,17 +84,41 @@ Source: [[Canto-span Evaluation Subset v0.1]].
 
 The class is reported separately and cannot satisfy independent coverage.
 
-## Condition fields
+## Condition model
+
+A material record must not assume that every task uses U, P, and S.
+
+- `U` is an authorized source or uncontrolled baseline. Its intended meaning and known deviations must be recorded. U is not automatically a preservation-certified condition.
+- `P` is an ordinary expert-edited plain condition or guidance set. Confirmatory P must pass independent preservation review.
+- `S` is a proposed SLE-controlled condition or guidance set. Confirmatory S must pass independent preservation review.
+
+### Task-specific required condition sets
+
+- reader reconstruction: P and S required; U optional when an authorized source baseline is analytically useful;
+- editorial review: register the passages needed for checklist or conformance testing; no universal triplet requirement;
+- authoring and revision: P and S guidance or workflow conditions required; the source passage or brief is task input;
+- translation: P and S required; source-order baseline separately registered when used;
+- full-document: P and S required; U optional;
+- synthetic procedure pilot: any condition set permitted when its construction status and limitations are explicit.
+
+A publication claim requires a valid S-versus-P comparison. Benefit over U alone is insufficient.
+
+## Comparison and condition fields
 
 Every comparison record must include:
 
 - material ID;
 - class;
+- task type;
+- required condition set;
 - immutable source or version reference;
 - authorized meaning record ID;
-- condition `U`, `P`, or `S`;
+- condition code and condition role;
 - condition author and role;
-- independent preservation result;
+- condition admissibility state;
+- intended-meaning authority for U when used;
+- documented U deviations when used;
+- independent preservation result for P and S;
 - condition word and sentence count;
 - condition-specific notes;
 - scoring-key version;
@@ -197,8 +224,9 @@ Before launch, the confirmatory register must contain at least:
 - 2 or more non-English-original `TRANS` records;
 - 2 or more `FULL` records;
 - 2 or more authentic `GLOSS` records;
-- ordinary expert-edited `P` conditions for every confirmatory meaning record;
-- no source contributing more than 20% of confirmatory trials;
+- valid P and S conditions for every confirmatory comparison;
+- registered U baselines only where the task requires them;
+- no source contributing more than 20% of confirmatory meaning records or participant exposures;
 - no Canto-span material contributing more than 10% of any pooled trial set.
 
 These are minimum diversity gates, not evidence that the final sample represents linguistics as a whole.
@@ -224,6 +252,7 @@ Use these states:
 - `candidate`;
 - `permission_pending`;
 - `meaning_pending`;
+- `task_registration`;
 - `condition_drafting`;
 - `independent_review`;
 - `pilot_ready`;
@@ -231,7 +260,7 @@ Use these states:
 - `excluded`;
 - `retired`.
 
-A material can become `confirmatory_ready` only after all three conditions and the scoring key pass independent review.
+A material can become `confirmatory_ready` only after its registered required condition set, scoring key, permission state, and authority records pass review. No universal U/P/S triplet is required.
 
 ## Change control
 
@@ -239,6 +268,6 @@ After the main-study freeze:
 
 - do not edit a stimulus silently;
 - assign a new material version for any change;
-- remove an invalid item under the preregistered exclusion rule;
+- remove an invalid item under the frozen exclusion rule;
 - report the item, reason, timing, and affected analyses;
 - do not replace an excluded item after viewing its condition effect.
