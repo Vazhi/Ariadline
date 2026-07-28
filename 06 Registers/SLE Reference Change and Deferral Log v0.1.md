@@ -29,9 +29,17 @@ The controlling product is a durable human-readable edition. Software, schemas, 
 
 Core SLE design uses independent evidence and multi-domain evaluation. Canto-span remains a later non-authoritative stress test and adoption target.
 
+### Draft-phase evidence gate
+
+Issue #8 assembles a proposed draft when every proposed rule has auditable independent rationale and exact traceability. This is not the stabilization criterion.
+
+Independent cross-domain justification sufficient for stable normative status remains required before stabilization. Assembly does not waive that requirement, and unresolved direct or cross-domain evidence gaps remain visible.
+
 ### Modular controlling text
 
-The package has separate controlling modules for rules, patterns, profiles and conformance, profile mappings, governance, versioning, and terminology. The master draft supplies navigation and hierarchy rather than silently rewriting those modules.
+The package has separate controlling modules for rules, patterns, profiles and conformance, profile mappings, governance, and versioning. The master draft supplies navigation and hierarchy rather than silently rewriting those modules.
+
+The glossary is an informative terminology guide. It summarizes package usage and cannot create independent obligations or universal linguistic definitions.
 
 ### Stable identifiers
 
@@ -87,7 +95,7 @@ The four example-provenance dimensions remain proposed pending field, corpus, ex
 
 ### Controlled terminology module
 
-The current [[Glossary]] supplies publication terminology. A larger stable controlled termbase remains future work and must not be derived from the non-normative Canto-span fixture.
+The current [[Glossary]] is informative. A stable controlled terminology module or larger termbase remains future work and must not be derived from the non-normative Canto-span fixture.
 
 ### Multilingual and localized guidance
 
@@ -109,6 +117,7 @@ Automation may flag text for review. Executable rules, diagnostics, confidence p
 
 The draft has not established:
 
+- independent cross-domain justification sufficient to stabilize every proposed rule;
 - broad reader-comprehension improvement;
 - authoring-efficiency improvement;
 - authentic cross-language meaning preservation;
