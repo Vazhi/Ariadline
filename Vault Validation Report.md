@@ -12,7 +12,7 @@ tags:
 # Vault Validation Report
 
 - Markdown notes: 87
-- Wikilinks checked: 572
+- Wikilinks checked: 574
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -22,7 +22,7 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the issue #9 human-evaluation preparation package on top of the merged proposed reference-artifact draft.
+This report describes the issue #9 human-evaluation preparation package after substantive review and blocker repair, on top of the merged proposed reference-artifact draft.
 
 The assembled reference package remains:
 
@@ -59,41 +59,46 @@ Issue #9 adds:
 - [[Evaluation Material and Task Register v0.1]]
 - [[Participant Sampling and Recruitment Plan v0.1]]
 - [[Evaluation Data Dictionary and Privacy Plan v0.1]]
-- [[Preregistered Analysis and Decision Plan v0.1]]
+- [[Preregistered Analysis and Decision Plan v0.1|Analysis and Decision Plan Draft v0.1]]
 - [[Evaluation Execution Status v0.1]]
 
 ## Count method
 
 Merged `main` contained 81 Markdown notes and 525 wikilinks.
 
-The issue #9 branch:
+The repaired issue #9 branch:
 
 - adds six uniquely named Markdown notes containing 23 wikilinks;
 - adds six links to the map of content;
 - adds six links to [[Evaluation Framework]];
-- adds four links to [[Pilot Study Design]];
+- adds six links to [[Pilot Study Design]];
 - revises [[Quality Metrics and Acceptance Gates]] for a net increase of two wikilinks;
 - adds six links to this validation report.
 
-Result: 87 Markdown notes and 572 wikilinks.
+Result: 87 Markdown notes and 574 wikilinks.
 
 Ordinary Markdown links and plain rule, pattern, profile, material, participant, condition, question, and version IDs are not included in the wikilink total.
 
 ## Protocol validation
 
 - The protocol separates material authorization, operational piloting, reader evaluation, editorial review, authoring, translation, and full-document phases.
-- U, P, and S conditions must derive from the same authorized meaning record.
+- U, P, and S are anchored to one authorized meaning record but are not falsely treated as literally equivalent.
+- U is an authorized source or uncontrolled baseline, not a preservation-certified rewrite.
+- P and S require independent preservation review for confirmatory comparison.
+- Required condition sets are registered by task rather than universally requiring a U/P/S triplet.
 - SLE must be compared with ordinary expert editing, not only deliberately defective prose.
-- Primary reader, author-safety, and reviewability outcomes are identified.
+- Primary reader, author-safety, and reviewability outcomes are identified for later human freeze.
 - Counterbalancing, exclusions, deviations, and non-generalization rules are explicit.
-- The protocol states that the study has not started.
+- The protocol states that the study has not started and is not yet preregistered.
 
 ## Material validation
 
 - All 16 independent constructed corpus items are assigned to procedure-pilot blocks.
 - The two Canto-span items remain separately labelled supplementary material.
 - Authentic, translated, full-document, and glossing material IDs are reserved but not falsely reported as populated.
-- Confirmatory launch requires authentic authority, ordinary expert-edited conditions, independent preservation review, and source-diversity gates.
+- Confirmatory launch requires authentic authority, task-specific condition registration, ordinary expert-edited P conditions, independently reviewed S conditions, and source-diversity gates.
+- U baselines are included only where the registered task requires them.
+- `confirmatory_ready` depends on the registered condition set rather than a universal triplet.
 
 ## Participant validation
 
@@ -113,7 +118,12 @@ Ordinary Markdown links and plain rule, pattern, profile, material, participant,
 
 ## Analysis and decision validation
 
-- Reader benefit, unsupported inference, material misinterpretation, author preservation, burden, and reviewability gates are defined before data collection.
+- The analysis record is classified as a freeze-ready draft, not a completed preregistration.
+- Human approval and immutable registration are required before confirmatory recruitment.
+- S-versus-P is the required publication-relevant contrast.
+- S-versus-U is optional and valid only for registered admissible U baselines.
+- Reader benefit, unsupported inference, material misinterpretation, author preservation, burden, and reviewability gates are proposed before data collection.
+- Numerical margins remain planning proposals until human statistical review and freeze.
 - Rule findings include beneficial, neutral, harmful, biased, burdensome, and inconclusive.
 - Project disposition is limited to `publish`, `revise`, or `stop` after actual evidence.
 - The current recommendation remains `not determined — study not executed`.
@@ -122,7 +132,8 @@ Ordinary Markdown links and plain rule, pattern, profile, material, participant,
 ## Execution-state validation
 
 - Current state is `not_started`.
-- Administrative, material, sampling, and analysis blockers are listed.
+- Registration state is `draft — not preregistered`.
+- Administrative, authority, material, sampling, accessibility, analysis, and registration blockers are listed.
 - No participant, effect, rule classification, or publication recommendation is fabricated.
 - Issue #9 remains open until execution, analysis, rule dispositions, and epic update are complete.
 
