@@ -36,11 +36,14 @@ The controlling human boundaries remain in [[Evaluation Execution Status v0.1]],
 
 - `tools/evaluation/generate_dry_run.py`
 - `tools/evaluation/validate_dry_run.py`
+- `tools/evaluation/dry_run_reviewed.py`
 - `tools/evaluation/dry_run_common.py`
 - [[Evaluation Dry-Run Tool Instructions]]
 - `fixtures/evaluation-dry-run/v0.1/valid_fixture.json`
 - `fixtures/evaluation-dry-run/v0.1/invalid_fixture.json`
 - `fixtures/evaluation-dry-run/v0.1/expected_invalid_codes.json`
+
+`dry_run_reviewed.py` is the controlling implementation layer for recorded self-tests. `dry_run_common.py` supplies lower-level fixture primitives.
 
 Software is optional. The readable records remain usable without running code.
 
@@ -62,8 +65,22 @@ python3 tools/evaluation/validate_dry_run.py \
 Expected result:
 
 - the valid fixture reports `PASS` with zero findings;
-- the intentionally invalid fixture reports findings for every listed expected code;
+- the intentionally invalid fixture detects all 34 registered validation classes;
+- the actual and expected distinct code sets match exactly;
 - neither result changes the study state from `not_started`.
+
+## Reviewed assignment behavior
+
+The valid synthetic schedule uses 20 active fictional participants and one separately retained withdrawn row.
+
+- Every core material receives 16 exposures.
+- Four balanced U exposures are assigned only to the admissible reader baseline.
+- That baseline receives 6 P, 6 S, and 4 U exposures.
+- Every other core material receives 8 P and 8 S exposures.
+- The P/S difference at every order position is at most 1.
+- No participant receives multiple wording conditions from one meaning record.
+
+These counts exercise assignment logic only. They are not a sample-size or design recommendation for issue #33.
 
 ## What the automation checks
 
@@ -71,17 +88,21 @@ The validator can check:
 
 - required tables and stable identifiers;
 - foreign-key consistency;
+- condition and trial meaning-record consistency;
 - task-specific condition registration;
 - mandatory P-versus-S availability for publication-relevant synthetic tasks;
 - U use only when the task registers an admissible baseline;
 - repeated exposure to multiple wording conditions from one meaning record;
-- opaque masking codes;
+- opaque and unique masking codes;
+- exact trial-mask agreement with the registered material-condition mask;
+- material-level and order-position P/S balance;
 - scorer masking state;
 - withdrawal-order violations;
 - Canto-span participant and trial caps;
 - prohibited direct-identifier fields in the participant table;
 - invalid preservation-state transitions;
-- conversion of `not determined` into success.
+- conversion of `not determined` into success;
+- exact 34-code negative-fixture coverage.
 
 ## What it cannot check
 
