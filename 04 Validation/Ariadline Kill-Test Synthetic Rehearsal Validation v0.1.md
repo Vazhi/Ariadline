@@ -11,7 +11,7 @@ tags: [ariadline, validation, rehearsal]
 
 ## Package result
 
-PASS — the package contains every automated deliverable in issue #55 and keeps all human-study authority outside the synthetic rehearsal.
+PASS — the repaired package contains every automated deliverable in issue #55 and keeps all human-study authority outside the synthetic rehearsal.
 
 ## Files checked
 
@@ -21,7 +21,7 @@ PASS — the package contains every automated deliverable in issue #55 and keeps
 - `tools/evaluation/rehearse_kill_test.py`
 - valid fixture JSON;
 - invalid fixture JSON;
-- exact expected-code manifest.
+- exact expected `(code, path)` finding manifest.
 
 ## Executed checks
 
@@ -29,38 +29,40 @@ PASS — the package contains every automated deliverable in issue #55 and keeps
 valid fixture: valid
 valid findings: 0
 invalid fixture: expected_failures_detected
-invalid findings: 23
-distinct expected classes: 17
-missing expected classes: 0
-unexpected classes: 0
+invalid findings: 50
+distinct diagnostic classes: 27
+expected finding identities: 50
+missing finding identities: 0
+unexpected finding identities: 0
 ```
 
 ## Structural coverage
 
 The validator checks:
 
+- required fixture, case, scenario, P/S condition, editor, shared-packet, output-hash, scoring-key, and preservation records;
 - explicit synthetic-only status;
-- permitted rehearsal study states;
-- procedure-only evidence claims;
-- presence of required human gates;
+- permitted rehearsal study states and procedure-only evidence claims;
+- required human gates and allowed gate states;
 - unique case identifiers;
 - separate P/S editors for one meaning record;
-- identical P/S shared-packet hashes;
-- absence of restricted scorer metadata;
-- scoring-key freeze before condition-output access;
-- deterministic preservation aggregation;
-- pair benefit eligibility;
-- pair-level reader eligibility;
-- reader exposure blocked until human launch gates pass;
-- adverse-result retention;
+- identical non-empty P/S shared-packet hashes;
+- absence of rule, condition, and editor metadata from scorer materials;
+- scoring-key freeze before condition-output access with a recorded key hash;
+- valid preservation dimensions and deterministic aggregation;
+- pair benefit eligibility derived from all structural and preservation controls;
+- explicit launch selection;
+- pair-level reader eligibility and launch readiness;
+- retention of adverse and unresolved records;
 - prohibition on promoting `not determined`;
-- launch blocking with unresolved human gates or ineligible records;
+- launch blocking for unresolved gates or ineligible selected records;
+- permission for excluded adverse records to coexist with an eligible selected set;
 - prohibition on advancing parent issue #9.
 
 ## Determinism
 
-The validator uses only the Python standard library. The negative self-test compares the exact set of diagnostic codes, not only the exit status or finding count.
+The validator uses only the Python standard library. The negative self-test compares the complete ordered multiset of `(code, path)` finding identities. A missing duplicate, changed path, or unexpected finding fails the self-test even when the diagnostic-class set remains unchanged.
 
 ## Authority boundary
 
-A PASS means only that the supplied fictional records exercise the represented structural controls as expected. It does not validate real materials, human decisions, study readiness, or Ariadline effectiveness.
+The valid fixture's `approved` gate values are fictional state markers. A PASS means only that the supplied fictional records exercise the represented structural controls as expected. It does not validate real materials, human decisions, study readiness, or Ariadline effectiveness.
