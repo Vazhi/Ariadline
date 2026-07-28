@@ -32,7 +32,7 @@ When two package components appear inconsistent, use this authority order:
 3. [[Profiles and Conformance]] controls conformance results, review methods, typed evaluations, waivers, and extensions.
 4. [[SLE Profile Applicability Register v0.1]] controls exact profile-to-rule mappings.
 5. [[Governance and Change Control]] and [[Versioning and Release Model]] control change and compatibility decisions.
-6. [[Glossary]] controls package terminology unless a controlling rule gives a narrower local definition.
+6. [[Glossary]] is an informative guide to package usage. It does not create obligations or universal linguistic definitions.
 7. Indexes, examples, checklists, validation records, case studies, and annexes support interpretation but do not override the controlling modules.
 
 The complete component classification is in [[SLE Reference Publication Map v0.1]].
@@ -206,6 +206,8 @@ Exact rule-to-rationale, checklist, case, and audit-prompt mappings are in [[SLE
 
 The current evidence and constructed prompts justify an auditable proposed draft. They do not justify stabilization. Missing authentic, multilingual, full-document, community-governed, translation, accessibility, and independently reviewed glossing evidence remains visible.
 
+For issue #8 assembly, every proposed rule must have auditable independent rationale and exact traceability. Independent cross-domain justification sufficient for stable normative status remains a separate stabilization gate. This assembly does not waive or satisfy that stronger requirement.
+
 ## 13. Governance and revision
 
 [[Governance and Change Control]] defines roles, change requests, evidence requirements, evaluation, dissent, decision records, profile governance, waiver governance, and extensions.
@@ -222,7 +224,7 @@ The current rejected and deferred proposals are recorded in [[SLE Reference Chan
 
 ## 14. Terminology
 
-The publication glossary is [[Glossary]].
+The informative publication glossary is [[Glossary]]. It summarizes package usage and does not create universal linguistic definitions.
 
 A local project may define specialized terms differently when it declares the definition, scope, and relation to external terminology. Local terminology must not be presented as universal SLE terminology.
 
@@ -232,7 +234,8 @@ The package distinguishes:
 
 - controlling proposed normative modules;
 - conformance and governance modules;
-- informative authoring aids;
+- controlled review support;
+- informative terminology and authoring aids;
 - validation and evaluation records;
 - non-authoritative case studies and stress tests.
 
