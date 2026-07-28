@@ -22,6 +22,13 @@ tags:
 - [[README]]
 - [[Vault Validation Report]]
 
+## Assembled reference draft
+
+- [[SLE for Linguistics Reference Artifact v0.1 Draft]]
+- [[SLE Reference Publication Map v0.1]]
+- [[SLE Rule and Pattern Index v0.1]]
+- [[SLE Reference Change and Deferral Log v0.1]]
+
 ## Orientation
 
 - [[Project Charter]]
@@ -113,7 +120,7 @@ tags:
 6. Define [[SLE for Linguistics Document Patterns v0.1|document patterns and conformance guidance]].
 7. Build [[Multi-Domain SLE Evaluation Corpus v0.1|the multi-domain evaluation corpus]].
 8. Define [[SLE Editorial Conformance Checklist v0.1|the human editorial checklist and rule cases]].
-9. Publish an internal [[Pilot Specification Outline|v0.1 pilot]].
+9. Assemble [[SLE for Linguistics Reference Artifact v0.1 Draft|the human-readable reference publication draft]].
 10. Run [[Pilot Study Design|controlled evaluations]].
 11. Apply the [[Quality Metrics and Acceptance Gates|acceptance gates]].
 12. Release through [[Governance and Change Control|governed change control]].
