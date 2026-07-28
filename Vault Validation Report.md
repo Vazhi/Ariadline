@@ -12,7 +12,7 @@ tags:
 # Vault Validation Report
 
 - Markdown notes: 99
-- Wikilinks checked: 637
+- Wikilinks checked: 634
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -88,9 +88,9 @@ The issue #49 branch:
 
 - adds four uniquely named Markdown notes containing 16 wikilinks;
 - adds four links to the map of content;
-- adds four links to this validation report.
+- replaces the 37-link validation report with this 38-link report, for a net increase of one.
 
-Result: 99 Markdown notes and 637 wikilinks.
+Result: 99 Markdown notes and 634 wikilinks.
 
 Ordinary Markdown links and plain rule, pattern, profile, material, participant, condition, question, issue, path, and version IDs are not included in the wikilink total.
 
