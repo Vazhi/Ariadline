@@ -19,6 +19,7 @@ tags:
 - Invalid fixture ID: `SLE-EVAL-DRY-RUN-INVALID-0.1`
 - Generator seed: `20260728`
 - Generator: `tools/evaluation/generate_dry_run.py`
+- Reviewed layer: `tools/evaluation/dry_run_reviewed.py`
 - Validator: `tools/evaluation/validate_dry_run.py`
 
 Every person, passage, response, score, finding, authority record, and deviation is fictional.
@@ -27,7 +28,8 @@ Every person, passage, response, score, finding, authority record, and deviation
 
 The fixture includes:
 
-- 20 fictional participant rows across the five planned strata;
+- 21 fictional participant rows across the five planned strata;
+- 20 active fictional participants;
 - one fictional withdrawn participant with no valid post-withdrawal trials;
 - six constructed material records;
 - task-specific U, P, and S condition records;
@@ -47,35 +49,39 @@ The valid fixture demonstrates:
 - P and S available for every publication-relevant synthetic task;
 - U limited to one registered reader baseline;
 - no repeated wording-condition exposure from one meaning record;
-- opaque condition masks;
+- exact agreement between each trial mask and the registered material-condition mask;
+- P/S difference at most 1 for every material and order position;
 - scorer masking;
-- Canto-span participant share at 10%;
+- Canto-span contributor share below 10%;
 - Canto-span trial share below 10%;
 - no direct identifier fields;
 - no post-withdrawal trial;
-- preserved synthetic P/S condition status where required;
+- synthetic P/S result values explicitly scoped to the fictional fixture;
 - `not determined` retained for U.
 
 These are structural demonstrations, not human findings.
 
-## Invalid-fixture injections
+## Invalid-fixture coverage
 
-The invalid fixture intentionally adds:
+The invalid fixture intentionally exercises all 34 codes in `expected_invalid_codes.json`, including:
 
-1. a direct identifier field;
-2. excessive Canto-span contributor share;
-3. a broken participant foreign key;
-4. multiple wording-condition exposure;
-5. prohibited U use in a revision task;
-6. a condition-mask leak;
-7. a missing required P condition;
-8. a confirmatory-ready P condition with unresolved preservation;
-9. `not determined` marked as success;
-10. a post-withdrawal trial;
-11. a broken scoring foreign key;
-12. excessive Canto-span trial share.
+- false evidence and authenticity metadata;
+- missing tables;
+- invalid and duplicate identifiers;
+- broken participant, material, and trial references;
+- condition and trial meaning mismatches;
+- universal or prohibited U registration and use;
+- missing and unregistered conditions;
+- duplicate meaning exposure;
+- condition and order imbalance;
+- mask leakage, duplicate masks, and registered-mask mismatch;
+- unmasked scoring;
+- invalid preservation readiness and uncertainty downgrading;
+- post-withdrawal assignment;
+- duplicate deviations;
+- excessive Canto-span contributor and trial shares.
 
-`expected_invalid_codes.json` lists the required diagnostics.
+The expected-invalid command passes only when the actual distinct code set matches the 34-code manifest exactly.
 
 ## Non-evidence rule
 
