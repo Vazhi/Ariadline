@@ -45,6 +45,7 @@ tags:
 
 - [[SLE for Linguistics Document Patterns v0.1]]
 - [[Profiles and Conformance]]
+- [[SLE Editorial Conformance Checklist v0.1]]
 - [[Authoring and Conformance Tools]]
 - [[Corpus and Annotation Interoperability]]
 - [[Pilot Specification Outline]]
@@ -61,6 +62,8 @@ tags:
 - [[Semantic Equivalence Review Record v0.1]]
 - [[SLE Evaluation Corpus Bias Assessment v0.1]]
 - [[Canto-span Evaluation Subset v0.1]]
+- [[Human Review Boundary Register v0.1]]
+- [[SLE Rule Test Case Catalog v0.1]]
 - [[SLE-GE Canto-span Pilot Baseline v0.1]]
 
 ## Case studies
@@ -82,6 +85,7 @@ tags:
 - [[Term Inventory]]
 - [[Claim Function Decision Register v0.1]]
 - [[SLE Profile Applicability Register v0.1]]
+- [[SLE Rule Traceability Matrix v0.1]]
 
 ## Templates and examples
 
@@ -97,6 +101,7 @@ tags:
 
 - [[Glossary]]
 - [[Standards and Sources]]
+- [[Optional Automation Notes for SLE Review v0.1]]
 
 ## Proposed development sequence
 
@@ -107,10 +112,11 @@ tags:
 5. Define [[Claim-Evidence Matrix|evidence language]] and [[Linguistic Examples and Glossing|example conventions]].
 6. Define [[SLE for Linguistics Document Patterns v0.1|document patterns and conformance guidance]].
 7. Build [[Multi-Domain SLE Evaluation Corpus v0.1|the multi-domain evaluation corpus]].
-8. Publish an internal [[Pilot Specification Outline|v0.1 pilot]].
-9. Run [[Pilot Study Design|controlled evaluations]].
-10. Apply the [[Quality Metrics and Acceptance Gates|acceptance gates]].
-11. Release through [[Governance and Change Control|governed change control]].
+8. Define [[SLE Editorial Conformance Checklist v0.1|the human editorial checklist and rule cases]].
+9. Publish an internal [[Pilot Specification Outline|v0.1 pilot]].
+10. Run [[Pilot Study Design|controlled evaluations]].
+11. Apply the [[Quality Metrics and Acceptance Gates|acceptance gates]].
+12. Release through [[Governance and Change Control|governed change control]].
 
 ## Key concepts
 
