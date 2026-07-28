@@ -76,6 +76,8 @@ tags:
 - [[Participant Flow and Deviation Report Template v0.1]]
 - [[Synthetic Evaluation Operations Fixture v0.1]]
 - [[Evaluation Dry-Run Tool Instructions]]
+- [[Minimal SLE Kill-Test Protocol v0.1]]
+- [[SLE Kill-Test Decision Matrix v0.1]]
 - [[Independent SLE Rule Evidence Register v0.1]]
 - [[Document Pattern Coverage Register v0.1]]
 - [[Multi-Domain SLE Evaluation Corpus v0.1]]
@@ -107,6 +109,8 @@ tags:
 - [[Claim Function Decision Register v0.1]]
 - [[SLE Profile Applicability Register v0.1]]
 - [[SLE Rule Traceability Matrix v0.1]]
+- [[SLE Candidate Test Core Register v0.1]]
+- [[SLE Rule Deferral Register v0.1]]
 
 ## Templates and examples
 
