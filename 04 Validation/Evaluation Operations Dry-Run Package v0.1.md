@@ -36,7 +36,8 @@ The controlling human boundaries remain in [[Evaluation Execution Status v0.1]],
 
 - `tools/evaluation/generate_dry_run.py`
 - `tools/evaluation/validate_dry_run.py`
-- `tools/evaluation/README.md`
+- `tools/evaluation/dry_run_common.py`
+- [[Evaluation Dry-Run Tool Instructions]]
 - `fixtures/evaluation-dry-run/v0.1/valid_fixture.json`
 - `fixtures/evaluation-dry-run/v0.1/invalid_fixture.json`
 - `fixtures/evaluation-dry-run/v0.1/expected_invalid_codes.json`
@@ -114,4 +115,4 @@ The fixture also records task registration, masking, assignment order, synthetic
 
 ## Use restriction
 
-Do not merge synthetic rows into any real study dataset. Do not replace fictional identifiers with real identifying information in the committed fixture. Use a separate approved restricted environment for actual contact, consent, participant-key, authentic-material, or community-controlled records.
+Do not merge synthetic rows into any real study dataset. Do not replace fictional identifiers with real identifying information in the generated synthetic fixture. Use a separate approved restricted environment for actual contact, consent, participant-key, authentic-material, or community-controlled records.
