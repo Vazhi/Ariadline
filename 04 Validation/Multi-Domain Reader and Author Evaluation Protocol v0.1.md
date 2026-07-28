@@ -1,7 +1,7 @@
 ---
 title: "Multi-Domain Reader and Author Evaluation Protocol v0.1"
 type: evaluation-protocol
-status: preregistration-draft
+status: freeze-ready-draft
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
@@ -9,7 +9,7 @@ tags:
   - sle
   - evaluation
   - human-study
-  - preregistration
+  - protocol-draft
 ---
 # Multi-Domain Reader and Author Evaluation Protocol v0.1
 
@@ -19,7 +19,7 @@ This protocol prepares the human evaluation required by issue #9.
 
 The study has **not started**. No participant data, effect estimate, rule disposition, or `publish`, `revise`, or `stop` recommendation exists.
 
-The protocol must be frozen before condition-labelled outcome data are inspected. Administrative, ethics, accessibility, community, publisher, or institutional review must occur before recruitment when applicable.
+This is a freeze-ready protocol draft, not a completed preregistration. The protocol, materials, scoring, sampling, analysis, and decision rules must become immutable and receive the required human approvals before confirmatory recruitment. Administrative, ethics, accessibility, community, publisher, or institutional review must occur before recruitment when applicable.
 
 ## Central question
 
@@ -31,7 +31,7 @@ The study evaluates communication performance. It does not determine linguistic 
 
 - Evaluation principles: [[Evaluation Framework]]
 - Initial study architecture: [[Pilot Study Design]]
-- Decision thresholds: [[Preregistered Analysis and Decision Plan v0.1]]
+- Draft analysis and decision rules: [[Preregistered Analysis and Decision Plan v0.1|Analysis and Decision Plan Draft v0.1]]
 - Materials and task allocation: [[Evaluation Material and Task Register v0.1]]
 - Participant quotas: [[Participant Sampling and Recruitment Plan v0.1]]
 - Data and privacy controls: [[Evaluation Data Dictionary and Privacy Plan v0.1]]
@@ -47,11 +47,14 @@ The study evaluates communication performance. It does not determine linguistic 
 Before participant exposure:
 
 1. Identify the exact source, version, permission, access boundary, and authorized meaning record for every authentic item.
-2. Create the uncontrolled, expert-edited plain, and proposed SLE-controlled conditions from the same authorized record.
-3. Obtain independent meaning review for each condition.
-4. Exclude any item with unresolved material meaning change from confirmatory comparison.
-5. Preserve rejected alternatives and the reason for rejection.
-6. Freeze scoring keys, item exclusions, condition labels, and trial allocation.
+2. Register the task type and its required condition set before condition drafting.
+3. For a source or uncontrolled `U` baseline, record the intended meaning authority and any known mismatch, ambiguity, omission, or overstatement. Do not label `U` as meaning-preserved merely because it is the source.
+4. Create ordinary expert-edited `P` and proposed SLE-controlled `S` variants from the same authorized meaning record.
+5. Obtain independent meaning review for every `P` and `S` variant used in confirmatory comparison.
+6. Exclude any `P` or `S` variant with unresolved material meaning change from confirmatory use.
+7. A `U` baseline may enter a reader comparison only when its intended meaning is authorized and its deviations are documented. It cannot support an author-preservation success claim.
+8. Preserve rejected alternatives and the reason for rejection.
+9. Freeze scoring keys, exclusions, condition labels, and trial allocation.
 
 Constructed corpus items may be used for procedure piloting. They must remain labelled synthetic and cannot support authentic effectiveness claims.
 
@@ -120,7 +123,7 @@ Authors complete two separate tasks:
 1. revise a passage against an authorized meaning record;
 2. draft new text from a structured research brief.
 
-Compare ordinary expert guidance and proposed SLE guidance. Do not compare SLE only against deliberately defective prose.
+Compare ordinary expert guidance `P` with proposed SLE guidance `S`. The source passage or research brief is the task input, not a third authoring outcome condition.
 
 Measure:
 
@@ -140,9 +143,10 @@ This phase requires non-English-original material and independently reviewed tra
 
 Compare:
 
-- source-order translation;
-- ordinary expert translation or editing;
-- translation or reorganization using proposed SLE controls.
+- ordinary expert translation or editing `P`;
+- translation or reorganization using proposed SLE controls `S`.
+
+The source-language original is the authority anchor, not an English `U` condition unless the exact task separately registers a source-order baseline.
 
 Measure normative-function preservation, terminology preservation, reader reconstruction, naturalness, rhetorical-order acceptability, burden, and disagreement.
 
@@ -151,6 +155,8 @@ A translated result applies only to the tested language direction, passage, part
 ### Phase 6 — Full-document and combined-pattern evaluation
 
 Apply the reference artifact to full sections or documents that combine multiple communicative purposes.
+
+The required comparison is `P` versus `S`. An authorized source or uncontrolled `U` baseline may be included only when the registered task requires it and exposure remains counterbalanced.
 
 Measure:
 
@@ -164,21 +170,29 @@ Measure:
 
 ## Experimental conditions
 
-For each authorized meaning record, use up to three conditions:
+Each task registers only the conditions needed for that task.
 
-- **U — uncontrolled or source draft**;
-- **P — ordinary expert-edited plain alternative**;
-- **S — proposed SLE-controlled alternative**.
+- **U — authorized source or uncontrolled baseline.** Its intended meaning must be recorded, but the wording is not assumed to preserve or communicate that meaning successfully. Known deviations are part of the registered item record. Deliberately defective U material is limited to synthetic procedure pilots.
+- **P — ordinary expert-edited plain alternative or guidance.** A confirmatory P variant must pass independent preservation review against the authorized meaning record.
+- **S — proposed SLE-controlled alternative or guidance.** A confirmatory S variant must pass independent preservation review against the same authorized meaning record.
 
-The comparison of S with P is required for publication claims. A benefit over U alone does not establish benefit over ordinary expert editing.
+All compared variants are anchored to one authorized meaning record. This does not make U, P, and S literally equivalent.
 
-Each condition must preserve the same authorized information. A condition with a possible material change receives `not determined` and is not used as a valid confirmatory comparison.
+### Required condition sets
+
+- Reader reconstruction: `P` and `S` are required for publication claims; `U` is optional when a registered authorized baseline is analytically useful.
+- Editorial review: use the registered passages needed to test checklist application; a same-record U/P/S triplet is not universally required.
+- Authoring and revision: compare `P` and `S` guidance or workflows; participant outputs are evaluated against the authorized record.
+- Translation: compare `P` and `S`; register a source-order baseline separately when used.
+- Full-document use: compare `P` and `S`; U is optional.
+
+A benefit over U alone does not establish benefit over ordinary expert editing. The S-versus-P comparison is required for any publication recommendation.
 
 ## Assignment and counterbalancing
 
 - Randomize condition assignment within material blocks.
 - Counterbalance domain, condition, and presentation order.
-- Prevent the same participant from seeing multiple conditions from one meaning record.
+- Prevent the same participant from seeing multiple wording conditions from one meaning record when that exposure would contaminate the task.
 - Limit repeated exposure to one rule family.
 - Record device, interruption, and accessibility accommodations when relevant.
 - Do not reveal the intended “better” condition.
@@ -196,11 +210,11 @@ Recruit across:
 
 Cross-cutting records include primary scholarly language, English-use context, career stage, method and theory experience, controlled-language familiarity, accessibility needs, and community relationship where relevant.
 
-Canto-span maintainers may enter only the labelled Canto-span arm. They must not dominate any domain stratum or the overall sample.
+Canto-span contributors may complete eligible general materials under a declared contributor flag. Their Canto-span-arm results are separately reported, and they must not dominate a domain stratum or the overall sample.
 
 ## Material coverage gates
 
-The main study cannot launch until the material register includes:
+The confirmatory study cannot launch until the material register includes:
 
 - multiple domains, methods, theories, genres, and participant roles;
 - authentic authorized passages from independent sources;
@@ -208,14 +222,15 @@ The main study cannot launch until the material register includes:
 - direct example and interlinear-glossing tasks;
 - procedure and annotation tasks;
 - full-document or full-section material;
-- ordinary expert-edited plain comparison conditions;
+- ordinary expert-edited P conditions for every confirmatory comparison;
+- independently reviewed S conditions for every confirmatory comparison;
 - no single source, project, language, framework, or venue dominating the confirmatory set.
 
 The current constructed corpus does not satisfy these gates.
 
 ## Exclusion policy
 
-Participant-level exclusions must be mechanical and preregistered, such as:
+Participant-level exclusions must be mechanical and frozen before confirmatory recruitment, such as:
 
 - no consent or required authorization;
 - duplicate participation;
@@ -228,7 +243,8 @@ Do not exclude a participant for disagreeing with SLE, reporting bias, selecting
 Item-level exclusions include:
 
 - unresolved authorized meaning;
-- material condition mismatch;
+- material P or S condition mismatch;
+- an unauthorized or analytically invalid U baseline;
 - invalid or ambiguous scoring key;
 - permission or access failure;
 - condition cue that reveals the expected answer;
@@ -238,7 +254,7 @@ Report all exclusions by condition and reason.
 
 ## Safeguards against result-dependent revision
 
-Before the main study:
+Before the confirmatory study:
 
 1. freeze the protocol version;
 2. freeze materials and hashes or immutable versions;
@@ -246,7 +262,8 @@ Before the main study:
 4. freeze exclusions and analysis models;
 5. freeze rule-level harm and stop criteria;
 6. record deviations without rewriting the original plan;
-7. keep exploratory analyses visibly separate.
+7. keep exploratory analyses visibly separate;
+8. create an immutable preregistration record before condition-labelled outcome inspection.
 
 ## Reporting requirements
 
