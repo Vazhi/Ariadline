@@ -1,7 +1,7 @@
 ---
-title: "Preregistered Analysis and Decision Plan v0.1"
+title: "Analysis and Decision Plan Draft v0.1"
 type: evaluation-analysis-plan
-status: preregistration-draft
+status: freeze-ready-draft
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
@@ -10,14 +10,24 @@ tags:
   - evaluation
   - analysis
   - decision
+  - protocol-draft
 ---
-# Preregistered Analysis and Decision Plan v0.1
+# Analysis and Decision Plan Draft v0.1
 
 ## Status
 
-This plan defines analysis and decision rules for [[Multi-Domain Reader and Author Evaluation Protocol v0.1]].
+This plan defines proposed analysis and decision rules for [[Multi-Domain Reader and Author Evaluation Protocol v0.1]].
 
-No participant outcome data have been collected or analyzed. Numerical planning thresholds below are proposal-stage thresholds and must be frozen before confirmatory condition labels are inspected.
+It is **not yet preregistered**. No participant outcome data have been collected or analyzed. Numerical planning thresholds below are proposal-stage thresholds.
+
+The plan becomes a preregistration only after all of the following are complete:
+
+1. a human study lead and qualified statistical reviewer approve the exact primary outcome family, models, estimands, thresholds, exclusions, multiplicity treatment, sample target, and subgroup plan;
+2. the protocol, material register, condition sets, scoring keys, and analysis code or calculation specification are frozen;
+3. an immutable repository commit and, where applicable, an external registration record are created before confirmatory condition-labelled outcome inspection;
+4. the registration date, responsible roles, immutable identifiers, and permitted amendment process are recorded.
+
+Until then, cite this record only as an **analysis-plan draft**.
 
 ## Analysis principles
 
@@ -26,23 +36,33 @@ No participant outcome data have been collected or analyzed. Numerical planning 
 3. Model participants and materials as varying sources when the design permits.
 4. Preserve domain, participant-group, language-direction, and genre boundaries.
 5. Treat `not determined` as an informative result, not missing success.
-6. Report SLE versus uncontrolled prose and SLE versus ordinary expert editing.
-7. Keep confirmatory and exploratory analyses separate.
-8. Do not use Canto-span results to determine the project-wide disposition.
+6. Report SLE versus ordinary expert editing for every publication-relevant task.
+7. Report SLE versus an authorized U baseline only for tasks that registered U as admissible.
+8. Keep confirmatory and exploratory analyses separate.
+9. Do not use Canto-span results to determine the project-wide disposition.
+
+## Condition and estimand rules
+
+- `P` versus `S` is the required publication-relevant comparison.
+- `U` is an optional authorized source or uncontrolled baseline, not a preservation-certified rewrite.
+- An S-versus-U estimate is valid only for registered reader or full-document tasks with an admissible U baseline.
+- Authoring compares participant outputs produced under P and S guidance against the same authorized record.
+- Translation compares P and S outputs against the source-language authority; a source-order baseline is analyzed only when separately registered.
+- Do not synthesize incompatible task estimands into one project effect.
 
 ## Primary reader outcomes
 
 ### Claim-and-scope reconstruction accuracy
 
-Score the preregistered claim, scope, and condition fields against the frozen authorized key.
+Score the frozen claim, scope, and condition fields against the authorized key.
 
-Primary contrast:
-
-- S condition minus U condition.
-
-Required comparative contrast:
+Required publication contrast:
 
 - S condition minus P condition.
+
+Optional baseline contrast:
+
+- S condition minus U condition, only for registered admissible U items.
 
 ### Unsupported inference rate
 
@@ -50,7 +70,9 @@ A response counts as an unsupported inference when it asserts a materially stron
 
 ### Material misinterpretation rate
 
-A material misinterpretation changes polarity, quantification, scope, evidence force, theoretical commitment, example status, access boundary, normative force, or another preregistered critical dimension.
+A material misinterpretation changes polarity, quantification, scope, evidence force, theoretical commitment, example status, access boundary, normative force, or another frozen critical dimension.
+
+The human statistical review must choose and freeze one primary reader outcome family and the exact relation among these components before registration.
 
 ## Primary author outcome
 
@@ -60,9 +82,11 @@ A failure occurs when an independently reviewed output changes a critical or maj
 
 `Not determined` is reported separately and cannot be recoded as preserved.
 
+The authoring estimand compares failure risk under P guidance with failure risk under S guidance.
+
 ## Primary review outcome
 
-### Final-outcome agreement
+### Final-outcome agreement and validity
 
 Measure agreement on:
 
@@ -72,6 +96,8 @@ Measure agreement on:
 - need for substantive escalation.
 
 A shared but incorrect answer does not count as valid agreement when an authorized key exists.
+
+The final preregistration must identify the primary agreement or validity estimand and its adequacy threshold.
 
 ## Secondary outcomes
 
@@ -87,70 +113,85 @@ A shared but incorrect answer does not count as valid agreement when an authoriz
 - rule usability and teachability;
 - qualitative bias or oversimplification reports.
 
-## Proposed statistical models
+## Proposed statistical model families
 
-The final preregistration must name the exact software-independent model specification. The conceptual default is:
+The immutable preregistration must name the exact model, coding, estimand, software-independent equation or calculation specification, convergence and diagnostic rules, and fallback model.
 
-- binary outcomes: mixed-effects logistic model or a prespecified equivalent;
-- bounded ordinal outcomes: cumulative ordinal model or a prespecified equivalent;
-- continuous timing outcomes: transformed mixed-effects model or robust prespecified equivalent;
-- count outcomes: Poisson or negative-binomial mixed model according to frozen diagnostic criteria;
-- agreement: raw agreement plus an appropriate chance-adjusted or model-based measure;
+Conceptual candidates are:
+
+- binary outcomes: mixed-effects logistic model or a frozen equivalent;
+- bounded ordinal outcomes: cumulative ordinal model or a frozen equivalent;
+- continuous timing outcomes: transformed mixed-effects model or robust frozen equivalent;
+- count outcomes: Poisson or negative-binomial mixed model under frozen diagnostic criteria;
+- agreement: raw agreement plus a frozen chance-adjusted or model-based measure;
 - preservation dimensions: item-level risk estimates with exact counts and uncertainty.
 
-Include participant and material effects when identifiable. Add domain or participant-group interactions only as preregistered primary subgroup analyses or clearly labelled exploratory analyses.
+Include participant and material effects when identifiable. Add domain or participant-group interactions only as frozen primary subgroup analyses or clearly labelled exploratory analyses.
 
 Do not change the model solely because a preferred result is not obtained.
 
-## Smallest effects and proposed success thresholds
+## Proposed smallest effects and decision thresholds
 
-These thresholds must be frozen before confirmatory data inspection.
+These values are planning proposals. Human statistical review must justify, revise if necessary, and freeze them before confirmatory recruitment. Any revision must occur before condition-labelled outcome inspection and must be recorded.
 
-### Reader benefit gate
+### Reader benefit and safety gate
 
-For the pooled tested scope:
+For registered reader tasks:
 
-- estimated S versus U improvement in claim-and-scope accuracy is at least 8 percentage points;
-- the uncertainty interval excludes no improvement in the harmful direction;
-- unsupported inference and material misinterpretation do not increase.
+- S-versus-P claim-and-scope accuracy must meet the frozen benefit or non-inferiority criterion;
+- unsupported inference and material misinterpretation must not increase beyond frozen safety margins;
+- where U is registered, S-versus-U benefit may provide supporting evidence but cannot replace S-versus-P evidence.
 
-### Ordinary-editing comparison gate
+Initial planning values for review:
 
-S must not be materially worse than P:
+- S-versus-U improvement target, where applicable: 8 percentage points;
+- S-versus-P non-inferiority margin for claim-and-scope accuracy: 5 percentage points;
+- S-versus-P non-inferiority margin for material misinterpretation: 3 percentage points.
 
-- non-inferiority margin for claim-and-scope accuracy: 5 percentage points;
-- non-inferiority margin for material misinterpretation: 3 percentage points;
-- any time or burden increase must be interpreted with the authoring gate rather than ignored.
-
-S does not need to outperform P on every outcome. A finding that ordinary editing performs equally well with lower burden is a valid reason to revise or narrow SLE.
+These numbers have no confirmatory authority until justified and frozen.
 
 ### Author preservation gate
 
+Initial planning proposal:
+
 - no unresolved SLE-attributable critical meaning failure in confirmatory authentic material;
-- estimated S versus P increase in critical-or-major preservation failure does not exceed 3 percentage points;
+- S-versus-P increase in critical-or-major preservation failure does not exceed a frozen margin, initially proposed as 3 percentage points;
 - `not determined` rates are reported and must not be hidden through exclusion;
 - source-author or authorized-proxy review confirms the exact scope of any preservation claim.
 
 ### Author burden gate
 
-For the pooled tested authoring tasks:
+Initial planning proposal:
 
-- median S condition completion time should not exceed P by more than 25% without a demonstrated reader or safety benefit;
+- median S completion time should not exceed P by more than 25% without a demonstrated reader, safety, or operational benefit;
 - severe burden, fragmentation, or theory-bias reports must not concentrate in one tested group;
 - accommodation-related time is analyzed separately and never treated as failure.
 
 ### Reviewability gate
 
-- applicable-rule and final-outcome agreement must reach the frozen adequacy threshold after the pilot;
+- applicable-rule and final-outcome agreement must reach a human-approved frozen adequacy threshold;
 - false substantive-certification statements must be rare and individually reviewed;
 - frequent `not determined` outcomes trigger rule, material, training, or applicability review rather than automatic failure.
+
+## Sample-size and precision requirement
+
+Before preregistration, a qualified human reviewer must complete a simulation or precision analysis using:
+
+- the frozen primary estimand and model;
+- justified smallest effects or safety margins;
+- participant and material variance estimates from the pilot or defensible independent priors;
+- planned condition, material, and stratum allocation;
+- expected attrition and exclusions;
+- multiplicity and subgroup requirements.
+
+The sample target is not frozen in this draft.
 
 ## Domain and participant safeguards
 
 A pooled positive result cannot support `publish` when:
 
 - one domain or participant group shows material harm;
-- a theory, method, language direction, or community reports unresolved structural bias;
+- a theory, method, language direction, accessibility group, or community reports unresolved structural bias;
 - the pooled result is driven by one source or material family;
 - authentic material results conflict materially with constructed-pilot results;
 - source-author preservation fails.
@@ -159,7 +200,7 @@ Report each primary stratum and material family even when estimates are imprecis
 
 ## Rule-level classification
 
-Classify every evaluated rule as one of:
+Classify every evaluated rule as one or more of the following, with tested scope and evidence:
 
 ### Beneficial
 
@@ -204,8 +245,8 @@ No rule becomes stable from one pooled study result.
 
 Use only when all apply within the tested scope:
 
-- reader benefit or strong operational need is demonstrated;
-- ordinary expert editing is not clearly preferable on the combined benefit, safety, and burden evidence;
+- reader benefit or strong operational need is demonstrated under the frozen criteria;
+- ordinary expert editing is not clearly preferable on combined benefit, safety, and burden evidence;
 - authentic authorized meaning preservation passes;
 - no unresolved critical domain, theory, method, language, accessibility, or community harm remains;
 - harmful and biased rule findings have been resolved or removed;
@@ -247,12 +288,13 @@ Stopping the current core design does not prohibit narrower local guidance or fu
 
 ## Multiple outcomes
 
-The final preregistration must identify:
+The immutable preregistration must identify:
 
 - one primary reader outcome family;
 - one primary author safety outcome;
 - one primary reviewability outcome;
 - multiplicity handling for confirmatory secondary tests;
+- subgroup analyses that can affect disposition;
 - exploratory analyses that do not affect the primary disposition.
 
 ## Qualitative analysis
@@ -278,6 +320,7 @@ Every deviation is recorded under [[Evaluation Data Dictionary and Privacy Plan 
 The final report must include:
 
 - frozen protocol and analysis versions;
+- immutable preregistration identifier;
 - deviations before and after outcome unmasking;
 - all exclusions;
 - all primary results;
