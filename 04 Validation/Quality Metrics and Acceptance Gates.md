@@ -51,6 +51,22 @@ A proposed reference-artifact draft requires:
 - a versioned readable publication package;
 - explicit notice that cross-domain stabilization and effectiveness gates remain open.
 
+## Confirmatory-study launch gates
+
+Confirmatory recruitment requires:
+
+- human-approved administrative, consent, privacy, accessibility, and authority routes;
+- valid authentic materials and task-specific condition sets;
+- independently reviewed P and S conditions for every publication-relevant comparison;
+- authorized U baselines only where registered;
+- frozen scoring keys and adjudication procedures;
+- a justified sample target;
+- exact estimands, models, thresholds, exclusions, subgroup rules, and multiplicity handling;
+- immutable protocol, materials, and analysis-plan versions;
+- a recorded preregistration identifier and date.
+
+A freeze-ready draft does not satisfy these launch gates.
+
 ## Stable publication gates
 
 Stable publication requires evidence beyond draft assembly:
@@ -86,7 +102,7 @@ Primary and supporting metrics include:
 - frequency and cause of `not determined` outcomes;
 - qualitative failure and dissent cases.
 
-Exact thresholds and project-level disposition rules are controlled by [[Preregistered Analysis and Decision Plan v0.1]].
+Proposed thresholds and project-level disposition rules are in [[Preregistered Analysis and Decision Plan v0.1|Analysis and Decision Plan Draft v0.1]]. They have no confirmatory authority until human approval, freeze, and immutable preregistration are complete.
 
 ## Severity classes
 
@@ -108,7 +124,7 @@ Human evaluation classifies tested rules as:
 - burdensome;
 - inconclusive.
 
-The classifications and actions are defined in [[Preregistered Analysis and Decision Plan v0.1]].
+The classifications and actions are defined in [[Preregistered Analysis and Decision Plan v0.1|Analysis and Decision Plan Draft v0.1]].
 
 ## Stop rule
 
