@@ -29,8 +29,8 @@ PASS — the package contains every automated deliverable in issue #55 and keeps
 valid fixture: valid
 valid findings: 0
 invalid fixture: expected_failures_detected
-invalid findings: 20
-distinct expected classes: 16
+invalid findings: 23
+distinct expected classes: 17
 missing expected classes: 0
 unexpected classes: 0
 ```
@@ -50,7 +50,8 @@ The validator checks:
 - scoring-key freeze before condition-output access;
 - deterministic preservation aggregation;
 - pair benefit eligibility;
-- reader-exposure eligibility;
+- pair-level reader eligibility;
+- reader exposure blocked until human launch gates pass;
 - adverse-result retention;
 - prohibition on promoting `not determined`;
 - launch blocking with unresolved human gates or ineligible records;
