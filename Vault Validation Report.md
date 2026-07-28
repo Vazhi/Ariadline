@@ -11,8 +11,8 @@ tags:
 ---
 # Vault Validation Report
 
-- Markdown notes: 87
-- Wikilinks checked: 574
+- Markdown notes: 95
+- Wikilinks checked: 613
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -22,7 +22,7 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the issue #9 human-evaluation preparation package after substantive review and blocker repair, on top of the merged proposed reference-artifact draft.
+This report describes the issue #36 synthetic evaluation-operations dry-run package on top of the merged issue #9 preparation package.
 
 The assembled reference package remains:
 
@@ -53,7 +53,7 @@ The editorial-review package remains:
 - [[SLE Rule Traceability Matrix v0.1]]
 - [[Optional Automation Notes for SLE Review v0.1]]
 
-Issue #9 adds:
+Issue #9 preparation remains:
 
 - [[Multi-Domain Reader and Author Evaluation Protocol v0.1]]
 - [[Evaluation Material and Task Register v0.1]]
@@ -62,88 +62,121 @@ Issue #9 adds:
 - [[Preregistered Analysis and Decision Plan v0.1|Analysis and Decision Plan Draft v0.1]]
 - [[Evaluation Execution Status v0.1]]
 
+Issue #36 adds:
+
+- [[Evaluation Operations Dry-Run Package v0.1]]
+- [[Material Intake and Authority Ledger Template v0.1]]
+- [[Condition Development and Preservation Review Worksheet v0.1]]
+- [[Operational Pilot Randomization Plan v0.1]]
+- [[Evaluation Operations Validation Rules v0.1]]
+- [[Participant Flow and Deviation Report Template v0.1]]
+- [[Synthetic Evaluation Operations Fixture v0.1]]
+- [[Evaluation Dry-Run Tool Instructions]]
+
 ## Count method
 
-Merged `main` contained 81 Markdown notes and 525 wikilinks.
+Merged `main` contained 87 Markdown notes and 574 wikilinks.
 
-The repaired issue #9 branch:
+The merged baseline count already includes the issue #9 links from [[Evaluation Framework]], [[Pilot Study Design]], and [[Quality Metrics and Acceptance Gates]].
 
-- adds six uniquely named Markdown notes containing 23 wikilinks;
-- adds six links to the map of content;
-- adds six links to [[Evaluation Framework]];
-- adds six links to [[Pilot Study Design]];
-- revises [[Quality Metrics and Acceptance Gates]] for a net increase of two wikilinks;
-- adds six links to this validation report.
+The issue #36 branch:
 
-Result: 87 Markdown notes and 574 wikilinks.
+- adds eight uniquely named Markdown notes containing 23 wikilinks;
+- adds eight links to the map of content;
+- replaces the prior 29-link validation report with this 37-link report, for a net increase of eight.
 
-Ordinary Markdown links and plain rule, pattern, profile, material, participant, condition, question, and version IDs are not included in the wikilink total.
+Result: 95 Markdown notes and 613 wikilinks.
 
-## Protocol validation
+The eight Markdown notes are seven readable validation or template records and one uniquely named tool-instruction note. Python and JSON files are not included in the Markdown-note count.
 
-- The protocol separates material authorization, operational piloting, reader evaluation, editorial review, authoring, translation, and full-document phases.
-- U, P, and S are anchored to one authorized meaning record but are not falsely treated as literally equivalent.
-- U is an authorized source or uncontrolled baseline, not a preservation-certified rewrite.
-- P and S require independent preservation review for confirmatory comparison.
-- Required condition sets are registered by task rather than universally requiring a U/P/S triplet.
-- SLE must be compared with ordinary expert editing, not only deliberately defective prose.
-- Primary reader, author-safety, and reviewability outcomes are identified for later human freeze.
-- Counterbalancing, exclusions, deviations, and non-generalization rules are explicit.
-- The protocol states that the study has not started and is not yet preregistered.
+Ordinary Markdown links and plain rule, pattern, profile, material, participant, condition, question, issue, path, and version IDs are not included in the wikilink total.
 
-## Material validation
+## Synthetic execution validation
 
-- All 16 independent constructed corpus items are assigned to procedure-pilot blocks.
-- The two Canto-span items remain separately labelled supplementary material.
-- Authentic, translated, full-document, and glossing material IDs are reserved but not falsely reported as populated.
-- Confirmatory launch requires authentic authority, task-specific condition registration, ordinary expert-edited P conditions, independently reviewed S conditions, and source-diversity gates.
-- U baselines are included only where the registered task requires them.
-- `confirmatory_ready` depends on the registered condition set rather than a universal triplet.
+The reviewed implementation layer was exercised locally against the original dry-run base API after blocker repair.
 
-## Participant validation
+- deterministic seed: `20260728`;
+- valid fixture: zero findings;
+- expected invalid-code coverage: 34 of 34;
+- missing expected codes: 0;
+- unexpected codes: 0;
+- expected-invalid success requires exact distinct-code agreement.
 
-- Five primary recruitment strata cover descriptive and field, theoretical, empirical, computational and resource, and editorial or advanced-student roles.
-- SLE-unfamiliar participants are required to dominate the confirmatory sample.
-- Canto-span participation is capped and separately reported.
-- Accessibility, primary scholarly language, method, theory, and community relationships are recorded with privacy safeguards.
-- Planning ranges are not represented as completed power analysis.
+The valid and invalid JSON fixtures are generated outputs. The 34-code expected manifest is committed. Regeneration is deterministic under the recorded seed and source version.
 
-## Data and privacy validation
+## Data-model validation
 
-- Contact, participant-key, response, restricted-material, analysis, and public-release records are separated.
-- Direct identifiers are excluded from the research response dataset.
-- Participant, trial, response, scoring, preservation, qualitative-finding, and deviation tables are defined.
-- Publication depends on consent, material permission, disclosure review, and community or source authority.
-- No universal retention period is invented.
+The generator populates every operational table defined by the evaluation data plan:
 
-## Analysis and decision validation
+- participants;
+- materials;
+- conditions;
+- trials;
+- responses;
+- scoring;
+- preservation;
+- qualitative findings;
+- protocol deviations.
 
-- The analysis record is classified as a freeze-ready draft, not a completed preregistration.
-- Human approval and immutable registration are required before confirmatory recruitment.
-- S-versus-P is the required publication-relevant contrast.
-- S-versus-U is optional and valid only for registered admissible U baselines.
-- Reader benefit, unsupported inference, material misinterpretation, author preservation, burden, and reviewability gates are proposed before data collection.
-- Numerical margins remain planning proposals until human statistical review and freeze.
-- Rule findings include beneficial, neutral, harmful, biased, burdensome, and inconclusive.
-- Project disposition is limited to `publish`, `revise`, or `stop` after actual evidence.
-- The current recommendation remains `not determined — study not executed`.
-- Adverse and null findings cannot be silently removed.
+All records are visibly fictional. No authentic passage, real participant, contact record, consent form, restricted material, or human approval is included.
 
-## Execution-state validation
+## Condition and assignment validation
 
-- Current state is `not_started`.
-- Registration state is `draft — not preregistered`.
-- Administrative, authority, material, sampling, accessibility, analysis, and registration blockers are listed.
-- No participant, effect, rule classification, or publication recommendation is fabricated.
-- Issue #9 remains open until execution, analysis, rule dispositions, and epic update are complete.
+The reviewed valid dry run demonstrates:
 
-## Human-first and authority boundaries
+- 20 active fictional participants and one separately retained withdrawn row;
+- 16 exposures for every core material;
+- task-specific required condition sets;
+- P and S availability for publication-relevant synthetic tasks;
+- U limited to an admissible reader baseline;
+- 6 P, 6 S, and 4 U assignments for that baseline;
+- 8 P and 8 S assignments for every other core material;
+- P/S difference at most 1 for every order position;
+- no participant exposure to multiple wording conditions from one meaning record;
+- exact agreement between trial masks and registered material-condition masks;
+- masked scoring records;
+- no post-withdrawal assignments;
+- Canto-span contributor and trial shares below 10%;
+- `not determined` retained rather than converted to success.
 
-- Checker precision and recall are removed from core quality metrics.
-- Tools remain optional and cannot replace human evaluation.
-- Conformance does not establish substantive correctness.
-- Constructed corpus results cannot establish authentic effectiveness.
-- Canto-span cannot define SLE or determine the project-wide disposition.
+These are structural tests only. They do not establish that P or S preserves authentic meaning or that a real assignment is fair, accessible, or scientifically valid.
+
+## Invalid-fixture validation
+
+The intentionally invalid fixture exercises all 34 registered validation classes across:
+
+- evidence and authenticity boundaries;
+- missing tables;
+- invalid and duplicate identifiers;
+- broken participant, material, and trial references;
+- condition and trial meaning mismatches;
+- universal, missing, unregistered, and prohibited conditions;
+- duplicate meaning exposure;
+- condition and order imbalance;
+- mask leakage, duplication, and registered-mask mismatch;
+- unmasked scoring;
+- invalid preservation readiness and uncertainty downgrading;
+- post-withdrawal assignment;
+- duplicate deviations;
+- Canto-span participant and trial cap violations.
+
+One injected fault can create several row-level findings. The distinct code set, not the total row count, controls the self-test. Missing and unexpected codes both fail the expected-invalid command.
+
+## Human authority boundary
+
+The dry run cannot:
+
+- approve oversight, consent, privacy, retention, or accessibility;
+- grant material permission;
+- identify legitimate source, translator, publisher, or community authority;
+- certify meaning preservation;
+- freeze statistical choices or preregister the study;
+- recruit or supervise participants;
+- classify rules from human evidence;
+- advance the study state beyond preparation;
+- support a `publish`, `revise`, or `stop` recommendation.
+
+Human issues #30 through #35 remain open.
 
 ## Duplicate basenames
 
