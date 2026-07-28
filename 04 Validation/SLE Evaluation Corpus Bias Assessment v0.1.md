@@ -17,193 +17,139 @@ tags:
 
 This assessment identifies design bias in [[Multi-Domain SLE Evaluation Corpus v0.1]], [[Evaluation Corpus Coverage Matrix v0.1]], and [[Canto-span Evaluation Subset v0.1]].
 
-The assessment prevents a broad-looking constructed corpus from being mistaken for representative evidence.
+It prevents a broad-looking constructed corpus from being mistaken for representative or authentic evidence.
 
 ## Overall judgment
 
-The v0.1 corpus is suitable for internal rule auditing, semantic-equivalence procedure testing, and preparation of later human studies.
+The v0.1 corpus is suitable only for:
+
+- internal rule auditing;
+- testing the authorized-brief review procedure;
+- designing later reader and author tasks;
+- exposing wording, scope, burden, and neutrality risks.
 
 It is not suitable for:
 
-- claiming that SLE improves comprehension;
-- claiming that SLE preserves meaning across linguistics generally;
-- stabilizing a rule or document pattern;
+- claiming improved comprehension;
+- claiming independent meaning preservation;
+- claiming authentic multilingual coverage;
+- stabilizing a rule or pattern;
 - choosing a universal rhetorical order;
-- validating translations or multilingual use;
-- treating any named language, theory, or method as adequately represented.
+- validating a theory, method, language, or community representation.
 
-## Source-construction bias
+## Constructed-brief circularity
 
-All 16 independent items are project-constructed. Their uncontrolled passages were intentionally written to expose current rules.
+All independent items, briefs, defective drafts, and controlled alternatives were created by the same project.
 
-Consequences:
+Risks:
 
-- the corpus may make current rules appear more useful than they are;
+- current rules may appear more useful because the items were built around them;
 - missing rules are less likely to appear;
-- uncontrolled passages may be less natural than authentic scholarly prose;
-- controlled alternatives may contain details that real authors would not have available;
-- semantic-equivalence review depends on fictional item briefs created by the same project.
+- controlled alternatives can seem successful because the project controls the brief;
+- authentic authors may not accept the project's inferred meaning;
+- no failed controlled alternative is present.
 
 Mitigation:
 
-1. label every item constructed;
-2. prohibit effectiveness claims from v0.1;
-3. add authentic permission-compatible passages in later versions;
-4. require independent authors to confirm intended meaning;
-5. preserve rejected rewrites and rule failures.
+1. declare every brief before both passages;
+2. distinguish controlled-to-brief matching from literal equivalence;
+3. keep independent preservation `not determined`;
+4. prohibit effectiveness and stabilization claims;
+5. retain failed and disputed alternatives in later versions;
+6. require authorized source meaning for authentic passages.
 
-## English-language and rhetorical bias
+## Language and representation bias
 
-Every item is written in English. Named-language contexts do not replace original writing in those languages.
+Every independent passage is English project prose. The revised corpus uses anonymized illustrative contexts such as `Language A` and `Signed Language J`.
+
+This prevents fictional forms, senses, distributions, or community claims from being attached to real languages. It does not create authentic multilingual coverage.
+
+Authentic language coverage remains zero because:
+
+- no passage was written originally in another language;
+- no translation has independent review;
+- no object-language example has a language reviewer;
+- no language community supplied or approved an item;
+- signed-language material is represented only through English prose.
+
+Mitigation requires non-English-original passages, translator review, community authority, and video-aware signed-language material.
+
+## English rhetorical bias
+
+English sentence boundaries, pronouns, clause order, and academic conventions can favor the current SLE rules and patterns.
+
+Later evaluation must:
+
+- permit alternative rhetorical order;
+- test translated and non-English-original prose;
+- separate translator decisions from analytical decisions;
+- avoid one English naturalness rubric;
+- record when sentence splitting damages cohesion.
+
+## Domain, theory, and method prompting bias
+
+The corpus names many domains, frameworks, and methods, but they are prompts rather than authentic representation.
 
 Risks:
 
-- English sentence boundaries may favor `SLE-RULE-0001`;
-- English subject and pronoun patterns may overstate referential problems;
-- English academic order may make the recommended pattern sequences appear universal;
-- normative verbal-form guidance may not transfer directly;
-- translated linguistic terminology may hide category distinctions.
+- cautious empirical wording may weaken formal or framework-internal argument;
+- neutral paraphrases may conceal theoretical assumptions;
+- quantitative details may be privileged over qualitative, archival, formal, ethnographic, or interactional adequacy;
+- unavailable metadata may make legitimate prose appear defective;
+- short passages may overload readers with qualifications.
 
-Mitigation:
+Mitigation requires independent domain reviewers, authentic passages, formal-proof tests, qualitative materials, permitted omissions, and authoring-burden measures.
 
-- add non-English-original passages;
-- test translated alternatives in both directions;
-- record translator decisions separately from linguistic-analysis decisions;
-- permit alternative rhetorical order when information relationships remain recoverable;
-- do not score naturalness across languages with one English rubric.
+## Genre and length bias
 
-## Domain and genre bias
+Research reports, resource notes, and procedures dominate. All items are short passages.
 
-Research reporting, resource documentation, and procedure writing dominate the corpus.
+Underrepresented or absent:
 
-Underrepresented areas include:
-
+- full articles, grammars, dictionaries, and manuals;
 - community-authored documentation;
-- sociolinguistic ethnography;
-- historical linguistics and philology;
-- language acquisition;
-- clinical and applied linguistics;
-- linguistic accessibility materials;
+- historical and philological work;
+- acquisition and psycholinguistics;
 - peer review and editorial correspondence;
-- full dictionaries, grammars, articles, and manuals;
-- multimodal signed-language examples;
-- public-facing linguistic communication.
-
-Mitigation:
-
-- recruit domain owners rather than inventing additional synthetic coverage;
-- add full-document and mixed-pattern samples;
-- record when a pattern is absent instead of assuming combination solves the gap.
-
-## Theory bias
-
-The corpus names multiple frameworks, but most controlled alternatives favor cautious empirical separation between observation and interpretation.
-
-That separation may be useful across traditions, but it can still conflict with traditions in which description and analysis are intentionally integrated.
-
-Risks:
-
-- theoretical prose may be weakened by excessive qualification;
-- framework-internal proof or deduction may be misclassified as empirical overstatement;
-- conventional category names may be replaced with awkward neutral paraphrases;
-- theory-neutral wording may conceal rather than remove theoretical assumptions.
-
-Mitigation:
-
-- require theory experts to review meaning preservation;
-- retain framework terms when defined and necessary;
-- test formal proofs, model-theoretic arguments, and qualitative interpretations separately;
-- record when a rule should be profile-limited rather than universal.
-
-## Method bias
-
-Many controlled alternatives add counts, denominators, versions, or exclusion rules.
-
-Risks:
-
-- quantitative transparency may be privileged over qualitative adequacy;
-- interactional, ethnographic, archival, and formal evidence may be forced into inappropriate record structures;
-- unavailable details may make a legitimate passage appear nonconforming;
-- short summaries may become overloaded.
-
-Mitigation:
-
-- apply fields only when relevant to interpretation;
-- test permitted omissions and immediate cross-references;
-- include qualitative and formal methods in independent review;
-- measure authoring burden and cohesion, not only claim reconstruction.
-
-## Language and community bias
-
-The corpus names several languages, but no language community supplied or approved the fictional passages.
-
-The ASL and Māori contexts are especially sensitive because naming a community can create a false appearance of representation.
-
-Mitigation:
-
-- retain the explicit fictional-data warning;
-- do not use the items as evidence about the named languages;
-- seek community review before adding authentic or community-controlled material;
-- preserve access, consent, attribution, and governance restrictions;
-- permit anonymized or restricted review records where public disclosure is inappropriate.
+- accessibility and public-facing explanation;
+- multimodal and signed examples;
+- mixed-pattern documents.
 
 ## Canto-span bias
 
-The Canto-span subset contains 2 of 18 items and is stored separately.
+Canto-span supplies 2 of 18 items and remains in a separate namespace and file.
 
-Residual risks:
+The subset cannot satisfy independent coverage. Its findings remain adoption or stress-test findings unless independent evidence establishes the same issue.
 
-- project familiarity may lead reviewers to give the subset disproportionate attention;
-- Canto-span statuses and parser workflow may appear more operationally complete than other domains;
-- repository-based examples may bias SLE toward versioned technical documentation.
+## Reviewer and publication bias
 
-Mitigation:
+All controlled-to-brief matches are project-internal. No item has independent preservation confirmation.
 
-- keep the `SLE-EVAL-CS-*` namespace;
-- exclude Canto-span from independent coverage requirements;
-- report its findings as adoption or stress-test findings;
-- require independent evidence before any Canto-span finding changes SLE.
+A later corpus must retain:
 
-## Reviewer and authority bias
-
-The current provisional equivalence judgments were authored within the project. They are not independent reviews.
-
-Before an item enters a formal evaluation:
-
-- one reviewer must understand the relevant linguistic domain or method;
-- one reviewer must check SLE rule application;
-- the source author or an authorized proxy must confirm intended meaning for authentic passages;
-- disagreements must remain visible;
-- a `not determined` result is acceptable when expertise or source authority is unavailable.
-
-## Selection and publication bias
-
-A corpus can become biased if only successful rewrites remain visible.
-
-The project must retain:
-
-- alternatives rejected for meaning loss;
-- items for which no safe rewrite is found;
+- controlled alternatives rejected for meaning loss;
+- items with no safe alternative;
 - rules that add burden without benefit;
-- passages that become less natural or less coherent;
-- cases where plain editing performs as well as SLE;
-- cases where an SLE rule does not apply.
+- passages that become less natural or coherent;
+- cases where ordinary editing performs as well as SLE;
+- cases where a proposed rule does not apply.
 
-## Minimum gates for corpus v0.2
+## Minimum gates for a more representative corpus
 
-A later version should not claim improved representativeness until it includes:
+A later version should not claim improved representativeness until it includes at least:
 
-1. at least 16 authentic, permission-compatible independent passages;
-2. at least 8 passages originally written in languages other than English;
-3. at least 4 translated pairs with independent translation review;
-4. at least 2 community-authored or community-governed contributions;
-5. at least 4 full-document or multi-section samples;
-6. at least 4 rejected or unresolved rewrite cases;
-7. direct tests of interlinear glossing and a non-Canto-span limitation record;
-8. no source project contributing more than 20% of authentic items.
+1. 16 authentic, permission-compatible independent passages;
+2. 8 passages originally written in languages other than English;
+3. 4 translated pairs with independent translation review;
+4. 2 community-authored or community-governed contributions;
+5. 4 full-document or multi-section samples;
+6. 4 rejected or unresolved controlled alternatives;
+7. direct interlinear-glossing tests;
+8. an independent limitation and open-question record;
+9. no source project contributing more than 20% of authentic items.
 
-These numbers are corpus-development gates, not normative SLE language rules.
+These are evaluation-corpus development gates, not normative language rules.
 
 ## Disposition
 
-The v0.1 corpus remains **proposed internal evaluation material**. Its diversity is intentional but synthetic. The recorded gaps are part of the deliverable, not reasons to describe the corpus as representative.
+The v0.1 corpus remains proposed internal audit material. Its diversity is synthetic and must not be described as authentic representation.

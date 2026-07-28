@@ -17,90 +17,91 @@ tags:
 
 ## Authority warning
 
-This subset is a non-authoritative stress test for [[Multi-Domain SLE Evaluation Corpus v0.1]].
+This is a bounded non-authoritative stress test for [[Multi-Domain SLE Evaluation Corpus v0.1]].
 
-Canto-span does not define SLE rules, document patterns, profiles, conformance results, evaluation methods, or terminology. The subset cannot supply normative justification. It contains 2 of the 18 v0.1 corpus items.
+Canto-span does not define SLE rules, patterns, profiles, conformance, evaluation methods, or terminology. These are project-constructed test passages, not copied Canto-span source prose. They cannot satisfy independent domain, theory, language, method, or genre coverage.
 
-The source vocabulary fixture is [[Canto-span Pilot Termbase v0.1]]. That fixture is also non-normative. These passages are project-constructed test items rather than copied Canto-span documentation.
+- SLE baseline: merge commit `4334ef9a8afb1ec0e995145865afa38292ba9bf2`
+- Source fixture: [[Canto-span Pilot Termbase v0.1]]
+- Review template: [[SLE Semantic Equivalence Review Template v0.1]]
 
-## Stable provenance
+## SLE-EVAL-CS-0001 — Status label is not a truth judgment
 
-- SLE repository baseline: merge commit `4334ef9a8afb1ec0e995145865afa38292ba9bf2`
-- Canto-span fixture role: bounded vocabulary and documentation stress test
-- External Canto-span repository authority: none for SLE design
-- Item source class: constructed from documented Canto-span-local distinctions
-- Semantic-equivalence template: [[SLE Semantic Equivalence Review Template v0.1]]
-
-# SLE-EVAL-CS-0001 — Status label is not a truth judgment
-
+- **Meaning brief:** `SLE-BRIEF-CS-0001`
+- **Brief authority:** project-constructed evaluation specification; no external source-author authority
+- **Provenance:** project-constructed fictional editorial test item
 - **Domain:** grammar-engineering documentation
 - **Method:** status and limitation record
-- **Theory or framework:** project-local
-- **Language context:** Cantonese-oriented Canto-span documentation
-- **Genre:** limitation and open-question record
+- **Illustrative context:** Canto-span documentation
+- **Framework prompt:** project-local
+- **Genre:** limitation record
 - **Pattern:** `SLE-PATTERN-0013`
-- **Rules tested:** `SLE-RULE-0003`, `0004`, `0005`, `0018`, `0019`, `0020`, `0022`, `0023`
+- **Rules tested:** `SLE-RULE-0003`, `SLE-RULE-0004`, `SLE-RULE-0005`, `SLE-RULE-0018`, `SLE-RULE-0019`, `SLE-RULE-0020`, `SLE-RULE-0022`, `SLE-RULE-0023`
 
-## Uncontrolled passage
+### Authorized meaning brief
+
+> In the fictional frozen Canto-span record, unsupported_generalization means the current generalization lacks the required support. It does not mean the construction is impossible or that all examples must be removed. Review must separate unsupported claims, retained observations, and missing evidence.
+
+### Uncontrolled draft
 
 > This construction is unsupported, so it is wrong and should be removed.
 
-## Proposed controlled alternative
+### Proposed controlled alternative
 
-> In the fictional frozen Canto-span record, the note has status `unsupported_generalization`. The status records that the current generalization lacks the required support. It does not establish that the construction is impossible or that every descriptive example must be removed. The next review must identify the unsupported claim, retained observations, and evidence needed for a narrower or revised analysis.
+> In the fictional frozen Canto-span record, the note has status unsupported_generalization. The status records that the current generalization lacks the required support. It does not establish that the construction is impossible or that every descriptive example must be removed. The next review must identify the unsupported claim, retained observations, and evidence needed for a narrower or revised analysis.
 
-## Change record
+### Pair audit
 
-- status name, controlled meaning, and affected claim are separated;
-- *wrong* is removed because the status does not license that conclusion;
-- removal becomes one possible future decision rather than an automatic action;
-- required resolution evidence is stated.
+- **Length:** 12 → 58 words (+46); 1 → 4 sentences (+3)
+- **Structure and terminology:** Defines the local status, removes wrong, bounds removal, and states the review task.
+- **Uncontrolled-to-brief result:** does not match brief
+- **Controlled-to-brief internal result:** matches brief
+- **Literal passage-to-passage equivalence:** not equivalent by design when the uncontrolled draft overstates or obscures the authorized brief
+- **Independent preservation result:** not determined
+- **Risk:** The status meaning remains Canto-span-local and non-normative.
 
-## Semantic-equivalence review
+## SLE-EVAL-CS-0002 — Parser output is not linguistic support
 
-- **Result:** provisionally equivalent to the intended project-status record, not to the literal claim that the construction is false;
-- **Preserved:** current generalization lacks required support;
-- **Risk:** the exact operational meaning of `unsupported_generalization` remains Canto-span-local and must not become a core SLE status.
-
-# SLE-EVAL-CS-0002 — Parser output is not linguistic support
-
+- **Meaning brief:** `SLE-BRIEF-CS-0002`
+- **Brief authority:** project-constructed evaluation specification; no external source-author authority
+- **Provenance:** project-constructed fictional editorial test item
 - **Domain:** annotation and parser documentation
 - **Method:** parser-assisted review procedure
-- **Theory or framework:** project-local grammar engineering
-- **Language context:** Cantonese-oriented Canto-span documentation
+- **Illustrative context:** Canto-span documentation
+- **Framework prompt:** project-local grammar engineering
 - **Genre:** annotation guideline and procedure
 - **Patterns:** `SLE-PATTERN-0007`, `SLE-PATTERN-0011`
-- **Rules tested:** `SLE-RULE-0003`, `0005`, `0008`, `0015`, `0016`, `0017`, `0018`, `0019`, `0020`, `0022`, `0023`
+- **Rules tested:** `SLE-RULE-0003`, `SLE-RULE-0005`, `SLE-RULE-0008`, `SLE-RULE-0015`, `SLE-RULE-0016`, `SLE-RULE-0017`, `SLE-RULE-0018`, `SLE-RULE-0019`, `SLE-RULE-0020`, `SLE-RULE-0022`, `SLE-RULE-0023`
 
-## Uncontrolled passage
+### Authorized meaning brief
 
-> If the parser labels the sentence `A_NOT_A`, mark the grammar note supported and update everything.
+> Parser P at a frozen test state can trigger a review record. Parser output alone cannot change a grammar note's evidence status. A human reviewer must compare the input, configuration, definition, examples, counterexamples, and independent sources. Only affected records may change.
 
-## Proposed controlled alternative
+### Uncontrolled draft
 
-> If Parser P at the frozen test state labels the input `A_NOT_A`, record the parser result in the test record. Do not change the grammar note's evidence status from parser output alone. A reviewer must separately compare the input, parser configuration, linguistic definition, examples, counterexamples, and independent sources. Update only the records affected by the documented review decision.
+> If the parser labels the sentence A_NOT_A, mark the grammar note supported and update everything.
 
-## Change record
+### Proposed controlled alternative
 
-- condition, parser identity, action, and review boundary are separated;
-- parser output is distinguished from linguistic support;
-- *update everything* becomes a bounded record update;
-- the required human evidence review is stated.
+> If Parser P at the frozen test state labels the input A_NOT_A, record the parser result in the test record. Do not change the grammar note's evidence status from parser output alone. A reviewer must separately compare the input, parser configuration, linguistic definition, examples, counterexamples, and independent sources. Update only the records affected by the documented review decision.
 
-## Semantic-equivalence review
+### Pair audit
 
-- **Result:** provisionally equivalent to the intended safe parser-assisted workflow, not to the literal automatic-support rule;
-- **Preserved:** parser output triggers a review record;
-- **Risk:** the procedure is Canto-span-specific and cannot become a universal SLE workflow requirement.
+- **Length:** 15 → 58 words (+43); 1 → 4 sentences (+3)
+- **Structure and terminology:** Separates trigger, system record, evidence boundary, human review, and bounded update.
+- **Uncontrolled-to-brief result:** does not match brief
+- **Controlled-to-brief internal result:** matches brief
+- **Literal passage-to-passage equivalence:** not equivalent by design when the uncontrolled draft overstates or obscures the authorized brief
+- **Independent preservation result:** not determined
+- **Risk:** The workflow remains Canto-span-specific and cannot define SLE.
 
 # Subset restrictions
 
-- Keep these IDs under the `SLE-EVAL-CS-*` namespace.
-- Do not combine their counts with independent-source coverage without showing the source class.
-- Do not use the subset to satisfy an independent theory, language, method, or genre requirement.
-- Do not generalize Canto-span statuses or parser workflows into SLE.
-- Retain failed or disputed rewrites as Canto-span adoption findings, not as defects in SLE unless independent multi-domain evidence supports the same problem.
+- Keep the IDs under `SLE-EVAL-CS-*`.
+- Keep the briefs under `SLE-BRIEF-CS-*`.
+- Do not combine this subset with independent-source coverage without showing the source class.
+- Do not generalize Canto-span statuses or workflows into SLE.
+- Treat failed or disputed rewrites as adoption findings unless independent multi-domain evidence supports the same issue.
+- Independent preservation remains `not determined` for both items.
 
-# Relationship to coverage
-
-The subset contributes a project-local limitation record and parser-assisted procedure test. [[Evaluation Corpus Coverage Matrix v0.1]] treats both as one bounded source project and preserves the requirement for an independent non-Canto-span limitation-record item.
+[[Evaluation Corpus Coverage Matrix v0.1]] records the subset as one bounded source project.

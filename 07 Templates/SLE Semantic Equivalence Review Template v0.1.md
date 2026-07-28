@@ -1,5 +1,7 @@
 ---
-title: "SLE Semantic Equivalence Review Template v0.1"
+title: "SLE Meaning-Preservation Review Template v0.1"
+aliases:
+  - "SLE Semantic Equivalence Review Template v0.1"
 type: template
 status: proposed
 version: "0.1"
@@ -8,35 +10,58 @@ updated: 2026-07-28
 tags:
   - sle
   - evaluation
-  - semantic-equivalence
+  - meaning-preservation
   - template
 ---
-# SLE Semantic Equivalence Review Template v0.1
+# SLE Meaning-Preservation Review Template v0.1
 
 ## Purpose
 
-Use this template to compare an uncontrolled passage with a proposed SLE-controlled alternative.
+Use this template to compare an uncontrolled draft and a proposed controlled alternative against an authorized meaning record.
 
-The review determines whether the alternative preserves the intended linguistic content. It does not determine whether the claim is true, whether the method is valid, or whether the controlled wording is easier to read.
+The review does not determine whether the claim is true, whether the method is valid, or whether the controlled wording is easier to read. It separates three questions:
+
+1. Does the uncontrolled draft express the authorized meaning?
+2. Does the controlled alternative express the authorized meaning?
+3. Are the two passages literally equivalent to each other?
+
+A defective uncontrolled draft and a controlled alternative can have different literal meanings. In that case, do not call them equivalent. Evaluate which passage better preserves the authorized meaning only after the meaning record is fixed.
 
 This template supports [[Evaluation Framework]] and [[Multi-Domain SLE Evaluation Corpus v0.1]].
 
 ## Item identity
 
 - Evaluation item ID:
+- Meaning brief ID:
 - Corpus version:
 - Source or provenance:
 - Original-text permission or construction status:
+- Brief author or controlling authority:
 - Document genre:
 - Linguistic domain:
 - Method or evidence source:
-- Theoretical tradition or declared analytical framework:
-- Language or language context:
+- Theoretical tradition or analytical framework:
+- Language or illustrative context:
 - Canto-span item: yes / no
+
+## Authorized meaning record
+
+Record the intended content before drafting or reviewing either passage.
+
+- Principal claim or instruction:
+- Direct evidence or source record:
+- Scope, population, time, dataset, or version:
+- Evidential force and certainty:
+- Theoretical or methodological commitment:
+- Required limitations or exclusions:
+- Terms whose meanings must remain stable:
+- Claims or interpretations that are not authorized:
+
+An item without an authorized meaning record receives `not determined` for meaning preservation.
 
 ## Compared passages
 
-### Uncontrolled passage
+### Uncontrolled draft
 
 > [Insert the original or constructed uncontrolled passage.]
 
@@ -49,16 +74,16 @@ This template supports [[Evaluation Framework]] and [[Multi-Domain SLE Evaluatio
 - SLE version:
 - Profile-set version:
 - Profile or exact rule set:
-- Rule IDs tested:
+- Full rule IDs tested:
 - Pattern IDs tested:
 - Conditional rules marked not applicable:
 - Declared extension or waiver:
 
-## Meaning-preservation review
+## Passage-to-brief review
 
-Review each dimension separately.
+Review each passage separately.
 
-| Dimension | Preserved | Changed | Not applicable | Reviewer note |
+| Dimension | Uncontrolled matches brief | Controlled matches brief | Not determined | Reviewer note |
 |---|---:|---:|---:|---|
 | polarity |  |  |  |  |
 | quantification |  |  |  |  |
@@ -75,12 +100,24 @@ Review each dimension separately.
 | normative force, for procedures |  |  |  |  |
 | rights, consent, or access boundary |  |  |  |  |
 
-## Structural-change record
+## Literal passage-to-passage relation
+
+Select one:
+
+- **equivalent** — no material literal meaning difference identified;
+- **not equivalent** — the passages differ materially;
+- **not determined** — the available record is insufficient.
+
+Do not use an “equivalent with uncertainty” category. A possible material change requires `not determined`.
+
+## Structural and length record
 
 - Sentences before:
 - Sentences after:
+- Sentence delta:
 - Words before:
 - Words after:
+- Word delta:
 - Headings, lists, tables, or examples added or removed:
 - Terms replaced or defined:
 - Information reordered:
@@ -88,38 +125,26 @@ Review each dimension separately.
 
 Structural change is not evidence of improvement or damage by itself.
 
-## Risk review
+## Review results
 
-Record any risk that the controlled alternative:
+Record three independent results:
 
-- adds a claim not present in the uncontrolled passage;
-- removes a qualification;
-- narrows or broadens scope;
-- changes evidential strength;
-- introduces a theoretical commitment;
-- changes participant, speaker, annotator, or community voice;
-- exposes restricted or community-controlled information;
-- makes a conventional field expression unnatural or misleading;
-- increases reading or authoring burden without a clear communication benefit.
+- **Uncontrolled-to-brief:** matches brief / does not match brief / ambiguous / not determined
+- **Controlled-to-brief:** matches brief / does not match brief / not determined
+- **Independent preservation:** confirmed / rejected / not determined
 
-## Review result
-
-Select one:
-
-- **provisionally equivalent** — no material meaning change identified;
-- **equivalent with recorded uncertainty** — a possible change remains for later specialist review;
-- **not equivalent** — the alternative must not be used as the paired SLE version;
-- **not determined** — the available record is insufficient.
+A project-internal construction check cannot produce `confirmed` independent preservation.
 
 ## Independent review
 
 - Reviewer role:
 - Relevant language, method, or domain expertise:
 - Review date:
+- Exact reviewed scope:
 - Result:
 - Disagreement or unresolved question:
 - Required next action:
 
 ## Evaluation boundary
 
-A provisionally equivalent pair can enter reader or author testing. It must not be described as a better version until the applicable evaluation produces evidence of benefit.
+A controlled alternative can enter reader testing after an internal `matches brief` result. It must not be described as independently meaning-preserving or better until the applicable independent review and evaluation produce that evidence.
