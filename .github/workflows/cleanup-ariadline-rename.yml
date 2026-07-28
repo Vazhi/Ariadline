@@ -1,0 +1,248 @@
+name: Clean up Ariadline documentation migration
+
+on:
+  push:
+    branches:
+      - agent/rename-project-to-ariadline
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clean prose, regenerate manifest, and validate links
+        shell: bash
+        run: |
+          python - <<'PY'
+          from __future__ import annotations
+
+          import hashlib
+          import json
+          import re
+          from pathlib import Path
+
+          root = Path('.')
+          workflow = Path('.github/workflows/cleanup-ariadline-rename.yml')
+
+          def read(path: str) -> str:
+              return Path(path).read_text(encoding='utf-8')
+
+          def write(path: str, text: str) -> None:
+              Path(path).write_text(text, encoding='utf-8')
+
+          # Global cleanup of mechanical replacements.
+          markdown_files = sorted(
+              p for p in root.rglob('*.md')
+              if '.git' not in p.parts
+          )
+          for path in markdown_files:
+              text = path.read_text(encoding='utf-8')
+              text = text.replace('[[Ariadline|Ariadline (Ariadline)]]', '[[Ariadline]]')
+              text = text.replace('[[Ariadline|Ariadline]]', '[[Ariadline]]')
+              text = text.replace('Ariadline (Ariadline)', 'Ariadline')
+
+              # Deduplicate repeated values in YAML frontmatter lists while
+              # preserving order and leaving the document body untouched.
+              lines = text.splitlines(keepends=True)
+              if lines and lines[0].strip() == '---':
+                  try:
+                      end = next(i for i in range(1, len(lines)) if lines[i].strip() == '---')
+                  except StopIteration:
+                      end = -1
+                  if end > 0:
+                      current_key = None
+                      seen_values: dict[str, set[str]] = {}
+                      cleaned = [lines[0]]
+                      for line in lines[1:end]:
+                          key_match = re.match(r'^([A-Za-z0-9_-]+):\s*$', line.rstrip('\r\n'))
+                          if key_match:
+                              current_key = key_match.group(1)
+                              seen_values.setdefault(current_key, set())
+                              cleaned.append(line)
+                              continue
+                          item_match = re.match(r'^\s+-\s+(.+?)\s*$', line.rstrip('\r\n'))
+                          if item_match and current_key:
+                              value = item_match.group(1)
+                              if value in seen_values[current_key]:
+                                  continue
+                              seen_values[current_key].add(value)
+                          elif line and not line[0].isspace():
+                              current_key = None
+                          cleaned.append(line)
+                      lines = cleaned + lines[end:]
+                      text = ''.join(lines)
+
+              path.write_text(text, encoding='utf-8')
+
+          # Editorial corrections where the old acronym-oriented wording no
+          # longer makes sense after adoption of the coined name.
+          path = 'README.md'
+          text = read(path)
+          text = text.replace(
+              'This vault is a project plan for the development of **Ariadline**.',
+              'This vault develops **Ariadline**, an experimental framework for clear and accountable linguistic reporting.'
+          )
+          write(path, text)
+
+          path = '01 Foundation/Project Charter.md'
+          text = read(path)
+          text = re.sub(
+              r'\*\*Ariadline\*\* is the working name\. The project must perform a naming and acronym review before public release because \*\*Ariadline\*\* has other established meanings\.',
+              '**Ariadline** is the project name. It refers to an experimental framework for clear and accountable linguistic reporting. Public materials should pair the name with a descriptive subtitle until its purpose is widely understood.',
+              text,
+          )
+          write(path, text)
+
+          path = '08 Reference/Ariadline.md'
+          text = read(path)
+          text = text.replace(
+              '**Ariadline** is the working name for the controlled language planned in this vault.',
+              '**Ariadline** is the project name for the experimental linguistic reporting framework developed in this vault.'
+          )
+          write(path, text)
+
+          path = '05 Governance/Risks and Open Questions.md'
+          text = read(path)
+          text = re.sub(
+              r'## R-07 — Acronym collision\n\n\*\*Ariadline\*\* already has other meanings in medicine, education, and other contexts\.\n\n\*\*Control:\*\* conduct a naming review before public branding\.',
+              '## R-07 — Brand ambiguity\n\nThe coined name **Ariadline** does not immediately explain the project’s purpose to every reader.\n\n**Control:** pair the name with a descriptive subtitle and maintain a documented naming and intellectual-property review.',
+              text,
+          )
+          write(path, text)
+
+          path = '06 Registers/Ariadline Reference Change and Deferral Log v0.1.md'
+          text = read(path)
+          text = re.sub(
+              r'## Naming risk\n\n\*\*Ariadline\*\* is a working abbreviation with other established meanings\. A naming and acronym review is required before public release\.',
+              '## Naming decision\n\nThe project name is **Ariadline**. Public materials should pair it with a descriptive subtitle until the name is established. Naming and intellectual-property review remains part of release governance.',
+              text,
+          )
+          write(path, text)
+
+          tsv = Path('06 Registers/Canto-span Pilot Termbase v0.1.tsv')
+          if tsv.exists():
+              text = tsv.read_text(encoding='utf-8')
+              text = text.replace(
+                  'authority_boundary\tfixture entries do not define SLE terminology or normative requirements',
+                  'authority_boundary\tfixture entries do not define Ariadline terminology or normative requirements',
+              )
+              tsv.write_text(text, encoding='utf-8')
+
+          # Remove this one-use workflow before inventory and commit.
+          if workflow.exists():
+              workflow.unlink()
+
+          # Rebuild the vault manifest from the actual renamed documentation.
+          markdown_files = sorted(
+              p for p in root.rglob('*.md')
+              if '.git' not in p.parts
+          )
+          stems: dict[str, list[str]] = {}
+          for path in markdown_files:
+              stems.setdefault(path.stem, []).append(path.as_posix())
+          duplicates = {
+              stem: paths for stem, paths in sorted(stems.items())
+              if len(paths) > 1
+          }
+
+          wikilink = re.compile(r'!?\[\[([^\]]+)\]\]')
+          broken: list[str] = []
+          wikilink_count = 0
+          for path in markdown_files:
+              text = path.read_text(encoding='utf-8')
+              links = wikilink.findall(text)
+              wikilink_count += len(links)
+              for raw in links:
+                  target = raw.split('|', 1)[0].split('#', 1)[0].strip()
+                  if not target:
+                      continue
+                  target_name = Path(target).name
+                  if target_name not in stems:
+                      broken.append(f'{path.as_posix()}: [[{raw}]]')
+
+          old_manifest_path = Path('manifest.json')
+          created = '2026-07-27'
+          if old_manifest_path.exists():
+              try:
+                  created = json.loads(old_manifest_path.read_text(encoding='utf-8')).get('created', created)
+              except (json.JSONDecodeError, OSError):
+                  pass
+
+          entries = []
+          for path in markdown_files:
+              data = path.read_bytes()
+              entries.append({
+                  'path': path.as_posix(),
+                  'bytes': len(data),
+                  'sha256': hashlib.sha256(data).hexdigest(),
+              })
+
+          manifest = {
+              'vault': 'Ariadline_Development_Plan_Obsidian',
+              'created': created,
+              'note_count': len(markdown_files),
+              'wikilink_count': wikilink_count,
+              'duplicate_basenames': duplicates,
+              'broken_wikilinks': broken,
+              'files': entries,
+          }
+          old_manifest_path.write_text(
+              json.dumps(manifest, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
+
+          # Final validation.
+          failures: list[str] = []
+          forbidden = {
+              'Ariadline (Ariadline)': 'duplicated project name',
+              '[[Ariadline|Ariadline]]': 'redundant Ariadline wikilink alias',
+              '[[Ariadline|Ariadline (Ariadline)]]': 'duplicated Ariadline wikilink label',
+              'Simplified Linguistic English': 'former project name',
+              'Vazhi/simplified-linguistic-english': 'former repository slug',
+          }
+          for path in markdown_files:
+              text = path.read_text(encoding='utf-8')
+              for needle, description in forbidden.items():
+                  if needle in text:
+                      failures.append(f'{path.as_posix()}: {description}')
+
+          # Standalone SLE prose should be gone; stable IDs such as SLE-RULE-0001
+          # remain intentionally unchanged for traceability and tool compatibility.
+          standalone_sle = re.compile(r'(?<![A-Za-z0-9_-])SLE(?![A-Za-z0-9_-])')
+          for path in markdown_files:
+              for lineno, line in enumerate(path.read_text(encoding='utf-8').splitlines(), 1):
+                  scrubbed = re.sub(r'`SLE-[^`]+`', '', line)
+                  scrubbed = re.sub(r'\bSLE-(?:RULE|PATTERN|PROFILE|EVAL|BRIEF|TERM|DEC|PROFILE-SET)[A-Za-z0-9_.-]*\b', '', scrubbed)
+                  if standalone_sle.search(scrubbed):
+                      failures.append(f'{path.as_posix()}:{lineno}: standalone legacy acronym')
+
+          if duplicates:
+              failures.append(f'duplicate Markdown basenames: {duplicates}')
+          if broken:
+              failures.extend(f'broken wikilink: {item}' for item in broken)
+          if failures:
+              raise SystemExit('validation failed:\n' + '\n'.join(failures[:300]))
+
+          print(f'Validated {len(markdown_files)} Markdown files.')
+          print(f'Validated {wikilink_count} Obsidian wikilinks.')
+          print('Regenerated manifest.json with current paths, byte counts, and SHA-256 hashes.')
+          PY
+
+      - name: Commit cleanup
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No cleanup changes were required."
+            exit 0
+          fi
+          git commit -m "clean up Ariadline documentation rename"
+          git push
