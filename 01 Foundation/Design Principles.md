@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - foundation
   - principles
 ---
@@ -17,7 +17,7 @@ A simpler sentence is not better when it removes a necessary contrast.
 
 ## DP-02 — Control ambiguity, not intellectual complexity
 
-SLE must make a complex analysis explicit. It must not pretend that the analysis is simple.
+Ariadline must make a complex analysis explicit. It must not pretend that the analysis is simple.
 
 ## DP-03 — Separate functions
 
@@ -58,7 +58,7 @@ Each normative rule needs:
 - boundary cases;
 - a verification method.
 
-Use [[SLE Rule Proposal Template]].
+Use [[Ariadline Rule Proposal Template]].
 
 ## DP-09 — Use layered conformance
 

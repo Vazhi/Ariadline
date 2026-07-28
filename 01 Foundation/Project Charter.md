@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - foundation
   - charter
 ---
@@ -13,7 +13,7 @@ tags:
 
 ## Working name
 
-**Simplified Linguistic English (SLE)** is the working name. The project must perform a naming and acronym review before public release because **SLE** has other established meanings.
+**Ariadline (Ariadline)** is the working name. The project must perform a naming and acronym review before public release because **Ariadline** has other established meanings.
 
 ## Problem statement
 
@@ -23,7 +23,7 @@ Linguistic writing often mixes observations, theoretical analyses, evidence, qua
 
 Develop a [[Controlled Natural Language|controlled form of English]] for clear linguistic description and technical communication.
 
-SLE will help writers:
+Ariadline will help writers:
 
 - state one principal claim at a time;
 - use stable terms with explicit definitions;
@@ -36,8 +36,8 @@ SLE will help writers:
 
 The project will publish:
 
-1. an SLE core standard;
-2. one or more [[SLE Profile|profiles]] for different document types;
+1. an Ariadline core standard;
+2. one or more [[Ariadline Profile|profiles]] for different document types;
 3. a controlled termbase;
 4. authoring and conformance guidance;
 5. a test corpus with compliant and noncompliant examples;
@@ -45,7 +45,7 @@ The project will publish:
 
 ## Success condition
 
-SLE succeeds only if target users understand SLE text more accurately or efficiently than comparable uncontrolled prose **without a material loss of necessary linguistic precision**.
+Ariadline succeeds only if target users understand Ariadline text more accurately or efficiently than comparable uncontrolled prose **without a material loss of necessary linguistic precision**.
 
 See [[Evaluation Framework]] and [[Quality Metrics and Acceptance Gates]].
 
@@ -61,9 +61,9 @@ See [[Evaluation Framework]] and [[Quality Metrics and Acceptance Gates]].
 
 ## Initial deliverables
 
-- [[Pilot Specification Outline|SLE v0.1 pilot specification]]
+- [[Pilot Specification Outline|Ariadline v0.1 pilot specification]]
 - [[Term Inventory|starter term inventory]]
 - [[Rule Inventory|starter rule inventory]]
-- [[SLE Test Case Template|test-case suite]]
+- [[Ariadline Test Case Template|test-case suite]]
 - [[Pilot Study Design|pilot evaluation protocol]]
 - [[Governance and Change Control|governance procedure]]

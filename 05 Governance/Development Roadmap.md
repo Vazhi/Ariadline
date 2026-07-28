@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - governance
   - roadmap
 ---
@@ -69,7 +69,7 @@ Exit gate:
 
 Deliverables:
 
-- [[Pilot Specification Outline|SLE 0.1-alpha]];
+- [[Pilot Specification Outline|Ariadline 0.1-alpha]];
 - manual checklist;
 - prototype checker;
 - expert meaning-preservation review;

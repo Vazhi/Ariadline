@@ -5,10 +5,10 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 aliases:
-  - "ANotAQuestion SLE Worked Example"
+  - "ANotAQuestion Ariadline Worked Example"
   - "Canto-span Construction Note Worked Example"
 tags:
-  - sle
+  - ariadline
   - case-study
   - canto-span
   - grammar-engineering
@@ -18,7 +18,7 @@ tags:
 # Canto-span A-not-A Worked Example
 
 > [!abstract] Purpose
-> This note applies the target [[Simplified Linguistic English|SLE]] system to one live Canto-span construction record. It shows how SLE could make identity, linguistic scope, evidence, software behavior, and unresolved questions easier to distinguish without weakening Canto-span governance.
+> This note applies the target [[Ariadline|Ariadline]] system to one live Canto-span construction record. It shows how Ariadline could make identity, linguistic scope, evidence, software behavior, and unresolved questions easier to distinguish without weakening Canto-span governance.
 
 This note extends [[Canto-span Case Study]] with a construction-level example.
 
@@ -66,7 +66,7 @@ Each listed source has:
 - a statement of what the source supports;
 - a statement of what must not be inferred.
 
-This structure is already close to SLE evidence records.
+This structure is already close to Ariadline evidence records.
 
 ### Explicit implementation limits
 
@@ -88,7 +88,7 @@ The note title is `ANotAQuestion`. The identity registry gives `M4MarkedANotAInt
 
 A reader who opens only the grammar note can mistake the legacy label for the current ontology term.
 
-**SLE improvement:** every construction note should show the permanent code, canonical name, and legacy display label together in the first human-readable section.
+**Ariadline improvement:** every construction note should show the permanent code, canonical name, and legacy display label together in the first human-readable section.
 
 ### CP-02 — The plain-language claim is not the exact profile
 
@@ -101,7 +101,7 @@ The note says that Cantonese may instantiate the structural family represented b
 - the profile excludes final-未 completion questions;
 - the profile excludes arbitrary truncation of disyllabic predicates.
 
-**SLE improvement:** a `[GEN]` statement must contain the bounded profile or link to a profile record that contains it.
+**Ariadline improvement:** a `[GEN]` statement must contain the bounded profile or link to a profile record that contains it.
 
 ### CP-03 — Metadata is precise but cognitively dense
 
@@ -115,34 +115,34 @@ The frontmatter contains many useful fields. A new reader must still know which 
 - workflow;
 - promotion.
 
-**SLE improvement:** keep machine-readable fields, but group the human-readable report by claim function and state dimension.
+**Ariadline improvement:** keep machine-readable fields, but group the human-readable report by claim function and state dimension.
 
 ### CP-04 — Counts can be misread as conclusions
 
 The note lists five verified sources and twelve executable tests. Neither count states how many propositions directly support the exact canonical profile.
 
-**SLE improvement:** counts must not substitute for proposition-level evidence statements. Every count should be followed by its direct conclusion and limitation.
+**Ariadline improvement:** counts must not substitute for proposition-level evidence statements. Every count should be followed by its direct conclusion and limitation.
 
 ### CP-05 — Historical judgment evidence can look current
 
 The note reports one speaker record, but zero eligible panel responses under the current evidence model.
 
-**SLE improvement:** distinguish a historical diagnostic judgment from current role-neutral panel evidence with separate terms and claim classes.
+**Ariadline improvement:** distinguish a historical diagnostic judgment from current role-neutral panel evidence with separate terms and claim classes.
 
 ### CP-06 — Runtime success can overshadow unresolved linguistic work
 
 The runtime is active and the note marks the negative tests as passing. The status remains `research_pending`, the negative-boundary inventory is incomplete, code-document reconciliation is pending, and the current Definition-of-Done implementation review is not complete.
 
-**SLE improvement:** every system-result block must end with a statement of what the result does not establish.
+**Ariadline improvement:** every system-result block must end with a statement of what the result does not establish.
 
-## Target SLE-GE declaration
+## Target Ariadline-GE declaration
 
 A fully converted note could start with:
 
 ```yaml
-sle:
+ariadline:
   version: "1.0"
-  profile: "SLE-GE"
+  profile: "Ariadline-GE"
   conformance_level: "B"
   termbase: "canto-span-1.0"
   document_class: "construction-note"
@@ -156,7 +156,7 @@ sle:
 
 This declaration would describe documentation conformance. It would not certify linguistic truth or promotion eligibility.
 
-## Worked SLE rewrite
+## Worked Ariadline rewrite
 
 ### Identity
 
@@ -306,7 +306,7 @@ A judgment record that is not eligible under the current panel model MUST be des
 
 ## Construction-note target structure
 
-A mature SLE-GE note could use this order:
+A mature Ariadline-GE note could use this order:
 
 1. **Identity**
 2. **Exact claim**
@@ -364,7 +364,7 @@ Ask readers to identify:
 
 ### Acceptance condition
 
-Adopt a candidate rule only when the SLE version improves reader performance without:
+Adopt a candidate rule only when the Ariadline version improves reader performance without:
 
 - changing Canto-span policy;
 - removing a necessary linguistic distinction;
@@ -376,16 +376,16 @@ See [[Evaluation Framework]], [[Pilot Study Design]], and [[Quality Metrics and 
 ## Recommended first implementation
 
 1. Build the initial Canto-span termbase.
-2. Add SLE identity and claim-class headers to twelve pilot construction notes.
+2. Add Ariadline identity and claim-class headers to twelve pilot construction notes.
 3. Rewrite the plain-language claims with exact profile and exclusion statements.
 4. Add explicit limitation sentences to source, panel, corpus, and system blocks.
 5. Add a lightweight checker for identity, claim class, scope, denominator, baseline, and prohibited inference patterns.
-6. Evaluate paired original and SLE versions.
+6. Evaluate paired original and Ariadline versions.
 7. Adopt only the rules that pass the pilot gates.
 
 ## Safeguards
 
-SLE adoption MUST NOT:
+Ariadline adoption MUST NOT:
 
 - rename or split the construction without accepted Canto-span adjudication;
 - move the linguistic status;
@@ -397,9 +397,9 @@ SLE adoption MUST NOT:
 
 ## Conclusion
 
-`ANotAQuestion` shows why Canto-span is a strong SLE reference implementation.
+`ANotAQuestion` shows why Canto-span is a strong Ariadline reference implementation.
 
-The project already records the necessary distinctions. A fully developed SLE would make those distinctions more visible, more consistent, and more mechanically reviewable.
+The project already records the necessary distinctions. A fully developed Ariadline would make those distinctions more visible, more consistent, and more mechanically reviewable.
 
 The strongest initial benefit would come from three controls:
 

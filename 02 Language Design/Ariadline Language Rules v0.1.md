@@ -1,27 +1,27 @@
 ---
-title: "SLE for Linguistics Language Rules v0.1"
+title: "Ariadline Language Rules v0.1"
 type: normative-draft
 status: proposed
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - language-rules
   - normative-draft
   - linguistics
 ---
-# SLE for Linguistics Language Rules v0.1
+# Ariadline Language Rules v0.1
 
 ## Status and purpose
 
-This document is the first prose-first normative draft for the SLE for Linguistics reference specification.
+This document is the first prose-first normative draft for the Ariadline reference specification.
 
 The rules are proposed requirements and recommendations. They are not yet a published standard. A rule can become stable only after cross-domain review and human evaluation under [[Evaluation Framework]].
 
-SLE controls how linguistic content is communicated. SLE conformance does not establish that a claim is true, theoretically correct, ethically acceptable, or methodologically sound.
+Ariadline controls how linguistic content is communicated. Ariadline conformance does not establish that a claim is true, theoretically correct, ethically acceptable, or methodologically sound.
 
-The evidence basis is recorded in [[Independent SLE Rule Evidence Register v0.1]]. Decisions about optional claim functions are recorded in [[Claim Function Decision Register v0.1]].
+The evidence basis is recorded in [[Independent Ariadline Rule Evidence Register v0.1]]. Decisions about optional claim functions are recorded in [[Claim Function Decision Register v0.1]].
 
 ## Draft-local normative verbal forms
 
@@ -34,7 +34,7 @@ This draft uses the following verbal forms so that its own rule statements are i
 - **may** states permission;
 - **can** states capability or factual possibility.
 
-This is a draft-local editorial convention, not a final decision that all SLE-conforming documents must use **must** rather than **shall** or another declared requirement form. ISO practice uses **shall** for requirements, while IETF BCP 14 permits **MUST** and **SHALL** as requirement terms. SLE-RULE-0008 therefore controls declared meaning and consistency. The final preferred requirement form remains an evaluation question.
+This is a draft-local editorial convention, not a final decision that all Ariadline-conforming documents must use **must** rather than **shall** or another declared requirement form. ISO practice uses **shall** for requirements, while IETF BCP 14 permits **MUST** and **SHALL** as requirement terms. SLE-RULE-0008 therefore controls declared meaning and consistency. The final preferred requirement form remains an evaluation question.
 
 ## Rule format
 
@@ -158,7 +158,7 @@ A definition must state the relevant scope and distinguishing criteria.
 
 **Editorial check:** Answer “more or less than what, on which measure?”
 
-**Evidence:** ER-06, ER-07; the exact three-part control remains a proposed SLE formulation.
+**Evidence:** ER-06, ER-07; the exact three-part control remains a proposed Ariadline formulation.
 
 ## SLE-RULE-0007 — Clear logical scope
 
@@ -180,7 +180,7 @@ or
 
 **Editorial check:** Paraphrase the sentence with explicit quantifier and negation order.
 
-**Evidence:** ER-01, ER-04; the paraphrase test is an SLE-local editorial method.
+**Evidence:** ER-01, ER-04; the paraphrase test is an Ariadline-local editorial method.
 
 # B. Procedures and normative text
 
@@ -190,7 +190,7 @@ or
 
 Within that declared system, one form must not be used for two different normative functions when the difference affects conformance.
 
-SLE v0.1 does not yet require **must** rather than **shall**. The final SLE requirement form must be selected only after comparison and reader evaluation.
+Ariadline v0.1 does not yet require **must** rather than **shall**. The final Ariadline requirement form must be selected only after comparison and reader evaluation.
 
 **Noncompliant**
 
@@ -247,7 +247,7 @@ Actions that form one inseparable operation may remain together in their require
 
 **Editorial check:** Ask whether one action can fail or be skipped independently of another action.
 
-**Evidence:** ER-01, ER-06, ER-10; the independence test is an SLE-local hypothesis.
+**Evidence:** ER-01, ER-06, ER-10; the independence test is an Ariadline-local hypothesis.
 
 # C. Claims, evidence, and scope
 
@@ -265,7 +265,7 @@ Actions that form one inseparable operation may remain together in their require
 
 **Editorial check:** Identify the additional evidence needed for the stronger claim.
 
-**Evidence:** ER-06, ER-07, ER-08 provide the general evidence-boundary problem. The specific attestation distinction is an SLE-local linguistic hypothesis for cross-domain testing.
+**Evidence:** ER-06, ER-07, ER-08 provide the general evidence-boundary problem. The specific attestation distinction is an Ariadline-local linguistic hypothesis for cross-domain testing.
 
 ## SLE-RULE-0010 — Judgment method
 
@@ -283,7 +283,7 @@ Actions that form one inseparable operation may remain together in their require
 
 **Editorial check:** Confirm that a reader can determine what response was collected, from whom, for which items, and by which procedure.
 
-**Evidence:** ER-06 and ER-07 support method and population reporting. The exact judgment fields are proposed SLE guidance pending fieldwork and experimental-linguistics review.
+**Evidence:** ER-06 and ER-07 support method and population reporting. The exact judgment fields are proposed Ariadline guidance pending fieldwork and experimental-linguistics review.
 
 ## SLE-RULE-0015 — System behavior is not a language fact
 
@@ -301,7 +301,7 @@ A writer must not present system behavior alone as direct evidence of speaker kn
 
 **Editorial check:** Replace “the language” with “the system” and confirm whether the statement remains accurate.
 
-**Evidence:** ER-06, ER-07, ER-08, ER-10 support system and data identification. The language-fact boundary is an SLE-local cross-domain hypothesis.
+**Evidence:** ER-06, ER-07, ER-08, ER-10 support system and data identification. The language-fact boundary is an Ariadline-local cross-domain hypothesis.
 
 ## SLE-RULE-0019 — Observation separate from interpretation
 
@@ -325,7 +325,7 @@ The distinction may appear in separate sentences, clauses, headings, or table co
 
 **Rule:** Evidence wording must not state a stronger relation between evidence and conclusion than the declared method, assumptions, and support justify.
 
-SLE v0.1 does not define a universal hierarchy for *shows*, *supports*, *suggests*, *is consistent with*, *does not establish*, or *contradicts*. Their force can vary by discipline and argument type. A document should define an evidence term when its interpretation is important and not clear from context.
+Ariadline v0.1 does not define a universal hierarchy for *shows*, *supports*, *suggests*, *is consistent with*, *does not establish*, or *contradicts*. Their force can vary by discipline and argument type. A document should define an evidence term when its interpretation is important and not clear from context.
 
 **Noncompliant**
 
@@ -357,7 +357,7 @@ SLE v0.1 does not define a universal hierarchy for *shows*, *supports*, *suggest
 
 **Editorial check:** Identify what was searched or tested and what the method could have missed.
 
-**Evidence:** ER-06, ER-07, ER-10; the sensitivity statement is a proposed SLE control.
+**Evidence:** ER-06, ER-07, ER-10; the sensitivity statement is a proposed Ariadline control.
 
 ## SLE-RULE-0022 — Limitations and counterevidence
 
@@ -375,7 +375,7 @@ The statement must identify which claim is affected and how its scope or strengt
 
 **Editorial check:** Ask whether a reasonable reader would otherwise make a broader inference.
 
-**Evidence:** ER-07; the local attachment requirement is a proposed SLE control.
+**Evidence:** ER-07; the local attachment requirement is a proposed Ariadline control.
 
 ## SLE-RULE-0023 — Claim-support connection
 
@@ -393,7 +393,7 @@ A reader must not have to infer which evidence supports which claim.
 
 **Editorial check:** Point from each central claim to the exact supporting record.
 
-**Evidence:** ER-05, ER-06, ER-07; the local-mapping rule is a proposed SLE control.
+**Evidence:** ER-05, ER-06, ER-07; the local-mapping rule is a proposed Ariadline control.
 
 # D. Linguistic examples and data
 
@@ -430,7 +430,7 @@ or
 
 **Editorial check:** Record origin, collection context, modification, and production method separately. Do not force the example into one exclusive category.
 
-**Evidence:** ER-02 establishes that glosses are analytical and may be modified; ER-04 and ER-05 support declared conventions. The four-dimensional model is an SLE-local proposal for evaluation.
+**Evidence:** ER-02 establishes that glosses are analytical and may be modified; ER-04 and ER-05 support declared conventions. The four-dimensional model is an Ariadline-local proposal for evaluation.
 
 ## SLE-RULE-0012 — Defined judgment notation
 
@@ -492,15 +492,15 @@ Project-specific abbreviations must be defined. Object-language material, segmen
 
 ## SLE-RULE-0018 — Conformance does not certify truth
 
-**Rule:** A conformance statement must not imply that SLE has verified the truth, acceptability, grammaticality, theoretical correctness, ethical adequacy, or methodological validity of the linguistic content.
+**Rule:** A conformance statement must not imply that Ariadline has verified the truth, acceptability, grammaticality, theoretical correctness, ethical adequacy, or methodological validity of the linguistic content.
 
 **Compliant**
 
-> This report conforms to SLE for Linguistics v0.1 for claim scope and example provenance. The conformance statement does not validate the analysis.
+> This report conforms to Ariadline v0.1 for claim scope and example provenance. The conformance statement does not validate the analysis.
 
 **Editorial check:** Confirm that the statement refers only to declared communication requirements.
 
-**Evidence:** ER-03, ER-06, ER-07. The full linguistic-truth boundary is an SLE-local safeguard.
+**Evidence:** ER-03, ER-06, ER-07. The full linguistic-truth boundary is an Ariadline-local safeguard.
 
 # Non-rules and deferred controls
 

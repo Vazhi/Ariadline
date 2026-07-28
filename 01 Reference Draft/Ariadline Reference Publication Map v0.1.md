@@ -1,21 +1,21 @@
 ---
-title: "SLE Reference Publication Map v0.1"
+title: "Ariadline Reference Publication Map v0.1"
 type: publication-map
 status: proposed
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - publication
   - authority
   - normative-informative
 ---
-# SLE Reference Publication Map v0.1
+# Ariadline Reference Publication Map v0.1
 
 ## Purpose
 
-This map identifies the components of the assembled [[SLE for Linguistics Reference Artifact v0.1 Draft]] and their authority.
+This map identifies the components of the assembled [[Ariadline Reference Artifact v0.1 Draft]] and their authority.
 
 A component's inclusion in the package does not make it normative.
 
@@ -23,16 +23,16 @@ A component's inclusion in the package does not make it normative.
 
 ### A. Publication front door
 
-- [[SLE for Linguistics Reference Artifact v0.1 Draft]] — status, navigation, package hierarchy, and integrated reader guidance.
+- [[Ariadline Reference Artifact v0.1 Draft]] — status, navigation, package hierarchy, and integrated reader guidance.
 
 The front door summarizes the package. It does not replace narrower controlling text.
 
 ### B. Controlling proposed normative modules
 
-- [[SLE for Linguistics Language Rules v0.1]] — exact rule wording, boundaries, examples, and editorial checks.
-- [[SLE for Linguistics Document Patterns v0.1]] — pattern obligations, required distinctions, recommended sequences, omissions, and pattern conformance guidance.
+- [[Ariadline Language Rules v0.1]] — exact rule wording, boundaries, examples, and editorial checks.
+- [[Ariadline Document Patterns v0.1]] — pattern obligations, required distinctions, recommended sequences, omissions, and pattern conformance guidance.
 - [[Profiles and Conformance]] — conformance objects and results, review methods, typed evaluations, waivers, and extensions.
-- [[SLE Profile Applicability Register v0.1]] — exact profile-set mappings and conditional applicability.
+- [[Ariadline Profile Applicability Register v0.1]] — exact profile-set mappings and conditional applicability.
 
 All items in these modules remain proposed unless their own state says otherwise.
 
@@ -43,7 +43,7 @@ All items in these modules remain proposed unless their own state says otherwise
 
 ### D. Controlled review support
 
-- [[SLE Editorial Conformance Checklist v0.1]] — human application questions and item outcomes.
+- [[Ariadline Editorial Conformance Checklist v0.1]] — human application questions and item outcomes.
 - [[Human Review Boundary Register v0.1]] — limits of editorial authority.
 
 These modules apply controlling rules and conformance semantics. They do not create independent language rules or substantive authority.
@@ -51,27 +51,27 @@ These modules apply controlling rules and conformance semantics. They do not cre
 ### E. Informative terminology and authoring aids
 
 - [[Glossary]]
-- [[SLE Document Pattern Outlines v0.1]]
-- [[SLE Document Pattern Example Bank v0.1]]
-- [[SLE Rule Test Case Catalog v0.1]]
-- [[Optional Automation Notes for SLE Review v0.1]]
-- [[SLE Rule and Pattern Index v0.1]]
-- [[SLE Reference Change and Deferral Log v0.1]]
+- [[Ariadline Document Pattern Outlines v0.1]]
+- [[Ariadline Document Pattern Example Bank v0.1]]
+- [[Ariadline Rule Test Case Catalog v0.1]]
+- [[Optional Automation Notes for Ariadline Review v0.1]]
+- [[Ariadline Rule and Pattern Index v0.1]]
+- [[Ariadline Reference Change and Deferral Log v0.1]]
 
 The glossary summarizes current package usage. It does not create obligations or universal linguistic definitions. An informative definition or example cannot override a controlling module or establish that its linguistic content is true.
 
 ### F. Evidence, validation, and evaluation records
 
-- [[Independent SLE Rule Evidence Register v0.1]]
-- [[SLE Rule Traceability Matrix v0.1]]
+- [[Independent Ariadline Rule Evidence Register v0.1]]
+- [[Ariadline Rule Traceability Matrix v0.1]]
 - [[Document Pattern Coverage Register v0.1]]
 - [[Evaluation Framework]]
 - [[Pilot Study Design]]
 - [[Quality Metrics and Acceptance Gates]]
-- [[Multi-Domain SLE Evaluation Corpus v0.1]]
+- [[Multi-Domain Ariadline Evaluation Corpus v0.1]]
 - [[Evaluation Corpus Coverage Matrix v0.1]]
 - [[Semantic Equivalence Review Record v0.1]]
-- [[SLE Evaluation Corpus Bias Assessment v0.1]]
+- [[Ariadline Evaluation Corpus Bias Assessment v0.1]]
 
 These records justify, test, qualify, or expose gaps. They are not normative text.
 
@@ -81,9 +81,9 @@ These records justify, test, qualify, or expose gaps. They are not normative tex
 - [[Canto-span Pilot Termbase v0.1]]
 - [[Canto-span Case Study]]
 - [[Canto-span A-not-A Worked Example]]
-- [[SLE-GE Canto-span Pilot Baseline v0.1]]
+- [[Ariadline-GE Canto-span Pilot Baseline v0.1]]
 
-These components cannot define SLE terminology, rules, patterns, profiles, conformance, or governance.
+These components cannot define Ariadline terminology, rules, patterns, profiles, conformance, or governance.
 
 ## Conflict resolution
 

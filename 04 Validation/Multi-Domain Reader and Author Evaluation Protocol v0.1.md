@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - human-study
   - protocol-draft
@@ -23,7 +23,7 @@ This is a freeze-ready protocol draft, not a completed preregistration. The prot
 
 ## Central question
 
-Does the proposed [[SLE for Linguistics Reference Artifact v0.1 Draft]] improve reader reconstruction, editorial review, and authoring reliability while preserving authorized meaning and avoiding unacceptable burden or bias?
+Does the proposed [[Ariadline Reference Artifact v0.1 Draft]] improve reader reconstruction, editorial review, and authoring reliability while preserving authorized meaning and avoiding unacceptable burden or bias?
 
 The study evaluates communication performance. It does not determine linguistic truth, grammaticality, theoretical correctness, methodological validity, ethics, translation quality, software correctness, or community authority.
 
@@ -36,9 +36,9 @@ The study evaluates communication performance. It does not determine linguistic 
 - Participant quotas: [[Participant Sampling and Recruitment Plan v0.1]]
 - Data and privacy controls: [[Evaluation Data Dictionary and Privacy Plan v0.1]]
 - Current execution state: [[Evaluation Execution Status v0.1]]
-- Constructed procedure-testing corpus: [[Multi-Domain SLE Evaluation Corpus v0.1]]
-- Meaning review: [[SLE Semantic Equivalence Review Template v0.1]]
-- Human editorial controls: [[SLE Editorial Conformance Checklist v0.1]]
+- Constructed procedure-testing corpus: [[Multi-Domain Ariadline Evaluation Corpus v0.1]]
+- Meaning review: [[Ariadline Semantic Equivalence Review Template v0.1]]
+- Human editorial controls: [[Ariadline Editorial Conformance Checklist v0.1]]
 
 ## Study phases
 
@@ -49,7 +49,7 @@ Before participant exposure:
 1. Identify the exact source, version, permission, access boundary, and authorized meaning record for every authentic item.
 2. Register the task type and its required condition set before condition drafting.
 3. For a source or uncontrolled `U` baseline, record the intended meaning authority and any known mismatch, ambiguity, omission, or overstatement. Do not label `U` as meaning-preserved merely because it is the source.
-4. Create ordinary expert-edited `P` and proposed SLE-controlled `S` variants from the same authorized meaning record.
+4. Create ordinary expert-edited `P` and proposed Ariadline-controlled `S` variants from the same authorized meaning record.
 5. Obtain independent meaning review for every `P` and `S` variant used in confirmatory comparison.
 6. Exclude any `P` or `S` variant with unresolved material meaning change from confirmatory use.
 7. A `U` baseline may enter a reader comparison only when its intended meaning is authorized and its deviations are documented. It cannot support an author-preservation success claim.
@@ -123,7 +123,7 @@ Authors complete two separate tasks:
 1. revise a passage against an authorized meaning record;
 2. draft new text from a structured research brief.
 
-Compare ordinary expert guidance `P` with proposed SLE guidance `S`. The source passage or research brief is the task input, not a third authoring outcome condition.
+Compare ordinary expert guidance `P` with proposed Ariadline guidance `S`. The source passage or research brief is the task input, not a third authoring outcome condition.
 
 Measure:
 
@@ -144,7 +144,7 @@ This phase requires non-English-original material and independently reviewed tra
 Compare:
 
 - ordinary expert translation or editing `P`;
-- translation or reorganization using proposed SLE controls `S`.
+- translation or reorganization using proposed Ariadline controls `S`.
 
 The source-language original is the authority anchor, not an English `U` condition unless the exact task separately registers a source-order baseline.
 
@@ -174,7 +174,7 @@ Each task registers only the conditions needed for that task.
 
 - **U — authorized source or uncontrolled baseline.** Its intended meaning must be recorded, but the wording is not assumed to preserve or communicate that meaning successfully. Known deviations are part of the registered item record. Deliberately defective U material is limited to synthetic procedure pilots.
 - **P — ordinary expert-edited plain alternative or guidance.** A confirmatory P variant must pass independent preservation review against the authorized meaning record.
-- **S — proposed SLE-controlled alternative or guidance.** A confirmatory S variant must pass independent preservation review against the same authorized meaning record.
+- **S — proposed Ariadline-controlled alternative or guidance.** A confirmatory S variant must pass independent preservation review against the same authorized meaning record.
 
 All compared variants are anchored to one authorized meaning record. This does not make U, P, and S literally equivalent.
 
@@ -206,7 +206,7 @@ Recruit across:
 - corpus, experimental, sociolinguistic, discourse, or phonetic research;
 - computational linguistics and language-resource work;
 - editing, reviewing, research assistance, and advanced study;
-- authors who have not contributed to SLE design.
+- authors who have not contributed to Ariadline design.
 
 Cross-cutting records include primary scholarly language, English-use context, career stage, method and theory experience, controlled-language familiarity, accessibility needs, and community relationship where relevant.
 
@@ -238,7 +238,7 @@ Participant-level exclusions must be mechanical and frozen before confirmatory r
 - technical failure that prevents stimulus display or response recording;
 - failure of a neutral attention or instruction check defined before launch.
 
-Do not exclude a participant for disagreeing with SLE, reporting bias, selecting `not determined`, or preferring ordinary editing.
+Do not exclude a participant for disagreeing with Ariadline, reporting bias, selecting `not determined`, or preferring ordinary editing.
 
 Item-level exclusions include:
 
@@ -275,7 +275,7 @@ Report:
 - subgroup estimates with uncertainty;
 - semantic-preservation failures;
 - harmful, biased, burdensome, neutral, beneficial, and inconclusive rule findings;
-- qualitative failure cases, including ordinary editing outperforming SLE;
+- qualitative failure cases, including ordinary editing outperforming Ariadline;
 - all protocol deviations;
 - tested scope and explicit non-generalization boundaries.
 

@@ -7,7 +7,7 @@ updated: 2026-07-27
 aliases:
   - "CNL"
 tags:
-  - sle
+  - ariadline
   - reference
   - cnl
 ---
@@ -23,7 +23,7 @@ Controlled languages can prioritize:
 - formal interpretation;
 - machine processing.
 
-SLE is initially planned as a human-oriented controlled language. See [[SLE Architecture]].
+Ariadline is initially planned as a human-oriented controlled language. See [[Ariadline Architecture]].
 
 The design must be evaluated against its actual users and tasks. A restriction that helps aircraft maintenance documentation does not automatically help linguistic argumentation.
 

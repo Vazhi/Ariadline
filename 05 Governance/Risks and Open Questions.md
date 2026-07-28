@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - governance
   - risks
 ---
@@ -49,7 +49,7 @@ A linguistics-wide termbase can become too large to govern.
 
 ## R-07 — Acronym collision
 
-**SLE** already has other meanings in medicine, education, and other contexts.
+**Ariadline** already has other meanings in medicine, education, and other contexts.
 
 **Control:** conduct a naming review before public branding.
 
@@ -61,13 +61,13 @@ Rules based on English academic conventions might disadvantage other rhetorical 
 
 ## R-09 — Example standard conflict
 
-SLE additions could conflict with established glossing or journal conventions.
+Ariadline additions could conflict with established glossing or journal conventions.
 
 **Control:** adopt existing standards where possible and add only clearly scoped requirements.
 
 ## Open questions
 
-- Should SLE control paragraph structure in v1.0?
+- Should Ariadline control paragraph structure in v1.0?
 - Should evidence-class labels appear in published text or only in authoring metadata?
 - Which sentence-length thresholds, if any, have measurable benefit?
 - Can a core termbase remain theory-neutral?

@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - automation
   - synthetic
@@ -114,7 +114,7 @@ The validator cannot establish:
 - whether P or S preserves authentic meaning;
 - whether a statistical model or threshold is scientifically appropriate;
 - whether recruitment is fair or accessible in practice;
-- whether SLE helps real readers or authors;
+- whether Ariadline helps real readers or authors;
 - whether the project should `publish`, `revise`, or `stop`.
 
 Those decisions remain assigned to human issues #30 through #35.

@@ -6,13 +6,13 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - evaluation-corpus
 ---
 # Evaluation Corpus Items 0009–0012 v0.1
 
-These project-constructed items belong to [[Multi-Domain SLE Evaluation Corpus v0.1]]. Each authorized meaning brief is declared before the two passages. `Matches brief` is an internal construction check, not independent semantic-equivalence approval.
+These project-constructed items belong to [[Multi-Domain Ariadline Evaluation Corpus v0.1]]. Each authorized meaning brief is declared before the two passages. `Matches brief` is an internal construction check, not independent semantic-equivalence approval.
 
 ## SLE-EVAL-0009 — Signed-language resource access
 

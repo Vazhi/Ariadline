@@ -6,9 +6,9 @@ created: 2026-07-27
 updated: 2026-07-27
 aliases:
   - "Conformance"
-  - "SLE Profile"
+  - "Ariadline Profile"
 tags:
-  - sle
+  - ariadline
   - implementation
   - conformance
   - profiles
@@ -17,11 +17,11 @@ tags:
 
 ## Purpose
 
-Conformance states whether a declared document or document part meets the applicable communication controls in a stated SLE for Linguistics version.
+Conformance states whether a declared document or document part meets the applicable communication controls in a stated Ariadline version.
 
 Conformance does not certify linguistic truth, theoretical correctness, methodological validity, ethical adequacy, speaker acceptability, or software quality.
 
-The proposed document patterns are in [[SLE for Linguistics Document Patterns v0.1]]. The exact profile-to-rule mappings are in [[SLE Profile Applicability Register v0.1]]. The controlling rule text is in [[SLE for Linguistics Language Rules v0.1]].
+The proposed document patterns are in [[Ariadline Document Patterns v0.1]]. The exact profile-to-rule mappings are in [[Ariadline Profile Applicability Register v0.1]]. The controlling rule text is in [[Ariadline Language Rules v0.1]].
 
 ## Conformance object
 
@@ -53,7 +53,7 @@ A document can establish its conformance result through ordinary prose and a hum
 
 Profiles select exact rule groups. They do not define linguistic theories, methods, document genres, or scientific quality.
 
-A profile name is auditable only when the declaration identifies the profile-set version in [[SLE Profile Applicability Register v0.1]] and resolves the conditional rules for the declared text.
+A profile name is auditable only when the declaration identifies the profile-set version in [[Ariadline Profile Applicability Register v0.1]] and resolves the conditional rules for the declared text.
 
 ## SLE-Core
 
@@ -93,7 +93,7 @@ A conformance result is separate from the method used to review the text.
 Use **conforms** only when:
 
 - the conformance object is identified;
-- the SLE version and applicable rule set are identified;
+- the Ariadline version and applicable rule set are identified;
 - every applicable requirement is met;
 - no unresolved applicable nonconformity remains;
 - any declared extension is compatible with the stated result.
@@ -178,7 +178,7 @@ An evaluation result does not automatically change the conformance result. A res
 
 A declaration may use ordinary prose. It should identify:
 
-- SLE reference version;
+- Ariadline reference version;
 - conformance object;
 - profile-set version and profile or profiles, or the exact rule IDs;
 - applicable document-pattern IDs;
@@ -193,9 +193,9 @@ Typed evaluations should be listed separately with their exact scope.
 
 Example:
 
-> Sections 2–4 conform with declared waivers to SLE for Linguistics v0.1. The review used SLE-PROFILE-SET-0.1, SLE-Research, and SLE-PATTERN-0004. The conditional-rule decisions and two material waivers are listed in Appendix A. Review method: independent editorial review. Review date: 2026-07-27. A reader-comprehension evaluation covered only paragraphs 2.3–2.5 and is recorded separately.
+> Sections 2–4 conform with declared waivers to Ariadline v0.1. The review used SLE-PROFILE-SET-0.1, SLE-Research, and SLE-PATTERN-0004. The conditional-rule decisions and two material waivers are listed in Appendix A. Review method: independent editorial review. Review date: 2026-07-27. A reader-comprehension evaluation covered only paragraphs 2.3–2.5 and is recorded separately.
 
-A declaration must not imply that SLE verified the content's truth or scientific quality.
+A declaration must not imply that Ariadline verified the content's truth or scientific quality.
 
 # Waivers
 
@@ -215,8 +215,8 @@ A waiver addresses communication conformance. It must not hide missing evidence,
 
 A local extension must:
 
-- identify the SLE version and profile-set version it extends;
-- distinguish local requirements from SLE requirements;
+- identify the Ariadline version and profile-set version it extends;
+- distinguish local requirements from Ariadline requirements;
 - list added, replaced, or excluded rule IDs;
 - preserve core distinctions or declare an incompatibility;
 - avoid presenting one theory, language, method, or workflow as universal;
@@ -226,4 +226,4 @@ A local extension must:
 
 A tool may assist terminology, cross-reference, or editorial review.
 
-A tool result is not a conformance result, review method, or evaluation type. Tool availability is not required for ordinary SLE conformance.
+A tool result is not a conformance result, review method, or evaluation type. Tool availability is not required for ordinary Ariadline conformance.

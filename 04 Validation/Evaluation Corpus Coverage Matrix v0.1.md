@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - corpus-coverage
   - representativeness
@@ -15,7 +15,7 @@ tags:
 
 ## Purpose
 
-This register describes the internal-audit coverage and representativeness limits of [[Multi-Domain SLE Evaluation Corpus v0.1]] and the separately bounded [[Canto-span Evaluation Subset v0.1]].
+This register describes the internal-audit coverage and representativeness limits of [[Multi-Domain Ariadline Evaluation Corpus v0.1]] and the separately bounded [[Canto-span Evaluation Subset v0.1]].
 
 The corpus is test material, not normative evidence. Its anonymized contexts are prompts for editorial evaluation, not facts about languages, communities, theories, or methods.
 
@@ -129,7 +129,7 @@ Before effectiveness, representativeness, or stabilization claims, add:
 
 ## Representativeness gate
 
-Before any claim that SLE works across linguistics:
+Before any claim that Ariadline works across linguistics:
 
 1. at least half of evaluated passages must come from independent, permission-compatible, non-Canto-span sources;
 2. no repository, institution, language, theory, method, or author group may supply most evaluated passages;

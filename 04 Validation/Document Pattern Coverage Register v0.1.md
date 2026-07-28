@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - validation
   - document-patterns
   - neutrality
@@ -15,11 +15,11 @@ tags:
 
 ## Purpose
 
-This register reviews the proposed patterns in [[SLE for Linguistics Document Patterns v0.1]].
+This register reviews the proposed patterns in [[Ariadline Document Patterns v0.1]].
 
 It records intended coverage, known gaps, neutrality risks, conformance risks, and evaluation requirements. It does not certify that the patterns are universally valid or final.
 
-Conformance semantics are defined in [[Profiles and Conformance]]. Exact profile mappings are defined in [[SLE Profile Applicability Register v0.1]].
+Conformance semantics are defined in [[Profiles and Conformance]]. Exact profile mappings are defined in [[Ariadline Profile Applicability Register v0.1]].
 
 Canto-span is not an authority in this register. It may later supply one bounded test case only.
 

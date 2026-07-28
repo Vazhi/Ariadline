@@ -1,23 +1,23 @@
 ---
-title: "Independent SLE Rule Evidence Register v0.1"
+title: "Independent Ariadline Rule Evidence Register v0.1"
 type: evidence-register
 status: proposed
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - evidence
   - language-rules
   - cross-domain
 ---
-# Independent SLE Rule Evidence Register v0.1
+# Independent Ariadline Rule Evidence Register v0.1
 
 ## Purpose
 
-This register records the independent basis for [[SLE for Linguistics Language Rules v0.1]].
+This register records the independent basis for [[Ariadline Language Rules v0.1]].
 
-Canto-span is not an authority in this register. It can provide later test cases only after a candidate SLE rule exists.
+Canto-span is not an authority in this register. It can provide later test cases only after a candidate Ariadline rule exists.
 
 ## Evidence roles
 
@@ -25,9 +25,9 @@ Every rule mapping distinguishes three roles:
 
 1. **Problem evidence** — an independent source documents the communication, interpretation, consistency, or reproducibility problem.
 2. **Control evidence** — an independent source explicitly uses or recommends an equivalent control.
-3. **SLE-local hypothesis** — SLE proposes a more specific formulation that still requires reader, author, neutrality, and cross-domain evaluation.
+3. **Ariadline-local hypothesis** — Ariadline proposes a more specific formulation that still requires reader, author, neutrality, and cross-domain evaluation.
 
-A source can establish a problem without establishing the exact SLE wording. `Direct` is used only when the cited locator states an equivalent control. `Convergent` means that more than one independent practice points in the same direction. It does not mean that the SLE wording is already validated.
+A source can establish a problem without establishing the exact Ariadline wording. `Direct` is used only when the cited locator states an equivalent control. `Convergent` means that more than one independent practice points in the same direction. It does not mean that the Ariadline wording is already validated.
 
 ## External sources and exact locators
 
@@ -76,7 +76,7 @@ Exact locator:
 
 Domain: general linguistic publishing.
 
-This source supports the general need for consistent conventions. It does not directly establish every SLE sentence or evidence rule.
+This source supports the general need for consistent conventions. It does not directly establish every Ariadline sentence or evidence rule.
 
 ### ER-05 — Linguistic Society of America proceedings guidance
 
@@ -163,32 +163,32 @@ Domain: technical specifications and conformance language.
 
 ## Rule-by-rule traceability
 
-| Rule | Problem evidence | Control evidence | SLE-local hypothesis or unresolved design choice |
+| Rule | Problem evidence | Control evidence | Ariadline-local hypothesis or unresolved design choice |
 |---|---|---|---|
 | SLE-RULE-0001 | ER-01-A documents misunderstanding and one-idea guidance. | ER-01-A explicitly recommends one idea per sentence. | “One principal message” and its exception boundary require linguistic reader testing. |
-| SLE-RULE-0002 | ER-01-A and ER-04-A support unambiguous, functional prose. | No cited source in v0.1 states the exact antecedent test. | The substitution test is SLE-local. |
-| SLE-RULE-0003 | ER-06-C, ER-07-B, and ER-09-A show that data, population, and resource scope affect interpretation. | ER-06-C directly requires dataset, language, exclusion, and preprocessing information. | Near-claim placement and the full scope list are SLE-local. |
+| SLE-RULE-0002 | ER-01-A and ER-04-A support unambiguous, functional prose. | No cited source in v0.1 states the exact antecedent test. | The substitution test is Ariadline-local. |
+| SLE-RULE-0003 | ER-06-C, ER-07-B, and ER-09-A show that data, population, and resource scope affect interpretation. | ER-06-C directly requires dataset, language, exclusion, and preprocessing information. | Near-claim placement and the full scope list are Ariadline-local. |
 | SLE-RULE-0004 | ER-01-A, ER-04-A, and ER-08-B document consistency and explicit semantics problems. | ER-04-A and ER-08-B support consistent conventions and semantics. | One preferred term per controlled concept remains subject to multilingual testing. |
-| SLE-RULE-0005 | ER-08-B and ER-09-A document the need for explicit semantics. | ER-08-B directly supports explicit semantics for reusable data. | The “before claim-critical use” timing is SLE-local. |
-| SLE-RULE-0006 | ER-06-A/B and ER-07-B show that measures and evaluation bases must be interpretable. | ER-06-A/B requires defined measures and reported statistics. | The exact item–dimension–measure triad is SLE-local. |
-| SLE-RULE-0007 | ER-01-A supports unambiguous prose. | No source in this set states the exact quantifier-negation control. | The paraphrase test is SLE-local and needs formal-semantics review. |
-| SLE-RULE-0008 | ER-01-B/C, ER-03-A, and ER-11-A document ambiguity when normative terms are not declared consistently. | ER-01-B/C and ER-11-B directly define stable function mappings. | SLE does not yet choose **must** over **shall**; the final form requires comparison and reader testing. |
-| SLE-RULE-0009 | ER-07-C/D establishes that conclusions must not exceed evidence; ER-08-B requires explicit semantics. | No source in this set directly states “attestation is not productivity.” | The specific linguistic inference boundary is SLE-local and requires corpus, fieldwork, and theoretical review. |
-| SLE-RULE-0010 | ER-06-D and ER-07-B show that collected responses require method and population information. | ER-06-D directly requires collection instructions and quality-control description. | The exact task–response–population–item–result fields are SLE-local pending experimental and fieldwork review. |
-| SLE-RULE-0011 | ER-02-B/C shows that example presentation and analysis can differ and that cited glosses can be changed. | ER-02-C directly requires treating changed glosses as analysis rather than unchanged data. | The four provenance dimensions are SLE-local and must be tested across elicited, corpus, constructed, and system-produced examples. |
-| SLE-RULE-0012 | ER-02-A/B and ER-04-A show convention variation. | ER-02-A/B explicitly permits modified or alternative conventions. | Requiring task or population linkage for every symbol remains SLE-local. |
-| SLE-RULE-0013 | ER-05-B and ER-08-D show the need for complete references and identifiers. | ER-08-D directly provides stable IDs and example references. | The “referred to more than once” threshold is SLE-local. |
+| SLE-RULE-0005 | ER-08-B and ER-09-A document the need for explicit semantics. | ER-08-B directly supports explicit semantics for reusable data. | The “before claim-critical use” timing is Ariadline-local. |
+| SLE-RULE-0006 | ER-06-A/B and ER-07-B show that measures and evaluation bases must be interpretable. | ER-06-A/B requires defined measures and reported statistics. | The exact item–dimension–measure triad is Ariadline-local. |
+| SLE-RULE-0007 | ER-01-A supports unambiguous prose. | No source in this set states the exact quantifier-negation control. | The paraphrase test is Ariadline-local and needs formal-semantics review. |
+| SLE-RULE-0008 | ER-01-B/C, ER-03-A, and ER-11-A document ambiguity when normative terms are not declared consistently. | ER-01-B/C and ER-11-B directly define stable function mappings. | Ariadline does not yet choose **must** over **shall**; the final form requires comparison and reader testing. |
+| SLE-RULE-0009 | ER-07-C/D establishes that conclusions must not exceed evidence; ER-08-B requires explicit semantics. | No source in this set directly states “attestation is not productivity.” | The specific linguistic inference boundary is Ariadline-local and requires corpus, fieldwork, and theoretical review. |
+| SLE-RULE-0010 | ER-06-D and ER-07-B show that collected responses require method and population information. | ER-06-D directly requires collection instructions and quality-control description. | The exact task–response–population–item–result fields are Ariadline-local pending experimental and fieldwork review. |
+| SLE-RULE-0011 | ER-02-B/C shows that example presentation and analysis can differ and that cited glosses can be changed. | ER-02-C directly requires treating changed glosses as analysis rather than unchanged data. | The four provenance dimensions are Ariadline-local and must be tested across elicited, corpus, constructed, and system-produced examples. |
+| SLE-RULE-0012 | ER-02-A/B and ER-04-A show convention variation. | ER-02-A/B explicitly permits modified or alternative conventions. | Requiring task or population linkage for every symbol remains Ariadline-local. |
+| SLE-RULE-0013 | ER-05-B and ER-08-D show the need for complete references and identifiers. | ER-08-D directly provides stable IDs and example references. | The “referred to more than once” threshold is Ariadline-local. |
 | SLE-RULE-0014 | ER-06-C, ER-09-A, and ER-10-A/B document version, preprocessing, metadata, and format requirements. | ER-06-C directly requires exclusions and preprocessing; ER-10-A/B demonstrates release and format identification. | “Material transformation” needs profile-specific interpretation. |
-| SLE-RULE-0015 | ER-06-A/C and ER-08-A/C distinguish system, data, and method descriptions. | ER-08-C directly emphasizes separation between data and tools. | The prohibition on treating system output as speaker evidence is an SLE-local epistemic safeguard. |
-| SLE-RULE-0016 | ER-01-A supports clear instructions; ER-06-D requires usable collection instructions. | No source in this set directly requires condition-first order. | Condition-first order is SLE-local and requires procedural testing. |
-| SLE-RULE-0017 | ER-01-A supports focused sentences and instructions. | ER-01-A directly supports one idea per sentence. | One principal action per step and the independence test are SLE-local. |
-| SLE-RULE-0018 | ER-03-A separates conformance from content; ER-07-B evaluates scientific soundness independently. | ER-03-A directly limits conformance to declared document requirements. | The expanded truth, ethics, theory, and method disclaimer is an SLE-local safeguard. |
-| SLE-RULE-0019 | ER-07-C/D distinguishes claims, evidence, hypotheses, and conclusions; ER-10-A/B separates documented data and annotation description. | ER-07-D directly warns against presenting unsupported claims as conclusions. | Mandatory local separation of record and interpretation is SLE-local. |
+| SLE-RULE-0015 | ER-06-A/C and ER-08-A/C distinguish system, data, and method descriptions. | ER-08-C directly emphasizes separation between data and tools. | The prohibition on treating system output as speaker evidence is an Ariadline-local epistemic safeguard. |
+| SLE-RULE-0016 | ER-01-A supports clear instructions; ER-06-D requires usable collection instructions. | No source in this set directly requires condition-first order. | Condition-first order is Ariadline-local and requires procedural testing. |
+| SLE-RULE-0017 | ER-01-A supports focused sentences and instructions. | ER-01-A directly supports one idea per sentence. | One principal action per step and the independence test are Ariadline-local. |
+| SLE-RULE-0018 | ER-03-A separates conformance from content; ER-07-B evaluates scientific soundness independently. | ER-03-A directly limits conformance to declared document requirements. | The expanded truth, ethics, theory, and method disclaimer is an Ariadline-local safeguard. |
+| SLE-RULE-0019 | ER-07-C/D distinguishes claims, evidence, hypotheses, and conclusions; ER-10-A/B separates documented data and annotation description. | ER-07-D directly warns against presenting unsupported claims as conclusions. | Mandatory local separation of record and interpretation is Ariadline-local. |
 | SLE-RULE-0020 | ER-07-B/C/D directly documents overstatement when conclusions exceed evidence. | ER-07-D supports matching conclusion strength to evidence or argument. | No universal evidence-verb hierarchy is adopted; lexical mappings are deferred for evaluation. |
-| SLE-RULE-0021 | ER-06-C and ER-07-B show that search/test coverage and method affect conclusions. | ER-06-C directly requires exclusions and preprocessing. | A mandatory sensitivity-limit statement for absence claims is SLE-local. |
-| SLE-RULE-0022 | ER-07-C/D requires appropriate support and acknowledgement of counterarguments or unsupported conclusions. | ER-07-C explicitly asks for appropriate evidence and counterarguments. | Local attachment of each limitation to an affected claim is SLE-local. |
-| SLE-RULE-0023 | ER-05-B, ER-06-A, and ER-07-B show that claims and references must be traceable. | ER-05-B directly requires complete references; ER-07-B requires adequate support. | The exact local cross-reference forms are SLE-local. |
-| SLE-RULE-0024 | ER-02-A/B/D documents shared glossing conventions, flexibility, and alignment. | ER-02-D directly states word-by-word alignment; ER-02-A/B permits declared alternatives. | The exact SLE declaration wording remains proposed. |
+| SLE-RULE-0021 | ER-06-C and ER-07-B show that search/test coverage and method affect conclusions. | ER-06-C directly requires exclusions and preprocessing. | A mandatory sensitivity-limit statement for absence claims is Ariadline-local. |
+| SLE-RULE-0022 | ER-07-C/D requires appropriate support and acknowledgement of counterarguments or unsupported conclusions. | ER-07-C explicitly asks for appropriate evidence and counterarguments. | Local attachment of each limitation to an affected claim is Ariadline-local. |
+| SLE-RULE-0023 | ER-05-B, ER-06-A, and ER-07-B show that claims and references must be traceable. | ER-05-B directly requires complete references; ER-07-B requires adequate support. | The exact local cross-reference forms are Ariadline-local. |
+| SLE-RULE-0024 | ER-02-A/B/D documents shared glossing conventions, flexibility, and alignment. | ER-02-D directly states word-by-word alignment; ER-02-A/B permits declared alternatives. | The exact Ariadline declaration wording remains proposed. |
 
 ## Cross-domain coverage and limits
 
@@ -206,7 +206,7 @@ Before any rule becomes stable, the project must add direct review from phonetic
 4. A glossing rule does not govern the underlying linguistic analysis.
 5. Two documents from the same research community do not by themselves establish cross-domain convergence.
 6. A Canto-span practice cannot supply normative justification.
-7. Every SLE-local hypothesis must survive reader testing, author meaning-preservation testing, neutrality review, and multi-domain review.
+7. Every Ariadline-local hypothesis must survive reader testing, author meaning-preservation testing, neutrality review, and multi-domain review.
 8. A rule must be revised or rejected when it removes a necessary distinction or favors one theory without justification.
 
 ## Disposition

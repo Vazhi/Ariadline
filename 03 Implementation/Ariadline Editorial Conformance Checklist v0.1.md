@@ -1,30 +1,30 @@
 ---
-title: "SLE Editorial Conformance Checklist v0.1"
+title: "Ariadline Editorial Conformance Checklist v0.1"
 type: implementation
 status: proposed
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - conformance
   - editorial-checklist
   - human-review
 ---
-# SLE Editorial Conformance Checklist v0.1
+# Ariadline Editorial Conformance Checklist v0.1
 
 ## Status and authority
 
-This checklist translates the 24 proposed controls in [[SLE for Linguistics Language Rules v0.1]] into questions that a trained human reviewer can answer.
+This checklist translates the 24 proposed controls in [[Ariadline Language Rules v0.1]] into questions that a trained human reviewer can answer.
 
-It does not create or stabilize rules, replace the controlling rule text, certify substantive content, or require software. Optional tooling is separated in [[Optional Automation Notes for SLE Review v0.1]].
+It does not create or stabilize rules, replace the controlling rule text, certify substantive content, or require software. Optional tooling is separated in [[Optional Automation Notes for Ariadline Review v0.1]].
 
 ## Required review record
 
 Before applying the checklist, record:
 
 - the bounded conformance object;
-- the SLE version and profile-set version;
+- the Ariadline version and profile-set version;
 - the exact applicable rule IDs;
 - the selected document pattern or patterns, if any;
 - the review method;
@@ -32,7 +32,7 @@ Before applying the checklist, record:
 - the authorized meaning record when a passage will be revised or compared;
 - the final result: **conforms**, **conforms with declared waivers**, **does not conform**, or **not determined**.
 
-Use [[Profiles and Conformance]], [[SLE Profile Applicability Register v0.1]], and [[SLE Semantic Equivalence Review Template v0.1]] to define the review scope and meaning authority.
+Use [[Profiles and Conformance]], [[Ariadline Profile Applicability Register v0.1]], and [[Ariadline Semantic Equivalence Review Template v0.1]] to define the review scope and meaning authority.
 
 ## Final item outcomes
 
@@ -97,9 +97,9 @@ A recommendation expressed with **should** receives **Justified exception**, not
 
 For each applicable rule, record a final item outcome and link it to the exact passage. Preserve any provisional **Borderline** flag and its resolution in the review history.
 
-- Independent rationale: [[Independent SLE Rule Evidence Register v0.1]]
-- Rule and audit-material mapping: [[SLE Rule Traceability Matrix v0.1]]
-- Classified constructed cases: [[SLE Rule Test Case Catalog v0.1]]
+- Independent rationale: [[Independent Ariadline Rule Evidence Register v0.1]]
+- Rule and audit-material mapping: [[Ariadline Rule Traceability Matrix v0.1]]
+- Classified constructed cases: [[Ariadline Rule Test Case Catalog v0.1]]
 - Substantive-review limits: [[Human Review Boundary Register v0.1]]
 - Conformance result model: [[Profiles and Conformance]]
 

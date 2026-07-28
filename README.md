@@ -1,19 +1,19 @@
 ---
-title: "SLE Development Plan"
+title: "Ariadline Development Plan"
 type: readme
 status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - controlled-language
   - obsidian
 ---
-# SLE Development Plan
+# Ariadline Development Plan
 
-This vault is a project plan for the development of **Simplified Linguistic English (SLE)**.
+This vault is a project plan for the development of **Ariadline (Ariadline)**.
 
-Start with [[00 SLE Development MOC]].
+Start with [[00 Ariadline Development MOC]].
 
 ## What this vault contains
 
@@ -27,4 +27,4 @@ Start with [[00 SLE Development MOC]].
 
 ## Status
 
-This is a **development plan**, not an approved SLE standard. All proposed rules and thresholds remain provisional until they pass [[Evaluation Framework|evaluation]] and [[Governance and Change Control|review]].
+This is a **development plan**, not an approved Ariadline standard. All proposed rules and thresholds remain provisional until they pass [[Evaluation Framework|evaluation]] and [[Governance and Change Control|review]].

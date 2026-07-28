@@ -7,7 +7,7 @@ updated: 2026-07-27
 aliases:
   - "Term Control"
 tags:
-  - sle
+  - ariadline
   - language-design
   - terminology
 ---
@@ -29,7 +29,7 @@ Within a declared scope:
 
 ## Project-scoped definitions
 
-Linguistics contains legitimate theoretical disagreement. Therefore, SLE should not force one universal definition for every term.
+Linguistics contains legitimate theoretical disagreement. Therefore, Ariadline should not force one universal definition for every term.
 
 A term entry can have:
 
@@ -40,7 +40,7 @@ A term entry can have:
 
 ## Term-entry fields
 
-Use [[SLE Term Entry Template]].
+Use [[Ariadline Term Entry Template]].
 
 Required fields:
 
@@ -101,6 +101,6 @@ A controlled term is successful when independent readers map its uses to the int
 
 ## Non-normative Canto-span stress-test fixture
 
-[[Canto-span Pilot Termbase v0.1]] is a project-specific vocabulary fixture used to test whether independently proposed SLE rules preserve difficult distinctions. It is not the SLE controlled vocabulary and does not establish normative terms or definitions.
+[[Canto-span Pilot Termbase v0.1]] is a project-specific vocabulary fixture used to test whether independently proposed Ariadline rules preserve difficult distinctions. It is not the Ariadline controlled vocabulary and does not establish normative terms or definitions.
 
-Canto-span cannot define SLE. A general SLE term requires independent justification across linguistic subfields, methods, theories, languages, and document genres.
+Canto-span cannot define Ariadline. A general Ariadline term requires independent justification across linguistic subfields, methods, theories, languages, and document genres.

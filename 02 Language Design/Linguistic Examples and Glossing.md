@@ -5,7 +5,7 @@ status: revised
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - language-design
   - examples
   - glossing
@@ -16,13 +16,13 @@ tags:
 
 A [[Linguistic Example]] should let a reader identify the recorded or proposed form, relevant language variety, provenance, analytical layers, and judgment basis when those details affect interpretation.
 
-The proposed controls are SLE-RULE-0011 through SLE-RULE-0013 and SLE-RULE-0024 in [[SLE for Linguistics Language Rules v0.1]].
+The proposed controls are SLE-RULE-0011 through SLE-RULE-0013 and SLE-RULE-0024 in [[Ariadline Language Rules v0.1]].
 
 ## Glossing baseline
 
-SLE proposes the Leipzig Glossing Rules as the default convention for interlinear morpheme-by-morpheme glosses.
+Ariadline proposes the Leipzig Glossing Rules as the default convention for interlinear morpheme-by-morpheme glosses.
 
-A document may use another convention when it declares that convention. The Leipzig rules themselves permit flexibility and alternative conventions. SLE adds proposed controls for provenance, judgments, reference stability, and separation of recorded material from analysis.
+A document may use another convention when it declares that convention. The Leipzig rules themselves permit flexibility and alternative conventions. Ariadline adds proposed controls for provenance, judgments, reference stability, and separation of recorded material from analysis.
 
 ## Example information
 

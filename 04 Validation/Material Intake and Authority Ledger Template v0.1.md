@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - materials
   - authority
@@ -89,8 +89,8 @@ An automated agent cannot complete or approve this section.
 - Translation direction:
 - Genre:
 - Document length:
-- Applicable [[SLE for Linguistics Document Patterns v0.1|pattern IDs]]:
-- Candidate [[SLE for Linguistics Language Rules v0.1|rule IDs]]:
+- Applicable [[Ariadline Document Patterns v0.1|pattern IDs]]:
+- Candidate [[Ariadline Language Rules v0.1|rule IDs]]:
 - Accessibility considerations:
 - Community relationship:
 - Sensitive or rare-category risk:

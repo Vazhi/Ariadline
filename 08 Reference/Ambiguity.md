@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - reference
   - ambiguity
 ---
@@ -13,7 +13,7 @@ tags:
 
 Ambiguity exists when an expression permits more than one materially different interpretation in context.
 
-SLE prioritizes ambiguities that affect:
+Ariadline prioritizes ambiguities that affect:
 
 - the claim;
 - the evidence;

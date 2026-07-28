@@ -1,15 +1,15 @@
 ---
-title: "SLE Change Request Template"
+title: "Ariadline Change Request Template"
 type: template
 status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - template
   - change-control
 ---
-# SLE Change Request Template
+# Ariadline Change Request Template
 
 ## Metadata
 

@@ -2,7 +2,7 @@ schema	sle-canto-span-vocabulary-stress-test-fixture-manifest-v0.1
 version	0.1
 status	proposed
 normative_status	non-normative
-purpose	stress-test independently proposed SLE for Linguistics rules against Canto-span-specific distinctions
+purpose	stress-test independently proposed Ariadline rules against Canto-span-specific distinctions
 authority_boundary	fixture entries do not define SLE terminology or normative requirements
 entry_count	46
 external_repository	Vazhi/canto-span

@@ -1,21 +1,21 @@
 ---
-title: "SLE Evaluation Corpus Bias Assessment v0.1"
+title: "Ariadline Evaluation Corpus Bias Assessment v0.1"
 type: validation-assessment
 status: proposed
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - bias
   - representativeness
 ---
-# SLE Evaluation Corpus Bias Assessment v0.1
+# Ariadline Evaluation Corpus Bias Assessment v0.1
 
 ## Purpose
 
-This assessment identifies design bias in [[Multi-Domain SLE Evaluation Corpus v0.1]], [[Evaluation Corpus Coverage Matrix v0.1]], and [[Canto-span Evaluation Subset v0.1]].
+This assessment identifies design bias in [[Multi-Domain Ariadline Evaluation Corpus v0.1]], [[Evaluation Corpus Coverage Matrix v0.1]], and [[Canto-span Evaluation Subset v0.1]].
 
 It prevents a broad-looking constructed corpus from being mistaken for representative or authentic evidence.
 
@@ -76,7 +76,7 @@ Mitigation requires non-English-original passages, translator review, community 
 
 ## English rhetorical bias
 
-English sentence boundaries, pronouns, clause order, and academic conventions can favor the current SLE rules and patterns.
+English sentence boundaries, pronouns, clause order, and academic conventions can favor the current Ariadline rules and patterns.
 
 Later evaluation must:
 
@@ -131,7 +131,7 @@ A later corpus must retain:
 - items with no safe alternative;
 - rules that add burden without benefit;
 - passages that become less natural or coherent;
-- cases where ordinary editing performs as well as SLE;
+- cases where ordinary editing performs as well as Ariadline;
 - cases where a proposed rule does not apply.
 
 ## Minimum gates for a more representative corpus

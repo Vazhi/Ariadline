@@ -5,7 +5,7 @@ status: complete
 created: 2026-07-27
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - vault
 ---
@@ -26,15 +26,15 @@ This report describes the issue #36 synthetic evaluation-operations dry-run pack
 
 The assembled reference package remains:
 
-- [[SLE for Linguistics Reference Artifact v0.1 Draft]]
-- [[SLE Reference Publication Map v0.1]]
-- [[SLE Rule and Pattern Index v0.1]]
-- [[SLE Reference Change and Deferral Log v0.1]]
+- [[Ariadline Reference Artifact v0.1 Draft]]
+- [[Ariadline Reference Publication Map v0.1]]
+- [[Ariadline Rule and Pattern Index v0.1]]
+- [[Ariadline Reference Change and Deferral Log v0.1]]
 - [[Glossary]]
 
 The corrected corpus and preservation records remain:
 
-- [[Multi-Domain SLE Evaluation Corpus v0.1]]
+- [[Multi-Domain Ariadline Evaluation Corpus v0.1]]
 - [[Evaluation Corpus Items 0001–0004 v0.1]]
 - [[Evaluation Corpus Items 0005–0008 v0.1]]
 - [[Evaluation Corpus Items 0009–0012 v0.1]]
@@ -42,16 +42,16 @@ The corrected corpus and preservation records remain:
 - [[Canto-span Evaluation Subset v0.1]]
 - [[Evaluation Corpus Coverage Matrix v0.1]]
 - [[Semantic Equivalence Review Record v0.1]]
-- [[SLE Evaluation Corpus Bias Assessment v0.1]]
-- [[SLE Semantic Equivalence Review Template v0.1]]
+- [[Ariadline Evaluation Corpus Bias Assessment v0.1]]
+- [[Ariadline Semantic Equivalence Review Template v0.1]]
 
 The editorial-review package remains:
 
-- [[SLE Editorial Conformance Checklist v0.1]]
-- [[SLE Rule Test Case Catalog v0.1]]
+- [[Ariadline Editorial Conformance Checklist v0.1]]
+- [[Ariadline Rule Test Case Catalog v0.1]]
 - [[Human Review Boundary Register v0.1]]
-- [[SLE Rule Traceability Matrix v0.1]]
-- [[Optional Automation Notes for SLE Review v0.1]]
+- [[Ariadline Rule Traceability Matrix v0.1]]
+- [[Optional Automation Notes for Ariadline Review v0.1]]
 
 Issue #9 preparation remains:
 

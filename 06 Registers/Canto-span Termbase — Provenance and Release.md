@@ -7,7 +7,7 @@ version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - terminology
   - canto-span
   - test-fixture-part
@@ -16,7 +16,7 @@ tags:
 
 # Canto-span Vocabulary Stress-Test Fixture v0.1 — Provenance and Release
 
-Part of [[Canto-span Pilot Termbase v0.1]]. **Non-normative test material:** this entry records a Canto-span-specific meaning for stress-testing independently proposed SLE rules. It does not define SLE terminology or requirements.
+Part of [[Canto-span Pilot Termbase v0.1]]. **Non-normative test material:** this entry records a Canto-span-specific meaning for stress-testing independently proposed Ariadline rules. It does not define Ariadline terminology or requirements.
 
 ## CS-TERM-0046 — historical provenance
 

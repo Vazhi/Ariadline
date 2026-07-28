@@ -8,7 +8,7 @@ aliases:
   - "Evidence Language"
   - "Claim Types"
 tags:
-  - sle
+  - ariadline
   - language-design
   - evidence
 ---
@@ -20,7 +20,7 @@ The matrix helps writers distinguish observation, attestation, judgment, general
 
 It prevents a writer from presenting different evidential or communicative functions as if they were interchangeable.
 
-The normative controls are in [[SLE for Linguistics Language Rules v0.1]]. The candidate-function decisions are in [[Claim Function Decision Register v0.1]].
+The normative controls are in [[Ariadline Language Rules v0.1]]. The candidate-function decisions are in [[Claim Function Decision Register v0.1]].
 
 ## Editorial functions
 
@@ -42,7 +42,7 @@ The normative controls are in [[SLE for Linguistics Language Rules v0.1]]. The c
 
 Visible codes such as `[OBS]`, `[ATT]`, or `[ANA]` are optional editorial aids.
 
-Basic SLE conformance does not require visible labels. A profile may use labels for a defined workflow, but labels do not establish that a claim is supported.
+Basic Ariadline conformance does not require visible labels. A profile may use labels for a defined workflow, but labels do not establish that a claim is supported.
 
 ## Separation rule
 
@@ -64,7 +64,7 @@ See [[Attestation and Productivity]].
 
 Evidence wording must not overstate the relationship between evidence and conclusion.
 
-SLE does not define a universal hierarchy for *shows*, *supports*, *suggests*, *is consistent with*, *does not establish*, and *contradicts*. Their force can vary across disciplines, methods, and argument types.
+Ariadline does not define a universal hierarchy for *shows*, *supports*, *suggests*, *is consistent with*, *does not establish*, and *contradicts*. Their force can vary across disciplines, methods, and argument types.
 
 A document should define an evidence expression when its force is important and not clear from context. The editor should identify the direct result, inference, assumptions, alternatives, and limitations.
 

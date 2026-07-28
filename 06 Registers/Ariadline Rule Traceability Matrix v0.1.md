@@ -1,27 +1,27 @@
 ---
-title: "SLE Rule Traceability Matrix v0.1"
+title: "Ariadline Rule Traceability Matrix v0.1"
 type: register
 status: proposed
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - traceability
   - rules
   - evaluation
 ---
-# SLE Rule Traceability Matrix v0.1
+# Ariadline Rule Traceability Matrix v0.1
 
 ## Purpose
 
 This register links every proposed language rule to its controlling statement, independent rationale, checklist question, constructed test cases, internal audit prompts, and known substantive boundary.
 
-- Controlling rules: [[SLE for Linguistics Language Rules v0.1]]
-- Independent rationale: [[Independent SLE Rule Evidence Register v0.1]]
-- Human checklist: [[SLE Editorial Conformance Checklist v0.1]]
-- Classified cases: [[SLE Rule Test Case Catalog v0.1]]
-- Internal audit corpus: [[Multi-Domain SLE Evaluation Corpus v0.1]]
+- Controlling rules: [[Ariadline Language Rules v0.1]]
+- Independent rationale: [[Independent Ariadline Rule Evidence Register v0.1]]
+- Human checklist: [[Ariadline Editorial Conformance Checklist v0.1]]
+- Classified cases: [[Ariadline Rule Test Case Catalog v0.1]]
+- Internal audit corpus: [[Multi-Domain Ariadline Evaluation Corpus v0.1]]
 - Coverage gaps: [[Evaluation Corpus Coverage Matrix v0.1]]
 
 Corpus items are constructed audit prompts. Their controlled alternatives internally match constructed briefs, but independent preservation remains `not determined`. They are not normative evidence or verified examples of improvement.

@@ -1,21 +1,21 @@
 ---
-title: "SLE Document Pattern Example Bank v0.1"
+title: "Ariadline Document Pattern Example Bank v0.1"
 type: example-collection
 status: proposed
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - examples
   - document-patterns
   - linguistics
 ---
-# SLE Document Pattern Example Bank v0.1
+# Ariadline Document Pattern Example Bank v0.1
 
 ## Purpose
 
-This bank supplies cross-domain examples for [[SLE for Linguistics Document Patterns v0.1]] and the proposed rules in [[SLE for Linguistics Language Rules v0.1]].
+This bank supplies cross-domain examples for [[Ariadline Document Patterns v0.1]] and the proposed rules in [[Ariadline Language Rules v0.1]].
 
 The examples are constructed for editorial evaluation. They are not linguistic evidence and do not establish that the described phenomena or results are real.
 

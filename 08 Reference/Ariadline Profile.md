@@ -1,17 +1,17 @@
 ---
-title: "SLE Profile"
+title: "Ariadline Profile"
 type: concept
 status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - reference
   - profiles
 ---
-# SLE Profile
+# Ariadline Profile
 
-An SLE profile is a declared subset or extension of SLE rules for a document type or task.
+An Ariadline profile is a declared subset or extension of Ariadline rules for a document type or task.
 
 Proposed profiles include:
 

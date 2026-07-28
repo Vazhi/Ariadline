@@ -1,19 +1,19 @@
 ---
-title: "SLE Meaning-Preservation Review Template v0.1"
+title: "Ariadline Meaning-Preservation Review Template v0.1"
 aliases:
-  - "SLE Semantic Equivalence Review Template v0.1"
+  - "Ariadline Semantic Equivalence Review Template v0.1"
 type: template
 status: proposed
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - meaning-preservation
   - template
 ---
-# SLE Meaning-Preservation Review Template v0.1
+# Ariadline Meaning-Preservation Review Template v0.1
 
 ## Purpose
 
@@ -27,7 +27,7 @@ The review does not determine whether the claim is true, whether the method is v
 
 A defective uncontrolled draft and a controlled alternative can have different literal meanings. In that case, do not call them equivalent. Evaluate which passage better preserves the authorized meaning only after the meaning record is fixed.
 
-This template supports [[Evaluation Framework]] and [[Multi-Domain SLE Evaluation Corpus v0.1]].
+This template supports [[Evaluation Framework]] and [[Multi-Domain Ariadline Evaluation Corpus v0.1]].
 
 ## Item identity
 
@@ -67,11 +67,11 @@ An item without an authorized meaning record receives `not determined` for meani
 
 ### Proposed controlled alternative
 
-> [Insert the proposed SLE-controlled alternative.]
+> [Insert the proposed Ariadline-controlled alternative.]
 
 ## Applicable controls
 
-- SLE version:
+- Ariadline version:
 - Profile-set version:
 - Profile or exact rule set:
 - Full rule IDs tested:

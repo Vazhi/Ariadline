@@ -1,21 +1,21 @@
 ---
-title: "Multi-Domain SLE Evaluation Corpus v0.1"
+title: "Multi-Domain Ariadline Evaluation Corpus v0.1"
 type: evaluation-corpus
 status: proposed-internal-audit
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - evaluation-corpus
   - multi-domain
 ---
-# Multi-Domain SLE Evaluation Corpus v0.1
+# Multi-Domain Ariadline Evaluation Corpus v0.1
 
 ## Status and authority
 
-This corpus is project-constructed internal audit material for the proposed SLE for Linguistics reference artifact.
+This corpus is project-constructed internal audit material for the proposed Ariadline reference artifact.
 
 It is not authentic multilingual evidence, source-author prose, normative justification, or proof that a controlled alternative is better. The illustrative contexts are anonymized so fictional claims cannot be mistaken for facts about real languages or communities.
 
@@ -61,9 +61,9 @@ These counts describe surface change only. They do not establish readability, co
 ## Supporting records
 
 - [[Semantic Equivalence Review Record v0.1]]
-- [[SLE Semantic Equivalence Review Template v0.1]]
+- [[Ariadline Semantic Equivalence Review Template v0.1]]
 - [[Evaluation Corpus Coverage Matrix v0.1]]
-- [[SLE Evaluation Corpus Bias Assessment v0.1]]
+- [[Ariadline Evaluation Corpus Bias Assessment v0.1]]
 - [[Canto-span Evaluation Subset v0.1]]
 
 ## Interpretation rule
@@ -80,5 +80,5 @@ Every independent preservation result remains `not determined`.
 - Do not call illustrative contexts authentic language coverage.
 - Do not describe a controlled alternative as superior before evaluation.
 - Do not infer rule validity from a constructed pair.
-- Do not use the Canto-span subset to define SLE.
+- Do not use the Canto-span subset to define Ariadline.
 - Do not require a machine-readable corpus.

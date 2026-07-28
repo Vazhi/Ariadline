@@ -5,7 +5,7 @@ status: revised
 created: 2026-07-27
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - pilot-study
 ---
@@ -13,13 +13,13 @@ tags:
 
 ## Material baseline
 
-The first internal material set is [[Multi-Domain SLE Evaluation Corpus v0.1]]. It is constructed procedure-testing material, not a representative sample.
+The first internal material set is [[Multi-Domain Ariadline Evaluation Corpus v0.1]]. It is constructed procedure-testing material, not a representative sample.
 
 The synthetic reader-pilot items contain:
 
 1. a defective or uncontrolled U draft;
 2. an expert-edited plain P alternative;
-3. a proposed SLE-controlled S alternative.
+3. a proposed Ariadline-controlled S alternative.
 
 All three are anchored to the same synthetic authorized meaning brief. U is not assumed to preserve or communicate the brief successfully. P and S are checked against the brief, but independent preservation remains `not determined`.
 
@@ -47,7 +47,7 @@ Participants apply alternative instructions to the same fictional item set.
 
 Measure action accuracy, agreement, completion time, questions, inappropriate escalation, and false certainty.
 
-Local operational details belong to the authorized brief. They must not be misrepresented as universal SLE requirements.
+Local operational details belong to the authorized brief. They must not be misrepresented as universal Ariadline requirements.
 
 ## Study 4 — Authoring cost and preservation
 
@@ -61,7 +61,7 @@ For authentic passages, the source author or legitimate proxy must confirm the m
 
 Use non-English-original passages and independently reviewed translations.
 
-Compare ordinary expert translation or editing with translation or reorganization under proposed SLE controls. Register a source-order baseline separately when used.
+Compare ordinary expert translation or editing with translation or reorganization under proposed Ariadline controls. Register a source-order baseline separately when used.
 
 Measure meaning and normative-function preservation, naturalness, reader reconstruction, disagreement, and burden.
 
@@ -81,7 +81,7 @@ Do not claim universal effectiveness from one institution, project, subfield, la
 
 Report participant subfield, theory and method experience, primary scholarly language, English use, community relationship when relevant, controlled-language experience, and accessibility needs.
 
-Corpus imbalance is recorded in [[Evaluation Corpus Coverage Matrix v0.1]] and [[SLE Evaluation Corpus Bias Assessment v0.1]].
+Corpus imbalance is recorded in [[Evaluation Corpus Coverage Matrix v0.1]] and [[Ariadline Evaluation Corpus Bias Assessment v0.1]].
 
 ## Analysis plan
 
@@ -91,11 +91,11 @@ The current draft is [[Preregistered Analysis and Decision Plan v0.1|Analysis an
 
 ## Qualitative review
 
-Collect comments about unnatural rules, lost distinctions, damaged cohesion, repetition, theory- or method-specific wording, English rhetorical assumptions, unavailable source information, and cases where ordinary editing performs as well as or better than SLE.
+Collect comments about unnatural rules, lost distinctions, damaged cohesion, repetition, theory- or method-specific wording, English rhetorical assumptions, unavailable source information, and cases where ordinary editing performs as well as or better than Ariadline.
 
 ## Canto-span boundary
 
-[[Canto-span Evaluation Subset v0.1]] is a bounded project-local stress test. It cannot satisfy independent coverage or define SLE.
+[[Canto-span Evaluation Subset v0.1]] is a bounded project-local stress test. It cannot satisfy independent coverage or define Ariadline.
 
 ## Operational implementation
 

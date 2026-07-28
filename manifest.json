@@ -7,7 +7,7 @@
   "broken_wikilinks": [],
   "files": [
     {
-      "path": "00 SLE Development MOC.md",
+      "path": "00 Ariadline Development MOC.md",
       "bytes": 2499,
       "sha256": "b73860a2d25f9eacb10fa0dce1c32fe30834530691799544d36a403018d770b7"
     },
@@ -22,7 +22,7 @@
       "sha256": "3ce5dd13762ce66765f89e966c71073aae3d13f26274e7888a4acf092b0b3798"
     },
     {
-      "path": "01 Foundation/SLE Architecture.md",
+      "path": "01 Foundation/Ariadline Architecture.md",
       "bytes": 2145,
       "sha256": "762e7198607cc15b37c981974cfe03b0264cd8b518b62d6ba7728648780b17af"
     },
@@ -142,22 +142,22 @@
       "sha256": "4958fb2ad8225af722c1777261aa396ebc9b07dec144bc055bbc4d39b440d98d"
     },
     {
-      "path": "07 Templates/SLE Change Request Template.md",
+      "path": "07 Templates/Ariadline Change Request Template.md",
       "bytes": 862,
       "sha256": "93dd512f7ebcf61ccd4be386f5bb92c3aaf6f9b74828459fecd50f02613c7636"
     },
     {
-      "path": "07 Templates/SLE Rule Proposal Template.md",
+      "path": "07 Templates/Ariadline Rule Proposal Template.md",
       "bytes": 1188,
       "sha256": "b1eb4dec678e566d21e5d6ae1d739de3a05a4ad5485f15a96005a0fd59a12815"
     },
     {
-      "path": "07 Templates/SLE Term Entry Template.md",
+      "path": "07 Templates/Ariadline Term Entry Template.md",
       "bytes": 837,
       "sha256": "af3ee715ea1752dd34f8e21a7b2cb64bf84a91d997bcb12dd840e971db03166b"
     },
     {
-      "path": "07 Templates/SLE Test Case Template.md",
+      "path": "07 Templates/Ariadline Test Case Template.md",
       "bytes": 835,
       "sha256": "cc64b1815ce6bad28227cc2f326265e19d1ce30ef0c2db5b7ea5f0e4a80c4ee5"
     },
@@ -192,12 +192,12 @@
       "sha256": "a40a6e09015fa0ef4f4bcd0808e72d8ccf215b67db7d703a72d28861434b7e81"
     },
     {
-      "path": "08 Reference/SLE Profile.md",
+      "path": "08 Reference/Ariadline Profile.md",
       "bytes": 441,
       "sha256": "a758b0401de35e0bbf65fe1c66827ee01e480bceaec5661ca04dc42b95371d03"
     },
     {
-      "path": "08 Reference/Simplified Linguistic English.md",
+      "path": "08 Reference/Ariadline.md",
       "bytes": 682,
       "sha256": "d963fa25693067e849b6b0f0348503da505434ea3e35acda0e368d4a57238bf2"
     },

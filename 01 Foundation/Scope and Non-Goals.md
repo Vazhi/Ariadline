@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - foundation
   - scope
 ---
@@ -31,7 +31,7 @@ The initial release will control four layers:
 
 ## Non-goals
 
-SLE will not initially:
+Ariadline will not initially:
 
 - define a universal linguistic theory;
 - require one analysis for disputed phenomena;
@@ -46,9 +46,9 @@ SLE will not initially:
 
 ## Boundary principle
 
-SLE controls **how a claim is written**, not **which theoretical claim a writer must adopt**.
+Ariadline controls **how a claim is written**, not **which theoretical claim a writer must adopt**.
 
-For example, SLE can require a writer to define *subject*. It must not require all theories to use the same definition of *subject*.
+For example, Ariadline can require a writer to define *subject*. It must not require all theories to use the same definition of *subject*.
 
 ## Deferred scope
 

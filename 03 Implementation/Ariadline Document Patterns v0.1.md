@@ -1,25 +1,25 @@
 ---
-title: "SLE for Linguistics Document Patterns v0.1"
+title: "Ariadline Document Patterns v0.1"
 type: normative-draft
 status: proposed
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - document-patterns
   - conformance
   - linguistics
 ---
-# SLE for Linguistics Document Patterns v0.1
+# Ariadline Document Patterns v0.1
 
 ## Status and purpose
 
-This chapter proposes human-readable document patterns for the SLE for Linguistics reference specification.
+This chapter proposes human-readable document patterns for the Ariadline reference specification.
 
 A document pattern is a communication structure. It is not a mandatory file schema, repository layout, research method, linguistic theory, or software data model.
 
-The patterns organize information so that readers can distinguish data, observation, analysis, hypothesis, system behavior, limitation, and conclusion when those distinctions are relevant. They apply the proposed rules in [[SLE for Linguistics Language Rules v0.1]].
+The patterns organize information so that readers can distinguish data, observation, analysis, hypothesis, system behavior, limitation, and conclusion when those distinctions are relevant. They apply the proposed rules in [[Ariadline Language Rules v0.1]].
 
 All patterns in v0.1 remain **proposed**. They require cross-domain author and reader evaluation before stabilization.
 
@@ -47,7 +47,7 @@ A journal article, grammar chapter, dictionary entry, dataset guide, or annotati
 
 ## Shared information relationships and recommended sequence
 
-Most SLE documents should make the following information recoverable. The order below is a recommended default:
+Most Ariadline documents should make the following information recoverable. The order below is a recommended default:
 
 1. **Purpose or question** — what the document, section, or entry addresses.
 2. **Scope** — language, variety, population, register, dataset, time, document part, or operational domain.
@@ -265,7 +265,7 @@ Each **recommended sequence** below can be reordered. The listed distinctions an
 
 # Conformance guidance
 
-Detailed conformance guidance is in [[Profiles and Conformance]]. Exact profile mappings are in [[SLE Profile Applicability Register v0.1]].
+Detailed conformance guidance is in [[Profiles and Conformance]]. Exact profile mappings are in [[Ariadline Profile Applicability Register v0.1]].
 
 ## Conformance result
 
@@ -294,7 +294,7 @@ Each record must identify its exact evaluated document scope or sample. Evaluati
 
 A declaration should identify:
 
-- SLE version;
+- Ariadline version;
 - conformance object;
 - profile-set version and profiles, or exact rule IDs;
 - exact conditional-rule resolution or stable review record;
@@ -306,7 +306,7 @@ A declaration should identify:
 
 Typed evaluations appear as separate records.
 
-A declaration must not imply that SLE verified linguistic truth, speaker acceptability, ethical adequacy, statistical validity, or theoretical correctness.
+A declaration must not imply that Ariadline verified linguistic truth, speaker acceptability, ethical adequacy, statistical validity, or theoretical correctness.
 
 ## Waiver rule
 
@@ -318,7 +318,7 @@ A waiver must not conceal a linguistic disagreement, unsupported claim, missing 
 
 ## Extension rule
 
-An extension must identify its controlling SLE and profile-set versions, distinguish local requirements, list affected rule IDs, preserve core distinctions or declare incompatibility, and define its declaration method.
+An extension must identify its controlling Ariadline and profile-set versions, distinguish local requirements, list affected rule IDs, preserve core distinctions or declare incompatibility, and define its declaration method.
 
 ## Versioning rule for patterns
 
@@ -342,7 +342,7 @@ For the selected pattern, confirm:
 6. Examples, glosses, judgments, and adaptations are interpretable.
 7. Alternatives, counterevidence, and uncertainty are not hidden.
 8. Omitted required relationships are inapplicable, cross-referenced, or covered by a recorded waiver.
-9. Local extensions are not presented as universal SLE requirements.
+9. Local extensions are not presented as universal Ariadline requirements.
 10. The conformance result is separate from review method and evaluation records.
 11. A conformance statement does not certify linguistic truth.
 

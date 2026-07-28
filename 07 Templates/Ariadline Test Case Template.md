@@ -1,15 +1,15 @@
 ---
-title: "SLE Test Case Template"
+title: "Ariadline Test Case Template"
 type: template
 status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - template
   - testing
 ---
-# SLE Test Case Template
+# Ariadline Test Case Template
 
 ## Metadata
 

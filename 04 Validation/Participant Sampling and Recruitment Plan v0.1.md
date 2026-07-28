@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - participants
   - recruitment
@@ -55,7 +55,7 @@ Includes people who routinely interpret, revise, adjudicate, or apply linguistic
 
 ## Cross-cutting recruitment requirement
 
-At least 80% of the confirmatory sample must not have contributed to SLE rule, pattern, corpus, checklist, or publication design.
+At least 80% of the confirmatory sample must not have contributed to Ariadline rule, pattern, corpus, checklist, or publication design.
 
 Record but do not use as automatic exclusion:
 
@@ -91,7 +91,7 @@ Planning target: 24–36 participants.
 Minimum coverage:
 
 - at least 4 participants from each primary stratum;
-- at least 75% unfamiliar with SLE development;
+- at least 75% unfamiliar with Ariadline development;
 - no more than 4 Canto-span contributors;
 - representation of more than one primary scholarly language;
 - at least one participant using a declared accessibility accommodation when recruitment permits.
@@ -113,7 +113,7 @@ The exact target must be frozen before main recruitment through a documented sim
 Minimum quota before any pooled claim:
 
 - at least 20 analyzable participants in each primary stratum;
-- at least 80 participants unfamiliar with SLE development;
+- at least 80 participants unfamiliar with Ariadline development;
 - no primary condition-by-domain cell with fewer than the frozen minimum;
 - no more than 10% Canto-span contributors overall.
 
@@ -126,7 +126,7 @@ Planning target: 40–80 analyzable reviewers, including:
 - at least 10 experienced editors or reviewers;
 - at least 10 research assistants or advanced students;
 - domain coverage across all primary strata;
-- at least 75% unfamiliar with SLE development.
+- at least 75% unfamiliar with Ariadline development.
 
 ### Authoring study
 
@@ -136,7 +136,7 @@ Include:
 
 - authors with experience in at least four domain families;
 - authors who use English as an additional language;
-- authors with no prior SLE experience;
+- authors with no prior Ariadline experience;
 - a separately identified source-author or authorized-proxy subset for authentic meaning confirmation.
 
 ### Translation study
@@ -194,7 +194,7 @@ Before launch:
 - Define completion before recruitment.
 - Report starts, withdrawals, exclusions, and analyzable records by stratum and condition.
 - Replacement recruitment may fill a preregistered quota without inspecting outcome effects.
-- Do not replace a subgroup because its results are unfavorable to SLE.
+- Do not replace a subgroup because its results are unfavorable to Ariadline.
 
 ## Non-generalization rule
 

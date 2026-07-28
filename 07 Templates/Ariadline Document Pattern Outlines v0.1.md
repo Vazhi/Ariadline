@@ -1,20 +1,20 @@
 ---
-title: "SLE Document Pattern Outlines v0.1"
+title: "Ariadline Document Pattern Outlines v0.1"
 type: template-collection
 status: proposed
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - templates
   - document-patterns
 ---
-# SLE Document Pattern Outlines v0.1
+# Ariadline Document Pattern Outlines v0.1
 
 ## Purpose
 
-These outlines support the proposed patterns in [[SLE for Linguistics Document Patterns v0.1]].
+These outlines support the proposed patterns in [[Ariadline Document Patterns v0.1]].
 
 They are human-readable drafting aids. Authors may rename, combine, reorder, or omit headings when the required information relationships and distinctions remain recoverable.
 
@@ -322,11 +322,11 @@ Text in parentheses is drafting guidance and should normally be removed from a f
 
 # Optional conformance declaration
 
-Use the result and review terminology in [[Profiles and Conformance]]. Resolve profile names through [[SLE Profile Applicability Register v0.1]].
+Use the result and review terminology in [[Profiles and Conformance]]. Resolve profile names through [[Ariadline Profile Applicability Register v0.1]].
 
-> This [document or section] [conforms / conforms with declared waivers / does not conform / has a result not determined] against SLE for Linguistics [version]. The conformance object is [scope]. The review used [profile-set version and profiles, or exact rule IDs] and [pattern IDs]. Review method: [author self-review / independent editorial review / other defined method]. The applicable-rule record is [location]. Material waivers or extensions: [list or none]. Review date: [date].
+> This [document or section] [conforms / conforms with declared waivers / does not conform / has a result not determined] against Ariadline [version]. The conformance object is [scope]. The review used [profile-set version and profiles, or exact rule IDs] and [pattern IDs]. Review method: [author self-review / independent editorial review / other defined method]. The applicable-rule record is [location]. Material waivers or extensions: [list or none]. Review date: [date].
 
-Do not use this statement to imply that SLE verified the linguistic analysis, research method, ethical adequacy, or truth of the conclusions.
+Do not use this statement to imply that Ariadline verified the linguistic analysis, research method, ethical adequacy, or truth of the conclusions.
 
 # Typed evaluation record
 
@@ -372,7 +372,7 @@ An evaluation of a sample does not apply automatically to the full document.
 
 Use the controlling profile-set version and record every included conditional rule.
 
-## SLE version
+## Ariadline version
 
 ## Profile-set version
 

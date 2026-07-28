@@ -11,7 +11,7 @@ source_head: b802410efc18959c4b539b49cfa24e7fd6d50638
 source_merge_commit: c9dd631739734a5ab886f0b667db9888b0add13b
 capture_sha256: b3f5983c10e39511e137a5cd1a38f3bff13ea7752246cf4f49a0880442b18d8b
 tags:
-  - sle
+  - ariadline
   - validation
   - source-snapshot
   - canto-span
@@ -27,7 +27,7 @@ tags:
 - Associated head: `b802410efc18959c4b539b49cfa24e7fd6d50638`
 - Merge commit: `c9dd631739734a5ab886f0b667db9888b0add13b`
 - SHA-256 of the exact captured body below: `b3f5983c10e39511e137a5cd1a38f3bff13ea7752246cf4f49a0880442b18d8b`
-- Pilot baseline: [[SLE-GE Canto-span Pilot Baseline v0.1]]
+- Pilot baseline: [[Ariadline-GE Canto-span Pilot Baseline v0.1]]
 
 ## Captured body
 
