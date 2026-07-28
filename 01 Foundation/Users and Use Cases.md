@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - foundation
   - users
 ---
@@ -44,42 +44,42 @@ tags:
 
 The author identifies an attested form and gives its source.
 
-Expected SLE behavior: separate the observation from the analysis. See [[Claim-Evidence Matrix]].
+Expected Ariadline behavior: separate the observation from the analysis. See [[Claim-Evidence Matrix]].
 
 ### UC-02 — State a generalization with a boundary
 
 The author states a pattern and identifies the population, variety, register, corpus, or construction to which it applies.
 
-Expected SLE behavior: make [[Ambiguity and Referential Clarity|scope]] explicit.
+Expected Ariadline behavior: make [[Ambiguity and Referential Clarity|scope]] explicit.
 
 ### UC-03 — Report a speaker judgment
 
 The author records the task, scale, speaker population, and result.
 
-Expected SLE behavior: do not convert a limited judgment into an unrestricted grammaticality claim.
+Expected Ariadline behavior: do not convert a limited judgment into an unrestricted grammaticality claim.
 
 ### UC-04 — Define a technical term
 
 The author introduces a term that has different meanings across frameworks.
 
-Expected SLE behavior: create a [[Terminology Control|project-scoped definition]] and use one preferred designation.
+Expected Ariadline behavior: create a [[Terminology Control|project-scoped definition]] and use one preferred designation.
 
 ### UC-05 — Write an annotation rule
 
 The author specifies how annotators must label a construction.
 
-Expected SLE behavior: use [[Normative Language|normative verbs]] consistently and provide positive, negative, and boundary examples.
+Expected Ariadline behavior: use [[Normative Language|normative verbs]] consistently and provide positive, negative, and boundary examples.
 
 ### UC-06 — Document a parser behavior
 
 The author distinguishes a runtime observation from a linguistic conclusion.
 
-Expected SLE behavior: state that software output is evidence about the system, not automatically evidence about the language.
+Expected Ariadline behavior: state that software output is evidence about the system, not automatically evidence about the language.
 
 ## User research questions
 
 - Which ambiguities cause the most revision or adjudication work?
 - Which technical terms produce the most cross-framework confusion?
-- Which SLE restrictions reduce comprehension errors?
+- Which Ariadline restrictions reduce comprehension errors?
 - Which restrictions increase authoring time without sufficient benefit?
-- Which users need separate [[SLE Profile|profiles]]?
+- Which users need separate [[Ariadline Profile|profiles]]?

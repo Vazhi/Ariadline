@@ -5,9 +5,9 @@ status: revised
 created: 2026-07-27
 updated: 2026-07-27
 aliases:
-  - "SLE Modality"
+  - "Ariadline Modality"
 tags:
-  - sle
+  - ariadline
   - language-design
   - modality
 ---
@@ -17,7 +17,7 @@ tags:
 
 [[Normative Language]] supports consistent distinctions among requirements, prohibitions, recommendations, permissions, capabilities, and factual possibilities.
 
-The proposed normative rule is SLE-RULE-0008 in [[SLE for Linguistics Language Rules v0.1]].
+The proposed normative rule is SLE-RULE-0008 in [[Ariadline Language Rules v0.1]].
 
 ## Function before form
 
@@ -36,14 +36,14 @@ The declared forms must be used consistently when a difference affects conforman
 
 ## Requirement-form decision
 
-SLE v0.1 uses **must** and **must not** inside its own draft rule statements. This is a draft-local editorial convention, not a final universal SLE requirement.
+Ariadline v0.1 uses **must** and **must not** inside its own draft rule statements. This is a draft-local editorial convention, not a final universal Ariadline requirement.
 
 Two established alternatives are under comparison:
 
 - ISO drafting practice uses **shall** for a requirement, **should** for a recommendation, **may** for permission, and **can** for capability or possibility.
 - IETF BCP 14 treats **MUST** and **SHALL** as requirement terms, **SHOULD** as a recommendation term, and **MAY** as permission or optionality.
 
-The final SLE reference artifact must select a preferred requirement form only after reader testing, translation review, and comparison across linguistic document types. A profile may link to another declared normative-language system when that choice is explicit.
+The final Ariadline reference artifact must select a preferred requirement form only after reader testing, translation review, and comparison across linguistic document types. A profile may link to another declared normative-language system when that choice is explicit.
 
 ## Permission and capability
 
@@ -63,7 +63,7 @@ A quotation may preserve source wording.
 
 SLE-RULE-0020 requires evidence wording not to overstate the relationship between evidence and conclusion.
 
-SLE v0.1 does **not** define a universal lexical hierarchy for:
+Ariadline v0.1 does **not** define a universal lexical hierarchy for:
 
 - *shows*;
 - *supports*;

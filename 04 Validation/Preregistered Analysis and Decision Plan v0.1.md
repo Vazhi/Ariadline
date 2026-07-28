@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - analysis
   - decision
@@ -36,8 +36,8 @@ Until then, cite this record only as an **analysis-plan draft**.
 3. Model participants and materials as varying sources when the design permits.
 4. Preserve domain, participant-group, language-direction, and genre boundaries.
 5. Treat `not determined` as an informative result, not missing success.
-6. Report SLE versus ordinary expert editing for every publication-relevant task.
-7. Report SLE versus an authorized U baseline only for tasks that registered U as admissible.
+6. Report Ariadline versus ordinary expert editing for every publication-relevant task.
+7. Report Ariadline versus an authorized U baseline only for tasks that registered U as admissible.
 8. Keep confirmatory and exploratory analyses separate.
 9. Do not use Canto-span results to determine the project-wide disposition.
 
@@ -154,7 +154,7 @@ These numbers have no confirmatory authority until justified and frozen.
 
 Initial planning proposal:
 
-- no unresolved SLE-attributable critical meaning failure in confirmatory authentic material;
+- no unresolved Ariadline-attributable critical meaning failure in confirmatory authentic material;
 - S-versus-P increase in critical-or-major preservation failure does not exceed a frozen margin, initially proposed as 3 percentage points;
 - `not determined` rates are reported and must not be hidden through exclusion;
 - source-author or authorized-proxy review confirms the exact scope of any preservation claim.

@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - reference
   - sources
 ---
@@ -19,14 +19,14 @@ Official site: <https://www.asd-ste100.org/>
 
 The current official site describes ASD-STE100 as a controlled natural language and an international standard for technical documentation. Issue 9 was released on 15 January 2025.
 
-Relevance to SLE:
+Relevance to Ariadline:
 
 - governed rules and dictionary;
 - controlled terminology;
 - change process;
 - explicit conformance-oriented writing.
 
-SLE must not copy aerospace-specific rules without linguistic-domain testing.
+Ariadline must not copy aerospace-specific rules without linguistic-domain testing.
 
 ### Kuhn — Survey and classification of controlled natural languages
 
@@ -81,7 +81,7 @@ Official page: <https://www.eva.mpg.de/lingua/resources/glossing-rules.php>
 Relevance:
 
 - established conventions for interlinear morpheme-by-morpheme glossing;
-- a baseline that SLE should extend rather than replace.
+- a baseline that Ariadline should extend rather than replace.
 
 ### LSA Journals Style Sheet
 
@@ -90,7 +90,7 @@ Official page: <https://www.lsadc.org/lsa_journals_style_sheet>
 Relevance:
 
 - publication conventions for linguistics;
-- evidence that SLE must interoperate with existing editorial styles.
+- evidence that Ariadline must interoperate with existing editorial styles.
 
 ### Unified Style Sheet for Linguistics
 
@@ -127,4 +127,4 @@ Relevance:
 
 ## Source-use rule
 
-These sources inform the development plan. They do not establish that the proposed SLE rules are effective. Effectiveness requires the studies in [[Evaluation Framework]].
+These sources inform the development plan. They do not establish that the proposed Ariadline rules are effective. Effectiveness requires the studies in [[Evaluation Framework]].

@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - reference
   - examples
 ---
@@ -20,4 +20,4 @@ An example can be:
 - constructed;
 - adapted.
 
-SLE requires the author to identify the relevant status and provenance. See [[Linguistic Examples and Glossing]].
+Ariadline requires the author to identify the relevant status and provenance. See [[Linguistic Examples and Glossing]].

@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - claims
   - decisions
   - neutrality
@@ -17,7 +17,7 @@ tags:
 
 This register evaluates the candidate claim-function codes from [[Claim-Evidence Matrix]].
 
-The functions are editorial concepts. [[SLE for Linguistics Language Rules v0.1]] does not require visible labels in normal prose.
+The functions are editorial concepts. [[Ariadline Language Rules v0.1]] does not require visible labels in normal prose.
 
 A function can help a writer identify missing information. It does not determine whether a claim is true.
 
@@ -27,7 +27,7 @@ A function can help a writer identify missing information. It does not determine
 - **revise:** retain a narrower or differently organized distinction;
 - **merge:** express the function as a subtype or property of another function;
 - **defer:** keep for later study without a normative decision;
-- **reject:** do not include as a general SLE function.
+- **reject:** do not include as a general Ariadline function.
 
 ## Decisions
 

@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - status
   - execution
@@ -107,7 +107,7 @@ The prepared package may be used to:
 - estimate timing and task feasibility without making effectiveness claims;
 - create transparent follow-up work items.
 
-It must not be used to claim that SLE improves authentic writing, has completed preregistration, or is ready for stable publication.
+It must not be used to claim that Ariadline improves authentic writing, has completed preregistration, or is ready for stable publication.
 
 ## Required next records
 

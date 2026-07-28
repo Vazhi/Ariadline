@@ -1,21 +1,21 @@
 ---
-title: "SLE Reference Change and Deferral Log v0.1"
+title: "Ariadline Reference Change and Deferral Log v0.1"
 type: change-log
 status: proposed
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - change-log
   - deferred
   - rejected
 ---
-# SLE Reference Change and Deferral Log v0.1
+# Ariadline Reference Change and Deferral Log v0.1
 
 ## Purpose
 
-This log records major assembly decisions for [[SLE for Linguistics Reference Artifact v0.1 Draft]].
+This log records major assembly decisions for [[Ariadline Reference Artifact v0.1 Draft]].
 
 It is an informative history. Normative changes must follow [[Governance and Change Control]] and [[Versioning and Release Model]].
 
@@ -27,7 +27,7 @@ The controlling product is a durable human-readable edition. Software, schemas, 
 
 ### Independent authority
 
-Core SLE design uses independent evidence and multi-domain evaluation. Canto-span remains a later non-authoritative stress test and adoption target.
+Core Ariadline design uses independent evidence and multi-domain evaluation. Canto-span remains a later non-authoritative stress test and adoption target.
 
 ### Draft-phase evidence gate
 
@@ -128,11 +128,11 @@ The draft has not established:
 - interlinear-glossing effectiveness on independently reviewed real examples;
 - superiority over ordinary expert editing.
 
-See [[Evaluation Framework]], [[Pilot Study Design]], [[SLE Evaluation Corpus Bias Assessment v0.1]], and [[Human Review Boundary Register v0.1]].
+See [[Evaluation Framework]], [[Pilot Study Design]], [[Ariadline Evaluation Corpus Bias Assessment v0.1]], and [[Human Review Boundary Register v0.1]].
 
-## Naming risk
+## Naming decision
 
-**SLE** is a working abbreviation with other established meanings. A naming and acronym review is required before public release.
+The project name is **Ariadline**. Public materials should pair it with a descriptive subtitle until the name is established. Naming and intellectual-property review remains part of release governance.
 
 ## Change history
 

@@ -1,21 +1,21 @@
 ---
-title: "SLE Rule and Pattern Index v0.1"
+title: "Ariadline Rule and Pattern Index v0.1"
 type: reference-index
 status: proposed
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - rules
   - patterns
   - index
 ---
-# SLE Rule and Pattern Index v0.1
+# Ariadline Rule and Pattern Index v0.1
 
 ## Authority
 
-This is a navigation index for [[SLE for Linguistics Reference Artifact v0.1 Draft]]. It does not replace the controlling text in [[SLE for Linguistics Language Rules v0.1]] or [[SLE for Linguistics Document Patterns v0.1]].
+This is a navigation index for [[Ariadline Reference Artifact v0.1 Draft]]. It does not replace the controlling text in [[Ariadline Language Rules v0.1]] or [[Ariadline Document Patterns v0.1]].
 
 This index intentionally does not summarize rule applicability. Use the controlling rule text, exact profile mappings, and resolved applicability record for that decision.
 
@@ -48,7 +48,7 @@ This index intentionally does not summarize rule applicability. Use the controll
 | `SLE-RULE-0023` | Claim-support connection | traceability |
 | `SLE-RULE-0024` | Interlinear glossing declaration | data presentation |
 
-Exact rationale and test mappings are in [[SLE Rule Traceability Matrix v0.1]]. Exact profile membership and conditional applicability are in [[SLE Profile Applicability Register v0.1]].
+Exact rationale and test mappings are in [[Ariadline Rule Traceability Matrix v0.1]]. Exact profile membership and conditional applicability are in [[Ariadline Profile Applicability Register v0.1]].
 
 ## Pattern index
 
@@ -69,7 +69,7 @@ Exact rationale and test mappings are in [[SLE Rule Traceability Matrix v0.1]]. 
 | `SLE-PATTERN-0013` | Limitation and open-question record | record unresolved boundaries, risks, or evidence gaps |
 | `SLE-PATTERN-0014` | Editorial change or revision note | explain wording, scope, terminology, or normative changes |
 
-Pattern outlines are in [[SLE Document Pattern Outlines v0.1]]. Pattern evidence and gaps are in [[Document Pattern Coverage Register v0.1]].
+Pattern outlines are in [[Ariadline Document Pattern Outlines v0.1]]. Pattern evidence and gaps are in [[Document Pattern Coverage Register v0.1]].
 
 ## Profile index
 

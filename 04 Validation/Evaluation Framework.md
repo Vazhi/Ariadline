@@ -5,7 +5,7 @@ status: revised
 created: 2026-07-27
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - evaluation
 ---
@@ -13,9 +13,9 @@ tags:
 
 ## Central question
 
-Does SLE improve understanding and consistency while preserving authorized linguistic meaning?
+Does Ariadline improve understanding and consistency while preserving authorized linguistic meaning?
 
-The first controlled materials are in [[Multi-Domain SLE Evaluation Corpus v0.1]]. They are constructed internal audit material and cannot answer the central question without independent human evaluation.
+The first controlled materials are in [[Multi-Domain Ariadline Evaluation Corpus v0.1]]. They are constructed internal audit material and cannot answer the central question without independent human evaluation.
 
 ## Meaning authority before comparison
 
@@ -27,7 +27,7 @@ Evaluate separately:
 
 1. an authorized source or uncontrolled baseline against authorized meaning;
 2. an ordinary expert-edited alternative against authorized meaning;
-3. an SLE-controlled alternative against authorized meaning;
+3. an Ariadline-controlled alternative against authorized meaning;
 4. literal passage-to-passage relation;
 5. independent preservation confirmation where required.
 
@@ -114,7 +114,7 @@ Tools may assist counting, terminology search, cross-reference checking, or rule
 
 Use task-specific randomized or counterbalanced comparisons:
 
-- reader tasks require ordinary expert-edited P and SLE-controlled S conditions; an authorized source or uncontrolled U baseline is optional;
+- reader tasks require ordinary expert-edited P and Ariadline-controlled S conditions; an authorized source or uncontrolled U baseline is optional;
 - authoring tasks compare P and S guidance or workflows, with participant outputs scored against one authorized meaning record;
 - translation tasks compare P and S, with a source-order baseline registered separately when used;
 - review tasks use the registered passages needed to test checklist application;
@@ -128,13 +128,13 @@ Randomization must not hide source authority, construction status, permission, a
 
 ## Corpus coverage policy
 
-Coverage is recorded in [[Evaluation Corpus Coverage Matrix v0.1]]. Bias is recorded in [[SLE Evaluation Corpus Bias Assessment v0.1]].
+Coverage is recorded in [[Evaluation Corpus Coverage Matrix v0.1]]. Bias is recorded in [[Ariadline Evaluation Corpus Bias Assessment v0.1]].
 
 Do not make broad effectiveness claims when authentic meaning is unconfirmed, non-English-original material is absent, only successful alternatives are retained, one source dominates, or short passages are generalized to full documents.
 
 ## Canto-span boundary
 
-[[Canto-span Evaluation Subset v0.1]] is a non-authoritative stress-test subset. It cannot define SLE or satisfy independent coverage.
+[[Canto-span Evaluation Subset v0.1]] is a non-authoritative stress-test subset. It cannot define Ariadline or satisfy independent coverage.
 
 ## Evidence policy
 

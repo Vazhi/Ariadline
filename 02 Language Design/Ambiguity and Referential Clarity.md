@@ -7,7 +7,7 @@ updated: 2026-07-27
 aliases:
   - "Ambiguity"
 tags:
-  - sle
+  - ariadline
   - language-design
   - ambiguity
   - reference

@@ -5,10 +5,10 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 aliases:
-  - "Canto-span SLE Case Study"
+  - "Canto-span Ariadline Case Study"
   - "Canto Span Case Study"
 tags:
-  - sle
+  - ariadline
   - case-study
   - canto-span
   - grammar-engineering
@@ -17,11 +17,11 @@ tags:
 # Canto-span Case Study
 
 > [!abstract] Purpose
-> This case study evaluates how the Canto-span Cantonese grammar-engineering project could improve by adopting a mature form of [[Simplified Linguistic English|Simplified Linguistic English (SLE)]]. It treats Canto-span as an advanced pilot project, not as an example of weak governance.
+> This case study evaluates how the Canto-span Cantonese grammar-engineering project could improve by adopting a mature form of [[Ariadline]]. It treats Canto-span as an advanced pilot project, not as an example of weak governance.
 
 ## Status of this case study
 
-SLE is still a development project. This note therefore describes a **target-state application** of a future SLE standard. It does not claim that Canto-span currently conforms to SLE.
+Ariadline is still a development project. This note therefore describes a **target-state application** of a future Ariadline standard. It does not claim that Canto-span currently conforms to Ariadline.
 
 Baseline reviewed: **2026-07-27**
 
@@ -51,7 +51,7 @@ Canto-span already has strong controls for:
 
 Its main communication risk is not missing policy. The risk is that a reader must combine many dense, project-specific distinctions before the reader can correctly interpret a claim.
 
-A mature SLE could reduce this risk in five ways:
+A mature Ariadline could reduce this risk in five ways:
 
 1. give every important statement an explicit claim function;
 2. define project terms in one controlled termbase;
@@ -59,13 +59,13 @@ A mature SLE could reduce this risk in five ways:
 4. standardize the form of requirements, evidence reports, limitations, and dispositions;
 5. make a useful subset of the documentation mechanically checkable.
 
-The recommended outcome is a reusable **SLE Grammar Engineering Profile**, with Canto-span as its first reference implementation and evaluation corpus.
+The recommended outcome is a reusable **Ariadline Grammar Engineering Profile**, with Canto-span as its first reference implementation and evaluation corpus.
 
 ## Why Canto-span is a strong test case
 
 Canto-span combines several document types that a linguistic controlled language must support:
 
-| Canto-span activity | Communication problem for SLE to solve |
+| Canto-span activity | Communication problem for Ariadline to solve |
 |---|---|
 | Linguistic analysis | Separate observations, analyses, hypotheses, and generalizations. |
 | Parser development | Separate runtime behavior from claims about Cantonese. |
@@ -75,7 +75,7 @@ Canto-span combines several document types that a linguistic controlled language
 | Multi-agent coordination | Write testable instructions with explicit authority and scope. |
 | Release management | Prevent public descriptions from exceeding the implemented and evidenced scope. |
 
-This mix makes Canto-span more useful than a simple prose corpus. It tests whether SLE can control both linguistic argumentation and technical procedure without confusing them.
+This mix makes Canto-span more useful than a simple prose corpus. It tests whether Ariadline can control both linguistic argumentation and technical procedure without confusing them.
 
 ## Baseline strengths
 
@@ -83,7 +83,7 @@ This mix makes Canto-span more useful than a simple prose corpus. It tests wheth
 
 Canto-span identifies a canonical owner for each state dimension. For example, current project state, linguistic status, runtime recognition, permanent identity, and merge authorization have different owners.
 
-This design is already compatible with [[Design Principles|SLE's separation principle]]. SLE would make the ownership relationship visible in each document that reports a state, rather than requiring the reader to reconstruct it from the project hierarchy.
+This design is already compatible with [[Design Principles|Ariadline's separation principle]]. Ariadline would make the ownership relationship visible in each document that reports a state, rather than requiring the reader to reconstruct it from the project hierarchy.
 
 ### 2. Strong evidence boundaries
 
@@ -110,7 +110,7 @@ Canto-span uses a bounded status vocabulary:
 - `lexicalized_only`
 - `parser_heuristic`
 
-This is a strong foundation for [[Terminology Control]]. The remaining SLE task is to define what each status asserts, what it does not assert, and which evidence records must accompany it.
+This is a strong foundation for [[Terminology Control]]. The remaining Ariadline task is to define what each status asserts, what it does not assert, and which evidence records must accompany it.
 
 ### 4. Explicit completion gates
 
@@ -125,13 +125,13 @@ The Definition of Done gives separate gates for:
 - held-out validation;
 - public description.
 
-This is more rigorous than a general instruction to “add evidence and tests.” It can be converted into an SLE conformance checklist with minimal conceptual change.
+This is more rigorous than a general instruction to “add evidence and tests.” It can be converted into an Ariadline conformance checklist with minimal conceptual change.
 
 ### 5. Recognition of multiple validation dimensions
 
 Canto-span evaluates linguistic support, implementation correctness, subsystem correctness, ontology consistency, evidence quality, and release consistency separately.
 
-This is exactly the type of distinction that SLE should preserve. SLE must not simplify these dimensions into one generic word such as *valid*.
+This is exactly the type of distinction that Ariadline should preserve. Ariadline must not simplify these dimensions into one generic word such as *valid*.
 
 ## Communication costs that remain
 
@@ -139,7 +139,7 @@ This is exactly the type of distinction that SLE should preserve. SLE must not s
 
 Some policy sentences distinguish several state dimensions at once. The content is correct, but readers must retain multiple contrasts while also interpreting the requirement.
 
-A future SLE rule should normally assign one principal function to each sentence:
+A future Ariadline rule should normally assign one principal function to each sentence:
 
 - state a fact;
 - state a requirement;
@@ -160,7 +160,7 @@ A sentence can describe any of the following:
 - a current-state fact;
 - a limitation.
 
-Canto-span usually keeps these meanings conceptually separate. SLE would also make the class visible in the wording and, where useful, in metadata.
+Canto-span usually keeps these meanings conceptually separate. Ariadline would also make the class visible in the wording and, where useful, in metadata.
 
 ### CC-03 — Project-local terms require substantial prior knowledge
 
@@ -173,13 +173,13 @@ A new reader can incorrectly apply an ordinary-language meaning. For example:
 - *supported_productive* is a gated project status, not a casual synonym for “probably grammatical”;
 - *parser_heuristic* describes a software representation, not a productive language construction.
 
-SLE would require these meanings in a versioned termbase.
+Ariadline would require these meanings in a versioned termbase.
 
 ### CC-04 — Readers must assemble meaning across canonical documents
 
 The canonical-document system prevents duplicated and contradictory policy. This is a strength. It also means that a reader sometimes needs several documents to answer one question.
 
-SLE would not duplicate the policy. It would require a local statement to identify:
+Ariadline would not duplicate the policy. It would require a local statement to identify:
 
 - the state dimension;
 - its canonical owner;
@@ -189,7 +189,7 @@ SLE would not duplicate the policy. It would require a local statement to identi
 
 ### CC-05 — Current facts and durable rules can look similar
 
-Canto-span correctly separates `PROJECT-STATE.md` from durable governance. SLE could reinforce this separation with explicit document classes:
+Canto-span correctly separates `PROJECT-STATE.md` from durable governance. Ariadline could reinforce this separation with explicit document classes:
 
 - **current-state report**;
 - **normative policy**;
@@ -222,19 +222,19 @@ Even with explicit governance, these invalid inferences remain easy for an unfam
 - construction is available → construction is supported;
 - PR is green → merge is authorized.
 
-A mature SLE checker could detect some of these inference patterns in summaries and release notes.
+A mature Ariadline checker could detect some of these inference patterns in summaries and release notes.
 
-## Proposed SLE Grammar Engineering Profile
+## Proposed Ariadline Grammar Engineering Profile
 
 The proposed profile would extend the profiles in [[Profiles and Conformance]].
 
 ### Profile name
 
-**SLE-GE — Grammar Engineering Profile**
+**Ariadline-GE — Grammar Engineering Profile**
 
 ### Intended documents
 
-SLE-GE would apply to:
+Ariadline-GE would apply to:
 
 - grammar and construction notes;
 - research summaries;
@@ -247,9 +247,9 @@ SLE-GE would apply to:
 - pull-request summaries;
 - release notes.
 
-### Required SLE modules
+### Required Ariadline modules
 
-| Module | Requirement in SLE-GE |
+| Module | Requirement in Ariadline-GE |
 |---|---|
 | SLE-Core | Required |
 | SLE-Research | Required for linguistic claims |
@@ -260,7 +260,7 @@ SLE-GE would apply to:
 
 ### Example conformance declaration
 
-> This document conforms to SLE 1.0, Grammar Engineering Profile, Level B, with Canto-span Termbase 1.0. Project extensions: CS-Identity, CS-Status, and CS-Workflow. Checker: SLE Checker 1.0. Review date: 2026-07-27.
+> This document conforms to Ariadline 1.0, Grammar Engineering Profile, Level B, with Canto-span Termbase 1.0. Project extensions: CS-Identity, CS-Status, and CS-Workflow. Checker: Ariadline Checker 1.0. Review date: 2026-07-27.
 
 This declaration does not certify that the linguistic analysis is true. It certifies only that the document satisfies the declared language and documentation controls.
 
@@ -298,7 +298,7 @@ Examples:
 
 ## Seed Canto-span termbase
 
-The following entries illustrate the minimum termbase needed for SLE adoption.
+The following entries illustrate the minimum termbase needed for Ariadline adoption.
 
 | Preferred term | Controlled meaning | Do not infer |
 |---|---|---|
@@ -319,11 +319,11 @@ The following entries illustrate the minimum termbase needed for SLE adoption.
 | **usable judgment** | An eligible, quality-checked, adjudicated response for one item. | Total submissions do not substitute for item-level usable judgments. |
 | **merge authorization** | Explicit user approval for one PR at an unchanged head. | Passing checks, ownership, or elapsed time do not authorize merge. |
 
-Each full term entry should use [[SLE Term Entry Template]] and record prohibited substitutions, scope, examples, and change history.
+Each full term entry should use [[Ariadline Term Entry Template]] and record prohibited substitutions, scope, examples, and change history.
 
-## Candidate SLE rules derived from the case study
+## Candidate Ariadline rules derived from the case study
 
-### SLE-GE-01 — State one state dimension per sentence
+### Ariadline-GE-01 — State one state dimension per sentence
 
 **Rule:** A sentence that reports project state MUST report one principal state dimension.
 
@@ -339,13 +339,13 @@ Each full term entry should use [[SLE Term Entry Template]] and record prohibite
 
 > The adjudication accepts the construction and updates it everywhere.
 
-### SLE-GE-02 — Identify the direct evidence type
+### Ariadline-GE-02 — Identify the direct evidence type
 
 **Rule:** A material linguistic statement MUST identify whether its direct basis is a source, corpus attestation, judgment result, analysis, or system result.
 
 **Verification:** The claim record contains one claim-class code and one evidence link.
 
-### SLE-GE-03 — Put the scope in the claim
+### Ariadline-GE-03 — Put the scope in the claim
 
 **Rule:** A generalization MUST identify the language variety, construction profile, population or dataset, and important exclusions.
 
@@ -357,7 +357,7 @@ Each full term entry should use [[SLE Term Entry Template]] and record prohibite
 
 > In the declared Hong Kong Cantonese profile, the reviewed evidence supports the construction only with the listed lexical and discourse restrictions. [GEN]
 
-### SLE-GE-04 — Block system-to-language promotion
+### Ariadline-GE-04 — Block system-to-language promotion
 
 **Rule:** A `[SYS]` statement MUST NOT use *prove*, *confirm*, *validate*, or *support* with a linguistic object unless an independent linguistic evidence statement follows.
 
@@ -366,7 +366,7 @@ Each full term entry should use [[SLE Term Entry Template]] and record prohibite
 > The parser recognizes all 18 positive fixtures at commit `abc123`. [SYS]  
 > This result establishes implementation coverage only. [LIM]
 
-### SLE-GE-05 — Separate retrieval from classification
+### Ariadline-GE-05 — Separate retrieval from classification
 
 **Rule:** A corpus report MUST distinguish retrieved candidates from reviewed genuine instances.
 
@@ -376,11 +376,11 @@ Each full term entry should use [[SLE Term Entry Template]] and record prohibite
 > Expert classification is incomplete. [STA]  
 > The candidate total is not evidence for construction frequency. [LIM]
 
-### SLE-GE-06 — Use item-level judgment quantities
+### Ariadline-GE-06 — Use item-level judgment quantities
 
 **Rule:** A judgment result MUST report the usable numerator and denominator for each critical item or explicitly link to the item-level table.
 
-### SLE-GE-07 — Mark current-state statements
+### Ariadline-GE-07 — Mark current-state statements
 
 **Rule:** A volatile value MUST identify its canonical owner and baseline date.
 
@@ -388,7 +388,7 @@ Each full term entry should use [[SLE Term Entry Template]] and record prohibite
 
 > At the 2026-07-27 baseline, `PROJECT-STATE.md` reports runtime v0.5.216. [STA]
 
-### SLE-GE-08 — Separate requirement, rationale, and exception
+### Ariadline-GE-08 — Separate requirement, rationale, and exception
 
 **Rule:** A procedural paragraph SHOULD use separate sentences for the required action, its rationale, and any exception.
 
@@ -398,19 +398,19 @@ Each full term entry should use [[SLE Term Entry Template]] and record prohibite
 > The locator permits independent verification. [ANA]  
 > The author MAY use a stable section identifier when the source has no page numbers. [REQ]
 
-### SLE-GE-09 — Identify the canonical owner
+### Ariadline-GE-09 — Identify the canonical owner
 
 **Rule:** A statement that changes or reports governed state MUST identify the canonical record that owns that state.
 
-### SLE-GE-10 — State negative boundaries
+### Ariadline-GE-10 — State negative boundaries
 
 **Rule:** A promoted construction MUST include executable nonmatching cases and a prose statement of the excluded scope.
 
-### SLE-GE-11 — Distinguish current and historical material
+### Ariadline-GE-11 — Distinguish current and historical material
 
 **Rule:** A historical record MUST identify itself as provenance and MUST NOT use unqualified present-tense wording for superseded state.
 
-### SLE-GE-12 — Report disposition explicitly
+### Ariadline-GE-12 — Report disposition explicitly
 
 **Rule:** A completed work report MUST end with one declared disposition and list the dimensions that changed and did not change.
 
@@ -427,7 +427,7 @@ Possible dispositions can include:
 
 ## Worked rewrites
 
-The following examples are illustrative SLE rewrites. They are not quotations from the repository.
+The following examples are illustrative Ariadline rewrites. They are not quotations from the repository.
 
 ### Example 1 — Corpus evidence and readiness
 
@@ -435,7 +435,7 @@ The following examples are illustrative SLE rewrites. They are not quotations fr
 
 > AB30 has five reviewed examples, so it is partly ready, and the parser tests pass.
 
-**SLE form**
+**Ariadline form**
 
 > The canonical AB30 packet contains five reviewed candidates. [OBS]  
 > Two candidates are classified as genuine. [OBS]  
@@ -456,7 +456,7 @@ The reader can identify what was observed, what was inferred, what remains unsup
 
 > Batch 18 internalized two records and narrowed another construction.
 
-**SLE form**
+**Ariadline form**
 
 > Accepted Batch 18 changes the ontology disposition of AB18 and AB21 to internalized. [DEC]  
 > It retains AB19 and AB20 as retired records. [DEC]  
@@ -474,7 +474,7 @@ The text prevents a reader from treating an ontology decision as a status migrat
 
 > All checks pass, so the change is valid.
 
-**SLE form**
+**Ariadline form**
 
 > `npm run verify` passes at commit `abc123`. [SYS]  
 > The result establishes that the checked repository invariants pass for that commit. [OBS]  
@@ -492,7 +492,7 @@ The word *valid* is replaced with the exact dimension that passed.
 
 > The construction now has enough evidence to be supported.
 
-**SLE form**
+**Ariadline form**
 
 > The exact claim is limited to the declared construction profile and variety. [GEN]  
 > The source ledger contains scope-matched support with exact locators. [OBS]  
@@ -513,7 +513,7 @@ The report exposes the evidence chain instead of relying on the vague phrase *en
 
 > Canto-span has 133 labels and no promotion-ready constructions.
 
-**SLE form**
+**Ariadline form**
 
 > At the 2026-07-27 baseline, the canonical project-state document reports 133 runtime labels. [STA]  
 > At the same baseline, it reports zero promotion-ready constructions. [STA]  
@@ -523,9 +523,9 @@ The report exposes the evidence chain instead of relying on the vague phrase *en
 
 The values remain useful without turning a case study into a competing current-state ledger.
 
-## SLE construction-note schema
+## Ariadline construction-note schema
 
-A Canto-span construction note that follows SLE-GE should have these sections.
+A Canto-span construction note that follows Ariadline-GE should have these sections.
 
 ### 1. Identity
 
@@ -617,9 +617,9 @@ For each proposition-level record:
 - next evidence needed;
 - reviewer and date.
 
-## SLE pull-request summary schema
+## Ariadline pull-request summary schema
 
-A substantive Canto-span PR could use this SLE-GE summary.
+A substantive Canto-span PR could use this Ariadline-GE summary.
 
 ```text
 Object:
@@ -662,7 +662,7 @@ Merge authority:
 State whether explicit approval is still required.
 ```
 
-## SLE release-note schema
+## Ariadline release-note schema
 
 A release note MUST distinguish:
 
@@ -719,9 +719,9 @@ These controls remain human review gates. See [[Quality Metrics and Acceptance G
 ### Suggested machine-readable header
 
 ```yaml
-sle:
+ariadline:
   version: "1.0"
-  profile: "SLE-GE"
+  profile: "Ariadline-GE"
   conformance_level: "B"
   termbase: "canto-span-1.0"
   document_class: "construction-note"
@@ -755,7 +755,7 @@ Start with approximately 40 high-risk terms:
 
 Each term must include a preferred designation, definition, scope, prohibited inference, and examples.
 
-### Phase 2 — Draft SLE-GE
+### Phase 2 — Draft Ariadline-GE
 
 1. Select the applicable SLE-Core, SLE-Research, SLE-Data, and SLE-Procedure rules.
 2. Add the REQ, DEC, and STA claim classes.
@@ -777,7 +777,7 @@ Rewrite, without changing policy:
 - five substantive PR summaries;
 - one release note.
 
-Keep paired original and SLE versions for evaluation.
+Keep paired original and Ariadline versions for evaluation.
 
 ### Phase 4 — Add a checker
 
@@ -798,7 +798,7 @@ Use the methods in [[Evaluation Framework]] and [[Pilot Study Design]].
 
 ### Phase 6 — Adopt incrementally
 
-Adopt SLE-GE first for:
+Adopt Ariadline-GE first for:
 
 1. new governance documents;
 2. new construction notes;
@@ -897,13 +897,13 @@ The profile could support other grammar engineering, corpus annotation, parser d
 | Authors write to satisfy the checker rather than communicate. | Keep human comprehension as the primary acceptance measure. |
 | The profile duplicates Canto-span governance. | Link to canonical owners and control expression; do not create parallel policy. |
 | The termbase becomes too large. | Begin with high-risk terms and add entries only for documented communication failures. |
-| SLE produces false confidence. | State that language conformance does not certify linguistic truth. |
+| Ariadline produces false confidence. | State that language conformance does not certify linguistic truth. |
 | Legacy documents become inconsistent during migration. | Use versioned adoption and explicit conformance declarations. |
 | Rewriting changes policy accidentally. | Review paired versions and require semantic-equivalence checks. |
 
 ## Non-goals
 
-SLE adoption must not:
+Ariadline adoption must not:
 
 - select a Cantonese linguistic theory;
 - promote a construction;
@@ -918,21 +918,21 @@ SLE adoption must not:
 
 ## Recommendation
 
-Use Canto-span as the first reference implementation for SLE-GE.
+Use Canto-span as the first reference implementation for Ariadline-GE.
 
 The pilot should begin with terminology and claim-class controls. These controls address the highest-risk misunderstandings while requiring the least change to Canto-span's underlying governance.
 
 The first empirical question should be:
 
-> Can trained readers determine Canto-span status, evidence, runtime behavior, scope, and authorization more accurately and quickly from SLE-GE documents than from semantically equivalent uncontrolled documents?
+> Can trained readers determine Canto-span status, evidence, runtime behavior, scope, and authorization more accurately and quickly from Ariadline-GE documents than from semantically equivalent uncontrolled documents?
 
-A positive result would provide evidence for SLE adoption. A negative or mixed result would identify which controls are unnecessary, too costly, or insufficiently precise.
+A positive result would provide evidence for Ariadline adoption. A negative or mixed result would identify which controls are unnecessary, too costly, or insufficiently precise.
 
-## Related SLE notes
+## Related Ariadline notes
 
 - [[Project Charter]]
 - [[Design Principles]]
-- [[SLE Architecture]]
+- [[Ariadline Architecture]]
 - [[Terminology Control]]
 - [[Controlled Vocabulary Plan]]
 - [[Grammar and Style Rule Plan]]
@@ -947,8 +947,8 @@ A positive result would provide evidence for SLE adoption. A negative or mixed r
 - [[Pilot Study Design]]
 - [[Quality Metrics and Acceptance Gates]]
 - [[Governance and Change Control]]
-- [[SLE Rule Proposal Template]]
-- [[SLE Term Entry Template]]
-- [[SLE Test Case Template]]
+- [[Ariadline Rule Proposal Template]]
+- [[Ariadline Term Entry Template]]
+- [[Ariadline Test Case Template]]
 - [[Controlled Natural Language]]
 - [[Attestation and Productivity]]

@@ -1,15 +1,15 @@
 ---
-title: "SLE Term Entry Template"
+title: "Ariadline Term Entry Template"
 type: template
 status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - template
   - terminology
 ---
-# SLE Term Entry Template
+# Ariadline Term Entry Template
 
 ## Metadata
 
@@ -62,7 +62,7 @@ Record theory-specific meanings or disputed boundaries.
 
 ## Tests
 
-Link to [[SLE Test Case Template|term interpretation tests]].
+Link to [[Ariadline Test Case Template|term interpretation tests]].
 
 ## Change history
 

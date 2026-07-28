@@ -1,23 +1,23 @@
 ---
-title: "Optional Automation Notes for SLE Review v0.1"
+title: "Optional Automation Notes for Ariadline Review v0.1"
 type: informative-note
 status: informative
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - automation
   - informative
   - non-normative
 ---
-# Optional Automation Notes for SLE Review v0.1
+# Optional Automation Notes for Ariadline Review v0.1
 
 ## Status
 
 This note is informative and outside the core reference artifact.
 
-No software, schema, machine-readable diagnostic, repository metadata, or automated pass is required by [[SLE Editorial Conformance Checklist v0.1]].
+No software, schema, machine-readable diagnostic, repository metadata, or automated pass is required by [[Ariadline Editorial Conformance Checklist v0.1]].
 
 A tool may flag text for human review. It cannot create a conformance result, establish authorized meaning, confirm preservation, determine linguistic truth, or replace human review.
 
@@ -42,7 +42,7 @@ A tool may flag text for human review. It cannot create a conformance result, es
 
 Automated output must not be labelled:
 
-- full SLE conformance;
+- full Ariadline conformance;
 - independent meaning preservation;
 - linguistic or grammaticality validation;
 - theory or method approval;
@@ -61,10 +61,10 @@ A project using optional automation should record:
 - known false-positive and false-negative risks;
 - human reviewer role;
 - disposition of material findings;
-- confirmation that tool output did not replace [[Profiles and Conformance]], [[Human Review Boundary Register v0.1]], or the authorized-meaning process in [[SLE Semantic Equivalence Review Template v0.1]].
+- confirmation that tool output did not replace [[Profiles and Conformance]], [[Human Review Boundary Register v0.1]], or the authorized-meaning process in [[Ariadline Semantic Equivalence Review Template v0.1]].
 
 ## Future boundary
 
-A later software project may define executable heuristics only under separately authorized scope. Software feasibility cannot determine whether a language rule belongs in SLE.
+A later software project may define executable heuristics only under separately authorized scope. Software feasibility cannot determine whether a language rule belongs in Ariadline.
 
 Tool findings must remain distinct from human item outcomes, conformance results, and typed evaluation records.

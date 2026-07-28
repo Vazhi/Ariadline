@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - implementation
   - corpus
   - annotation
@@ -14,7 +14,7 @@ tags:
 
 ## Objective
 
-SLE should describe linguistic datasets clearly without creating a new incompatible data ecosystem.
+Ariadline should describe linguistic datasets clearly without creating a new incompatible data ecosystem.
 
 ## Standards to evaluate
 
@@ -26,7 +26,7 @@ SLE should describe linguistic datasets clearly without creating a new incompati
 
 ## Interoperability principle
 
-SLE controls prose and declarations around a data model. It does not require all projects to convert to one annotation framework.
+Ariadline controls prose and declarations around a data model. It does not require all projects to convert to one annotation framework.
 
 ## Required declaration for datasets
 
@@ -66,4 +66,4 @@ When a project maps one label set to another, state whether the mapping is:
 
 ## Export goal
 
-The SLE termbase and rule inventory should support Markdown plus structured export. Candidate formats include JSON, CSV, and YAML. Dataset-specific exports can align with CLDF or CoNLL-U where appropriate.
+The Ariadline termbase and rule inventory should support Markdown plus structured export. Candidate formats include JSON, CSV, and YAML. Dataset-specific exports can align with CLDF or CoNLL-U where appropriate.

@@ -1,25 +1,25 @@
 ---
-title: "SLE-GE Canto-span Pilot Baseline v0.1"
+title: "Ariadline-GE Canto-span Pilot Baseline v0.1"
 type: validation-baseline
 status: locked
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 aliases:
-  - "SLE-GE Pilot Baseline"
+  - "Ariadline-GE Pilot Baseline"
   - "Canto-span Pilot Baseline"
 tags:
-  - sle
+  - ariadline
   - validation
   - pilot-baseline
   - canto-span
   - grammar-engineering
 ---
 
-# SLE-GE Canto-span Pilot Baseline v0.1
+# Ariadline-GE Canto-span Pilot Baseline v0.1
 
 > [!abstract] Purpose
-> This note freezes the source materials, reader questions, measures, safeguards, and decision outcomes for the first Canto-span SLE-GE test run. It must be accepted and locked before paired rewriting begins.
+> This note freezes the source materials, reader questions, measures, safeguards, and decision outcomes for the first Canto-span Ariadline-GE test run. It must be accepted and locked before paired rewriting begins.
 
 ## Baseline status
 
@@ -29,20 +29,20 @@ tags:
 - Baseline date: **2026-07-27**
 - External repository: `Vazhi/canto-span`
 - Frozen commit: [`c9dd631739734a5ab886f0b667db9888b0add13b`](https://github.com/Vazhi/canto-span/commit/c9dd631739734a5ab886f0b667db9888b0add13b)
-- Parent SLE issue: [#1](https://github.com/Vazhi/simplified-linguistic-english/issues/1)
-- Baseline issue and amendment: [#2](https://github.com/Vazhi/simplified-linguistic-english/issues/2)
-- Deviation ledger: [#11](https://github.com/Vazhi/simplified-linguistic-english/issues/11)
+- Parent Ariadline issue: [#1](https://github.com/Vazhi/Ariadline/issues/1)
+- Baseline issue and amendment: [#2](https://github.com/Vazhi/Ariadline/issues/2)
+- Deviation ledger: [#11](https://github.com/Vazhi/Ariadline/issues/11)
 
-This note is an SLE research instrument. It is not a current-state owner for Canto-span. All copied values are dated observations from the frozen commit.
+This note is an Ariadline research instrument. It is not a current-state owner for Canto-span. All copied values are dated observations from the frozen commit.
 
 ## Experimental purpose
 
 The test run has two objectives:
 
-1. determine whether a proposed SLE Grammar Engineering Profile helps readers interpret Canto-span documentation;
-2. discover where the current proposed [[Simplified Linguistic English|SLE]] notes, profiles, templates, and repository infrastructure are insufficient.
+1. determine whether a proposed Ariadline Grammar Engineering Profile helps readers interpret Canto-span documentation;
+2. discover where the current proposed [[Ariadline]] notes, profiles, templates, and repository infrastructure are insufficient.
 
-A workaround is evidence about a gap. It is not evidence that the current SLE already supported the task.
+A workaround is evidence about a gap. It is not evidence that the current Ariadline already supported the task.
 
 ## Authority and reproducibility rules
 
@@ -162,7 +162,7 @@ The reader-question set is locked for baseline version 0.1.
 21. Which state dimensions changed?
 22. Which adjacent state dimensions explicitly did not change?
 
-Questions may be presented in subsets appropriate to a document class. Their meanings and scoring keys must not change between original and SLE-GE conditions.
+Questions may be presented in subsets appropriate to a document class. Their meanings and scoring keys must not change between original and Ariadline-GE conditions.
 
 ## Measures
 
@@ -206,10 +206,10 @@ These measures extend [[Evaluation Framework]] and [[Pilot Study Design]].
 Where the selected material permits, compare:
 
 1. the frozen original;
-2. expert-edited plain prose without SLE-specific controls;
-3. SLE-GE prose.
+2. expert-edited plain prose without Ariadline-specific controls;
+3. Ariadline-GE prose.
 
-The plain-edited condition is required when practical so that the evaluation does not attribute ordinary editing benefits to SLE.
+The plain-edited condition is required when practical so that the evaluation does not attribute ordinary editing benefits to Ariadline.
 
 ## Semantic-equivalence safeguards
 
@@ -254,10 +254,10 @@ Exact numeric thresholds, sample sizes, exclusion rules, and statistical models 
 This baseline does not:
 
 - rewrite any selected Canto-span text;
-- declare a final SLE-GE profile;
+- declare a final Ariadline-GE profile;
 - certify that any linguistic analysis is true;
 - change Canto-span identity, status, evidence, runtime behavior, readiness, workflow, release state, or authorization;
-- make SLE conformance equivalent to linguistic validity;
+- make Ariadline conformance equivalent to linguistic validity;
 - require adoption before evaluation;
 - treat a proxy artifact as an original document class;
 - generalize results beyond the sampled materials and participant groups.
@@ -278,7 +278,7 @@ The following test-run findings are recorded in issue #11:
 
 DEV-013 was mitigated by including both rare populated records and reducing within-family redundancy. DEV-016 was mitigated through the reviewed issue amendment and an explicit proxy set. DEV-017 was mitigated through hashed snapshots. DEV-018 was mitigated by defining and applying the `pending_review` to `locked` transition.
 
-These deviations must be included in authoring-cost and infrastructure-burden analysis. A platform limitation must not be misclassified as an SLE language-design failure.
+These deviations must be included in authoring-cost and infrastructure-burden analysis. A platform limitation must not be misclassified as an Ariadline language-design failure.
 
 ## Change control
 
@@ -288,7 +288,7 @@ These deviations must be included in authoring-cost and infrastructure-burden an
 - A source that disappears remains identified by its frozen commit path and recorded metadata.
 - A proxy can be replaced with an original artifact only through a baseline amendment before rewriting begins.
 
-## Related SLE notes
+## Related Ariadline notes
 
 - [[Canto-span Case Study]]
 - [[Canto-span A-not-A Worked Example]]

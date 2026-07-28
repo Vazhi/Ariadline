@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - conformance
   - review-boundary
   - neutrality
@@ -17,13 +17,13 @@ tags:
 
 This register prevents human editorial review from being mistaken for linguistic, methodological, ethical, accessibility, translation, software, or community certification.
 
-It supports [[SLE Editorial Conformance Checklist v0.1]], [[Profiles and Conformance]], and `SLE-RULE-0018` in [[SLE for Linguistics Language Rules v0.1]].
+It supports [[Ariadline Editorial Conformance Checklist v0.1]], [[Profiles and Conformance]], and `SLE-RULE-0018` in [[Ariadline Language Rules v0.1]].
 
 ## Core rule
 
-A reviewer may decide whether text communicates its authorized or declared content under applicable SLE controls.
+A reviewer may decide whether text communicates its authorized or declared content under applicable Ariadline controls.
 
-A reviewer may not use an SLE result to certify:
+A reviewer may not use an Ariadline result to certify:
 
 - linguistic truth;
 - grammaticality or acceptability;
@@ -39,7 +39,7 @@ These matters require separately named authority and evidence.
 
 ## Boundary decisions
 
-| Area | Human SLE reviewer may decide | Human SLE reviewer must not decide | Appropriate separate record |
+| Area | Human Ariadline reviewer may decide | Human Ariadline reviewer must not decide | Appropriate separate record |
 |---|---|---|---|
 | authorized meaning | whether the controlling meaning record is identified and whether a revision visibly changes it | what an authentic author intended when no legitimate meaning authority exists | source-author, authorized-proxy, or community review |
 | claim scope | whether population, variety, dataset, period, or condition is recoverable | whether the sample justifies the generalization | domain or methods review |
@@ -61,7 +61,7 @@ These matters require separately named authority and evidence.
 | community authority | whether access, attribution, and authority boundaries are stated | whether representation is culturally or politically authorized | community-controlled review |
 | historical statements | whether historical state, current state, and source date are distinguished | whether reconstruction is correct | historical or archival review |
 | citations | whether a claim has an identifiable source reference | whether the source is correct, complete, or persuasive | source verification and peer review |
-| ethics | whether text avoids implying SLE ethics approval | whether collection, consent, or publication is ethical | ethics board or community authority |
+| ethics | whether text avoids implying Ariadline ethics approval | whether collection, consent, or publication is ethical | ethics board or community authority |
 
 ## Escalation outcomes
 
@@ -70,7 +70,7 @@ Use one of these when the boundary is reached:
 - **Pass for communication; substantive review pending**
 - **Not determined — authorized meaning is unclear or unavailable**
 - **Not determined — domain authority required**
-- **Not applicable to SLE**
+- **Not applicable to Ariadline**
 - **Fail — the text falsely implies substantive certification**
 - **Separate review record supplied**
 
@@ -84,8 +84,8 @@ When an editorial correction could alter polarity, quantification, scope, eviden
 4. request author, proxy, translator, community, or domain review as applicable;
 5. use **not determined** until meaning authority resolves the conflict.
 
-Use [[SLE Semantic Equivalence Review Template v0.1]] and [[Semantic Equivalence Review Record v0.1]] for passage-to-brief and preservation decisions.
+Use [[Ariadline Semantic Equivalence Review Template v0.1]] and [[Semantic Equivalence Review Record v0.1]] for passage-to-brief and preservation decisions.
 
 ## Canto-span boundary
 
-Canto-span findings remain project-adoption findings unless the same communication problem has independent multi-domain support. Its statuses, parser labels, workflows, and release practices cannot become SLE criteria through this register.
+Canto-span findings remain project-adoption findings unless the same communication problem has independent multi-domain support. Its statuses, parser labels, workflows, and release practices cannot become Ariadline criteria through this register.

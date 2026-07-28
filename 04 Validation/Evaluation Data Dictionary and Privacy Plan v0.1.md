@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - data
   - privacy
@@ -218,6 +218,6 @@ Every release must identify:
 - exclusions and deviations;
 - publication date;
 - license or access terms;
-- relation to the controlling SLE draft.
+- relation to the controlling Ariadline draft.
 
-A released dataset does not become normative SLE evidence merely because it is public.
+A released dataset does not become normative Ariadline evidence merely because it is public.

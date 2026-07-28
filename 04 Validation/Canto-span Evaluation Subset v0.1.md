@@ -7,7 +7,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - canto-span
   - stress-test
@@ -17,13 +17,13 @@ tags:
 
 ## Authority warning
 
-This is a bounded non-authoritative stress test for [[Multi-Domain SLE Evaluation Corpus v0.1]].
+This is a bounded non-authoritative stress test for [[Multi-Domain Ariadline Evaluation Corpus v0.1]].
 
-Canto-span does not define SLE rules, patterns, profiles, conformance, evaluation methods, or terminology. These are project-constructed test passages, not copied Canto-span source prose. They cannot satisfy independent domain, theory, language, method, or genre coverage.
+Canto-span does not define Ariadline rules, patterns, profiles, conformance, evaluation methods, or terminology. These are project-constructed test passages, not copied Canto-span source prose. They cannot satisfy independent domain, theory, language, method, or genre coverage.
 
-- SLE baseline: merge commit `4334ef9a8afb1ec0e995145865afa38292ba9bf2`
+- Ariadline baseline: merge commit `4334ef9a8afb1ec0e995145865afa38292ba9bf2`
 - Source fixture: [[Canto-span Pilot Termbase v0.1]]
-- Review template: [[SLE Semantic Equivalence Review Template v0.1]]
+- Review template: [[Ariadline Semantic Equivalence Review Template v0.1]]
 
 ## SLE-EVAL-CS-0001 — Status label is not a truth judgment
 
@@ -93,14 +93,14 @@ Canto-span does not define SLE rules, patterns, profiles, conformance, evaluatio
 - **Controlled-to-brief internal result:** matches brief
 - **Literal passage-to-passage equivalence:** not equivalent by design when the uncontrolled draft overstates or obscures the authorized brief
 - **Independent preservation result:** not determined
-- **Risk:** The workflow remains Canto-span-specific and cannot define SLE.
+- **Risk:** The workflow remains Canto-span-specific and cannot define Ariadline.
 
 # Subset restrictions
 
 - Keep the IDs under `SLE-EVAL-CS-*`.
 - Keep the briefs under `SLE-BRIEF-CS-*`.
 - Do not combine this subset with independent-source coverage without showing the source class.
-- Do not generalize Canto-span statuses or workflows into SLE.
+- Do not generalize Canto-span statuses or workflows into Ariadline.
 - Treat failed or disputed rewrites as adoption findings unless independent multi-domain evidence supports the same issue.
 - Independent preservation remains `not determined` for both items.
 

@@ -1,21 +1,21 @@
 ---
-title: "SLE Profile Applicability Register v0.1"
+title: "Ariadline Profile Applicability Register v0.1"
 type: applicability-register
 status: proposed
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - profiles
   - conformance
   - applicability
 ---
-# SLE Profile Applicability Register v0.1
+# Ariadline Profile Applicability Register v0.1
 
 ## Purpose
 
-This register maps each proposed SLE for Linguistics profile to exact rule IDs in [[SLE for Linguistics Language Rules v0.1]].
+This register maps each proposed Ariadline profile to exact rule IDs in [[Ariadline Language Rules v0.1]].
 
 A profile name is shorthand only when a declaration also identifies this register version and preserves an auditable record of the rules that were applicable, not applicable, or waived.
 
@@ -24,7 +24,7 @@ The register is human-readable. It does not require software or machine-readable
 ## Profile-set identity
 
 - Profile-set version: `SLE-PROFILE-SET-0.1`
-- Rule-set version: `SLE for Linguistics Language Rules v0.1`
+- Rule-set version: `Ariadline Language Rules v0.1`
 - Status: proposed
 
 A change to a profile mapping must receive a new profile-set version. A declaration against an earlier profile-set version keeps its original meaning.
@@ -121,7 +121,7 @@ A combined profile declaration does not automatically make every conditional rul
 
 A declaration that uses a profile must identify:
 
-1. the SLE reference version;
+1. the Ariadline reference version;
 2. `SLE-PROFILE-SET-0.1` or another controlling profile-set version;
 3. the selected profile or profiles;
 4. the exact conformance object;
@@ -135,7 +135,7 @@ The rule list may appear in the declaration, an appendix, a review form, or anot
 ## Example resolution record
 
 > Conformance object: Sections 2–4.  
-> Reference version: SLE for Linguistics v0.1.  
+> Reference version: Ariadline v0.1.  
 > Profile set: SLE-PROFILE-SET-0.1.  
 > Profile: SLE-Research.  
 > Conditional rules applied: SLE-RULE-0011, SLE-RULE-0013, SLE-RULE-0014, SLE-RULE-0021.  

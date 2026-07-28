@@ -1,19 +1,19 @@
 ---
-title: "SLE Architecture"
+title: "Ariadline Architecture"
 type: design
 status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - foundation
   - architecture
 ---
-# SLE Architecture
+# Ariadline Architecture
 
 ## Proposed architecture
 
-SLE will use six coordinated components.
+Ariadline will use six coordinated components.
 
 | Component | Function | Primary note |
 |---|---|---|
@@ -26,13 +26,13 @@ SLE will use six coordinated components.
 
 ## Human-oriented position
 
-The initial SLE design is a **human-oriented controlled language**. It will improve consistency and reduce ambiguity without requiring every sentence to map to a formal logic.
+The initial Ariadline design is a **human-oriented controlled language**. It will improve consistency and reduce ambiguity without requiring every sentence to map to a formal logic.
 
 Machine-oriented extensions can be developed later as optional profiles.
 
 ## Rule classes
 
-Each SLE rule will have one class:
+Each Ariadline rule will have one class:
 
 - **Lexical** — controls a word or phrase.
 - **Syntactic** — controls sentence form.
@@ -46,15 +46,15 @@ Each SLE rule will have one class:
 
 A document conforms to:
 
-1. a named SLE version;
-2. a named [[SLE Profile|profile]];
+1. a named Ariadline version;
+2. a named [[Ariadline Profile|profile]];
 3. a declared termbase;
 4. any listed project extensions.
 
 Example declaration:
 
-> This document conforms to SLE 0.1, Research Profile, with the Cantonese Grammar Termbase 0.3.
+> This document conforms to Ariadline 0.1, Research Profile, with the Cantonese Grammar Termbase 0.3.
 
 ## Extension rule
 
-A project can add technical terms and local conventions. An extension must not silently change the meaning of a core SLE term.
+A project can add technical terms and local conventions. An extension must not silently change the meaning of a core Ariadline term.

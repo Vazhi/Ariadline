@@ -5,7 +5,7 @@ status: revised
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - governance
   - change-control
 ---
@@ -13,11 +13,11 @@ tags:
 
 ## Purpose
 
-Governance protects the meaning, neutrality, usability, auditability, and version history of the SLE for Linguistics reference artifact.
+Governance protects the meaning, neutrality, usability, auditability, and version history of the Ariadline reference artifact.
 
 A project inconvenience, software limitation, or one-domain preference does not by itself justify a normative change.
 
-Conformance semantics are defined in [[Profiles and Conformance]]. Exact profile mappings are controlled by [[SLE Profile Applicability Register v0.1]].
+Conformance semantics are defined in [[Profiles and Conformance]]. Exact profile mappings are controlled by [[Ariadline Profile Applicability Register v0.1]].
 
 ## Governance roles
 
@@ -67,13 +67,13 @@ Use these states:
 - **deprecated** — still recognized but discouraged or scheduled for removal;
 - **retired** — no longer normative and retained for history.
 
-A proposed or revised item must not be described as established SLE practice.
+A proposed or revised item must not be described as established Ariadline practice.
 
 A profile-set version controls an exact rule mapping. Changing that mapping is a normative change and must receive a compatibility classification.
 
 ## Change process
 
-1. Submit [[SLE Change Request Template|a change request]].
+1. Submit [[Ariadline Change Request Template|a change request]].
 2. Identify affected rules, patterns, terms, profile mappings, conformance results, review methods, evaluation types, translations, examples, and annexes.
 3. State the communication problem and its scope.
 4. Provide independent evidence, examples, and alternatives appropriate to the proposed change.
@@ -111,9 +111,9 @@ A narrower finding may support:
 - an informative annex;
 - a publisher or community extension;
 - a worked example;
-- no SLE change.
+- no Ariadline change.
 
-Canto-span-specific findings can inform a later adoption guide. They cannot become core SLE requirements without independent justification.
+Canto-span-specific findings can inform a later adoption guide. They cannot become core Ariadline requirements without independent justification.
 
 ## Conflict-of-framework rule
 
@@ -149,7 +149,7 @@ Two declarations using the same profile and profile-set version must refer to th
 
 ## Waiver governance
 
-A waiver permits a bounded departure from an applicable communication control. It does not amend SLE.
+A waiver permits a bounded departure from an applicable communication control. It does not amend Ariadline.
 
 A material waiver record must identify:
 
@@ -174,13 +174,13 @@ A waiver must not conceal an unsupported claim, missing evidence, ethical proble
 
 An extension must identify:
 
-- controlling SLE version;
+- controlling Ariadline version;
 - controlling profile-set version;
 - responsible publisher, community, or project;
 - local requirements and their justification;
 - added, replaced, or excluded rule IDs;
 - affected patterns;
-- compatibility with core SLE;
+- compatibility with core Ariadline;
 - declaration method;
 - review and retirement process.
 

@@ -8,7 +8,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - meaning-preservation
   - review-record
@@ -17,9 +17,9 @@ tags:
 
 ## Purpose
 
-This register records the project-internal construction checks for [[Multi-Domain SLE Evaluation Corpus v0.1]] and [[Canto-span Evaluation Subset v0.1]].
+This register records the project-internal construction checks for [[Multi-Domain Ariadline Evaluation Corpus v0.1]] and [[Canto-span Evaluation Subset v0.1]].
 
-The checks use [[SLE Semantic Equivalence Review Template v0.1]]. They are not independent domain, language, community, translator, or source-author approvals.
+The checks use [[Ariadline Semantic Equivalence Review Template v0.1]]. They are not independent domain, language, community, translator, or source-author approvals.
 
 ## Controlling distinction
 
@@ -93,4 +93,4 @@ When no authorized resolution exists:
 
 ## Disposition
 
-The v0.1 items may support internal rule auditing and reader-task design. They may not be described as independently equivalent pairs or as evidence that SLE improves linguistic writing.
+The v0.1 items may support internal rule auditing and reader-task design. They may not be described as independently equivalent pairs or as evidence that Ariadline improves linguistic writing.

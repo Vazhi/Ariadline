@@ -5,7 +5,7 @@ status: draft
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - language-design
   - vocabulary
 ---
@@ -72,7 +72,7 @@ Permit a project termbase for language-specific categories, theory-specific term
 1. Collect a representative corpus of linguistic writing.
 2. Identify high-frequency and high-confusion terms.
 3. Record real ambiguity incidents from review, annotation, or replication.
-4. Draft entries with [[SLE Term Entry Template]].
+4. Draft entries with [[Ariadline Term Entry Template]].
 5. Test definitions with target users.
 6. approve only entries that improve interpretation or consistency.
 7. publish machine-readable and Markdown forms.

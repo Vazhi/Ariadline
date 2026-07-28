@@ -1,15 +1,15 @@
 ---
-title: "SLE Rule Proposal Template"
+title: "Ariadline Rule Proposal Template"
 type: template
 status: revised
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - template
   - rule
 ---
-# SLE Rule Proposal Template
+# Ariadline Rule Proposal Template
 
 ## Metadata
 
@@ -55,9 +55,9 @@ Identify exact source passages showing that the communication problem exists.
 
 Identify exact source passages that use or recommend an equivalent control. State when no direct control evidence exists.
 
-### SLE-local hypothesis
+### Ariadline-local hypothesis
 
-State which part of the proposed rule is an SLE design hypothesis rather than an inherited or independently established control.
+State which part of the proposed rule is an Ariadline design hypothesis rather than an inherited or independently established control.
 
 Do not label two sources from one research community as cross-domain convergence by themselves.
 
@@ -102,4 +102,4 @@ Link to [[Evaluation Framework|study results]], reviewer notes, and test cases.
 
 ## Compatibility
 
-State whether the rule changes prior SLE conformance.
+State whether the rule changes prior Ariadline conformance.

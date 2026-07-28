@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - reporting
   - deviations
@@ -61,7 +61,7 @@ For every code:
 - effect on analysis:
 - explanation:
 
-Do not exclude disagreement with SLE, a preference for ordinary editing, bias reports, or `not determined`.
+Do not exclude disagreement with Ariadline, a preference for ordinary editing, bias reports, or `not determined`.
 
 ## Accessibility and accommodation
 
@@ -107,7 +107,7 @@ Report:
 
 - semantic-preservation failures;
 - false substantive certification;
-- reader confusion caused by SLE controls;
+- reader confusion caused by Ariadline controls;
 - ordinary editing advantages;
 - burden, fragmentation, and repetition;
 - theory, method, language, accessibility, or community bias;

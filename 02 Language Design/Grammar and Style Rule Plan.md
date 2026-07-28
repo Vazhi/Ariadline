@@ -5,7 +5,7 @@ status: revised
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - language-design
   - grammar
   - style
@@ -14,7 +14,7 @@ tags:
 
 ## Current normative draft
 
-The first independent rule tranche is in [[SLE for Linguistics Language Rules v0.1]].
+The first independent rule tranche is in [[Ariadline Language Rules v0.1]].
 
 The draft is prose-first and written for a future human reference artifact. It does not require software, machine-readable headers, or Canto-span practices.
 
@@ -66,13 +66,13 @@ This preference is guidance, not a universal prohibition on nominalization.
 
 ### Fixed sentence-length limit
 
-SLE v0.1 does not define a maximum sentence length.
+Ariadline v0.1 does not define a maximum sentence length.
 
 Sentence length can be an editorial review signal, but a long sentence is not nonconforming only because of its word count. A short sentence can still be ambiguous or overloaded.
 
 ### Mandatory active voice
 
-SLE v0.1 does not require active voice in all contexts.
+Ariadline v0.1 does not require active voice in all contexts.
 
 Active voice is useful when the actor matters. Passive voice is permitted when the actor is unknown, irrelevant, intentionally backgrounded, or already established.
 
@@ -115,4 +115,4 @@ Each rule proposal must include:
 
 Optional tool support can be recorded, but tool feasibility is not an adoption criterion.
 
-Use [[SLE Rule Proposal Template]] and record adopted rule IDs in [[Rule Inventory]].
+Use [[Ariadline Rule Proposal Template]] and record adopted rule IDs in [[Rule Inventory]].

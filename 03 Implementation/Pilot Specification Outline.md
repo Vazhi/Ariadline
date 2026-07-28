@@ -5,7 +5,7 @@ status: revised
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - implementation
   - pilot
 ---
@@ -28,7 +28,7 @@ The pilot assembles an auditable proposed reference artifact for human evaluatio
 
 ### Part 2 — Language rules
 
-Use the proposed rules in [[SLE for Linguistics Language Rules v0.1]].
+Use the proposed rules in [[Ariadline Language Rules v0.1]].
 
 Each rule must include:
 
@@ -44,7 +44,7 @@ Each rule must include:
 
 ### Part 3 — Document patterns
 
-Use [[SLE for Linguistics Document Patterns v0.1]] and [[SLE Document Pattern Outlines v0.1]].
+Use [[Ariadline Document Patterns v0.1]] and [[Ariadline Document Pattern Outlines v0.1]].
 
 The pattern catalogue must cover multiple linguistic purposes without requiring one section schema or English rhetorical order. It must include:
 
@@ -64,7 +64,7 @@ The core term list must remain independent of Canto-span. Project-specific termb
 
 ### Part 5 — Profiles and conformance
 
-Use [[Profiles and Conformance]] and [[SLE Profile Applicability Register v0.1]].
+Use [[Profiles and Conformance]] and [[Ariadline Profile Applicability Register v0.1]].
 
 Define:
 

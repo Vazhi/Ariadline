@@ -5,7 +5,7 @@ status: revised
 created: 2026-07-27
 updated: 2026-07-27
 tags:
-  - sle
+  - ariadline
   - governance
   - versioning
 ---
@@ -13,11 +13,11 @@ tags:
 
 ## Purpose
 
-Versioning identifies the controlling edition of the human-readable SLE for Linguistics reference artifact and explains compatibility effects.
+Versioning identifies the controlling edition of the human-readable Ariadline reference artifact and explains compatibility effects.
 
 The reference artifact is primary. Machine-readable representations and tools are optional supporting products.
 
-Conformance terminology and profile resolution are defined in [[Profiles and Conformance]] and [[SLE Profile Applicability Register v0.1]].
+Conformance terminology and profile resolution are defined in [[Profiles and Conformance]] and [[Ariadline Profile Applicability Register v0.1]].
 
 ## Version format
 
@@ -76,7 +76,7 @@ A normative addition can avoid an immediate major change only when the release e
 - placing the obligation in a new optional profile;
 - publishing it as proposed or recommended rather than required;
 - setting a future effective major edition while preserving current declarations;
-- versioning a local extension separately from core SLE.
+- versioning a local extension separately from core Ariadline.
 
 The release record must state who remains covered by the prior requirement set, for how long, and how migration will occur.
 

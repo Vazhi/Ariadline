@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - conditions
   - preservation
@@ -28,7 +28,7 @@ It operationalizes the task-specific condition model in [[Multi-Domain Reader an
 - Optional conditions:
 - Is U admissible:
 - Reason for U:
-- Controlling SLE version:
+- Controlling Ariadline version:
 - Profile:
 - Applicable rule IDs:
 - Applicable pattern IDs:
@@ -59,16 +59,16 @@ Deliberately defective U passages are limited to synthetic procedure pilots.
 - Version or hash:
 - Mask code:
 - Editing rationale:
-- Any SLE-specific controls intentionally excluded:
+- Any Ariadline-specific controls intentionally excluded:
 - Potential unintended changes:
 
 P must be a fair ordinary-editing comparator, not a weakened condition designed to make S appear superior.
 
-## Condition S — proposed SLE editing or guidance
+## Condition S — proposed Ariadline editing or guidance
 
 - Author role:
 - Instructions given:
-- SLE version:
+- Ariadline version:
 - Profile and applicability record:
 - Rule and pattern IDs applied:
 - Waiver or non-applicability decisions:

@@ -10,7 +10,7 @@ aliases:
   - "Canto-span Pilot Termbase v0.1"
   - "Canto-span Vocabulary Fixture"
 tags:
-  - sle
+  - ariadline
   - test-fixture
   - canto-span
   - terminology
@@ -20,7 +20,7 @@ tags:
 # Canto-span Vocabulary Stress-Test Fixture v0.1
 
 > [!warning] Non-normative test material
-> This package records Canto-span-specific vocabulary for stress-testing future SLE for Linguistics rules. It does not define SLE terminology, establish normative writing rules, or make Canto-span a model that other linguistic projects must copy.
+> This package records Canto-span-specific vocabulary for stress-testing future Ariadline rules. It does not define Ariadline terminology, establish normative writing rules, or make Canto-span a model that other linguistic projects must copy.
 
 ## Purpose
 
@@ -29,23 +29,23 @@ The fixture records 46 Canto-span-specific meanings that are easy to collapse in
 The fixture has three permitted uses:
 
 1. identify difficult communication problems;
-2. test whether an independently proposed SLE rule preserves important distinctions;
-3. support a later, separate effort to apply the completed SLE reference specification to Canto-span documentation.
+2. test whether an independently proposed Ariadline rule preserves important distinctions;
+3. support a later, separate effort to apply the completed Ariadline reference specification to Canto-span documentation.
 
-It must not be used as normative evidence for SLE.
+It must not be used as normative evidence for Ariadline.
 
 ## Authority boundary
 
-Canto-span is not a gold standard. No term, status system, workflow, ontology, schema, or governance rule in this fixture enters normative SLE merely because Canto-span uses it.
+Canto-span is not a gold standard. No term, status system, workflow, ontology, schema, or governance rule in this fixture enters normative Ariadline merely because Canto-span uses it.
 
-A general SLE rule or term requires independent justification across linguistic subfields, methods, theories, languages, document genres, and project types.
+A general Ariadline rule or term requires independent justification across linguistic subfields, methods, theories, languages, document genres, and project types.
 
 The intended direction of influence is:
 
 ```text
-independent SLE design and multi-domain validation
+independent Ariadline design and multi-domain validation
         ↓
-SLE for Linguistics reference specification
+Ariadline reference specification
         ↓
 optional later application to Canto-span documentation
 ```
@@ -60,11 +60,11 @@ The fixture must not create the reverse dependency.
 - Structured mirror: `06 Registers/Canto-span Pilot Termbase v0.1.tsv` manifest plus six part TSV files
 - Status: **non-normative stress-test fixture v0.1**
 
-The structured mirror exists only to reproduce and compare this test material. Machine-readable files are not required for the eventual SLE reference specification.
+The structured mirror exists only to reproduce and compare this test material. Machine-readable files are not required for the eventual Ariadline reference specification.
 
 Each entry contains a preferred local designation, concept ID, project-local definition, scope, allowed variants, excluded interpretations, example, project-local owner or source, frozen test reference, and change status.
 
-See [[Terminology Control]], [[Term Inventory]], [[Canto-span Case Study]], and [[SLE-GE Canto-span Pilot Baseline v0.1]].
+See [[Terminology Control]], [[Term Inventory]], [[Canto-span Case Study]], and [[Ariadline-GE Canto-span Pilot Baseline v0.1]].
 
 ## Fixture parts
 
@@ -92,13 +92,13 @@ The legacy filenames retain the word `Termbase` for branch continuity. The norma
 | Repository action | merge authorization | passing checks, review readiness, ownership |
 | Publication action | release authorization | merge authorization, passing release checks, version metadata |
 
-These distinctions are test cases. Future SLE may preserve, combine, rename, or reject them after independent review.
+These distinctions are test cases. Future Ariadline may preserve, combine, rename, or reject them after independent review.
 
 ## Representation rule for the fixture
 
 The six Markdown parts are the human-readable test record. The TSV manifest and six TSV parts are a structured mirror. Both forms must change in the same pull request while this fixture is maintained.
 
-This local maintenance rule does not establish a general SLE requirement for machine-readable terminology.
+This local maintenance rule does not establish a general Ariadline requirement for machine-readable terminology.
 
 ## Reference contract
 
@@ -108,7 +108,7 @@ This local maintenance rule does not establish a general SLE requirement for mac
 - Multiple exact artifacts are separated with ` | `.
 - Free-text placeholders, directory-only paths, and mutable collaboration pages are not valid frozen references.
 
-A frozen reference supports reproducibility of the fixture. It does not transfer authority to SLE and does not make the referenced project state normative.
+A frozen reference supports reproducibility of the fixture. It does not transfer authority to Ariadline and does not make the referenced project state normative.
 
 ## Change control
 
@@ -116,7 +116,7 @@ A frozen reference supports reproducibility of the fixture. It does not transfer
 - Create a new concept ID when the project-local meaning changes materially.
 - Record every change status.
 - Do not silently import a Canto-span state change into the frozen fixture.
-- Do not promote a fixture entry into normative SLE without a separate independent decision and evidence record.
+- Do not promote a fixture entry into normative Ariadline without a separate independent decision and evidence record.
 
 ## Validation requirements
 
@@ -130,4 +130,4 @@ A frozen reference supports reproducibility of the fixture. It does not transfer
 
 ## Blockers and deviations
 
-Issue #11 preserves the removed SLE test-run methods `source snapshot` and `release proxy`, records the historical authority inversion and software-first scope drift, and documents the package and navigation deviations.
+Issue #11 preserves the removed Ariadline test-run methods `source snapshot` and `release proxy`, records the historical authority inversion and software-first scope drift, and documents the package and navigation deviations.

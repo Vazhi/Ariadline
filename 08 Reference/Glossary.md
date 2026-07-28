@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-27
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - reference
   - glossary
 ---
@@ -14,11 +14,11 @@ tags:
 
 ## Authority
 
-This glossary is an informative terminology guide for [[SLE for Linguistics Reference Artifact v0.1 Draft]]. It summarizes current package usage. It does not create an SLE obligation or a universal linguistic definition.
+This glossary is an informative terminology guide for [[Ariadline Reference Artifact v0.1 Draft]]. It summarizes current package usage. It does not create an Ariadline obligation or a universal linguistic definition.
 
-The narrower controlling rule, pattern, profile, conformance, and governance modules determine normative meaning. A project extension may define additional or different local terms when it identifies their scope and does not present them as universal SLE terminology.
+The narrower controlling rule, pattern, profile, conformance, and governance modules determine normative meaning. A project extension may define additional or different local terms when it identifies their scope and does not present them as universal Ariadline terminology.
 
-## Simplified Linguistic English
+## Ariadline
 
 A proposed controlled form of English for clear linguistic description, evidence reporting, research documentation, editorial review, and related technical communication.
 
@@ -28,11 +28,11 @@ A natural language used with deliberate restrictions or conventions to improve i
 
 ## Normative
 
-Creating or controlling an obligation, prohibition, recommendation, permission, capability distinction, conformance rule, profile mapping, or governance requirement within the stated SLE version.
+Creating or controlling an obligation, prohibition, recommendation, permission, capability distinction, conformance rule, profile mapping, or governance requirement within the stated Ariadline version.
 
 ## Informative
 
-Supporting understanding or application without creating an SLE obligation.
+Supporting understanding or application without creating an Ariadline obligation.
 
 ## Normative verbal form
 
@@ -40,11 +40,11 @@ A word or phrase assigned a declared function such as requirement, prohibition, 
 
 ## Language rule
 
-A stable-ID communication control in [[SLE for Linguistics Language Rules v0.1]].
+A stable-ID communication control in [[Ariadline Language Rules v0.1]].
 
 ## Document pattern
 
-A stable-ID communication structure in [[SLE for Linguistics Document Patterns v0.1]]. A pattern is not a mandatory file schema, research method, theory, or rhetorical order.
+A stable-ID communication structure in [[Ariadline Document Patterns v0.1]]. A pattern is not a mandatory file schema, research method, theory, or rhetorical order.
 
 ## Profile
 
@@ -52,7 +52,7 @@ A versioned selection of exact rule IDs. A profile does not define a document ge
 
 ## Profile set
 
-The versioned register that maps profile names to exact rule IDs and applicability conditions. The current proposed set is controlled by [[SLE Profile Applicability Register v0.1]].
+The versioned register that maps profile names to exact rule IDs and applicability conditions. The current proposed set is controlled by [[Ariadline Profile Applicability Register v0.1]].
 
 ## Conformance object
 
@@ -94,11 +94,11 @@ A final item outcome for a documented departure that the controlling rule or **s
 
 ## Waiver
 
-A recorded bounded departure from an applicable communication control. A waiver does not amend SLE or conceal a substantive defect.
+A recorded bounded departure from an applicable communication control. A waiver does not amend Ariadline or conceal a substantive defect.
 
 ## Extension
 
-A declared local or publisher-controlled addition, replacement, or exclusion relative to identified SLE and profile-set versions.
+A declared local or publisher-controlled addition, replacement, or exclusion relative to identified Ariadline and profile-set versions.
 
 ## Not determined
 
@@ -122,7 +122,7 @@ Occurrence in identified data under a stated source, search, or collection condi
 
 ## Productivity
 
-A working communication description for extension of a pattern to eligible novel forms or contexts under a declared criterion. A project may use another declared definition. SLE controls the inference from attestation; it does not impose one substantive theory of productivity.
+A working communication description for extension of a pattern to eligible novel forms or contexts under a declared criterion. A project may use another declared definition. Ariadline controls the inference from attestation; it does not impose one substantive theory of productivity.
 
 ## Observation
 
@@ -134,7 +134,7 @@ For package communication, an analytical claim about the significance, structure
 
 ## Evidence relation
 
-The declared connection between support and a claim. SLE controls overstatement but does not define one universal hierarchy of evidence verbs.
+The declared connection between support and a claim. Ariadline controls overstatement but does not define one universal hierarchy of evidence verbs.
 
 ## System behavior
 
@@ -154,4 +154,4 @@ An identifier whose controlling meaning is maintained across versions and is not
 
 ## Canto-span
 
-One non-authoritative project stress test and possible later adoption target. Canto-span does not define SLE rules, terminology, profiles, conformance, or governance.
+One non-authoritative project stress test and possible later adoption target. Canto-span does not define Ariadline rules, terminology, profiles, conformance, or governance.

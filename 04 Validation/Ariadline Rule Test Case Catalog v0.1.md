@@ -1,25 +1,25 @@
 ---
-title: "SLE Rule Test Case Catalog v0.1"
+title: "Ariadline Rule Test Case Catalog v0.1"
 type: validation-catalog
 status: proposed
 version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - validation
   - test-cases
   - editorial-review
 ---
-# SLE Rule Test Case Catalog v0.1
+# Ariadline Rule Test Case Catalog v0.1
 
 ## Purpose
 
-This catalog supplies pass, fail, provisional borderline, and boundary cases for every proposed rule in [[SLE for Linguistics Language Rules v0.1]].
+This catalog supplies pass, fail, provisional borderline, and boundary cases for every proposed rule in [[Ariadline Language Rules v0.1]].
 
 The cases are constructed editorial prompts. They are not linguistic evidence and have no independent meaning-preservation confirmation. The controlling rule text remains in the language-rule draft.
 
-Reviewers use [[SLE Editorial Conformance Checklist v0.1]] and [[Human Review Boundary Register v0.1]]. They must not copy an example when doing so changes the authorized meaning of the passage under review.
+Reviewers use [[Ariadline Editorial Conformance Checklist v0.1]] and [[Human Review Boundary Register v0.1]]. They must not copy an example when doing so changes the authorized meaning of the passage under review.
 
 ## Classification
 
@@ -56,7 +56,7 @@ A boundary case does not automatically receive the final checklist outcome **Jus
 | `SLE-RULE-0015` | Parser P version 2.1 labels the input A_NOT_A under Configuration C. This describes parser behavior and does not establish the linguistic analysis. | The sentence is an A-not-A question because the parser labels it A_NOT_A. | The model recognizes the construction. | **Ordinary bounded compliance:** On Benchmark B under Configuration C, System P achieved 91% label accuracy. |
 | `SLE-RULE-0016` | If the token is a clitic, assign label CL. | Assign label CL if the token is a clitic. | Assign label CL only to clitics; the document does not show whether a prior applicability statement controls the step. | **Explicit exception:** Table columns: Condition; Required action. |
 | `SLE-RULE-0017` | 1. Segment the token. 2. Assign the feature bundle. 3. Record any source-text correction. | Segment the token, assign features, correct the source, and update the log. | Open the file and select the target tier; the workflow does not show whether these are independently verifiable actions. | **Recommendation exception:** The emergency procedure keeps “Open the console and paste the signed recovery token” in one step because the approved workflow requires uninterrupted execution; the departure and risk are documented. |
-| `SLE-RULE-0018` | This section conforms to SLE v0.1 for the declared rules. The result does not validate the analysis. | This SLE-conforming analysis is linguistically correct. | The document passed SLE review. | **Ordinary bounded compliance:** The document conforms to SLE and separately received ethics approval under a named record. |
+| `SLE-RULE-0018` | This section conforms to Ariadline v0.1 for the declared rules. The result does not validate the analysis. | This Ariadline-conforming analysis is linguistically correct. | The document passed Ariadline review. | **Ordinary bounded compliance:** The document conforms to Ariadline and separately received ethics approval under a named record. |
 | `SLE-RULE-0019` | The query returned three tokens. Under Analysis A, these tokens are compatible with the proposed rule. | The three tokens demonstrate a grammatical rule. | The result indicates a grammatical rule. | **Permitted presentation:** Table columns: Recorded result; Interpretation under Analysis A. |
 | `SLE-RULE-0020` | The three tokens establish attestation in this corpus. They do not by themselves establish productivity. | Three tokens prove that the construction is productive. | The result shows that the analysis is preferred. | **Explicit exception:** The proof establishes Theorem 2 under Assumptions A–C. |
 | `SLE-RULE-0021` | The query found no tokens in Corpus C, release 3. It does not detect variants outside the normalization list. | The construction does not occur. | We found no examples in the corpus. | **Explicit exception:** The formal proof establishes that no model satisfying A–C has property P. |
@@ -78,4 +78,4 @@ The cases prompt several domains and methods but remain English project-construc
 
 Canto-span supplies no controlling test case. [[Canto-span Evaluation Subset v0.1]] remains supplementary.
 
-Known gaps include independent adjudication, authentic documents, full-document interaction, rejected rewrites, and independently reviewed interlinear glosses. See [[SLE Evaluation Corpus Bias Assessment v0.1]] and [[Evaluation Corpus Coverage Matrix v0.1]].
+Known gaps include independent adjudication, authentic documents, full-document interaction, rejected rewrites, and independently reviewed interlinear glosses. See [[Ariadline Evaluation Corpus Bias Assessment v0.1]] and [[Evaluation Corpus Coverage Matrix v0.1]].

@@ -6,7 +6,7 @@ version: "0.1"
 created: 2026-07-28
 updated: 2026-07-28
 tags:
-  - sle
+  - ariadline
   - evaluation
   - materials
   - tasks
@@ -23,7 +23,7 @@ A registered item is not automatically valid for confirmatory analysis. The item
 
 ### `SYN` — constructed procedure-pilot material
 
-Source: [[Multi-Domain SLE Evaluation Corpus v0.1]].
+Source: [[Multi-Domain Ariadline Evaluation Corpus v0.1]].
 
 Permitted use:
 
@@ -90,7 +90,7 @@ A material record must not assume that every task uses U, P, and S.
 
 - `U` is an authorized source or uncontrolled baseline. Its intended meaning and known deviations must be recorded. U is not automatically a preservation-certified condition.
 - `P` is an ordinary expert-edited plain condition or guidance set. Confirmatory P must pass independent preservation review.
-- `S` is a proposed SLE-controlled condition or guidance set. Confirmatory S must pass independent preservation review.
+- `S` is a proposed Ariadline-controlled condition or guidance set. Confirmatory S must pass independent preservation review.
 
 ### Task-specific required condition sets
 
