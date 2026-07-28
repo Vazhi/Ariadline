@@ -15,8 +15,8 @@ The deterministic rehearsal completed successfully on the exact fixture and vali
 
 - valid fixture: `valid`, 0 findings;
 - invalid fixture: `expected_failures_detected`;
-- invalid-fixture findings: 20;
-- distinct expected diagnostic classes: 16;
+- invalid-fixture findings: 23;
+- distinct expected diagnostic classes: 17;
 - missing expected classes: 0;
 - unexpected diagnostic classes: 0.
 
@@ -25,6 +25,7 @@ The deterministic rehearsal completed successfully on the exact fixture and vali
 The valid fixture demonstrates that the represented procedure can:
 
 - retain a structurally eligible fictional P/S pair when both conditions are comparable and derive to `preserved`;
+- keep reader exposure blocked even for that eligible pair while human launch gates remain unresolved;
 - exclude a pair when one condition derives to `not preserved`;
 - exclude a pair when one condition derives to `not determined`;
 - preserve failed and unresolved outcomes as adverse records;
@@ -44,6 +45,7 @@ The invalid fixture confirms detection of:
 - late scoring-key freeze;
 - invalid preservation aggregation;
 - invalid pair eligibility and reader exposure;
+- reader exposure before human launch gates pass;
 - hidden adverse outcomes;
 - promotion of `not determined`;
 - attempted launch and parent-study advancement.
