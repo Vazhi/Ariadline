@@ -39,7 +39,7 @@
         ], "overall": "preserved"}
       },
       "pair_eligible_for_benefit": true,
-      "reader_exposure_allowed": true,
+      "reader_exposure_allowed": false,
       "adverse_result_retained": false,
       "not_determined_promoted_to_success": false
     },
