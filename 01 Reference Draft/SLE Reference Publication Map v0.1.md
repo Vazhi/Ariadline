@@ -33,7 +33,6 @@ The front door summarizes the package. It does not replace narrower controlling 
 - [[SLE for Linguistics Document Patterns v0.1]] — pattern obligations, required distinctions, recommended sequences, omissions, and pattern conformance guidance.
 - [[Profiles and Conformance]] — conformance objects and results, review methods, typed evaluations, waivers, and extensions.
 - [[SLE Profile Applicability Register v0.1]] — exact profile-set mappings and conditional applicability.
-- [[Glossary]] — package terminology, except where a controlling rule states a narrower local definition.
 
 All items in these modules remain proposed unless their own state says otherwise.
 
@@ -42,15 +41,16 @@ All items in these modules remain proposed unless their own state says otherwise
 - [[Governance and Change Control]] — adoption, revision, dissent, evidence, evaluation, profile, waiver, and extension governance.
 - [[Versioning and Release Model]] — compatibility classification, stable identifiers, releases, translation editions, and publication requirements.
 
-### D. Normative review support
+### D. Controlled review support
 
 - [[SLE Editorial Conformance Checklist v0.1]] — human application questions and item outcomes.
 - [[Human Review Boundary Register v0.1]] — limits of editorial authority.
 
-These modules apply controlling rules but do not create new rules.
+These modules apply controlling rules and conformance semantics. They do not create independent language rules or substantive authority.
 
-### E. Informative authoring aids
+### E. Informative terminology and authoring aids
 
+- [[Glossary]]
 - [[SLE Document Pattern Outlines v0.1]]
 - [[SLE Document Pattern Example Bank v0.1]]
 - [[SLE Rule Test Case Catalog v0.1]]
@@ -58,7 +58,7 @@ These modules apply controlling rules but do not create new rules.
 - [[SLE Rule and Pattern Index v0.1]]
 - [[SLE Reference Change and Deferral Log v0.1]]
 
-An informative example cannot override a rule or establish that its linguistic content is true.
+The glossary summarizes current package usage. It does not create obligations or universal linguistic definitions. An informative definition or example cannot override a controlling module or establish that its linguistic content is true.
 
 ### F. Evidence, validation, and evaluation records
 
@@ -92,10 +92,10 @@ When components conflict:
 1. use the narrower controlling normative module;
 2. use the exact profile mapping for applicability;
 3. use governance and versioning records for change and compatibility;
-4. treat indexes, checklists, examples, corpora, and case studies as supporting material;
+4. treat the glossary, indexes, checklists, examples, corpora, and case studies as supporting material;
 5. record unresolved conflict rather than silently selecting convenient wording.
 
-A summary, index, test prompt, automation flag, or project-local practice must not amend a rule.
+A summary, glossary entry, index, test prompt, automation flag, or project-local practice must not amend a rule.
 
 ## Publication status labels
 
