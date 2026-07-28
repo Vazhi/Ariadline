@@ -25,12 +25,13 @@ For constructed items, the project brief is the authority only for the fictional
 
 Evaluate separately:
 
-1. uncontrolled draft against authorized meaning;
-2. controlled alternative against authorized meaning;
-3. literal passage-to-passage relation;
-4. independent preservation confirmation.
+1. an authorized source or uncontrolled baseline against authorized meaning;
+2. an ordinary expert-edited alternative against authorized meaning;
+3. an SLE-controlled alternative against authorized meaning;
+4. literal passage-to-passage relation;
+5. independent preservation confirmation where required.
 
-A defective uncontrolled draft and a controlled alternative can be literally non-equivalent. Do not call this semantic equivalence. The item can still test which passage helps readers recover the authorized meaning.
+A defective uncontrolled draft and a controlled alternative can be literally non-equivalent. Do not call this semantic equivalence. The item can still test which passage helps readers recover the authorized intended meaning when the source authority and deviations are documented.
 
 Initial item records are in [[Semantic Equivalence Review Record v0.1]].
 
@@ -111,13 +112,17 @@ Tools may assist counting, terminology search, cross-reference checking, or rule
 
 ## Comparison design
 
-Use randomized or counterbalanced comparisons among:
+Use task-specific randomized or counterbalanced comparisons:
 
-1. uncontrolled draft;
-2. expert-edited plain alternative;
-3. proposed SLE-controlled alternative.
+- reader tasks require ordinary expert-edited P and SLE-controlled S conditions; an authorized source or uncontrolled U baseline is optional;
+- authoring tasks compare P and S guidance or workflows, with participant outputs scored against one authorized meaning record;
+- translation tasks compare P and S, with a source-order baseline registered separately when used;
+- review tasks use the registered passages needed to test checklist application;
+- full-document tasks require P and S and may include U when analytically justified.
 
-All conditions must derive from the same authorized meaning record. This tests SLE controls against ordinary editing rather than against a deliberately different claim.
+All compared variants are anchored to the same authorized meaning record. This does not make U, P, and S literally equivalent or preservation-certified in the same way.
+
+Publication claims require S-versus-P evidence. A benefit over a deliberately defective or uncontrolled U baseline alone is insufficient.
 
 Randomization must not hide source authority, construction status, permission, access restrictions, or relevant context.
 
@@ -151,7 +156,7 @@ The human study is controlled by:
 - [[Evaluation Material and Task Register v0.1]];
 - [[Participant Sampling and Recruitment Plan v0.1]];
 - [[Evaluation Data Dictionary and Privacy Plan v0.1]];
-- [[Preregistered Analysis and Decision Plan v0.1]];
+- [[Preregistered Analysis and Decision Plan v0.1|Analysis and Decision Plan Draft v0.1]];
 - [[Evaluation Execution Status v0.1]].
 
 These records prepare execution but do not create participant results. The current valid project recommendation remains `not determined — study not executed`.
