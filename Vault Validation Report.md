@@ -11,8 +11,8 @@ tags:
 ---
 # Vault Validation Report
 
-- Markdown notes: 68
-- Wikilinks checked: 388
+- Markdown notes: 73
+- Wikilinks checked: 426
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -22,111 +22,82 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the issue #6 branch after the addition of a versioned multi-domain SLE evaluation corpus, coverage matrix, semantic-equivalence records, bias assessment, and bounded Canto-span subset.
+This report describes the issue #7 branch after the addition of:
 
-The branch adds:
+- [[SLE Editorial Conformance Checklist v0.1]];
+- [[SLE Rule Test Case Catalog v0.1]];
+- [[Human Review Boundary Register v0.1]];
+- [[SLE Rule Traceability Matrix v0.1]];
+- [[Optional Automation Notes for SLE Review v0.1]].
 
-- [[Multi-Domain SLE Evaluation Corpus v0.1]];
-- [[Evaluation Corpus Coverage Matrix v0.1]];
-- [[Semantic Equivalence Review Record v0.1]];
-- [[SLE Evaluation Corpus Bias Assessment v0.1]];
-- [[Canto-span Evaluation Subset v0.1]];
-- [[SLE Semantic Equivalence Review Template v0.1]].
+The branch translates all 24 proposed controls in [[SLE for Linguistics Language Rules v0.1]] without changing their normative wording or status.
 
-It revises [[Evaluation Framework]] and [[Pilot Study Design]] for multi-domain, multilingual, author-preservation, and full-document evaluation.
-
-The previously merged reference artifacts remain linked and unchanged in authority:
-
-- [[SLE for Linguistics Document Patterns v0.1]];
-- [[SLE Document Pattern Outlines v0.1]];
-- [[SLE Document Pattern Example Bank v0.1]];
-- [[Document Pattern Coverage Register v0.1]];
-- [[SLE Profile Applicability Register v0.1]];
-- [[Profiles and Conformance]];
-- [[Pilot Specification Outline]];
-- [[Governance and Change Control]];
-- [[Versioning and Release Model]].
+Traceability preserves separation among independent rationale in [[Independent SLE Rule Evidence Register v0.1]], synthetic evaluation material in [[Multi-Domain SLE Evaluation Corpus v0.1]], and conformance scope under [[Profiles and Conformance]] and [[SLE Profile Applicability Register v0.1]].
 
 ## Count method
 
-Merged `main` contained 62 Markdown notes and 346 wikilinks.
+Merged `main` contained 68 Markdown notes and 388 wikilinks.
 
 This branch:
 
-- adds 6 uniquely named Markdown notes containing 19 wikilinks;
-- adds 7 wikilinks to the map of content;
-- replaces one prior evaluation-framework link with 5 corpus links, for a net increase of 4;
-- replaces one prior pilot-study link with 5 corpus links, for a net increase of 4;
-- adds 8 net links to this validation report.
+- adds 5 uniquely named Markdown notes containing 33 wikilinks;
+- adds 5 wikilinks to the map of content;
+- replaces the prior 17-link validation report with this 17-link report.
 
-The resulting totals are 68 Markdown notes and 388 wikilinks.
+The resulting totals are 73 Markdown notes and 426 wikilinks.
 
 Ordinary Markdown web links and plain rule, pattern, profile, corpus, and item IDs are not included in the wikilink total.
 
-## Corpus identity validation
+## Checklist validation
 
-- Corpus ID: `SLE-EVAL-CORPUS-0.1`.
-- Independent item IDs: `SLE-EVAL-0001` through `SLE-EVAL-0016`.
-- Canto-span item IDs: `SLE-EVAL-CS-0001` and `SLE-EVAL-CS-0002`.
-- Total paired items: 18.
-- Independent items: 16.
-- Canto-span items: 2, or 11.1%.
-- Duplicate evaluation item IDs: 0.
-- Every item identifies provenance, domain, method, framework, language context, genre, pattern, rule IDs, uncontrolled passage, controlled alternative, structural change, equivalence result, and risk.
+- Checklist rule IDs: 24.
+- Controlling rule range: `SLE-RULE-0001` through `SLE-RULE-0024`.
+- Missing rule IDs: 0.
+- Duplicate checklist rule IDs: 0.
+- Every item states a plain-language control, communication risk, typical genres, a human question, an exception boundary, and a substantive-review boundary.
+- Allowed outcomes are Pass, Fail, Borderline, Not applicable, Justified exception, Waived, and Not determined.
+- Conformance result remains separate from review method and evaluation type.
 
-## Source and authority validation
+## Test-case validation
 
-- All 16 independent items are explicitly labelled project-constructed fictional evaluation material.
-- Named languages and theories are contexts, not evidence.
-- The corpus supplies test material rather than normative justification.
-- No item may be cited as a fact about a named language, community, theory, dataset, or method.
-- Canto-span is stored under a separate namespace and file.
-- Canto-span cannot satisfy an independent coverage requirement or define SLE.
-- No machine-readable representation is required.
+- Rule sections represented: 24.
+- Pass cases: 24.
+- Fail cases: 24.
+- Borderline cases: 24.
+- Justified-exception cases: 24.
+- Total classified cases: 96.
+- Cases are constructed editorial material rather than facts about named languages or theories.
+- Canto-span supplies no controlling case and remains supplementary under [[Canto-span Evaluation Subset v0.1]].
 
-## Coverage validation
+## Human-review boundary validation
 
-The independent corpus includes contexts involving descriptive grammar, theoretical syntax, functional and interactional analysis, corpus variation, typology, field elicitation, judgment research, lexicography, signed-language documentation, annotation, computational linguistics, language-resource publication, learner explanation, phonetics, conversation analysis, and collaborative terminology decisions.
+The boundary register distinguishes communication review from truth, grammaticality, theory, method, ethics, translation, accessibility, software correctness, and community authority.
 
-Language contexts include Cantonese, English, Spanish, Arabic varieties, Turkish, Japanese, Swahili, Korean, Māori, American Sign Language, Finnish, and multilingual work.
+Meaning-preservation conflicts must use author or authorized domain review and the process in [[SLE Semantic Equivalence Review Template v0.1]] with decisions recorded in [[Semantic Equivalence Review Record v0.1]].
 
-The matrix explicitly records overrepresentation of English metalanguage, constructed short passages, research-report genres, explicit quantitative scope, and current-rule-driven item design.
+## Traceability validation
 
-## Semantic-equivalence validation
+Every rule maps to:
 
-- Project-internal pre-review results: 18.
-- Provisionally equivalent: 11.
-- Equivalent with recorded uncertainty: 7.
-- Accepted not-equivalent alternatives: 0.
-- Independently reviewed items: 0.
-- Source-author-confirmed items: 0 because all v0.1 items are constructed.
+- independent rationale;
+- a checklist item;
+- four classified test cases;
+- principal corpus items or an explicit gap;
+- a substantive-review boundary.
 
-The record requires rejected, failed, and not-determined rewrites to remain visible in later corpus versions.
+The matrix records SLE-RULE-0024 as not directly tested by an independently reviewed interlinear-gloss block. This gap remains visible in [[Evaluation Corpus Coverage Matrix v0.1]] and [[SLE Evaluation Corpus Bias Assessment v0.1]].
 
-A controlled alternative is compared against its detailed item brief. Several alternatives are intentionally not equivalent to a literal universal or overstrong reading of the uncontrolled sentence. This boundary is recorded rather than hidden.
+## Optional automation boundary
 
-## Bias and representativeness validation
+Automation notes are informative only. Tools may flag text but cannot create conformance, linguistic validation, ethics approval, translation approval, accessibility certification, or community authorization.
 
-The assessment states that v0.1 is suitable for internal rule auditing and procedure testing only.
+Software remains outside the completion criteria and cannot replace human review.
 
-Before broad effectiveness or stabilization claims, later corpus versions require authentic independent passages, non-English-original material, translation review, community-governed contributions, full-document samples, rejected rewrite cases, and direct glossing tests.
+## Compatibility
 
-No source project may supply most authentic evaluated passages in a representative corpus.
+Changes to checklist outcomes, rule mappings, or conformance meaning must be classified by compatibility effect under [[Versioning and Release Model]].
 
-## Human-first evaluation validation
-
-The revised framework and pilot plan test:
-
-- reader claim reconstruction;
-- author meaning preservation;
-- review agreement;
-- translation and rhetorical order;
-- accessibility and reader diversity;
-- authoring burden and cohesion;
-- annotation and procedure use;
-- full-document and combined-pattern behavior.
-
-Optional tools cannot replace human review or semantic-equivalence testing.
+The document patterns in [[SLE for Linguistics Document Patterns v0.1]] remain proposed and unchanged by this branch.
 
 ## Duplicate basenames
 
