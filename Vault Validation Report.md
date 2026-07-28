@@ -22,7 +22,7 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes issue #7 on top of the corrected internal evaluation-corpus baseline.
+This report describes the reviewed issue #7 branch on top of the corrected internal evaluation-corpus baseline.
 
 Corpus and preservation records remain:
 
@@ -66,19 +66,23 @@ Ordinary Markdown links and plain rule, pattern, profile, item, and brief IDs ar
 - The checklist contains exactly one row for each rule from `SLE-RULE-0001` through `SLE-RULE-0024`.
 - Every row supplies a human-readable control, risk, review question, permitted boundary, and substantive-review boundary.
 - A reviewer can apply the checklist without software or machine-readable metadata.
-- Item outcomes distinguish Pass, Fail, Borderline, Not applicable, Justified exception, Waived, and Not determined.
-- Borderline or unclear authorized meaning cannot silently produce a passing conformance result.
-- Final conformance result remains separate from review method, typed evaluation, and independent preservation.
+- Final item outcomes are Pass, Fail, Not applicable, Justified exception, Waived, and Not determined.
+- Borderline is a provisional flag that must resolve to a final item outcome before a review closes.
+- A recommendation departure uses Justified exception rather than Pass.
+- An unresolved Borderline flag or Not determined item requires the declared conformance result to remain not determined.
+- Final conformance remains separate from review method, typed evaluation, and independent preservation.
 
 ## Test-case validation
 
 - Rule IDs represented: 24.
-- Pass cases: 24.
-- Fail cases: 24.
-- Borderline cases: 24.
-- Justified-exception cases: 24.
-- Total classified constructed cases: 96.
-- The catalog states that the cases are constructed prompts, not linguistic facts or independently preserved rewrites.
+- Pass prompts: 24.
+- Fail prompts: 24.
+- Provisional borderline prompts: 24.
+- Typed boundary prompts: 24.
+- Total classified constructed prompts: 96.
+- Boundary subtypes distinguish explicit exceptions, recommendation exceptions, permitted presentations, non-applicability, and ordinary bounded compliance.
+- A boundary prompt is not automatically a Justified exception outcome.
+- The catalog states that the prompts are constructed material, not linguistic facts or independently preserved rewrites.
 - Authentic multilingual and full-document testing remain gaps.
 
 ## Review-boundary validation
@@ -100,11 +104,12 @@ Every proposed rule maps to:
 
 - independent rationale;
 - one checklist item;
-- four classified cases;
-- principal internal audit items or an explicit gap;
+- four classified constructed prompts;
+- exact non-Canto-span audit items or an explicit gap;
+- separately listed supplementary Canto-span prompts;
 - a substantive-review boundary.
 
-Corpus mappings are described as constructed brief-based audit prompts. Their independent preservation remains `not determined`. `SLE-RULE-0024` retains an explicit direct-coverage gap.
+The rule-to-item mapping was regenerated as an exact reverse index of the merged corpus `Rules tested` fields. Corpus prompts remain constructed brief-based material whose independent preservation is `not determined`. `SLE-RULE-0024` retains an explicit direct-coverage gap.
 
 ## Optional automation boundary
 
@@ -115,10 +120,11 @@ Tools may flag text. They cannot create conformance, establish authorized meanin
 ## Authority validation
 
 - The checklist does not create or change rules.
+- The case catalog does not invent exceptions for rules that provide none.
 - Canto-span supplies no controlling rationale or checklist case.
 - Evaluation-corpus items are test material, not normative evidence.
 - No software is required for human review.
-- No rule becomes stable because a checklist row or constructed case exists.
+- No rule becomes stable because a checklist row or constructed prompt exists.
 
 ## Duplicate basenames
 
