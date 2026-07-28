@@ -93,16 +93,16 @@ Ordinary Markdown links and plain rule, pattern, profile, material, participant,
 
 ## Synthetic execution validation
 
-The exact source committed on the branch was executed locally before upload.
+The reviewed implementation layer was exercised locally against the original dry-run base API after blocker repair.
 
 - deterministic seed: `20260728`;
-- valid fixture: zero findings and exit status 0;
-- intentionally invalid fixture: 51 findings;
-- expected invalid-code coverage: 13 of 13;
+- valid fixture: zero findings;
+- expected invalid-code coverage: 34 of 34;
 - missing expected codes: 0;
-- unexpected codes: 0.
+- unexpected codes: 0;
+- expected-invalid success requires exact distinct-code agreement.
 
-The valid and invalid JSON fixtures are generated outputs. The expected-code manifest is committed. Regeneration is deterministic under the recorded seed and source version.
+The valid and invalid JSON fixtures are generated outputs. The 34-code expected manifest is committed. Regeneration is deterministic under the recorded seed and source version.
 
 ## Data-model validation
 
@@ -122,38 +122,45 @@ All records are visibly fictional. No authentic passage, real participant, conta
 
 ## Condition and assignment validation
 
-The valid dry run demonstrates:
+The reviewed valid dry run demonstrates:
 
+- 20 active fictional participants and one separately retained withdrawn row;
+- 16 exposures for every core material;
 - task-specific required condition sets;
 - P and S availability for publication-relevant synthetic tasks;
 - U limited to an admissible reader baseline;
+- 6 P, 6 S, and 4 U assignments for that baseline;
+- 8 P and 8 S assignments for every other core material;
+- P/S difference at most 1 for every order position;
 - no participant exposure to multiple wording conditions from one meaning record;
-- opaque masking codes;
+- exact agreement between trial masks and registered material-condition masks;
 - masked scoring records;
 - no post-withdrawal assignments;
-- Canto-span participant share at 10%;
-- Canto-span trial share below 10%;
+- Canto-span contributor and trial shares below 10%;
 - `not determined` retained rather than converted to success.
 
 These are structural tests only. They do not establish that P or S preserves authentic meaning or that a real assignment is fair, accessible, or scientifically valid.
 
 ## Invalid-fixture validation
 
-The intentionally invalid fixture exercises:
+The intentionally invalid fixture exercises all 34 registered validation classes across:
 
-- prohibited direct-identifier fields;
-- broken participant and trial references;
-- duplicate meaning-record exposure;
-- prohibited U use;
-- mask leakage;
-- missing required P condition;
-- unregistered trial conditions;
-- confirmatory readiness without preservation;
-- `not determined` recorded as success;
+- evidence and authenticity boundaries;
+- missing tables;
+- invalid and duplicate identifiers;
+- broken participant, material, and trial references;
+- condition and trial meaning mismatches;
+- universal, missing, unregistered, and prohibited conditions;
+- duplicate meaning exposure;
+- condition and order imbalance;
+- mask leakage, duplication, and registered-mask mismatch;
+- unmasked scoring;
+- invalid preservation readiness and uncertainty downgrading;
 - post-withdrawal assignment;
+- duplicate deviations;
 - Canto-span participant and trial cap violations.
 
-Extra row-level findings can occur when one injected fault affects several records. Expected-code coverage, not the total finding count, controls the self-test.
+One injected fault can create several row-level findings. The distinct code set, not the total row count, controls the self-test. Missing and unexpected codes both fail the expected-invalid command.
 
 ## Human authority boundary
 
