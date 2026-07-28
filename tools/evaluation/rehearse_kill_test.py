@@ -40,6 +40,8 @@ def validate(data:dict[str,Any]):
         if gate not in gates:
             add(findings,"HUMAN_GATE_MISSING",f"$.human_gates.{gate}",f"Human gate {gate} is missing.")
     unresolved=[g for g in REQUIRED_HUMAN_GATES if gates.get(g) not in {"approved","not_applicable"}]
+    launch=data.get("launch",{})
+    launch_permitted=launch.get("ready") is True and not unresolved
     seen=set(); any_ineligible=False; any_unresolved=False
     for i,case in enumerate(data.get("cases",[])):
         pfx=f"$.cases[{i}]"; cid=case.get("case_id")
@@ -73,9 +75,10 @@ def validate(data:dict[str,Any]):
             add(findings,"ADVERSE_RESULT_NOT_RETAINED",f"{pfx}.adverse_result_retained","Failed or unresolved preservation must remain visible.")
         if case.get("reader_exposure_allowed") is True and not should:
             add(findings,"READER_EXPOSURE_WITH_INELIGIBLE_PAIR",f"{pfx}.reader_exposure_allowed","An ineligible pair cannot enter reader exposure.")
+        if case.get("reader_exposure_allowed") is True and not launch_permitted:
+            add(findings,"READER_EXPOSURE_WITH_UNREADY_LAUNCH",f"{pfx}.reader_exposure_allowed","Reader exposure cannot be allowed before human launch gates pass.")
         if case.get("not_determined_promoted_to_success") is True:
             add(findings,"NOT_DETERMINED_PROMOTED",f"{pfx}.not_determined_promoted_to_success","not determined cannot be promoted to success.")
-    launch=data.get("launch",{})
     if launch.get("ready") is True and unresolved:
         add(findings,"LAUNCH_WITH_UNRESOLVED_HUMAN_GATES","$.launch.ready","Launch cannot be ready with unresolved human gates.")
     if launch.get("ready") is True and (any_ineligible or any_unresolved):
