@@ -90,3 +90,14 @@ Collect comments about unnatural rules, lost distinctions, damaged cohesion, rep
 ## Canto-span boundary
 
 [[Canto-span Evaluation Subset v0.1]] is a bounded project-local stress test. It cannot satisfy independent coverage or define SLE.
+
+## Operational implementation
+
+Issue #9 replaces an informal pilot launch with a controlled staged study:
+
+- protocol and phases: [[Multi-Domain Reader and Author Evaluation Protocol v0.1]];
+- material classes and blocks: [[Evaluation Material and Task Register v0.1]];
+- participant quotas and recruitment: [[Participant Sampling and Recruitment Plan v0.1]];
+- analysis thresholds and disposition: [[Preregistered Analysis and Decision Plan v0.1]].
+
+The constructed corpus can support the cognitive and operational pilot only. The confirmatory study cannot launch until authentic, translated, full-document, and glossing material gates are met.
