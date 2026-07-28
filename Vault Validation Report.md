@@ -11,8 +11,8 @@ tags:
 ---
 # Vault Validation Report
 
-- Markdown notes: 68
-- Wikilinks checked: 388
+- Markdown notes: 72
+- Wikilinks checked: 400
 - Duplicate note basenames: 0
 - Broken wikilinks: 0
 
@@ -22,111 +22,99 @@ PASS — all current wikilinks resolve and all note basenames are unique.
 
 ## Validation scope
 
-This report describes the issue #6 branch after the addition of a versioned multi-domain SLE evaluation corpus, coverage matrix, semantic-equivalence records, bias assessment, and bounded Canto-span subset.
+This report describes the repaired issue #6 branch after the addition and review of an internal constructed evaluation corpus.
 
-The branch adds:
+Core corpus records:
 
-- [[Multi-Domain SLE Evaluation Corpus v0.1]];
-- [[Evaluation Corpus Coverage Matrix v0.1]];
-- [[Semantic Equivalence Review Record v0.1]];
-- [[SLE Evaluation Corpus Bias Assessment v0.1]];
-- [[Canto-span Evaluation Subset v0.1]];
-- [[SLE Semantic Equivalence Review Template v0.1]].
+- [[Multi-Domain SLE Evaluation Corpus v0.1]]
+- [[Evaluation Corpus Items 0001–0004 v0.1]]
+- [[Evaluation Corpus Items 0005–0008 v0.1]]
+- [[Evaluation Corpus Items 0009–0012 v0.1]]
+- [[Evaluation Corpus Items 0013–0016 v0.1]]
+- [[Canto-span Evaluation Subset v0.1]]
 
-It revises [[Evaluation Framework]] and [[Pilot Study Design]] for multi-domain, multilingual, author-preservation, and full-document evaluation.
+Supporting records:
 
-The previously merged reference artifacts remain linked and unchanged in authority:
+- [[Evaluation Corpus Coverage Matrix v0.1]]
+- [[Semantic Equivalence Review Record v0.1]]
+- [[SLE Evaluation Corpus Bias Assessment v0.1]]
+- [[SLE Semantic Equivalence Review Template v0.1]]
+- [[Evaluation Framework]]
+- [[Pilot Study Design]]
 
-- [[SLE for Linguistics Document Patterns v0.1]];
-- [[SLE Document Pattern Outlines v0.1]];
-- [[SLE Document Pattern Example Bank v0.1]];
-- [[Document Pattern Coverage Register v0.1]];
-- [[SLE Profile Applicability Register v0.1]];
-- [[Profiles and Conformance]];
-- [[Pilot Specification Outline]];
-- [[Governance and Change Control]];
-- [[Versioning and Release Model]].
+Previously merged reference artifacts remain controlling for their proposed scope:
+
+- [[SLE for Linguistics Document Patterns v0.1]]
+- [[SLE Document Pattern Outlines v0.1]]
+- [[SLE Document Pattern Example Bank v0.1]]
+- [[Document Pattern Coverage Register v0.1]]
+- [[SLE Profile Applicability Register v0.1]]
+- [[Profiles and Conformance]]
+- [[Pilot Specification Outline]]
+- [[Governance and Change Control]]
+- [[Versioning and Release Model]]
 
 ## Count method
 
-Merged `main` contained 62 Markdown notes and 346 wikilinks.
+The original issue #6 branch contained 68 notes and 388 wikilinks.
 
-This branch:
+The blocker repair:
 
-- adds 6 uniquely named Markdown notes containing 19 wikilinks;
-- adds 7 wikilinks to the map of content;
-- replaces one prior evaluation-framework link with 5 corpus links, for a net increase of 4;
-- replaces one prior pilot-study link with 5 corpus links, for a net increase of 4;
-- adds 8 net links to this validation report.
+- adds four uniquely named corpus-part notes;
+- adds four links from the corpus index to those parts;
+- adds one link from each new part back to the corpus index;
+- adds four links to the new parts in this validation report;
+- leaves the link totals of the revised Canto-span, review, coverage, bias, framework, and pilot records unchanged.
 
-The resulting totals are 68 Markdown notes and 388 wikilinks.
+Result: 72 notes and 400 wikilinks.
 
-Ordinary Markdown web links and plain rule, pattern, profile, corpus, and item IDs are not included in the wikilink total.
+Ordinary Markdown links and plain rule, pattern, profile, corpus, brief, and item IDs are not included in the wikilink total.
 
 ## Corpus identity validation
 
 - Corpus ID: `SLE-EVAL-CORPUS-0.1`.
-- Independent item IDs: `SLE-EVAL-0001` through `SLE-EVAL-0016`.
-- Canto-span item IDs: `SLE-EVAL-CS-0001` and `SLE-EVAL-CS-0002`.
+- Independent items: `SLE-EVAL-0001` through `SLE-EVAL-0016`.
+- Canto-span items: `SLE-EVAL-CS-0001` and `SLE-EVAL-CS-0002`.
+- Meaning briefs: `SLE-BRIEF-0001` through `SLE-BRIEF-0016` and two `SLE-BRIEF-CS-*` records.
 - Total paired items: 18.
-- Independent items: 16.
-- Canto-span items: 2, or 11.1%.
-- Duplicate evaluation item IDs: 0.
-- Every item identifies provenance, domain, method, framework, language context, genre, pattern, rule IDs, uncontrolled passage, controlled alternative, structural change, equivalence result, and risk.
+- Canto-span share: 2 of 18, or 11.1%.
+- Duplicate item or brief IDs: 0.
 
-## Source and authority validation
+Every item records full rule and pattern IDs, an authorized brief, both passages, word and sentence counts and deltas, terminology and structure changes, passage-to-brief results, literal relation, independent preservation state, and risk.
 
-- All 16 independent items are explicitly labelled project-constructed fictional evaluation material.
-- Named languages and theories are contexts, not evidence.
-- The corpus supplies test material rather than normative justification.
-- No item may be cited as a fact about a named language, community, theory, dataset, or method.
-- Canto-span is stored under a separate namespace and file.
-- Canto-span cannot satisfy an independent coverage requirement or define SLE.
-- No machine-readable representation is required.
+## Meaning-preservation validation
 
-## Coverage validation
+- Controlled alternatives internally matching their constructed briefs: 18.
+- Uncontrolled drafts not matching their briefs: 14.
+- Uncontrolled drafts ambiguous relative to their briefs: 4.
+- Literally equivalent pairs: 0.
+- Independent preservation confirmations: 0.
+- Independent preservation results `not determined`: 18.
 
-The independent corpus includes contexts involving descriptive grammar, theoretical syntax, functional and interactional analysis, corpus variation, typology, field elicitation, judgment research, lexicography, signed-language documentation, annotation, computational linguistics, language-resource publication, learner explanation, phonetics, conversation analysis, and collaborative terminology decisions.
+The corpus no longer calls a controlled alternative equivalent to a materially different uncontrolled draft. Brief matching, literal equivalence, and independent preservation are separate results.
 
-Language contexts include Cantonese, English, Spanish, Arabic varieties, Turkish, Japanese, Swahili, Korean, Māori, American Sign Language, Finnish, and multilingual work.
+## Representation validation
 
-The matrix explicitly records overrepresentation of English metalanguage, constructed short passages, research-report genres, explicit quantitative scope, and current-rule-driven item design.
+- All independent items are project-constructed English prose.
+- Authentic external excerpts: 0.
+- Non-English-original passages: 0.
+- Independently reviewed translations: 0.
+- Source-author or community confirmations: 0.
+- Real-language fictional forms and claims were replaced with anonymized illustrative contexts.
 
-## Semantic-equivalence validation
+The corpus supports internal domain, method, framework, genre, and rule prompts only. It does not claim authentic multilingual or community representation.
 
-- Project-internal pre-review results: 18.
-- Provisionally equivalent: 11.
-- Equivalent with recorded uncertainty: 7.
-- Accepted not-equivalent alternatives: 0.
-- Independently reviewed items: 0.
-- Source-author-confirmed items: 0 because all v0.1 items are constructed.
+## Canto-span boundary
 
-The record requires rejected, failed, and not-determined rewrites to remain visible in later corpus versions.
+- Canto-span remains in a separate file and ID namespace.
+- It cannot define SLE or satisfy independent coverage.
+- Both Canto-span items have declared briefs, exact full IDs, length records, and independent results of `not determined`.
 
-A controlled alternative is compared against its detailed item brief. Several alternatives are intentionally not equivalent to a literal universal or overstrong reading of the uncontrolled sentence. This boundary is recorded rather than hidden.
+## Bias and evaluation boundary
 
-## Bias and representativeness validation
+The revised records prohibit effectiveness and stabilization claims from v0.1. Later gates require authentic independent passages, non-English-original materials, translation review, community authority, full-document samples, rejected alternatives, and direct glossing tests.
 
-The assessment states that v0.1 is suitable for internal rule auditing and procedure testing only.
-
-Before broad effectiveness or stabilization claims, later corpus versions require authentic independent passages, non-English-original material, translation review, community-governed contributions, full-document samples, rejected rewrite cases, and direct glossing tests.
-
-No source project may supply most authentic evaluated passages in a representative corpus.
-
-## Human-first evaluation validation
-
-The revised framework and pilot plan test:
-
-- reader claim reconstruction;
-- author meaning preservation;
-- review agreement;
-- translation and rhetorical order;
-- accessibility and reader diversity;
-- authoring burden and cohesion;
-- annotation and procedure use;
-- full-document and combined-pattern behavior.
-
-Optional tools cannot replace human review or semantic-equivalence testing.
+Optional software cannot replace authorized meaning, independent human review, reader testing, author review, translation review, or community review.
 
 ## Duplicate basenames
 
