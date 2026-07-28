@@ -9,22 +9,57 @@ tags: [ariadline, evaluation, readers, scoring]
 ---
 # Ariadline Reader Task and Scoring Packet v0.1
 
-Use only tasks registered for the passage’s authentic communication risk. Do not expose condition labels or candidate-rule IDs to readers.
+Use only tasks registered for the passage’s authentic rule-neutral communication risk.
 
-## Task registration
+This template has three information layers:
+
+1. **restricted administrative mapping** — condition identity, `SLE-RULE-*` IDs, editor identity, and action logs;
+2. **reader-facing packet** — masked text and registered questions only;
+3. **scorer-facing packet** — masked responses and a frozen scoring key only.
+
+Restricted administrative mapping must not be exposed to readers, scorers, adjudicators, or task/key designers before the relevant records are frozen.
+
+## Restricted administrative registration
 
 - Passage ID:
 - Masked text code:
-- Meaning-record ID:
-- Registered risk:
-- Applicable `SLE-RULE-*` IDs, held from readers:
+- Meaning-record ID and version:
+- Condition mapping, held by data manager:
+- Applicable `SLE-RULE-*` IDs, held by data manager:
+- Editor identity and action-log locator, held by data manager:
+- Registered rule-neutral risk:
 - Primary task:
 - Supporting tasks:
-- Scoring-key version:
+- Scoring-key version and hash:
 - Expected response type:
 - Accessibility format:
 
-## Reader instructions
+## Task and scoring-key freeze
+
+Task constructs, questions, accepted elements, prohibited unsupported elements, and adjudication rules must be derived only from:
+
+- the source passage;
+- the authorized meaning record;
+- the shared rule-neutral communication-risk brief;
+- the registered construct and accessibility requirements.
+
+Freeze the task and scoring key before task designers or scorers examine P/S outputs, editor logs, preservation outcomes, condition mappings, or participant outcomes.
+
+A later change requires a versioned deviation record. Outcome-visible or condition-visible changes cannot be silently applied to the primary comparison.
+
+## Reader-facing packet
+
+Reader-facing material contains only:
+
+- masked text code;
+- masked passage text;
+- reader instructions;
+- registered questions and response scales;
+- approved accessibility support.
+
+It must not contain condition labels, rule IDs, editor identity, action logs, meaning-record text, expected direction, or scoring answers.
+
+### Reader instructions
 
 Read the passage as you would read professional linguistic writing. Answer only from the passage. Use `not determined from this passage` when the passage does not provide enough information.
 
@@ -83,13 +118,21 @@ For each scored question, record:
 - `not determined` treatment;
 - critical error classes;
 - examples of pass, fail, and borderline responses;
-- scorer masking requirement;
-- adjudication trigger.
+- masking requirement;
+- adjudication trigger;
+- key version and hash;
+- freeze date and human approvers.
 
-## Scorer record
+The scoring key must not contain a condition label, rule ID, editor identity, rule-action log, or condition-specific expected answer.
+
+## Scorer-facing packet and record
+
+Scorers receive only masked response IDs, masked answers, and the frozen scoring key.
 
 - Scorer ID:
-- Condition masked: yes/no
+- Condition masked: yes/no/not determined
+- Rule metadata absent: yes/no/not determined
+- Editor metadata absent: yes/no/not determined
 - Training and calibration version:
 - Response ID:
 - Score:
@@ -99,6 +142,8 @@ For each scored question, record:
 - Confidence calibration result:
 - Adjudication required:
 - Notes:
+
+Any failed or indeterminate masking check must trigger the registered deviation and eligibility review.
 
 ## Agreement and adjudication
 
@@ -110,8 +155,10 @@ Report agreement separately for:
 - unsupported-inference classification;
 - final adjudicated result.
 
+Adjudicators receive the same restricted scorer-facing information unless the frozen protocol authorizes a documented unmasking step.
+
 Do not hide systematic disagreement behind a package average.
 
 ## Analysis boundary
 
-The primary contrast is masked S versus P. U, when registered, is descriptive and cannot replace S-versus-P. Scores cannot override a failed meaning-preservation gate.
+The primary contrast is masked S versus P. U, when registered, is descriptive and cannot replace S-versus-P. Scores cannot override a failed or unresolved meaning-preservation gate.
