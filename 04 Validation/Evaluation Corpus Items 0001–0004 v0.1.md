@@ -94,7 +94,7 @@ These project-constructed items belong to [[Multi-Domain SLE Evaluation Corpus v
 - **Illustrative context:** Illustrative Language C
 - **Framework prompt:** conversation-analytic and functional interpretation
 - **Genre:** phenomenon description and analysis
-- **Pattern:** `SLE-PATTERN-0002 + SLE-PATTERN-0003`
+- **Patterns:** `SLE-PATTERN-0002`, `SLE-PATTERN-0003`
 - **Rules tested:** `SLE-RULE-0003`, `SLE-RULE-0006`, `SLE-RULE-0019`, `SLE-RULE-0020`, `SLE-RULE-0022`, `SLE-RULE-0023`
 
 ### Authorized meaning brief
