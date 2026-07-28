@@ -70,7 +70,7 @@ Canto-span does not define SLE rules, patterns, profiles, conformance, evaluatio
 - **Illustrative context:** Canto-span documentation
 - **Framework prompt:** project-local grammar engineering
 - **Genre:** annotation guideline and procedure
-- **Pattern:** `SLE-PATTERN-0007 + SLE-PATTERN-0011`
+- **Patterns:** `SLE-PATTERN-0007`, `SLE-PATTERN-0011`
 - **Rules tested:** `SLE-RULE-0003`, `SLE-RULE-0005`, `SLE-RULE-0008`, `SLE-RULE-0015`, `SLE-RULE-0016`, `SLE-RULE-0017`, `SLE-RULE-0018`, `SLE-RULE-0019`, `SLE-RULE-0020`, `SLE-RULE-0022`, `SLE-RULE-0023`
 
 ### Authorized meaning brief
