@@ -1,7 +1,7 @@
 ---
 title: "Glossary"
 type: reference
-status: proposed
+status: informative
 version: "0.1"
 created: 2026-07-27
 updated: 2026-07-28
@@ -14,9 +14,9 @@ tags:
 
 ## Authority
 
-This glossary defines terms used across [[SLE for Linguistics Reference Artifact v0.1 Draft]].
+This glossary is an informative terminology guide for [[SLE for Linguistics Reference Artifact v0.1 Draft]]. It summarizes current package usage. It does not create an SLE obligation or a universal linguistic definition.
 
-A controlling rule may give a narrower local definition. A project extension may define additional local terms when it identifies their scope and does not present them as universal SLE terminology.
+The narrower controlling rule, pattern, profile, conformance, and governance modules determine normative meaning. A project extension may define additional or different local terms when it identifies their scope and does not present them as universal SLE terminology.
 
 ## Simplified Linguistic English
 
@@ -122,15 +122,15 @@ Occurrence in identified data under a stated source, search, or collection condi
 
 ## Productivity
 
-Extension of a pattern to eligible novel forms or contexts under a declared criterion. Attestation alone does not establish productivity.
+A working communication description for extension of a pattern to eligible novel forms or contexts under a declared criterion. A project may use another declared definition. SLE controls the inference from attestation; it does not impose one substantive theory of productivity.
 
 ## Observation
 
-A directly recorded result, response, source form, system output, or other stated record.
+For package communication, a directly recorded result, response, source form, system output, or other stated record. A document may declare a different theory-sensitive use of *observation*.
 
 ## Interpretation
 
-An analytical claim about the significance, structure, function, cause, or implication of an observation.
+For package communication, an analytical claim about the significance, structure, function, cause, or implication of a stated record. A document may declare a different theory-sensitive distinction.
 
 ## Evidence relation
 
