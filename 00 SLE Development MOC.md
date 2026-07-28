@@ -62,6 +62,12 @@ tags:
 - [[Evaluation Framework]]
 - [[Pilot Study Design]]
 - [[Quality Metrics and Acceptance Gates]]
+- [[Multi-Domain Reader and Author Evaluation Protocol v0.1]]
+- [[Evaluation Material and Task Register v0.1]]
+- [[Participant Sampling and Recruitment Plan v0.1]]
+- [[Evaluation Data Dictionary and Privacy Plan v0.1]]
+- [[Preregistered Analysis and Decision Plan v0.1]]
+- [[Evaluation Execution Status v0.1]]
 - [[Independent SLE Rule Evidence Register v0.1]]
 - [[Document Pattern Coverage Register v0.1]]
 - [[Multi-Domain SLE Evaluation Corpus v0.1]]
@@ -121,7 +127,7 @@ tags:
 7. Build [[Multi-Domain SLE Evaluation Corpus v0.1|the multi-domain evaluation corpus]].
 8. Define [[SLE Editorial Conformance Checklist v0.1|the human editorial checklist and rule cases]].
 9. Assemble [[SLE for Linguistics Reference Artifact v0.1 Draft|the human-readable reference publication draft]].
-10. Run [[Pilot Study Design|controlled evaluations]].
+10. Prepare and run [[Multi-Domain Reader and Author Evaluation Protocol v0.1|the multi-domain human evaluation]].
 11. Apply the [[Quality Metrics and Acceptance Gates|acceptance gates]].
 12. Release through [[Governance and Change Control|governed change control]].
 
