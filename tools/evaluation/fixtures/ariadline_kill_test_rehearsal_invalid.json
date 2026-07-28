@@ -1,0 +1,96 @@
+{
+  "fixture_id": "ARIADLINE-KTR-INVALID-0.1",
+  "synthetic_only": false,
+  "study_state": "completed",
+  "evidence_claim": "human_evidence",
+  "parent_issue_9_advanced": true,
+  "human_gates": {
+    "permissions": "not_determined",
+    "meaning_authority": "not_determined",
+    "accessibility": "not_determined",
+    "statistics": "not_determined",
+    "preregistration": "not_determined",
+    "recruitment": "not_started"
+  },
+  "launch": {
+    "ready": true,
+    "reason": "human gates unresolved; synthetic rehearsal only"
+  },
+  "cases": [
+    {
+      "case_id": "KTR-001",
+      "scenario": "fictional theoretical claim-scope passage",
+      "conditions": {
+        "P": {"editor_id": "F-ED-001", "shared_packet_hash": "sha256:shared-001"},
+        "S": {"editor_id": "F-ED-001", "shared_packet_hash": "sha256:mismatch"}
+      },
+      "comparability": "comparable",
+      "scorer_packet": {"rule_metadata_absent": false},
+      "scoring_freeze": {"frozen_before_condition_output": false},
+      "preservation": {
+        "P": {"dimensions": [
+          {"dimension": "claim_scope", "result": "preserved", "severity": "not_applicable", "material": true},
+          {"dimension": "evidential_force", "result": "preserved", "severity": "not_applicable", "material": true}
+        ], "overall": "preserved"},
+        "S": {"dimensions": [
+          {"dimension": "claim_scope", "result": "preserved", "severity": "not_applicable", "material": true},
+          {"dimension": "evidential_force", "result": "preserved", "severity": "not_applicable", "material": true}
+        ], "overall": "preserved"}
+      },
+      "pair_eligible_for_benefit": true,
+      "reader_exposure_allowed": true,
+      "adverse_result_retained": false,
+      "not_determined_promoted_to_success": false
+    },
+    {
+      "case_id": "KTR-002",
+      "scenario": "fictional computational report with system/language claim confusion",
+      "conditions": {
+        "P": {"editor_id": "F-ED-003", "shared_packet_hash": "sha256:shared-002"},
+        "S": {"editor_id": "F-ED-004", "shared_packet_hash": "sha256:shared-002"}
+      },
+      "comparability": "comparable",
+      "scorer_packet": {"rule_metadata_absent": true},
+      "scoring_freeze": {"frozen_before_condition_output": true},
+      "preservation": {
+        "P": {"dimensions": [
+          {"dimension": "claim_scope", "result": "preserved", "severity": "not_applicable", "material": true},
+          {"dimension": "evidential_force", "result": "preserved", "severity": "not_applicable", "material": true}
+        ], "overall": "preserved"},
+        "S": {"dimensions": [
+          {"dimension": "claim_content", "result": "not_preserved", "severity": "major", "material": true},
+          {"dimension": "evidential_force", "result": "preserved", "severity": "not_applicable", "material": true}
+        ], "overall": "preserved"}
+      },
+      "pair_eligible_for_benefit": true,
+      "reader_exposure_allowed": true,
+      "adverse_result_retained": false,
+      "not_determined_promoted_to_success": false
+    },
+    {
+      "case_id": "KTR-003",
+      "scenario": "fictional community-governed description with unresolved terminology authority",
+      "conditions": {
+        "P": {"editor_id": "F-ED-005", "shared_packet_hash": "sha256:shared-003"},
+        "S": {"editor_id": "F-ED-006", "shared_packet_hash": "sha256:shared-003"}
+      },
+      "comparability": "comparable",
+      "scorer_packet": {"rule_metadata_absent": true},
+      "scoring_freeze": {"frozen_before_condition_output": true},
+      "preservation": {
+        "P": {"dimensions": [
+          {"dimension": "claim_scope", "result": "preserved", "severity": "not_applicable", "material": true},
+          {"dimension": "evidential_force", "result": "preserved", "severity": "not_applicable", "material": true}
+        ], "overall": "preserved"},
+        "S": {"dimensions": [
+          {"dimension": "community_sensitive_meaning", "result": "not_determined", "severity": "major", "material": true},
+          {"dimension": "claim_scope", "result": "preserved", "severity": "not_applicable", "material": true}
+        ], "overall": "preserved"}
+      },
+      "pair_eligible_for_benefit": true,
+      "reader_exposure_allowed": true,
+      "adverse_result_retained": false,
+      "not_determined_promoted_to_success": true
+    }
+  ]
+}
