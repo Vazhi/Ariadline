@@ -15,7 +15,7 @@ All entries are fictional procedure tests. They do not represent authentic lingu
 
 | Case | Fictional communication risk | Expected structural result |
 |---|---|---|
-| `KTR-001` | theoretical claim with unclear scope | P and S use separate editors and the same shared packet; both preservation records derive to `preserved`; pair may be marked eligible inside the synthetic fixture |
+| `KTR-001` | theoretical claim with unclear scope | P and S use separate editors and the same shared packet; both preservation records derive to `preserved`; the pair is structurally benefit-eligible, but reader exposure remains blocked while human launch gates are unresolved |
 | `KTR-002` | computational report that confuses system output with a language claim | S contains a major claim-content loss; overall result derives to `not preserved`; pair and reader exposure remain ineligible; adverse result remains visible |
 | `KTR-003` | community-governed description with unresolved terminology authority | S contains unresolved material meaning; overall result derives to `not determined`; pair and reader exposure remain ineligible; no launch or success promotion is allowed |
 
@@ -38,6 +38,7 @@ The negative fixture introduces:
 - preservation results that contradict their dimensions;
 - benefit eligibility for failed or unresolved pairs;
 - reader exposure for ineligible pairs;
+- reader exposure before human launch gates pass;
 - hidden adverse outcomes;
 - promotion of `not determined` to success.
 
@@ -53,12 +54,13 @@ The negative fixture introduces:
 8. `PARENT_STUDY_ADVANCED`
 9. `PRESERVATION_AGGREGATION_INVALID`
 10. `READER_EXPOSURE_WITH_INELIGIBLE_PAIR`
-11. `SAME_EDITOR_SAME_RECORD`
-12. `SCORER_METADATA_LEAK`
-13. `SCORING_FREEZE_AFTER_OUTPUT`
-14. `SHARED_PACKET_HASH_MISMATCH`
-15. `STUDY_STATE_ADVANCED`
-16. `SYNTHETIC_FLAG_REQUIRED`
+11. `READER_EXPOSURE_WITH_UNREADY_LAUNCH`
+12. `SAME_EDITOR_SAME_RECORD`
+13. `SCORER_METADATA_LEAK`
+14. `SCORING_FREEZE_AFTER_OUTPUT`
+15. `SHARED_PACKET_HASH_MISMATCH`
+16. `STUDY_STATE_ADVANCED`
+17. `SYNTHETIC_FLAG_REQUIRED`
 
 ## Boundary
 
