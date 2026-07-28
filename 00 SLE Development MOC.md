@@ -66,7 +66,7 @@ tags:
 - [[Evaluation Material and Task Register v0.1]]
 - [[Participant Sampling and Recruitment Plan v0.1]]
 - [[Evaluation Data Dictionary and Privacy Plan v0.1]]
-- [[Preregistered Analysis and Decision Plan v0.1]]
+- [[Preregistered Analysis and Decision Plan v0.1|Analysis and Decision Plan Draft v0.1]]
 - [[Evaluation Execution Status v0.1]]
 - [[Independent SLE Rule Evidence Register v0.1]]
 - [[Document Pattern Coverage Register v0.1]]
