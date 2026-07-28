@@ -9,13 +9,14 @@ tags: [ariadline, evaluation, editing, conditions]
 ---
 # Ariadline Matched Editor Briefs v0.1
 
-## Shared information packet
+## Shared rule-neutral information packet
 
 The following information must be identical for P and S:
 
 - passage ID and source version;
 - authorized meaning-record ID and version;
 - document purpose and intended readership;
+- a frozen rule-neutral description of the authentic communication risk;
 - permitted degree of editing;
 - protected terminology and quotations;
 - source, community, privacy, and access restrictions;
@@ -24,13 +25,17 @@ The following information must be identical for P and S:
 - allowed external resources;
 - route for `not determined` questions.
 
+The risk description must not contain `SLE-RULE-*` IDs, Ariadline terminology, an expected condition direction, or a condition-specific diagnosis.
+
 Freeze and hash the shared packet before assignment. Record any later change as a deviation affecting both conditions.
+
+An independent coordinator may preregister candidate-rule applicability for later analysis. Keep that mapping from both editors until editing and all editor-facing records are frozen.
 
 ## P — ordinary expert editing brief
 
-You are performing competent ordinary expert editing. Improve clarity, precision, cohesion, and usability while preserving the authorized meaning.
+You are performing competent ordinary expert editing. Improve clarity, precision, cohesion, and usability while preserving the authorized meaning and addressing the shared communication risk.
 
-You may use your normal professional methods and the shared resources. You are not given the Ariadline candidate-rule register.
+You may use your normal professional methods and the shared resources. You are not given the Ariadline candidate-rule register or any preregistered rule-applicability mapping.
 
 You must:
 
@@ -42,7 +47,7 @@ You must:
 
 Deliverables:
 
-- edited P version;
+- edited P version and immutable version hash;
 - change summary;
 - unresolved questions;
 - time record;
@@ -54,13 +59,13 @@ The legacy condition code `S` is retained for compatibility. Perform the same ta
 
 You also receive:
 
-- [[Ariadline Candidate Test Core Register v0.1]];
-- passage-specific applicable and not-applicable `SLE-RULE-*` IDs;
-- the same authorized meaning record given to P.
+- [[Ariadline Candidate Test Core Register v0.1]].
+
+You do not receive the coordinator’s preregistered applicability mapping. Determine applicability from the shared packet and record your decisions during editing.
 
 You must:
 
-- apply only rules registered as applicable;
+- apply only rules that you judge applicable and record the reason;
 - preserve claim content, scope, evidential force, uncertainty, examples, limitations, and access boundaries;
 - avoid adding substantive information not available to P;
 - record when a rule adds burden, repetition, fragmentation, or unnaturalness;
@@ -69,13 +74,21 @@ You must:
 
 Deliverables:
 
-- edited S version;
-- rule-action log;
+- edited S version and immutable version hash;
+- editor-generated applicability and rule-action log;
 - change summary;
 - unresolved questions;
 - burden or conflict flags;
 - time record;
 - resource-use record.
+
+## Editor assignment and contamination controls
+
+- One editor must not produce both P and S for the same passage or meaning record.
+- An editor must not see the other condition’s output, action log, unresolved questions, preservation record, or reader result.
+- When an editor works in both conditions across different passages, register and counterbalance condition and order.
+- Record prior Ariadline exposure, ordinary editing experience, subfield familiarity, language background, and any contamination concern.
+- Any prohibited access or same-record carryover makes the pair `not comparable` unless the frozen protocol explicitly defines a narrower non-primary use.
 
 ## Comparability audit
 
@@ -85,12 +98,15 @@ Before preservation review, a masked coordinator records:
 |---|---|---|---|
 | Same source version | | | |
 | Same meaning-record version | | | |
+| Same rule-neutral risk brief | | | |
 | Same substantive source information | | | |
 | Same purpose and readership | | | |
 | Same allowed resources | | | |
 | Same length and formatting constraints | | | |
 | Same time rules | | | |
-| No cross-condition leakage | | | |
+| Different editors for the same meaning record | | | |
+| No access to the other condition’s output or logs | | | |
+| Cross-passage condition and order controls recorded | | | |
 | Differences limited to candidate-core guidance | | | |
 
 Allowed result: `comparable`, `not comparable`, or `not determined`.
