@@ -49,7 +49,7 @@ A launch result can be `ready` only when every applicable required item is `pass
 - [ ] Prior Ariadline exposure and contamination risks are recorded.
 - [ ] Any prohibited access or same-record carryover triggers comparability review.
 
-## D. Preservation
+## D. Preservation and adverse-condition retention
 
 - [ ] P and S conditions have independent masked preservation review under issue #44.
 - [ ] Reviewers receive no condition label, rule ID, editor identity, action log, expected direction, or other-condition output.
@@ -61,11 +61,13 @@ A launch result can be `ready` only when every applicable required item is `pass
 - [ ] Minor and editorial differences are explicitly confirmed nonmaterial.
 - [ ] Disagreement and dissent are retained.
 - [ ] Adjudication rules are frozen.
-- [ ] A failed or unresolved condition is excluded from benefit analysis.
+- [ ] A failed or unresolved condition is excluded from reader exposure and benefit analysis.
 - [ ] A P/S pair with either condition ineligible is excluded from the primary benefit comparison.
-- [ ] Adverse preservation results remain reported.
+- [ ] Pair ineligibility does not delete or overwrite either condition or its adverse result.
+- [ ] Every proposed, rejected, repaired, selected, failed, and unresolved condition version retains its hash, action log, review, disposition reason, and replacement relation.
+- [ ] Adverse preservation and comparability results remain reported.
 
-## E. Tasks and scoring
+## E. Tasks, scoring, and scorer independence
 
 - [ ] Each passage has a registered authentic rule-neutral communication risk.
 - [ ] Only relevant reader tasks are used.
@@ -77,6 +79,11 @@ A launch result can be `ready` only when every applicable required item is `pass
 - [ ] Reader-facing packets contain no rule IDs, condition labels, editor metadata, meaning-record text, or scoring answers.
 - [ ] Scorer-facing packets contain only masked responses and the frozen scoring key.
 - [ ] Rule IDs, condition mappings, editor identities, and action logs remain restricted administrative metadata.
+- [ ] Scorer and adjudicator contributor status, expertise, conflicts, calibration, masking, and unmasking are recorded.
+- [ ] Ariadline or Canto-span developers do not supply the entire scoring or adjudication chain.
+- [ ] Every scored task family includes at least one scorer or adjudicator independent of Ariadline development.
+- [ ] Unresolved material scorer or adjudicator conflicts block the affected route.
+- [ ] Initial independent scores remain available after adjudication.
 - [ ] Scorer calibration and agreement procedures are frozen.
 - [ ] Any masking failure or outcome-visible key change triggers eligibility and deviation review.
 - [ ] Meaning-preservation failure cannot be offset by reader scores.
@@ -86,7 +93,7 @@ A launch result can be `ready` only when every applicable required item is `pass
 
 - [ ] [[Ariadline Kill-Test Data, Assignment, and Analysis Plan v0.1]] is approved or replaced by a human-approved frozen plan.
 - [ ] Contact and consent records, participant key, restricted materials, restricted administrative mappings, de-identified research data, and release records are access-separated.
-- [ ] Participant and record IDs are random and do not encode condition, institution, country, language, role, recruitment source, health, or accessibility details.
+- [ ] Participant and record IDs are random and do not encode condition, institution, country, language, role, recruitment source, contributor, health, or accessibility details.
 - [ ] Direct identifiers are absent from assignment, response, score, preservation, and analysis records.
 - [ ] Rare combinations and free text have a disclosure-review route.
 - [ ] Access roles, encryption, backup, transfer, incident response, retention, deletion, withdrawal limits, and release conditions are approved.
@@ -106,13 +113,15 @@ A launch result can be `ready` only when every applicable required item is `pass
 - [ ] Withdrawal removes later assignments and follows approved data handling.
 - [ ] Participant identifiers remain outside public or analysis records.
 
-## H. Exclusions, deviations, and unmasking
+## H. Exclusions, pair ineligibility, deviations, and unmasking
 
-- [ ] Mechanical exclusion codes are frozen before participant exposure.
-- [ ] Exclusion rules are limited to approved objective eligibility, consent, duplicate, withdrawal, technical, missingness, masking, assignment, comparability, preservation, and protocol-integrity conditions.
+- [ ] Participant and response exclusion codes are frozen before participant exposure.
+- [ ] Participant or response exclusions are limited to approved objective eligibility, consent, duplicate, withdrawal, technical, missingness, masking, assignment, and protocol-integrity conditions.
+- [ ] Condition-pair ineligibility is recorded separately for preservation, comparability, authority, permission, contamination, or another approved non-compensable failure.
+- [ ] Pair ineligibility affects exposure or benefit analysis only and does not erase the restricted audit or adverse-results record.
 - [ ] No record is excluded because it favors P, criticizes Ariadline, reports burden or bias, selects uncertainty, or supports a null, adverse, revise, stop, or insufficient-evidence result.
 - [ ] Unregistered exclusions are recorded as deviations rather than silently treated as planned.
-- [ ] Every deviation records date, phase, affected scope, outcome visibility, reason, corrective action, eligibility effect, interpretive effect, and responsible role.
+- [ ] Every deviation records date, phase, affected scope, outcome visibility, reason, corrective action, eligibility effect, retention effect, interpretive effect, and responsible role.
 - [ ] The original frozen protocol remains preserved after amendments.
 - [ ] Unmasking sequence, authorized roles, date, scope, and purpose are frozen and logged.
 
@@ -129,9 +138,9 @@ A launch result can be `ready` only when every applicable required item is `pass
 
 - [ ] The primary comparison is S versus P.
 - [ ] Item-level and rule-level results precede package-level conclusions.
-- [ ] P successes and S-created problems are retained.
+- [ ] P successes, S-created problems, failed conditions, and rejected variants are retained.
 - [ ] Meaning preservation, burden, naturalness, cohesion, repetition, fragmentation, applicability agreement, and bias are reported alongside comprehension.
-- [ ] Uncertainty, missingness, scorer disagreement, withdrawals, exclusions, and deviations are visible.
+- [ ] Uncertainty, missingness, scorer disagreement, withdrawals, exclusions, ineligible pairs, and deviations are visible.
 - [ ] Hard safety failures, descriptive warnings, and insufficient evidence are distinguished.
 - [ ] No unsupported numerical threshold or universal generalization is introduced.
 - [ ] Null, mixed, harmful, revise, stop, and insufficient-evidence outcomes remain available.
