@@ -60,32 +60,38 @@ This result validates document structure and internal control coverage only. It 
 - Editors cannot access the other condition's output, logs, preservation, tasks, or participant results.
 - U is optional and cannot replace S-versus-P.
 
-## Preservation checks
+## Preservation and adverse-record checks
 
 - Independent masked preservation review is required for every P and S condition.
 - Any critical or major non-preservation requires overall `not preserved`.
 - Any unresolved material dimension requires `not determined` unless already `not preserved`.
 - `Preserved` requires every applicable material dimension to be preserved and all minor/editorial differences to be confirmed nonmaterial.
-- Failed or unresolved conditions and pairs cannot enter benefit analysis.
-- Adverse preservation results remain reportable and cannot be offset by benefit scores.
+- Failed or unresolved conditions and pairs cannot enter reader exposure or benefit analysis.
+- Pair ineligibility does not delete or overwrite either condition or its adverse result.
+- Every proposed, rejected, repaired, selected, failed, and unresolved condition version retains its exact hash, action log, review, disposition reason, and replacement relation.
+- Adverse preservation and comparability results remain reportable and cannot be offset by benefit scores.
 
-## Task, masking, and scoring checks
+## Task, masking, scoring, and independence checks
 
 - Tasks derive from the source, authorized meaning record, shared neutral risk, registered construct, and accessibility requirements.
 - Every scored answer is traceable through a frozen question ID and scoring-key version to an authorized meaning record.
 - Accepted elements, prohibited unsupported elements, partial credit, critical errors, `not determined`, and adjudication are registered.
 - Subjective clarity or preference does not substitute for scored comprehension.
-- Restricted rule, condition, editor, action-log, authority, and assignment metadata are separated from reader and scorer packets.
+- Restricted rule, condition, editor, action-log, authority, assignment, contributor, and conflict metadata are separated from reader and scorer packets.
 - Task designers and scorers must not inspect condition outputs or outcomes before freeze.
-- Masking failures and outcome-visible changes require deviation and eligibility review.
+- Ariadline or Canto-span developers cannot supply the entire scoring or adjudication chain.
+- Every scored task family includes at least one scorer or adjudicator independent of Ariadline development.
+- Scorer and adjudicator contributor status, expertise, conflicts, calibration, masking, and unmasking are recorded.
+- Initial independent scores remain visible after adjudication.
+- Masking failures, unresolved material conflicts, and outcome-visible changes require deviation and eligibility review.
 
 ## Data and privacy checks
 
 - Contact/consent records, participant key, restricted materials, restricted administration, de-identified research data, and release records are separated.
-- Random identifiers do not encode condition, institution, country, language, role, recruitment source, health, or accessibility information.
+- Random identifiers do not encode condition, institution, country, language, role, recruitment source, contributor status, health, or accessibility information.
 - Direct identifiers are prohibited in assignment, response, scoring, preservation, and analysis records.
 - Participant, material/condition, assignment, response, scoring, preservation, exclusion, and deviation fields are defined.
-- Rare combinations, free text, restricted materials, and condition keys require disclosure and permission review.
+- Rare combinations, free text, restricted materials, failed-condition text, and condition keys require disclosure and permission review.
 - Human issue #46 must approve access, security, retention, deletion, withdrawal, incident, and release rules.
 
 ## Assignment and exclusion checks
@@ -94,17 +100,20 @@ This result validates document structure and internal control coverage only. It 
 - P/S exposure is balanced by material, broad domain, and order as closely as the approved design permits.
 - The algorithm, seed, schedule, and hash freeze before exposure.
 - Editor and participant contamination controls are explicit.
-- Mechanical exclusions are limited to objective frozen eligibility, consent, duplicate, withdrawal, technical, missingness, masking, assignment, comparability, preservation, and protocol-integrity conditions.
+- Participant and response exclusions are separated from condition-pair ineligibility.
+- Mechanical participant/response exclusions are limited to objective frozen eligibility, consent, duplicate, withdrawal, technical, missingness, masking, assignment, and protocol-integrity conditions.
+- Pair ineligibility is limited to preservation, comparability, authority, permission, contamination, or another approved non-compensable failure.
+- Pair ineligibility affects exposure or benefit analysis only; the restricted audit and adverse-results record remain intact.
 - Preference for P, criticism of Ariadline, adverse findings, uncertainty, and null or stop outcomes are not valid exclusion grounds.
 - Unregistered exclusions remain deviations.
 
 ## Deviation, unmasking, and analysis checks
 
-- Deviations record affected scope, outcome visibility, correction, eligibility effect, interpretation, and responsible role while preserving the original frozen record.
+- Deviations record affected scope, outcome visibility, correction, eligibility effect, retention effect, interpretation, and responsible role while preserving the original frozen record.
 - Unmasking requires a frozen sequence and event log.
 - The primary comparison is S versus P with no more than three frozen primary outcomes.
 - Meaning preservation is a non-compensable safety outcome.
-- Item-level and rule-level results, P successes, S-created harms, uncertainty, missingness, and disagreement remain visible.
+- Item-level and rule-level results, P successes, S-created harms, failed conditions, rejected variants, uncertainty, missingness, and disagreement remain visible.
 - Hard safety failures, descriptive warnings, and insufficient evidence are distinguished.
 - The small pilot cannot justify manufactured thresholds or generalization to linguistics as a whole.
 - Continue, revise or reconceive, stop, and insufficient-evidence outcomes remain available.
