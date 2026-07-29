@@ -4,7 +4,7 @@ type: evaluation-method
 status: planning-draft
 version: "0.1"
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-07-29
 tags: [ariadline, evaluation, materials, method, open-license]
 ---
 # Ariadline Open-License Material Inventory Method v0.1
@@ -15,37 +15,44 @@ Which open-license linguistic publications or data papers provide a sufficiently
 
 ## Search boundary
 
-The search used official publisher, journal, or repository pages. It prioritized sources with:
+The search used official publisher, journal, article, or repository pages. Work-level source metadata was rechecked on 2026-07-29. The check covered:
 
-- a stable title, year, author, DOI, or equivalent locator;
-- an explicit Creative Commons notice on the official page;
+- stable title;
+- author or creator identity;
+- publication state, year, edition, or dataset version where displayed;
+- article or work DOI, dataset DOI, or equivalent stable locator;
+- a work-level Creative Commons notice on the official page;
 - authorial prose rather than only raw participant or community data;
 - plausible relevance to at least one candidate-core communication risk;
 - enough diversity to prevent the discovery process from collapsing into one theory, language, method, or genre.
 
-No passage text was copied or evaluated.
+No passage text was copied or evaluated. The metadata check did not establish rights in embedded or linked components, permission for participant exposure, meaning authority, ethical suitability, accessibility, or final eligibility.
 
 ## Included source families
 
 - open-access descriptive grammars and monographs from Language Science Press;
 - peer-reviewed general-linguistics articles from Glossa;
-- peer-reviewed data papers and linked resources from the Journal of Open Humanities Data;
-- selected original research listed by Frontiers in Communication, whose publisher policy uses CC BY, subject to article-specific re-verification.
+- peer-reviewed data papers, discussion papers, and linked resources from the Journal of Open Humanities Data;
+- selected original research from Frontiers in Communication using article-specific official pages and displayed Creative Commons Attribution notices.
 
 ## Screening fields
 
 Each candidate records:
 
 1. stable candidate ID;
-2. title and official page;
-3. citation or DOI locator;
-4. source type and broad domain family;
-5. displayed license or publisher policy;
-6. candidate section type, never copied text;
-7. possible communication risks;
-8. likely human authority and restriction checks;
-9. initial screening priority;
-10. status `candidate—not approved`.
+2. title and official work-level page;
+3. author or creator identity;
+4. publication state, year, edition, or dataset version where displayed;
+5. article or work DOI and separate dataset locator where applicable;
+6. source type and broad domain family;
+7. displayed work-level license;
+8. candidate section type, never copied text;
+9. possible communication risks;
+10. likely human authority and restriction checks;
+11. initial screening priority;
+12. status `candidate—not approved`.
+
+A missing or internally inconsistent publication field is recorded as an unresolved dependency rather than silently normalized.
 
 ## License interpretation
 
@@ -59,7 +66,7 @@ A displayed CC BY license may support adaptation of the covered work with attrib
 - translation, publisher, author, and source-version authority;
 - attribution, change-marking, and redistribution requirements.
 
-Sources using noncommercial, share-alike, no-derivatives, unclear, nonstandard, or component-specific licenses should be treated as conditional or held for clarification. None were treated as automatically study-ready.
+Sources using noncommercial, share-alike, no-derivatives, unclear, nonstandard, component-specific, or internally inconsistent licensing or publication metadata should be treated as conditional or held for clarification. None are automatically study-ready.
 
 ## Selection-bias controls
 
@@ -77,18 +84,19 @@ The inventory is intentionally larger than the target 10–12 passages. Human se
 
 ### High
 
-The official page displays a clear CC BY notice, and the work appears to contain bounded authorial prose that could plausibly be screened without immediately reproducing restricted participant or community material.
+The official work-level page displays a clear CC BY notice, the publication or version is sufficiently identified for screening, and the work appears to contain bounded authorial prose that could plausibly be screened without immediately reproducing restricted participant or community material.
 
 ### Conditional
 
 The candidate has one or more prominent dependencies, such as:
 
+- ambiguous publication state or unresolved version metadata;
 - translation authority;
 - community or modality-specific authority;
 - audio, video, transcript, child, clinical, or conversational data;
 - linked resource or upstream-license chains;
-- article-specific license verification;
-- figures, maps, examples, or test instruments essential to interpretation.
+- figures, maps, examples, or test instruments essential to interpretation;
+- component-level rights or access conditions that require separate review.
 
 Priority does not imply approval or likely inclusion.
 
