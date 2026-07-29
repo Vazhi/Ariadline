@@ -46,7 +46,7 @@ This result validates document structure and internal control coverage only. It 
 - Passage selection cannot create defects solely to favor Ariadline.
 - Publication and rights authority are separated from intended-meaning authority.
 - A legitimate author, translator, source, or community meaning authority must approve the meaning record.
-- Rejected and reserve materials remain visible.
+- Rejected and reserve materials remain visible or leave an approved tombstone when content cannot lawfully remain.
 
 ## Fair-comparison checks
 
@@ -60,16 +60,18 @@ This result validates document structure and internal control coverage only. It 
 - Editors cannot access the other condition's output, logs, preservation, tasks, or participant results.
 - U is optional and cannot replace S-versus-P.
 
-## Preservation and adverse-record checks
+## Preservation, adverse-record, and deletion checks
 
 - Independent masked preservation review is required for every P and S condition.
 - Any critical or major non-preservation requires overall `not preserved`.
 - Any unresolved material dimension requires `not determined` unless already `not preserved`.
 - `Preserved` requires every applicable material dimension to be preserved and all minor/editorial differences to be confirmed nonmaterial.
 - Failed or unresolved conditions and pairs cannot enter reader exposure or benefit analysis.
-- Pair ineligibility does not delete or overwrite either condition or its adverse result.
-- Every proposed, rejected, repaired, selected, failed, and unresolved condition version retains its exact hash, action log, review, disposition reason, and replacement relation.
-- Adverse preservation and comparability results remain reportable and cannot be offset by benefit scores.
+- Pair ineligibility does not itself delete or overwrite either condition or its adverse result.
+- Every proposed, rejected, repaired, selected, failed, and unresolved condition version retains its permitted exact hash, action log, review, disposition reason, and replacement relation.
+- A separately approved legal, rights, community, source-access, withdrawal, or deletion obligation may remove restricted content only with a permitted tombstone documenting the ID/hash, date, authority, basis, scope, prior disposition, replacement relation, and interpretive effect.
+- Tombstones cannot retain prohibited content or permit prohibited reconstruction.
+- Adverse preservation, comparability, and deletion effects remain reportable and cannot be offset by benefit scores.
 
 ## Task, masking, scoring, and independence checks
 
@@ -90,8 +92,8 @@ This result validates document structure and internal control coverage only. It 
 - Contact/consent records, participant key, restricted materials, restricted administration, de-identified research data, and release records are separated.
 - Random identifiers do not encode condition, institution, country, language, role, recruitment source, contributor status, health, or accessibility information.
 - Direct identifiers are prohibited in assignment, response, scoring, preservation, and analysis records.
-- Participant, material/condition, assignment, response, scoring, preservation, exclusion, and deviation fields are defined.
-- Rare combinations, free text, restricted materials, failed-condition text, and condition keys require disclosure and permission review.
+- Participant, material/condition, assignment, response, scoring, preservation, exclusion, deviation, and deletion-tombstone fields are defined.
+- Rare combinations, free text, restricted materials, failed-condition text, condition keys, and tombstones require disclosure and permission review.
 - Human issue #46 must approve access, security, retention, deletion, withdrawal, incident, and release rules.
 
 ## Assignment and exclusion checks
@@ -103,17 +105,18 @@ This result validates document structure and internal control coverage only. It 
 - Participant and response exclusions are separated from condition-pair ineligibility.
 - Mechanical participant/response exclusions are limited to objective frozen eligibility, consent, duplicate, withdrawal, technical, missingness, masking, assignment, and protocol-integrity conditions.
 - Pair ineligibility is limited to preservation, comparability, authority, permission, contamination, or another approved non-compensable failure.
-- Pair ineligibility affects exposure or benefit analysis only; the restricted audit and adverse-results record remain intact.
+- Pair ineligibility affects exposure or benefit analysis only; it does not itself erase the restricted audit or adverse-results record.
+- Approved deletion duties are recorded separately from analytical ineligibility and produce a permitted tombstone and explicit interpretive limitation.
 - Preference for P, criticism of Ariadline, adverse findings, uncertainty, and null or stop outcomes are not valid exclusion grounds.
 - Unregistered exclusions remain deviations.
 
 ## Deviation, unmasking, and analysis checks
 
-- Deviations record affected scope, outcome visibility, correction, eligibility effect, retention effect, interpretation, and responsible role while preserving the original frozen record.
+- Deviations record affected scope, outcome visibility, correction, eligibility effect, retention effect, interpretation, and responsible role while preserving the original frozen record or permitted tombstone.
 - Unmasking requires a frozen sequence and event log.
 - The primary comparison is S versus P with no more than three frozen primary outcomes.
 - Meaning preservation is a non-compensable safety outcome.
-- Item-level and rule-level results, P successes, S-created harms, failed conditions, rejected variants, uncertainty, missingness, and disagreement remain visible.
+- Item-level and rule-level results, P successes, S-created harms, failed conditions, rejected variants, permitted tombstones, uncertainty, missingness, and disagreement remain visible.
 - Hard safety failures, descriptive warnings, and insufficient evidence are distinguished.
 - The small pilot cannot justify manufactured thresholds or generalization to linguistics as a whole.
 - Continue, revise or reconceive, stop, and insufficient-evidence outcomes remain available.
@@ -127,7 +130,7 @@ The packet does not decide:
 - the fair final P/S conditions;
 - the final sample target or statistical method;
 - applicable oversight, legal, ethical, publisher, or community requirements;
-- compensation, accessibility, retention, security, or release terms;
+- compensation, accessibility, retention, security, deletion, or release terms;
 - exact primary outcomes, exclusions, schedule, seed, or thresholds;
 - whether execution is feasible;
 - the final project disposition.
