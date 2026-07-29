@@ -4,7 +4,7 @@ type: evaluation-package
 status: planning-draft
 version: "0.1"
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-07-29
 tags: [ariadline, evaluation, materials, open-license, candidates]
 ---
 # Ariadline Open-License Material Candidate Package v0.1
@@ -25,11 +25,11 @@ It does not select passages or create authorized materials.
 ## Workflow
 
 1. A human reviews the candidate pool and rejects unsuitable sources.
-2. A human confirms the exact work, version, license notice, and any third-party exclusions.
+2. A human confirms the exact work, version, license notice, and any third-party exclusions. A publisher or rights holder may confirm publication and rights information but is not automatically an authority on the author's intended meaning.
 3. A human proposes an exact passage boundary and necessary surrounding context without placing restricted text in the public repository.
-4. A legitimate author, translator, publisher, source, or community authority approves the meaning record and question route.
+4. A legitimate author, translator, source, or community meaning authority approves the meaning record and question route.
 5. Permission, participant exposure, quotation, redistribution, access, community, and privacy states are recorded separately.
-6. Only then may a candidate enter P/S condition development under issue #43 or its successor.
+6. Only then may a candidate enter P/S condition development under human issue #44, using the condition templates from issue #43 or their successors.
 
 ## Status vocabulary
 
