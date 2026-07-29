@@ -26,6 +26,9 @@ It does not approve the candidate core or start the study.
 - [[Ariadline Kill-Test Execution Checklist v0.1]]
 - [[Ariadline Kill-Test Execution Packet Validation v0.1]]
 - [[Ariadline Compact Kill-Test Synthetic Dry Run v0.1]]
+- [[Ariadline Compact Kill-Test Synthetic Data Dictionary v0.1]]
+- [[Ariadline Compact Kill-Test Synthetic Dry Run Report v0.1]]
+- [[Ariadline Compact Kill-Test Synthetic Dry Run Validation v0.1]]
 - [[Ariadline Compact Kill-Test Synthetic Readiness Checklist v0.1]]
 
 ## Current human and automated handoff
@@ -46,10 +49,15 @@ The older broad-study issues #9 and #30–#35 remain open or paused source mater
 Issue #45 exercises the planned workflow with:
 
 - 12 fictional meaning records across four domain families;
-- 24 fictional participants and 144 masked assignments;
-- exact P/S exposure balance for every eligible material;
-- masked responses, independent scoring, adjudication, exclusions, deviations, adverse conditions, analysis, and all four disposition routes;
-- complete exact expected fixtures and a deterministic self-test.
+- 24 fictional participants, six assignments each, and 144 masked assignments and raw responses;
+- exact eight-P/eight-S exposure for every eligible material;
+- nine eligible P/S pairs and three retained adverse or unresolved ineligible pairs;
+- 137 analyzable responses, 274 masked initial scores, and 23 adjudications;
+- seven mechanically excluded missing or technical-failure responses that remain visible but receive no score or adjudication rows;
+- one independent scoring route for every analyzable response and represented question;
+- explicit material and meaning-record identities in every compact scoring-key relation;
+- exclusions, deviations, adverse conditions, analysis, and all four disposition routes;
+- three exact round-trippable expected fixtures and a deterministic self-test with 16 passed checks.
 
 The synthetic package is ready for human protocol and launch review, not participant launch. It does not satisfy core approval, authentic-material, meaning-authority, permission, oversight, recruitment, statistical, accessibility, retention, or final-disposition gates.
 
@@ -68,10 +76,11 @@ The synthetic package is ready for human protocol and launch review, not partici
 11. Create the frozen participant assignment schedule and hash under the approved counterbalancing plan.
 12. Build reader- and scorer-facing packets without restricted rule, condition, editor, or action-log metadata.
 13. Freeze mechanical exclusions, data separation, retention, deviation, unmasking, and analysis rules.
-14. Review the synthetic dry-run defects and repaired controls against the authentic implementation.
-15. Complete launch, masking, accessibility, assignment, withdrawal, oversight, and registration checks.
-16. Run only after all required human approvals and registration gates pass.
-17. Apply rule-level and project-level decision routes without hiding adverse or insufficient-evidence outcomes.
+14. Reproduce the synthetic dry run and review every repaired defect against the authentic implementation.
+15. Confirm that excluded records remain auditable but cannot enter scoring or benefit analysis.
+16. Complete launch, masking, accessibility, assignment, withdrawal, oversight, and registration checks.
+17. Run only after all required human approvals and registration gates pass.
+18. Apply rule-level and project-level decision routes without hiding adverse or insufficient-evidence outcomes.
 
 ## Information separation
 
