@@ -11,7 +11,7 @@ tags: [ariadline, evaluation, execution]
 
 ## Purpose
 
-This is the operational front door for the compact adversarial pilot package prepared under issues #43 and #53. It translates [[Ariadline Minimal Kill-Test Package v0.1]] into forms and plans that humans can approve, replace, and use.
+This is the operational front door for the compact adversarial pilot package prepared under issues #43 and #53 and procedure-tested under issue #45. It translates [[Ariadline Minimal Kill-Test Package v0.1]] into forms and plans that humans can approve, replace, and use.
 
 It does not approve the candidate core or start the study.
 
@@ -25,6 +25,11 @@ It does not approve the candidate core or start the study.
 - [[Ariadline Kill-Test Data, Assignment, and Analysis Plan v0.1]]
 - [[Ariadline Kill-Test Execution Checklist v0.1]]
 - [[Ariadline Kill-Test Execution Packet Validation v0.1]]
+- [[Ariadline Compact Kill-Test Synthetic Dry Run v0.1]]
+- [[Ariadline Compact Kill-Test Synthetic Data Dictionary v0.1]]
+- [[Ariadline Compact Kill-Test Synthetic Dry Run Report v0.1]]
+- [[Ariadline Compact Kill-Test Synthetic Dry Run Validation v0.1]]
+- [[Ariadline Compact Kill-Test Synthetic Readiness Checklist v0.1]]
 
 ## Current human and automated handoff
 
@@ -32,12 +37,29 @@ It does not approve the candidate core or start the study.
 2. Human issue #42 acquires authentic passages, lawful-use records, and authorized meaning records.
 3. Automated issue #43 supplies this compact protocol, scoring, data, assignment, exclusion, deviation, analysis, and stop-rule package.
 4. Human issue #44 creates fair P/S conditions and completes independent preservation review.
-5. Automated issue #45 runs synthetic procedure tests without authentic materials or participants.
-6. Human issue #46 approves oversight, freezes the design, and executes the pilot.
+5. Automated issue #45 runs the complete deterministic synthetic dry run without authentic materials or participants.
+6. Human issue #46 reviews the synthetic readiness record, approves oversight, freezes the authentic design, and executes the pilot.
 7. Automated issue #47 analyzes only authorized de-identified data or publishable aggregates.
 8. Human issue #48 decides whether to continue, revise, reconceive, or stop.
 
 The older broad-study issues #9 and #30–#35 remain open or paused source material. This packet does not satisfy or resume them.
+
+## Synthetic readiness result
+
+Issue #45 exercises the planned workflow with:
+
+- 12 fictional meaning records across four domain families;
+- 24 fictional participants, six assignments each, and 144 masked assignments and raw responses;
+- exact eight-P/eight-S exposure for every eligible material;
+- nine eligible P/S pairs and three retained adverse or unresolved ineligible pairs;
+- 137 analyzable responses, 274 masked initial scores, and 23 adjudications;
+- seven mechanically excluded missing or technical-failure responses that remain visible but receive no score or adjudication rows;
+- one independent scoring route for every analyzable response and represented question;
+- explicit material and meaning-record identities in every compact scoring-key relation;
+- exclusions, deviations, adverse conditions, analysis, and all four disposition routes;
+- three exact round-trippable expected fixtures and a deterministic self-test with 16 passed checks.
+
+The synthetic package is ready for human protocol and launch review, not participant launch. It does not satisfy core approval, authentic-material, meaning-authority, permission, oversight, recruitment, statistical, accessibility, retention, or final-disposition gates.
 
 ## Workflow
 
@@ -50,13 +72,15 @@ The older broad-study issues #9 and #30–#35 remain open or paused source mater
 7. Produce matched P and S edits; the S editor determines and logs applicability independently.
 8. Audit comparability and immutable output versions.
 9. Conduct masked independent preservation review using deterministic aggregation rules.
-10. Exclude failed or unresolved conditions and pairs from benefit analysis while retaining adverse results.
+10. Exclude failed or unresolved conditions and pairs from benefit analysis while retaining adverse results or permitted tombstones.
 11. Create the frozen participant assignment schedule and hash under the approved counterbalancing plan.
 12. Build reader- and scorer-facing packets without restricted rule, condition, editor, or action-log metadata.
 13. Freeze mechanical exclusions, data separation, retention, deviation, unmasking, and analysis rules.
-14. Complete launch, masking, accessibility, assignment, withdrawal, oversight, and registration checks.
-15. Run only after all required human approvals and registration gates pass.
-16. Apply rule-level and project-level decision routes without hiding adverse or insufficient-evidence outcomes.
+14. Reproduce the synthetic dry run and review every repaired defect against the authentic implementation.
+15. Confirm that excluded records remain auditable but cannot enter scoring or benefit analysis.
+16. Complete launch, masking, accessibility, assignment, withdrawal, oversight, and registration checks.
+17. Run only after all required human approvals and registration gates pass.
+18. Apply rule-level and project-level decision routes without hiding adverse or insufficient-evidence outcomes.
 
 ## Information separation
 
@@ -74,4 +98,4 @@ Visible project language uses Ariadline. Stable `SLE-RULE-*` identifiers and U/P
 
 ## Authority boundary
 
-The packet supplies planning documents and forms only. It does not approve the core, select authentic passages, grant permission, define legitimate meaning, certify preservation, approve oversight, authorize recruitment, freeze the final statistics, preregister a study, analyze participant evidence, or decide whether Ariadline continues.
+The packet and synthetic dry run supply planning documents, forms, and procedure evidence only. They do not approve the core, select authentic passages, grant permission, define legitimate meaning, certify authentic preservation, approve oversight, authorize recruitment, freeze the final statistics, preregister a study, analyze participant evidence, or decide whether Ariadline continues.
