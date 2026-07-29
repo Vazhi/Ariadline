@@ -1,0 +1,359 @@
+---
+title: "Ariadline Kill-Test Data, Assignment, and Analysis Plan v0.1"
+type: evaluation-data-plan
+status: planning-draft
+version: "0.1"
+created: 2026-07-29
+updated: 2026-07-29
+tags: [ariadline, evaluation, data, assignment, analysis]
+---
+# Ariadline Kill-Test Data, Assignment, and Analysis Plan v0.1
+
+## Status and authority boundary
+
+This document completes the compact planning package for issue #43. It is not a frozen protocol, preregistration, privacy approval, recruitment authorization, statistical approval, or permission to expose participants to materials.
+
+Human issue #46 must approve or replace the data, assignment, exclusion, retention, accessibility, and analysis decisions before execution. The approved version and hash must be frozen before condition-labelled outcomes are inspected.
+
+## Study question
+
+Does the human-approved minimal Ariadline core produce an important advantage over competent ordinary expert editing (`P`) without increasing material meaning change, burden, unnaturalness, repetition, fragmentation, disagreement, or unresolved bias?
+
+The primary publication-relevant contrast is `S` versus `P`. An optional authorized source condition `U` is descriptive and cannot replace that comparison.
+
+## Information and data separation
+
+Maintain at least six logically and access-separated record stores:
+
+1. **Contact, consent, compensation, and withdrawal records** — directly identifying and accessible only to the approved participant-administration role.
+2. **Participant key** — maps a random participant ID to contact records and remains separate from responses and analysis.
+3. **Restricted material and authority records** — source passages, permissions, access restrictions, authorized meaning records, authority contacts, and protected context.
+4. **Restricted administrative mappings** — P/S identities, editor and scorer identities, rule-applicability mappings, assignment codes, randomization keys, action logs, conflict records, and unmasking keys.
+5. **De-identified research records** — masked assignments, responses, scores, preservation results, timing, exclusions, deviations, and adverse-condition records using random IDs only.
+6. **Analysis and release records** — a minimized analysis dataset and either approved de-identified data or publishable aggregates after disclosure and permission review.
+
+Direct identifiers must not appear in response, scoring, preservation, assignment, or analysis tables.
+
+## Identifier rules
+
+Use random identifiers that do not encode institution, country, language, role, recruitment source, condition, contributor status, health status, or accessibility need.
+
+Recommended namespaces:
+
+- participant: `ARI-PART-<random>`;
+- material: `ARI-MAT-<sequence>`;
+- meaning record: `ARI-MEAN-<sequence>-v<version>`;
+- condition output: `ARI-COND-<random>`;
+- masked text: `ARI-MASK-<random>`;
+- assignment: `ARI-ASG-<random>`;
+- response: `ARI-RESP-<random>`;
+- score: `ARI-SCORE-<random>`;
+- deviation: `ARI-DEV-<sequence>`.
+
+Public or analysis identifiers must not permit reconstruction of the restricted condition or participant key without the separately held mapping.
+
+## Minimum record tables
+
+### Participant table
+
+| Field | Requirement |
+|---|---|
+| `participant_id` | random study ID |
+| `eligibility_state` | eligible, ineligible, not determined |
+| `consent_state` | approved coded state; consent form stored separately |
+| `primary_domain_band` | broad registered practice or method family |
+| `secondary_experience_bands` | minimized coded experience |
+| `editing_experience_band` | registered ordinal band |
+| `scholarly_language_band` | broad category or suppressed when identifying |
+| `ariadline_contributor` | yes/no |
+| `canto_span_contributor` | yes/no |
+| `accessibility_state` | accommodation supplied, unmet, none, or prefer not to state; details restricted |
+| `completion_state` | complete, partial, withdrawn, technical failure, excluded |
+| `exclusion_code` | frozen mechanical code or none |
+
+Rare combinations must be coarsened or suppressed before public release.
+
+### Material and condition table
+
+| Field | Requirement |
+|---|---|
+| `material_id` | registered authentic material ID |
+| `source_version` | immutable locator or hash |
+| `meaning_record_id` | approved meaning-record version |
+| `permission_state` | approved coded state; evidence restricted |
+| `domain_family` | registered broad stratum |
+| `neutral_risk_version` | frozen shared communication-risk brief |
+| `condition_output_id` | immutable P or S output record |
+| `condition_mapping` | restricted until authorized unmasking |
+| `condition_version_state` | proposed, rejected, repaired, retained, failed, unresolved, selected, or tombstoned |
+| `condition_disposition_reason` | bounded reason and responsible role |
+| `editor_id` | restricted random editor ID |
+| `output_hash` | exact non-reversible hash where retention is permitted |
+| `preservation_state` | preserved, not preserved, not determined |
+| `pair_eligibility` | eligible, ineligible, not determined with reason |
+
+### Assignment table
+
+| Field | Requirement |
+|---|---|
+| `assignment_id` | unique masked assignment |
+| `participant_id` | random participant ID |
+| `masked_text_code` | reader-facing text identity |
+| `material_id` | restricted or analysis-layer material link |
+| `order_position` | presentation position |
+| `domain_family` | broad balance stratum |
+| `schedule_version` | frozen schedule identifier |
+| `schedule_hash` | exact frozen schedule hash |
+| `completion_state` | assigned, started, completed, skipped, withdrawn, technical failure |
+
+Condition identity remains outside the reader-facing assignment record until registered unmasking.
+
+### Response and timing table
+
+| Field | Requirement |
+|---|---|
+| `response_id` | unique response record |
+| `assignment_id` | assignment link |
+| `question_id` | frozen task identifier |
+| `response_type` | categorical, numeric, text, confidence, or `not determined` |
+| `response_value` | minimized response or restricted locator |
+| `response_time_ms` | elapsed time under the approved timing policy |
+| `completion_state` | complete, skipped, interrupted, technical failure |
+| `accommodation_applied` | coded state without medical detail |
+
+Free text must undergo disclosure review before release.
+
+### Scoring table
+
+| Field | Requirement |
+|---|---|
+| `score_id` | unique scoring record |
+| `response_id` | masked response link |
+| `scorer_id` | random scorer ID |
+| `scorer_ariadline_contributor` | yes/no, held outside scorer-facing records |
+| `scorer_canto_span_contributor` | yes/no, held outside scorer-facing records |
+| `scorer_conflict_state` | none, declared, managed, unresolved |
+| `scoring_key_version` | frozen version and hash |
+| `score` | frozen categorical or numeric result |
+| `error_class` | registered class including unsupported inference or material misinterpretation |
+| `condition_masked` | yes/no/not determined |
+| `adjudication_required` | yes/no |
+| `adjudicated_result` | final result where applicable |
+
+Initial scores must remain available so agreement and adjudication effects can be reported.
+
+### Editor and preservation table
+
+| Field | Requirement |
+|---|---|
+| `condition_output_id` | immutable output link or tombstone link |
+| `editor_id` | restricted random editor ID |
+| `condition_role` | restricted P/S mapping |
+| `editing_time_ms` | elapsed editing time under approved policy |
+| `action_log_version` | restricted frozen log or tombstone locator |
+| `reviewer_id` | random preservation-reviewer ID |
+| `reviewer_conflict_state` | none, declared, managed, unresolved |
+| `preservation_dimension` | registered meaning dimension |
+| `preservation_result` | preserved, not preserved, not determined, not applicable |
+| `severity` | critical, major, minor, editorial, not applicable |
+| `adjudication_state` | not required, pending, complete |
+
+A material unresolved difference remains `not determined`; it must not be promoted to preserved.
+
+### Exclusion and deviation table
+
+| Field | Requirement |
+|---|---|
+| `record_id` | exclusion, ineligibility, deviation, or deletion-tombstone ID |
+| `record_type` | participant exclusion, response exclusion, pair ineligibility, deviation, or deletion tombstone |
+| `date` | recorded date |
+| `study_phase` | setup, editing, preservation, assignment, recruitment, collection, scoring, analysis, retention |
+| `affected_scope` | participants, materials, conditions, assignments, tasks, outcomes, stored content |
+| `frozen_code` | registered code or `unregistered` |
+| `reason` | factual bounded reason |
+| `outcome_data_visible` | yes/no/not determined |
+| `corrective_action` | action or none |
+| `eligibility_effect` | none, exclude response, exclude participant, pair ineligible, sensitivity-only, not determined |
+| `retention_effect` | retain restricted record, retain tombstone only, or approved destruction |
+| `interpretive_effect` | bounded effect on analysis or disposition |
+| `responsible_role` | approved role, not a personal identifier in public records |
+
+The original frozen record must remain available after an amendment unless a separately approved legal, rights, community, source-access, withdrawal, or deletion obligation requires removal. In that case, retain the permitted tombstone and record the authority and effect of deletion.
+
+## Adverse-condition retention and deletion tombstones
+
+To the extent permitted by the approved rights, privacy, community, and retention plan, every proposed, rejected, repaired, selected, failed, and unresolved condition version retains:
+
+- condition-output ID and non-reversible hash;
+- source and authorized meaning-record versions;
+- editor and action-log locators;
+- preservation and comparability records;
+- disposition state and reason;
+- date and responsible role;
+- relationship to any replacement version.
+
+Ineligibility alone never authorizes deletion, overwriting, omission from the adverse-results record, or silent replacement.
+
+When a separately approved legal, rights, community, source-access, withdrawal, or deletion obligation requires removal of restricted text, identifiers, or logs, replace the deleted content with a tombstone containing, to the extent permitted:
+
+- condition or record ID;
+- non-reversible hash;
+- deletion date;
+- deletion authority and approved basis;
+- affected scope;
+- disposition and preservation state before deletion;
+- relationship to any replacement;
+- interpretive effect on exposure, analysis, auditability, and project disposition.
+
+A tombstone must not retain prohibited content or permit prohibited reconstruction. Required deletion itself remains a reportable limitation or deviation and must not be used to imply that the adverse condition never existed.
+
+## Assignment and counterbalancing
+
+The approved assignment schedule must satisfy all of the following:
+
+- each participant sees no more than one wording condition for a given meaning record;
+- both P and S receive exposure for every eligible retained pair unless a frozen design states an explicit reason otherwise;
+- P/S exposure is balanced by material, broad domain family, and order position as closely as the approved sample permits;
+- each participant receives a feasible mix across the registered domain families without repeated underlying meaning records;
+- condition sequences are randomized or counterbalanced under a frozen algorithm, seed, schedule, and hash;
+- participant replacement or late assignment follows a frozen rule and does not use condition-labelled outcomes;
+- assignment changes after exposure begins are versioned deviations;
+- accommodations may alter approved presentation or timing without being treated as inferior performance.
+
+The final schedule and sample target require human statistical and operational approval under issue #46.
+
+## Editor assignment and contamination controls
+
+- Different editors must produce P and S for the same meaning record.
+- An editor must not see the other condition's output, action log, preservation result, reader task answer, or participant result.
+- An editor may work in both conditions only across different meaning records under a frozen cross-record counterbalancing plan.
+- Editor expertise, language background, domain familiarity, prior Ariadline exposure, timing, and resources must be matched or recorded.
+- The coordinator's registered applicability mapping remains hidden from both editors.
+- The S editor records an independent applicability judgment; P does not receive the candidate-core rules.
+
+## Scorer and adjudicator independence
+
+- Ariadline or Canto-span developers must not supply the entire scoring or adjudication chain.
+- Every scored task family must include at least one scorer or adjudicator independent of Ariadline development.
+- Scorer and adjudicator contributor status, relevant expertise, calibration, conflicts, masking, and unmasking events must be recorded.
+- An unresolved material conflict blocks the affected scoring route.
+- Initial independent scores remain visible after adjudication.
+- Disagreement with Ariadline, preference for P, and adverse scoring are not conflicts and cannot justify exclusion.
+
+## Mechanical exclusion and pair-eligibility rules
+
+Freeze exact codes before participant exposure.
+
+### Participant or response exclusions
+
+Use only objective registered conditions such as:
+
+- ineligible or unapproved consent state;
+- duplicate or prohibited repeat participation;
+- prohibited duplicate exposure to one meaning record;
+- withdrawal under the approved policy;
+- technical failure that prevents presentation or response capture;
+- missing response beyond the frozen analyzability rule;
+- failed masking or assignment integrity;
+- an outcome-visible protocol deviation that invalidates the registered response comparison.
+
+### Condition-pair ineligibility
+
+A P/S pair cannot enter reader exposure or the primary benefit comparison when the frozen rules identify:
+
+- condition comparability failure;
+- preservation state `not preserved` or `not determined` for either condition;
+- invalid or unresolved permission or meaning authority;
+- prohibited contamination;
+- another approved non-compensable integrity failure.
+
+Pair ineligibility affects exposure or benefit analysis only. Preserve and report every condition, review, action log, finding, and adverse result under the approved retention-or-tombstone rule.
+
+### Prohibited outcome-based exclusion
+
+Do not exclude a participant, response, material, condition, editor, scorer, or adverse record because it:
+
+- favors P;
+- criticizes Ariadline;
+- reports confusion, burden, unnaturalness, bias, or inaccessibility;
+- selects `not determined`;
+- creates a null, adverse, mixed, stop, or reconception result;
+- disagrees with expected rule applicability or project interpretation.
+
+Unregistered exclusions must be reported as deviations and analyzed separately rather than silently treated as planned.
+
+## Analysis boundary
+
+### Primary comparison
+
+Use masked `S` versus `P` as the primary contrast. Register no more than three primary outcomes before launch. Meaning-preservation failure remains a safety outcome and cannot be traded for reader benefit.
+
+### Candidate outcomes
+
+Objective or rule-bound outcomes may include:
+
+- principal claim reconstruction;
+- claim-scope reconstruction;
+- identification of supporting evidence or recorded result;
+- identification of a material limitation or uncertainty;
+- unsupported inference;
+- material misinterpretation.
+
+Supporting outcomes include editing and response time, naturalness, cohesion, repetition, fragmentation, burden, reviewer agreement, `not determined` frequency, applicability agreement, and qualitative theory, method, language, community, translation, and accessibility concerns.
+
+### Small-pilot interpretation
+
+This 20–30-person planning range is not automatically powered for precise population estimates or small effects. The human-approved analysis must:
+
+- report item-level and rule-level results before aggregate conclusions;
+- show uncertainty and missingness;
+- retain adverse cases, failed conditions, and P successes, or an approved tombstone when the underlying restricted content must be deleted;
+- distinguish descriptive patterns from registered inferential claims;
+- avoid manufacturing numerical thresholds unsupported by the design;
+- avoid treating subjective clarity ratings as comprehension;
+- preserve initial scorer judgments and disagreement;
+- avoid generalizing from tested passages or participants to linguistics as a whole.
+
+### Decision classes
+
+Distinguish:
+
+1. **Hard safety failure** — a registered critical or major meaning-preservation failure, prohibited contamination, invalid authority or permission, or another approved non-compensable failure.
+2. **Descriptive warning** — a material adverse pattern in burden, naturalness, cohesion, repetition, fragmentation, applicability agreement, bias, accessibility, or P superiority that requires human interpretation.
+3. **Insufficient evidence** — too few eligible materials, participants, exposures, applicable rule instances, reliable scores, or uncontaminated comparisons to answer the registered question.
+
+Apply [[Ariadline Kill-Test Decision Matrix v0.1]]. Valid project routes remain continue, revise or reconceive, stop as a controlled language, and insufficient evidence. Only human issue #48 may select the final project disposition.
+
+## Masking and unmasking
+
+Reader, scorer, preservation-reviewer, and adjudicator packets must exclude condition labels, expected direction, editor identity, rule-action logs, and unneeded authority metadata.
+
+Unmask only under the frozen sequence after:
+
+- response collection is complete for the relevant frozen scope;
+- scoring and adjudication are frozen;
+- exclusions and deviations are recorded without condition-labelled outcome-driven changes;
+- the approved analysis role authorizes access.
+
+Every unmasking event must record role, date, scope, purpose, and version.
+
+## Retention, access, and release
+
+Before recruitment, human issue #46 must approve:
+
+- access roles for every store;
+- encryption, backup, transfer, and incident-response requirements;
+- retention and deletion periods for participant contact and research records;
+- restricted retention or tombstone requirements for failed-condition auditability;
+- withdrawal limits after de-identification or aggregation;
+- legal, rights, community, source-access, and deletion obligations;
+- disclosure-risk review;
+- whether row-level de-identified data, restricted-access data, synthetic records, or aggregates may be released.
+
+Publish no exact identifiers, rare combinations, restricted materials, authority contacts, unredacted free text, condition keys, failed-condition text, or tombstone details beyond the approved disclosure boundary.
+
+Every release must identify the protocol, material, condition, assignment, scoring-key, cleaning, exclusion, deviation, deletion, and analysis versions used.
+
+## Non-generalization statement
+
+The pilot evaluates a small approved candidate core on 10–12 authorized passages and approximately 20–30 participants under one frozen design. It cannot establish that Ariadline represents all linguistics, works across all languages or communities, validates any linguistic analysis, or warrants a universal standard. Null, mixed, harmful, infeasible, revise, stop, and insufficient-evidence outcomes are valid.
