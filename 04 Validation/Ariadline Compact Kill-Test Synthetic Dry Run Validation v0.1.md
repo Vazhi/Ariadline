@@ -11,9 +11,9 @@ tags: [ariadline, validation, synthetic, dry-run]
 
 ## Result
 
-PASS — exact deterministic outputs match the committed expected fixtures and all 13 synthetic operational checks pass.
+PASS — exact deterministic compact outputs match the committed expected fixtures and all 13 synthetic operational checks pass.
 
-This PASS is limited to procedure, data integrity, and reproducibility. It is not human approval or authentic evidence.
+This PASS is limited to procedure, data integrity, compact-fixture fidelity, and reproducibility. It is not human approval or authentic evidence.
 
 ## Exact-output check
 
@@ -26,9 +26,11 @@ This PASS is limited to procedure, data integrity, and reproducibility. It is no
 
 Expected hashes:
 
-- `assignments.json`: `sha256:16b99df65ae2a2e1bebcd7fcce2d14ad19b4634a8431374c75982c4d4dff0f4c`;
-- `scoring_and_adjudication.json`: `sha256:5cae5fe6cea6b544a7c78c396692075c296eece01890dee9e02f1760ded5bc6f`;
+- `assignments.json`: `sha256:c298fc68ec8a153ad004ab19b14edeca877951a9e1e26702fa1d198326116c96`;
+- `scoring_and_adjudication.json`: `sha256:ee3ea80b8a79dc60e1067626ecb347a2a4b57a25443d89c8f3d69b0ff04cde52`;
 - `analysis.json`: `sha256:6d02757f3f5607fffa4c10792bb9fce648c91d45ee54952caea7411f48fa9b83`.
+
+The verifier imports the core generator, derives the compact lossless assignment and scoring representations, and compares the complete decoded structures rather than only counts or diagnostic classes.
 
 ## Checks
 
