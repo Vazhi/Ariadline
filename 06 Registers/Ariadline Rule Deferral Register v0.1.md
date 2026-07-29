@@ -17,7 +17,7 @@ The four audit dispositions are:
 
 - **core candidate** — included in the 12-rule adversarial test core;
 - **domain profile** — potentially useful in a bounded genre, method, data practice, or task;
-- **local extension** — dependent on a project, publisher, language, theory, terminology authority, or community;
+- **local extension** — dependent on a project, publisher, language, framework, terminology authority, or community;
 - **defer** — not justified for the reader-benefit core at this stage; retain without promotion, or later retire after evidence and human review.
 
 ## Complete 24-rule primary disposition
@@ -27,7 +27,7 @@ The four audit dispositions are:
 | `SLE-RULE-0001` | defer | The one-principal-message control may create fragmentation and repetition. Test sentence-level burden only after the smaller core is evaluated. |
 | `SLE-RULE-0002` | core candidate | Test referential ambiguity as a durable cross-document communication risk. |
 | `SLE-RULE-0003` | core candidate | Test recovery of the population, dataset, variety, time, or other claim boundary. |
-| `SLE-RULE-0004` | local extension | Preferred-term governance depends on a project's, publisher's, language community's, or theory's legitimate terminology authority and may suppress purposeful contrasts. |
+| `SLE-RULE-0004` | local extension | Preferred-term governance depends on a project's, publisher's, language community's, or framework's legitimate terminology process and may suppress purposeful contrasts. |
 | `SLE-RULE-0005` | core candidate | Test whether locally important definitions reduce material terminological misinterpretation without imposing a universal ontology. |
 | `SLE-RULE-0006` | core candidate | Test reconstruction of compared items, dimensions, and measures. |
 | `SLE-RULE-0007` | core candidate | Test materially different readings caused by negation, quantifier, restriction, or exception scope. |
@@ -61,16 +61,18 @@ The four audit dispositions are:
 
 ## Proposed bounded profile and extension mapping
 
+The following are secondary implementation routes. A domain-profile rule may appear in more than one bounded profile when its function crosses practices. That overlap does not change the rule's single primary audit disposition above.
+
 | Destination | Rules | Boundary |
 |---|---|---|
-| Corpus, resource, and software reporting profile | `0009`, with interactions from core candidates `0014`, `0015`, `0021`, `0023` | Attestation, resource identity, system behavior, search sensitivity, and support mapping apply only when the passage makes those claims. |
-| Judgment, elicitation, annotation, and experimental reporting profile | `0010`, `0012`, `0019` | Required fields, notation, and observation/interpretation distinctions must follow the declared task, population, method, and community practice. |
-| Normative procedure and annotation-instruction profile | `0008`, `0016`, `0017` | Requirement forms and action ordering apply to instructions, not ordinary descriptive or argumentative prose. |
-| Document navigation and publication profile | `0013` | Stable identifiers depend on document scale, repeated reference, medium, and publication infrastructure. |
-| Linguistic examples and interlinear glossing profile | `0012`, `0024`, with core candidate `0011` when provenance matters | Notation and glossing conventions remain declared and flexible; provenance is tested separately. |
-| Local terminology extension | `0004` | A legitimate project, publisher, theory, language, or community authority controls preferred terms and permitted variation. |
-| Deferred sentence-structure experiment | `0001` | Do not promote unless benefit over ordinary editing exceeds fragmentation, repetition, and naturalness costs. |
-| Governance safeguard outside benefit core | `0018` | Apply to Ariadline conformance claims; do not score it as reader benefit or treat conformance as truth certification. |
+| Corpus, resource, and software reporting profile | `SLE-RULE-0009`, with interactions from core candidates `SLE-RULE-0014`, `SLE-RULE-0015`, `SLE-RULE-0021`, `SLE-RULE-0023` | Attestation, resource identity, system behavior, search sensitivity, and support mapping apply only when the passage makes those claims. |
+| Judgment, elicitation, annotation, and experimental reporting profile | `SLE-RULE-0010`, `SLE-RULE-0012`, `SLE-RULE-0019` | Required fields, notation, and observation/interpretation distinctions must follow the declared task, population, method, and community practice. |
+| Normative procedure and annotation-instruction profile | `SLE-RULE-0008`, `SLE-RULE-0016`, `SLE-RULE-0017` | Requirement forms and action ordering apply to instructions, not ordinary descriptive or argumentative prose. |
+| Document navigation and publication profile | `SLE-RULE-0013` | Stable identifiers depend on document scale, repeated reference, medium, and publication infrastructure. |
+| Linguistic examples and interlinear glossing profile | `SLE-RULE-0012`, `SLE-RULE-0024`, with core candidate `SLE-RULE-0011` when provenance matters | Notation and glossing conventions remain declared and flexible; provenance is tested separately. |
+| Local terminology extension | `SLE-RULE-0004` | A legitimate project, publisher, framework, language, or community process controls preferred terms and permitted variation. |
+| Deferred sentence-structure experiment | `SLE-RULE-0001` | Do not promote unless benefit over ordinary editing exceeds fragmentation, repetition, and naturalness costs. |
+| Governance safeguard outside benefit core | `SLE-RULE-0018` | Apply to Ariadline conformance claims; do not score it as reader benefit or treat conformance as truth certification. |
 
 ## Later profile-test order
 
