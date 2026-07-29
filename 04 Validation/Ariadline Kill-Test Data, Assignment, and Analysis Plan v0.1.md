@@ -85,10 +85,10 @@ Rare combinations must be coarsened or suppressed before public release.
 | `neutral_risk_version` | frozen shared communication-risk brief |
 | `condition_output_id` | immutable P or S output record |
 | `condition_mapping` | restricted until authorized unmasking |
-| `condition_version_state` | proposed, rejected, repaired, retained, failed, unresolved, or selected |
+| `condition_version_state` | proposed, rejected, repaired, retained, failed, unresolved, selected, or tombstoned |
 | `condition_disposition_reason` | bounded reason and responsible role |
 | `editor_id` | restricted random editor ID |
-| `output_hash` | exact immutable output hash |
+| `output_hash` | exact non-reversible hash where retention is permitted |
 | `preservation_state` | preserved, not preserved, not determined |
 | `pair_eligibility` | eligible, ineligible, not determined with reason |
 
@@ -146,11 +146,11 @@ Initial scores must remain available so agreement and adjudication effects can b
 
 | Field | Requirement |
 |---|---|
-| `condition_output_id` | immutable output link |
+| `condition_output_id` | immutable output link or tombstone link |
 | `editor_id` | restricted random editor ID |
 | `condition_role` | restricted P/S mapping |
 | `editing_time_ms` | elapsed editing time under approved policy |
-| `action_log_version` | restricted frozen log |
+| `action_log_version` | restricted frozen log or tombstone locator |
 | `reviewer_id` | random preservation-reviewer ID |
 | `reviewer_conflict_state` | none, declared, managed, unresolved |
 | `preservation_dimension` | registered meaning dimension |
@@ -164,27 +164,27 @@ A material unresolved difference remains `not determined`; it must not be promot
 
 | Field | Requirement |
 |---|---|
-| `record_id` | exclusion or deviation ID |
-| `record_type` | participant exclusion, response exclusion, pair ineligibility, or deviation |
+| `record_id` | exclusion, ineligibility, deviation, or deletion-tombstone ID |
+| `record_type` | participant exclusion, response exclusion, pair ineligibility, deviation, or deletion tombstone |
 | `date` | recorded date |
-| `study_phase` | setup, editing, preservation, assignment, recruitment, collection, scoring, analysis |
-| `affected_scope` | participants, materials, conditions, assignments, tasks, outcomes |
+| `study_phase` | setup, editing, preservation, assignment, recruitment, collection, scoring, analysis, retention |
+| `affected_scope` | participants, materials, conditions, assignments, tasks, outcomes, stored content |
 | `frozen_code` | registered code or `unregistered` |
 | `reason` | factual bounded reason |
 | `outcome_data_visible` | yes/no/not determined |
 | `corrective_action` | action or none |
 | `eligibility_effect` | none, exclude response, exclude participant, pair ineligible, sensitivity-only, not determined |
-| `retention_effect` | always retain restricted audit record; state any approved release restriction |
+| `retention_effect` | retain restricted record, retain tombstone only, or approved destruction |
 | `interpretive_effect` | bounded effect on analysis or disposition |
 | `responsible_role` | approved role, not a personal identifier in public records |
 
-The original frozen record must remain available after any amendment.
+The original frozen record must remain available after an amendment unless a separately approved legal, rights, community, source-access, withdrawal, or deletion obligation requires removal. In that case, retain the permitted tombstone and record the authority and effect of deletion.
 
-## Immutable adverse-condition retention
+## Adverse-condition retention and deletion tombstones
 
-Every proposed, rejected, repaired, selected, failed, and unresolved condition version must retain:
+To the extent permitted by the approved rights, privacy, community, and retention plan, every proposed, rejected, repaired, selected, failed, and unresolved condition version retains:
 
-- condition-output ID and exact hash;
+- condition-output ID and non-reversible hash;
 - source and authorized meaning-record versions;
 - editor and action-log locators;
 - preservation and comparability records;
@@ -192,7 +192,20 @@ Every proposed, rejected, repaired, selected, failed, and unresolved condition v
 - date and responsible role;
 - relationship to any replacement version.
 
-A condition or pair may be ineligible for reader exposure or the primary benefit comparison. Ineligibility never authorizes deletion, overwriting, omission from the adverse-results record, or silent replacement.
+Ineligibility alone never authorizes deletion, overwriting, omission from the adverse-results record, or silent replacement.
+
+When a separately approved legal, rights, community, source-access, withdrawal, or deletion obligation requires removal of restricted text, identifiers, or logs, replace the deleted content with a tombstone containing, to the extent permitted:
+
+- condition or record ID;
+- non-reversible hash;
+- deletion date;
+- deletion authority and approved basis;
+- affected scope;
+- disposition and preservation state before deletion;
+- relationship to any replacement;
+- interpretive effect on exposure, analysis, auditability, and project disposition.
+
+A tombstone must not retain prohibited content or permit prohibited reconstruction. Required deletion itself remains a reportable limitation or deviation and must not be used to imply that the adverse condition never existed.
 
 ## Assignment and counterbalancing
 
@@ -254,7 +267,7 @@ A P/S pair cannot enter reader exposure or the primary benefit comparison when t
 - prohibited contamination;
 - another approved non-compensable integrity failure.
 
-Pair ineligibility affects exposure or benefit analysis only. Preserve and report every condition, review, action log, finding, and adverse result under the immutable-retention rule.
+Pair ineligibility affects exposure or benefit analysis only. Preserve and report every condition, review, action log, finding, and adverse result under the approved retention-or-tombstone rule.
 
 ### Prohibited outcome-based exclusion
 
@@ -294,7 +307,7 @@ This 20–30-person planning range is not automatically powered for precise popu
 
 - report item-level and rule-level results before aggregate conclusions;
 - show uncertainty and missingness;
-- retain adverse cases, failed conditions, and P successes;
+- retain adverse cases, failed conditions, and P successes, or an approved tombstone when the underlying restricted content must be deleted;
 - distinguish descriptive patterns from registered inferential claims;
 - avoid manufacturing numerical thresholds unsupported by the design;
 - avoid treating subjective clarity ratings as comprehension;
@@ -331,15 +344,15 @@ Before recruitment, human issue #46 must approve:
 - access roles for every store;
 - encryption, backup, transfer, and incident-response requirements;
 - retention and deletion periods for participant contact and research records;
-- permanent or long-term restricted retention needed for failed-condition auditability;
+- restricted retention or tombstone requirements for failed-condition auditability;
 - withdrawal limits after de-identification or aggregation;
+- legal, rights, community, source-access, and deletion obligations;
 - disclosure-risk review;
-- community, source, publisher, and material restrictions;
 - whether row-level de-identified data, restricted-access data, synthetic records, or aggregates may be released.
 
-Publish no exact identifiers, rare combinations, restricted materials, authority contacts, unredacted free text, condition keys, or restricted failed-condition text unless the approved route permits them.
+Publish no exact identifiers, rare combinations, restricted materials, authority contacts, unredacted free text, condition keys, failed-condition text, or tombstone details beyond the approved disclosure boundary.
 
-Every release must identify the protocol, material, condition, assignment, scoring-key, cleaning, exclusion, deviation, and analysis versions used.
+Every release must identify the protocol, material, condition, assignment, scoring-key, cleaning, exclusion, deviation, deletion, and analysis versions used.
 
 ## Non-generalization statement
 
