@@ -23,7 +23,7 @@ A launch result can be `ready` only when every applicable required item is `pass
 - [ ] At least three independent subfield, method, or practice groups are represented.
 - [ ] No source, venue, theory, language, project, contributor network, or subfield dominates the set.
 - [ ] Canto-span does not satisfy independent coverage.
-- [ ] Rejected and reserve passages are retained with reasons.
+- [ ] Rejected and reserve passages are retained with reasons or represented by an approved tombstone when content cannot lawfully remain.
 - [ ] Passage selection was not based on expected P-versus-S performance.
 
 ## B. Shared information and conditions
@@ -63,9 +63,11 @@ A launch result can be `ready` only when every applicable required item is `pass
 - [ ] Adjudication rules are frozen.
 - [ ] A failed or unresolved condition is excluded from reader exposure and benefit analysis.
 - [ ] A P/S pair with either condition ineligible is excluded from the primary benefit comparison.
-- [ ] Pair ineligibility does not delete or overwrite either condition or its adverse result.
-- [ ] Every proposed, rejected, repaired, selected, failed, and unresolved condition version retains its hash, action log, review, disposition reason, and replacement relation.
-- [ ] Adverse preservation and comparability results remain reported.
+- [ ] Pair ineligibility does not itself delete or overwrite either condition or its adverse result.
+- [ ] Every proposed, rejected, repaired, selected, failed, and unresolved condition version retains its permitted hash, action log, review, disposition reason, and replacement relation.
+- [ ] A separately approved legal, rights, community, source-access, withdrawal, or deletion obligation may remove restricted content only with a tombstone recording the permitted ID/hash, date, authority, basis, affected scope, prior disposition, replacement relation, and interpretive effect.
+- [ ] Tombstones do not retain prohibited content or permit prohibited reconstruction.
+- [ ] Adverse preservation, comparability, and deletion effects remain reported.
 
 ## E. Tasks, scoring, and scorer independence
 
@@ -95,9 +97,9 @@ A launch result can be `ready` only when every applicable required item is `pass
 - [ ] Contact and consent records, participant key, restricted materials, restricted administrative mappings, de-identified research data, and release records are access-separated.
 - [ ] Participant and record IDs are random and do not encode condition, institution, country, language, role, recruitment source, contributor, health, or accessibility details.
 - [ ] Direct identifiers are absent from assignment, response, score, preservation, and analysis records.
-- [ ] Rare combinations and free text have a disclosure-review route.
+- [ ] Rare combinations, free text, restricted condition text, and tombstones have a disclosure-review route.
 - [ ] Access roles, encryption, backup, transfer, incident response, retention, deletion, withdrawal limits, and release conditions are approved.
-- [ ] Every release will identify protocol, material, condition, assignment, scoring, cleaning, exclusion, deviation, and analysis versions.
+- [ ] Every release will identify protocol, material, condition, assignment, scoring, cleaning, exclusion, deviation, deletion, and analysis versions.
 
 ## G. Assignment and participant protection
 
@@ -113,21 +115,22 @@ A launch result can be `ready` only when every applicable required item is `pass
 - [ ] Withdrawal removes later assignments and follows approved data handling.
 - [ ] Participant identifiers remain outside public or analysis records.
 
-## H. Exclusions, pair ineligibility, deviations, and unmasking
+## H. Exclusions, pair ineligibility, deviations, deletion, and unmasking
 
 - [ ] Participant and response exclusion codes are frozen before participant exposure.
 - [ ] Participant or response exclusions are limited to approved objective eligibility, consent, duplicate, withdrawal, technical, missingness, masking, assignment, and protocol-integrity conditions.
 - [ ] Condition-pair ineligibility is recorded separately for preservation, comparability, authority, permission, contamination, or another approved non-compensable failure.
-- [ ] Pair ineligibility affects exposure or benefit analysis only and does not erase the restricted audit or adverse-results record.
+- [ ] Pair ineligibility affects exposure or benefit analysis only and does not itself erase the restricted audit or adverse-results record.
+- [ ] Approved deletion duties are recorded separately from analytical ineligibility and produce a permitted tombstone and explicit interpretive limitation.
 - [ ] No record is excluded because it favors P, criticizes Ariadline, reports burden or bias, selects uncertainty, or supports a null, adverse, revise, stop, or insufficient-evidence result.
 - [ ] Unregistered exclusions are recorded as deviations rather than silently treated as planned.
 - [ ] Every deviation records date, phase, affected scope, outcome visibility, reason, corrective action, eligibility effect, retention effect, interpretive effect, and responsible role.
-- [ ] The original frozen protocol remains preserved after amendments.
+- [ ] The original frozen protocol remains preserved after amendments unless an approved deletion obligation requires a tombstone.
 - [ ] Unmasking sequence, authorized roles, date, scope, and purpose are frozen and logged.
 
 ## I. Execution controls
 
-- [ ] Protocol, material, condition, task, scoring, assignment, exclusion, deviation, and analysis versions are immutable before launch.
+- [ ] Protocol, material, condition, task, scoring, assignment, exclusion, deviation, deletion, and analysis versions are immutable before launch.
 - [ ] The synthetic dry run under issue #45 has been reviewed and all launch blockers are resolved.
 - [ ] Outcome data were not visible during setup changes.
 - [ ] Adverse findings trigger the registered pause or stop route.
@@ -138,9 +141,9 @@ A launch result can be `ready` only when every applicable required item is `pass
 
 - [ ] The primary comparison is S versus P.
 - [ ] Item-level and rule-level results precede package-level conclusions.
-- [ ] P successes, S-created problems, failed conditions, and rejected variants are retained.
+- [ ] P successes, S-created problems, failed conditions, and rejected variants are retained or represented by approved tombstones.
 - [ ] Meaning preservation, burden, naturalness, cohesion, repetition, fragmentation, applicability agreement, and bias are reported alongside comprehension.
-- [ ] Uncertainty, missingness, scorer disagreement, withdrawals, exclusions, ineligible pairs, and deviations are visible.
+- [ ] Uncertainty, missingness, scorer disagreement, withdrawals, exclusions, ineligible pairs, deviations, and deletion effects are visible.
 - [ ] Hard safety failures, descriptive warnings, and insufficient evidence are distinguished.
 - [ ] No unsupported numerical threshold or universal generalization is introduced.
 - [ ] Null, mixed, harmful, revise, stop, and insufficient-evidence outcomes remain available.
