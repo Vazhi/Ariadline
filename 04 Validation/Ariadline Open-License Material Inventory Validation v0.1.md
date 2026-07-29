@@ -4,14 +4,32 @@ type: validation-report
 status: complete
 version: "0.1"
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-07-29
 tags: [ariadline, validation, materials, open-license]
 ---
 # Ariadline Open-License Material Inventory Validation v0.1
 
 ## Result
 
-PASS — the package provides a diverse, source-only discovery pool for human issue #42 without reproducing passages or advancing any candidate beyond `candidate—not approved`.
+PASS — bounded structural and work-level source-metadata validation. The package provides a diverse, source-only discovery pool for human issue #42 without reproducing passages or advancing any candidate beyond `candidate—not approved`.
+
+This result does not validate component-level rights, participant exposure, meaning authority, ethics, accessibility, representativeness, passage suitability, or final selection.
+
+## Verification scope and date
+
+The package structure and work-level source metadata were checked on 2026-07-29 against official publisher, journal, article, or repository pages. The check covered:
+
+- candidate count and venue distribution;
+- required record fields;
+- official work-level source page;
+- title and author or creator identity;
+- publication state, year, edition, or dataset version where displayed;
+- article or work DOI and separate dataset locator where applicable;
+- displayed work-level Creative Commons notice;
+- explicit candidate-only and human-handoff boundaries;
+- absence of reproduced candidate passages.
+
+An internally inconsistent publication field is retained as an explicit conditional dependency rather than treated as resolved.
 
 ## Files checked
 
@@ -23,7 +41,7 @@ PASS — the package provides a diverse, source-only discovery pool for human is
 
 - total candidates: 16;
 - venues: 4;
-- source families: monographs/grammars, theoretical and experimental articles, data papers/datasets, translated publication, applied research;
+- source families: monographs/grammars, theoretical and experimental articles, data and discussion papers, datasets, translated publication, applied research;
 - descriptive/documentary/collaborative candidates: at least 2;
 - theoretical/conceptual/typological candidates: at least 5;
 - experimental/assessment/language-attitude candidates: at least 3;
@@ -48,13 +66,27 @@ Every candidate includes:
 
 - stable ID;
 - status `candidate—not approved`;
-- title and official source page;
-- DOI or citation locator where available;
+- title and official work-level source page;
+- author or creator identity;
+- publication state, year, edition, or dataset version where displayed;
+- article or work DOI, stable citation locator, and separate dataset locator where applicable;
 - source type and possible domain contribution;
-- official displayed license or publisher-policy statement;
+- official displayed work-level license;
 - candidate location type without copied text;
 - possible communication-risk categories;
 - explicit human checks for authority, permission, third-party content, privacy, community, accessibility, translation, or data governance as relevant.
+
+`OLM-002` remains conditional because its official publisher page displays both a forthcoming label and a 2025 publication date without a DOI. The inventory records rather than resolves that ambiguity.
+
+## Corrected review findings
+
+The substantive review corrections are incorporated:
+
+- `OLM-004` now uses the current 2023 edition of *Grammatical theory* rather than the publisher-designated superseded 2020 edition;
+- article authors, years, article DOIs, dataset locators, and displayed versions were completed where available for `OLM-008`–`OLM-014`;
+- `OLM-015` and `OLM-016` now use article-specific official Frontiers pages and displayed article-level Creative Commons notices;
+- source types and priority states were narrowed where linked data, participant material, or publication-state dependencies remain;
+- the validation claim is limited to structural and work-level source-metadata checks.
 
 ## Boundary checks
 
@@ -63,7 +95,7 @@ The package does not:
 - reproduce a candidate passage;
 - mark a source permission-approved or meaning-authorized;
 - infer participant-use permission from open access;
-- assume that article licensing covers embedded or linked material;
+- assume that work-level licensing covers embedded or linked material;
 - create P or S conditions;
 - certify preservation;
 - recruit participants;
@@ -72,11 +104,12 @@ The package does not:
 
 ## Known limitations
 
-- Official license notices must be rechecked at the exact version and component level before use.
-- Frontiers candidates currently rely on the publisher's CC BY policy plus official article listings; their individual article notices require explicit human re-verification.
-- Some grammar, sign-language, conversational, child, clinical, translation, and linked-dataset candidates have prominent authority or rights dependencies and are marked conditional.
-- The pool is still English-dominant. The Chinese translation candidate does not by itself satisfy a non-English-original coverage requirement.
+- Official license notices, publication states, exact versions, and component-level terms must be rechecked before use.
+- Work-level CC BY notices do not settle rights in examples, figures, maps, recordings, transcripts, instruments, linked datasets, or upstream resources.
+- Some grammar, sign-language, conversational, child, clinical, translation, and linked-dataset candidates have prominent authority or rights dependencies and remain conditional.
+- The pool is English-dominant. The Chinese translation candidate does not satisfy non-English-original coverage.
 - An open discovery pool cannot establish representativeness or fairness.
+- Source metadata can change; the recorded check is bounded to 2026-07-29.
 
 ## Human completion route
 
