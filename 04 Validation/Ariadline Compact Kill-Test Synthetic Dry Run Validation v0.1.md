@@ -11,53 +11,63 @@ tags: [ariadline, validation, synthetic, dry-run]
 
 ## Result
 
-PASS — exact deterministic compact outputs match the committed expected fixtures and all 13 synthetic operational checks pass.
+PASS — exact deterministic outputs match the committed expected fixtures, the compact representations reconstruct the declared assignment and scoring records, and all 16 synthetic operational checks pass.
 
-This PASS is limited to procedure, data integrity, compact-fixture fidelity, and reproducibility. It is not human approval or authentic evidence.
+This PASS is limited to procedure, data integrity, and reproducibility. It is not human approval or authentic evidence.
 
 ## Exact-output check
 
-- fixture: `ARIADLINE-COMPACT-DRY-RUN-0.1`;
+- fixture: `ARIADLINE-COMPACT-DRY-RUN-0.2`;
 - seed: `4501`;
-- generated files: 3;
-- hash mismatches: 0;
+- generated compact files: 3;
+- comparison findings: 0;
 - validation findings: 0;
 - mock disposition: `stop`.
 
 Expected hashes:
 
-- `assignments.json`: `sha256:c298fc68ec8a153ad004ab19b14edeca877951a9e1e26702fa1d198326116c96`;
-- `scoring_and_adjudication.json`: `sha256:ee3ea80b8a79dc60e1067626ecb347a2a4b57a25443d89c8f3d69b0ff04cde52`;
-- `analysis.json`: `sha256:6d02757f3f5607fffa4c10792bb9fce648c91d45ee54952caea7411f48fa9b83`.
+- `assignments.json`: `sha256:44ed785714ea80084a2c5dd670bf25eec58a1576d0bf4ab0ff08ba378987cb88`;
+- `scoring_and_adjudication.json`: `sha256:0a8222ec8811ce5de253c886163e2cffa5770f13cd71d394a0c07d7793c333d7`;
+- `analysis.json`: `sha256:b334d8acc27b682ebe82cfee7a6eac9c3964cbdf403c715f80f39c767ab3d0b5`.
 
-The verifier imports the core generator, derives the compact lossless assignment and scoring representations, and compares the complete decoded structures rather than only counts or diagnostic classes.
+## Operational checks
 
-## Checks
+1. The source fixture satisfies its synthetic-only schema and authority boundary.
+2. No participant receives both conditions for one meaning record.
+3. Eligible-material exposure is exactly balanced between P and S.
+4. Per-participant domain exposure remains within the registered bound.
+5. Scoring records remain masked.
+6. Every scoring key traces explicitly to one material and meaning record.
+7. Mechanically excluded responses receive no score or adjudication rows.
+8. Every analyzable response receives exactly two distinct initial scoring routes.
+9. Every analyzable response includes an independent scorer; every disagreement receives an independent adjudication.
+10. Every represented question has an independent scoring route.
+11. Missingness and exclusions use frozen mechanical codes and include all planned exclusions.
+12. Preservation failures and adverse records remain linked to exact items and rules.
+13. Continue, revise, stop, and insufficient-evidence branches derive correctly.
+14. The small-pilot and synthetic-evidence boundaries remain explicit.
+15. Ordinary editing can outperform S when the fixture specifies that outcome.
+16. Inconclusive and deviation cases remain visible and linked.
 
-1. No participant receives both conditions of one meaning record.
-2. Eligible material exposure is exactly balanced between P and S.
-3. Domain exposure remains within the registered bound.
-4. Scoring packets remain masked.
-5. Every scoring key traces to one synthetic meaning record.
-6. Preservation failures remain visible and cannot be hidden by aggregate scores.
-7. Missingness and exclusions use frozen mechanical codes.
-8. Continue, revise, stop, and insufficient-evidence branches all derive correctly.
-9. The report preserves the small-pilot non-generalization boundary.
-10. Ordinary editing can outperform S when the fixture specifies that outcome.
-11. Inconclusive cases remain visible.
-12. Deviation cases remain linked to affected records.
-13. Every scored task family has an independent scoring route.
+## Count invariants
+
+- raw responses: 144;
+- applied exclusions: 7;
+- analyzable responses: 137;
+- initial scores: 274 = 137 × 2;
+- excluded responses with score rows: 0;
+- adjudications: 23, only where the two initial scores disagree.
 
 ## Repaired defects
 
-The validation record includes the seven development defects listed in [[Ariadline Compact Kill-Test Synthetic Dry Run Report v0.1]]. They were found before publication, repaired, and covered by the final exact-output test.
+The validation record covers the ten development and review defects listed in [[Ariadline Compact Kill-Test Synthetic Dry Run Report v0.1]]. They were repaired before this exact-head result.
 
 ## Boundary checks
 
 - no authentic passage is included;
 - no real participant, editor, scorer, or authority is represented;
-- every gate is simulated only;
-- the study state remains synthetic rehearsal;
+- every authority or gate value is simulated only;
+- the study state remains `synthetic_rehearsal`;
 - the evidence claim remains `procedure_only`;
 - no human issue or evaluation status is advanced;
 - no synthetic threshold is treated as empirical.
