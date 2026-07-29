@@ -28,15 +28,15 @@ Maintain at least six logically and access-separated record stores:
 1. **Contact, consent, compensation, and withdrawal records** — directly identifying and accessible only to the approved participant-administration role.
 2. **Participant key** — maps a random participant ID to contact records and remains separate from responses and analysis.
 3. **Restricted material and authority records** — source passages, permissions, access restrictions, authorized meaning records, authority contacts, and protected context.
-4. **Restricted administrative mappings** — P/S identities, editor identities, rule-applicability mappings, assignment codes, randomization keys, action logs, and unmasking keys.
-5. **De-identified research records** — masked assignments, responses, scores, preservation results, timing, exclusions, and deviations using random IDs only.
+4. **Restricted administrative mappings** — P/S identities, editor and scorer identities, rule-applicability mappings, assignment codes, randomization keys, action logs, conflict records, and unmasking keys.
+5. **De-identified research records** — masked assignments, responses, scores, preservation results, timing, exclusions, deviations, and adverse-condition records using random IDs only.
 6. **Analysis and release records** — a minimized analysis dataset and either approved de-identified data or publishable aggregates after disclosure and permission review.
 
 Direct identifiers must not appear in response, scoring, preservation, assignment, or analysis tables.
 
 ## Identifier rules
 
-Use random identifiers that do not encode institution, country, language, role, recruitment source, condition, health status, or accessibility need.
+Use random identifiers that do not encode institution, country, language, role, recruitment source, condition, contributor status, health status, or accessibility need.
 
 Recommended namespaces:
 
@@ -85,10 +85,12 @@ Rare combinations must be coarsened or suppressed before public release.
 | `neutral_risk_version` | frozen shared communication-risk brief |
 | `condition_output_id` | immutable P or S output record |
 | `condition_mapping` | restricted until authorized unmasking |
+| `condition_version_state` | proposed, rejected, repaired, retained, failed, unresolved, or selected |
+| `condition_disposition_reason` | bounded reason and responsible role |
 | `editor_id` | restricted random editor ID |
 | `output_hash` | exact immutable output hash |
 | `preservation_state` | preserved, not preserved, not determined |
-| `pair_eligibility` | eligible, excluded, not determined with reason |
+| `pair_eligibility` | eligible, ineligible, not determined with reason |
 
 ### Assignment table
 
@@ -128,6 +130,9 @@ Free text must undergo disclosure review before release.
 | `score_id` | unique scoring record |
 | `response_id` | masked response link |
 | `scorer_id` | random scorer ID |
+| `scorer_ariadline_contributor` | yes/no, held outside scorer-facing records |
+| `scorer_canto_span_contributor` | yes/no, held outside scorer-facing records |
+| `scorer_conflict_state` | none, declared, managed, unresolved |
 | `scoring_key_version` | frozen version and hash |
 | `score` | frozen categorical or numeric result |
 | `error_class` | registered class including unsupported inference or material misinterpretation |
@@ -147,6 +152,7 @@ Initial scores must remain available so agreement and adjudication effects can b
 | `editing_time_ms` | elapsed editing time under approved policy |
 | `action_log_version` | restricted frozen log |
 | `reviewer_id` | random preservation-reviewer ID |
+| `reviewer_conflict_state` | none, declared, managed, unresolved |
 | `preservation_dimension` | registered meaning dimension |
 | `preservation_result` | preserved, not preserved, not determined, not applicable |
 | `severity` | critical, major, minor, editorial, not applicable |
@@ -159,7 +165,7 @@ A material unresolved difference remains `not determined`; it must not be promot
 | Field | Requirement |
 |---|---|
 | `record_id` | exclusion or deviation ID |
-| `record_type` | exclusion or deviation |
+| `record_type` | participant exclusion, response exclusion, pair ineligibility, or deviation |
 | `date` | recorded date |
 | `study_phase` | setup, editing, preservation, assignment, recruitment, collection, scoring, analysis |
 | `affected_scope` | participants, materials, conditions, assignments, tasks, outcomes |
@@ -167,18 +173,33 @@ A material unresolved difference remains `not determined`; it must not be promot
 | `reason` | factual bounded reason |
 | `outcome_data_visible` | yes/no/not determined |
 | `corrective_action` | action or none |
-| `eligibility_effect` | none, exclude, sensitivity-only, not determined |
+| `eligibility_effect` | none, exclude response, exclude participant, pair ineligible, sensitivity-only, not determined |
+| `retention_effect` | always retain restricted audit record; state any approved release restriction |
 | `interpretive_effect` | bounded effect on analysis or disposition |
 | `responsible_role` | approved role, not a personal identifier in public records |
 
 The original frozen record must remain available after any amendment.
+
+## Immutable adverse-condition retention
+
+Every proposed, rejected, repaired, selected, failed, and unresolved condition version must retain:
+
+- condition-output ID and exact hash;
+- source and authorized meaning-record versions;
+- editor and action-log locators;
+- preservation and comparability records;
+- disposition state and reason;
+- date and responsible role;
+- relationship to any replacement version.
+
+A condition or pair may be ineligible for reader exposure or the primary benefit comparison. Ineligibility never authorizes deletion, overwriting, omission from the adverse-results record, or silent replacement.
 
 ## Assignment and counterbalancing
 
 The approved assignment schedule must satisfy all of the following:
 
 - each participant sees no more than one wording condition for a given meaning record;
-- both P and S receive exposure for every eligible retained material unless a frozen design states an explicit reason otherwise;
+- both P and S receive exposure for every eligible retained pair unless a frozen design states an explicit reason otherwise;
 - P/S exposure is balanced by material, broad domain family, and order position as closely as the approved sample permits;
 - each participant receives a feasible mix across the registered domain families without repeated underlying meaning records;
 - condition sequences are randomized or counterbalanced under a frozen algorithm, seed, schedule, and hash;
@@ -194,12 +215,25 @@ The final schedule and sample target require human statistical and operational a
 - An editor must not see the other condition's output, action log, preservation result, reader task answer, or participant result.
 - An editor may work in both conditions only across different meaning records under a frozen cross-record counterbalancing plan.
 - Editor expertise, language background, domain familiarity, prior Ariadline exposure, timing, and resources must be matched or recorded.
-- The coordinator's preregistered applicability mapping remains hidden from both editors.
+- The coordinator's registered applicability mapping remains hidden from both editors.
 - The S editor records an independent applicability judgment; P does not receive the candidate-core rules.
 
-## Mechanical exclusion rules
+## Scorer and adjudicator independence
 
-Freeze exact exclusion codes before participant exposure. Exclusions may use only objective registered conditions such as:
+- Ariadline or Canto-span developers must not supply the entire scoring or adjudication chain.
+- Every scored task family must include at least one scorer or adjudicator independent of Ariadline development.
+- Scorer and adjudicator contributor status, relevant expertise, calibration, conflicts, masking, and unmasking events must be recorded.
+- An unresolved material conflict blocks the affected scoring route.
+- Initial independent scores remain visible after adjudication.
+- Disagreement with Ariadline, preference for P, and adverse scoring are not conflicts and cannot justify exclusion.
+
+## Mechanical exclusion and pair-eligibility rules
+
+Freeze exact codes before participant exposure.
+
+### Participant or response exclusions
+
+Use only objective registered conditions such as:
 
 - ineligible or unapproved consent state;
 - duplicate or prohibited repeat participation;
@@ -208,18 +242,30 @@ Freeze exact exclusion codes before participant exposure. Exclusions may use onl
 - technical failure that prevents presentation or response capture;
 - missing response beyond the frozen analyzability rule;
 - failed masking or assignment integrity;
-- condition comparability failure;
-- preservation state `not preserved` or `not determined` for the relevant P/S pair;
-- outcome-visible protocol deviation that invalidates the registered comparison.
+- an outcome-visible protocol deviation that invalidates the registered response comparison.
 
-Do not exclude a participant, response, material, condition, editor, or scorer because it:
+### Condition-pair ineligibility
+
+A P/S pair cannot enter reader exposure or the primary benefit comparison when the frozen rules identify:
+
+- condition comparability failure;
+- preservation state `not preserved` or `not determined` for either condition;
+- invalid or unresolved permission or meaning authority;
+- prohibited contamination;
+- another approved non-compensable integrity failure.
+
+Pair ineligibility affects exposure or benefit analysis only. Preserve and report every condition, review, action log, finding, and adverse result under the immutable-retention rule.
+
+### Prohibited outcome-based exclusion
+
+Do not exclude a participant, response, material, condition, editor, scorer, or adverse record because it:
 
 - favors P;
 - criticizes Ariadline;
 - reports confusion, burden, unnaturalness, bias, or inaccessibility;
 - selects `not determined`;
 - creates a null, adverse, mixed, stop, or reconception result;
-- disagrees with the expected rule applicability or project interpretation.
+- disagrees with expected rule applicability or project interpretation.
 
 Unregistered exclusions must be reported as deviations and analyzed separately rather than silently treated as planned.
 
@@ -248,7 +294,7 @@ This 20–30-person planning range is not automatically powered for precise popu
 
 - report item-level and rule-level results before aggregate conclusions;
 - show uncertainty and missingness;
-- retain adverse cases and P successes;
+- retain adverse cases, failed conditions, and P successes;
 - distinguish descriptive patterns from registered inferential claims;
 - avoid manufacturing numerical thresholds unsupported by the design;
 - avoid treating subjective clarity ratings as comprehension;
@@ -284,13 +330,14 @@ Before recruitment, human issue #46 must approve:
 
 - access roles for every store;
 - encryption, backup, transfer, and incident-response requirements;
-- retention and deletion periods;
+- retention and deletion periods for participant contact and research records;
+- permanent or long-term restricted retention needed for failed-condition auditability;
 - withdrawal limits after de-identification or aggregation;
 - disclosure-risk review;
 - community, source, publisher, and material restrictions;
 - whether row-level de-identified data, restricted-access data, synthetic records, or aggregates may be released.
 
-Publish no exact identifiers, rare combinations, restricted materials, authority contacts, unredacted free text, or condition keys unless the approved route permits them.
+Publish no exact identifiers, rare combinations, restricted materials, authority contacts, unredacted free text, condition keys, or restricted failed-condition text unless the approved route permits them.
 
 Every release must identify the protocol, material, condition, assignment, scoring-key, cleaning, exclusion, deviation, and analysis versions used.
 
