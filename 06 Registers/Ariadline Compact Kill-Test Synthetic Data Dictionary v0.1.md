@@ -11,7 +11,9 @@ tags: [ariadline, evaluation, synthetic, data]
 
 ## Scope
 
-This dictionary describes only the fictional dry-run fixtures and generated outputs. It does not define the final human-study schema.
+This dictionary describes only the fictional dry-run source, rich generated records, and compact expected fixtures. It does not define the final human-study schema.
+
+The core runner uses explicit row objects for validation and analysis. The exact expected assignment and scoring fixtures are losslessly compacted by participant to reduce repository size. The verifier reconstructs the relevant relationships through the declared derivation and column records before exact comparison.
 
 ## Source fixture
 
@@ -36,7 +38,7 @@ This dictionary describes only the fictional dry-run fixtures and generated outp
 | `material_id` | Fictional material identifier. |
 | `meaning_record_id` | Fictional authorized-meaning record identifier. |
 | `domain_family` | One of four broad synthetic strata. |
-| `scenario_class` | Neutral, `adverse_S`, or `inconclusive`. |
+| `scenario_class` | Benefit, neutral, `adverse_S`, or `inconclusive`. |
 | `synthetic_text` | Invented text; never authentic source material. |
 | `authority_state` | Simulated state marker only. |
 | `comparability` | Simulated P/S comparability state. |
@@ -45,54 +47,57 @@ This dictionary describes only the fictional dry-run fixtures and generated outp
 | `s_editor_rule_ids` | Independent synthetic S-editor applicability judgment. |
 | `applicability_agreement` | Whether the two synthetic mappings agree. |
 | `adverse_record_retained` | Confirms adverse state remains represented. |
-| `scoring_key` | Synthetic question, accepted answer class, and frozen hash. |
-| `conditions` | P and S editor, packet, output, preservation, burden, naturalness, and response-probability records. |
+| `scoring_key` | Synthetic question, accepted and prohibited elements, meaning-record link, and frozen hash. |
+| `conditions` | P and S editor, output, preservation, burden, naturalness, and response-probability records. |
 
-## Assignment output
+## Rich assignment records
 
-| Field | Meaning |
-|---|---|
-| `assignment_id` | Unique fictional assignment. |
-| `participant_id` | Random fictional participant ID. |
-| `masked_text_code` | Reader-facing code without condition identity. |
-| `order_position` | Position within the six-item assignment. |
-| `domain_family` | Broad synthetic stratum. |
-| `schedule_version` | Deterministic schedule version. |
-| `schedule_hash` | Hash covering seed, algorithm, public assignments, and restricted condition mapping. |
-| `restricted_condition_mapping` | Separate mapping from masked code to material and P/S identity. |
+The core generator creates one public assignment row and one restricted mapping row per exposure. The public row contains assignment, participant, masked text, order, domain, schedule version, and schedule hash. The restricted row links the assignment to material, meaning record, P/S identity, and output hash.
 
-## Scoring and adjudication output
+The schedule hash covers:
 
-### Response fields
+- deterministic seed and algorithm;
+- public assignment identities and ordering;
+- complete restricted condition mapping.
+
+## Compact assignment fixture
 
 | Field | Meaning |
 |---|---|
-| `response_id` | Unique fictional response. |
-| `assignment_id` | Link to one assignment. |
-| `masked_text_code` | Masked text identity. |
-| `question_id` | Synthetic scoring-key link. |
-| `answer_class` | `correct`, `incorrect`, `uncertain`, or `missing`. |
-| `response_value` | Fictional response value. |
-| `condition_identity_absent` | Masking assertion. |
-| `rule_metadata_absent` | Masking assertion. |
-| `completion_state` | `complete`, `missing`, or `technical_failure`. |
-| `mechanical_exclusion_code` | Frozen code or null. |
+| `material_columns` and `materials` | Manifest for the nine eligible materials: meaning record, domain, and P/S output hashes. |
+| `entry_columns` | Declares participant-entry order: position, material, condition, and masked text code. |
+| `participant_schedules` | Twenty-four participant records with six complete assignment entries each. |
+| `derivation` | Declares how the unique assignment ID derives from participant number and order. |
+| `schedule_hash` | Exact hash from the rich schedule, including restricted mapping. |
 
-### Score and adjudication fields
+The compact fixture therefore retains all 144 assignment identities, participant links, masked codes, order positions, material and meaning identities, domains, conditions, output hashes, seed, algorithm, and schedule hash without repeating invariant fields in every row.
+
+## Rich response, score, and adjudication records
+
+The core generator creates:
+
+- one masked response row per assignment;
+- two initial masked score rows per response;
+- one deterministic adjudication row when the initial scores differ;
+- explicit planned and applied exclusion records;
+- explicit planned deviation records.
+
+Missing or mechanically excluded responses remain recorded but do not enter the analyzable score mean as zero.
+
+## Compact scoring fixture
 
 | Field | Meaning |
 |---|---|
-| `score_id` | Unique initial score. |
-| `response_id` | Response link. |
-| `scorer_id` | Fictional scorer identity. |
-| `independent_of_ariadline` | Marks the independent scoring route. |
-| `condition_identity_absent` | Scorer masking assertion. |
-| `editor_metadata_absent` | Scorer masking assertion. |
-| `scoring_key_hash` | Frozen key identity. |
-| `score` | `0`, `0.5`, or `1`; excluded missing records do not enter analysis as zero. |
-| `critical_error` | Synthetic critical-error marker. |
-| `adjudications` | Deterministic resolution of initial scorer disagreement while retaining initial scores. |
-| `applied_exclusions` | Frozen planned and mechanically generated exclusion applications. |
+| `scoring_keys` | Material, question ID, and frozen scoring-key hash manifest. |
+| `scorers` | Synthetic scorer IDs and independence states. |
+| `adjudicator` | Synthetic independent adjudicator record. |
+| `entry_columns` | Declares result order: response class/value, completion, exclusion, two scores, two critical-error states, and adjudicated result. |
+| `participant_results` | Twenty-four result tapes with six entries each, ordered exactly as the assignment fixture. |
+| `derivation` | Declares how assignment and response IDs derive and where masked code, material, and condition are recovered. |
+| `planned_exclusions` and `applied_exclusions` | Frozen cases and exact affected assignment/response records. |
+| `planned_deviations` | Exact fictional deviations retained for interpretation. |
+
+The participant result tapes preserve all 144 responses, 288 initial scores, 24 adjudications, completion states, exclusions, critical-error states, key links, scorer independence, and masking assertions.
 
 ## Analysis output
 
