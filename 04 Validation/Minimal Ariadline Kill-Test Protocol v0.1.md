@@ -137,7 +137,9 @@ Use `preserved`, `not preserved`, or `not determined`.
 
 A material preservation failure makes the condition and pair ineligible for reader exposure or benefit analysis and remains an adverse result. If either member of a P/S pair is `not preserved` or `not determined`, that pair cannot enter the primary benefit comparison.
 
-Every proposed, rejected, repaired, selected, failed, and unresolved condition version must remain available in the restricted audit record with its exact hash, action log, preservation and comparability results, disposition reason, and relationship to any replacement. Ineligibility never authorizes deletion, overwriting, or omission from adverse reporting.
+To the extent permitted by the approved rights, privacy, community, and retention plan, every proposed, rejected, repaired, selected, failed, and unresolved condition version retains its exact hash, action log, preservation and comparability results, disposition reason, and relationship to any replacement. Ineligibility alone never authorizes deletion, overwriting, or omission from adverse reporting.
+
+When a separately approved legal, rights, community, source-access, withdrawal, or deletion obligation requires removal of restricted content, preserve only the permitted tombstone: record ID, non-reversible hash where permitted, deletion date, authority and basis, affected scope, prior disposition, replacement relation, and interpretive effect. The tombstone must not retain prohibited content or permit prohibited reconstruction.
 
 ## Participant assignment
 
@@ -194,19 +196,19 @@ Freeze exact codes before exposure.
 
 Participant or response exclusions may use only objective registered rules for consent or eligibility, duplicate participation or exposure, withdrawal, technical failure, frozen missingness requirements, masking or assignment failure, and outcome-visible protocol violations.
 
-Condition-pair ineligibility may follow preservation failure, comparability failure, unresolved permission or meaning authority, prohibited contamination, or another approved non-compensable integrity failure. Pair ineligibility removes the pair from exposure or the primary benefit comparison; it does not remove the condition or adverse record from the audit, safety report, or project disposition evidence.
+Condition-pair ineligibility may follow preservation failure, comparability failure, unresolved permission or meaning authority, prohibited contamination, or another approved non-compensable integrity failure. Pair ineligibility removes the pair from exposure or the primary benefit comparison; it does not remove the condition or adverse record from the audit, safety report, or project disposition evidence. When restricted content must be deleted under a separately approved obligation, retain only the permitted tombstone and report the resulting limitation.
 
 Do not exclude disagreement with Ariadline, preference for P, adverse ratings, criticism, uncertainty, `not determined`, null results, bias reports, or a condition merely because it harms the project hypothesis.
 
-Record every unregistered exclusion or protocol departure in the versioned deviation log defined in [[Ariadline Kill-Test Data, Assignment, and Analysis Plan v0.1]]. Preserve the original frozen protocol and state whether condition-labelled outcomes were visible.
+Record every unregistered exclusion or protocol departure in the versioned deviation log defined in [[Ariadline Kill-Test Data, Assignment, and Analysis Plan v0.1]]. Preserve the original frozen protocol or the permitted tombstone and state whether condition-labelled outcomes were visible.
 
 ## Small-pilot analysis
 
 The analysis must:
 
 - retain item-level and rule-level results before package conclusions;
-- retain P successes, S-created problems, failed conditions, and rejected variants;
-- report uncertainty, missingness, scorer disagreement, exclusions, ineligible pairs, and deviations;
+- retain P successes, S-created problems, failed conditions, and rejected variants, or their permitted tombstones when content must be deleted;
+- report uncertainty, missingness, scorer disagreement, exclusions, ineligible pairs, deviations, and deletion effects;
 - distinguish hard safety failures, descriptive warnings, and insufficient evidence;
 - avoid unsupported numerical thresholds and universal population claims;
 - avoid inferring rule benefit from package averages when the rule was not applicable;
@@ -228,7 +230,7 @@ Actively search for cases where:
 - community, translation, or accessibility requirements conflict with a control;
 - governance burden makes competent ordinary editing more practical.
 
-Retain these cases in the report.
+Retain these cases in the report or retain a permitted tombstone when a deletion obligation prevents content retention.
 
 ## Decision route
 
