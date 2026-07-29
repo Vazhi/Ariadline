@@ -4,7 +4,7 @@ type: evaluation-register
 status: planning-draft
 version: "0.1"
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-07-29
 tags: [ariadline, evaluation, materials, open-license, candidates]
 ---
 # Ariadline Open-License Material Candidate Inventory v0.1
@@ -14,6 +14,10 @@ tags: [ariadline, evaluation, materials, open-license, candidates]
 All 16 entries are **`candidate—not approved`**. No passage text is reproduced here. Official publisher or journal pages were used for source and license screening, but a human must recheck the exact version and every embedded component before use.
 
 An open article or book license does not automatically cover third-party examples, archival material, photographs, maps, audio, transcripts, community-controlled knowledge, linked datasets, or identifiable participant data.
+
+## Source-verification scope
+
+Work-level title, author or creator, publication state or year, DOI or stable locator, and displayed license metadata were rechecked against official pages on 2026-07-29. This was a source-metadata check only. It did not establish rights in embedded or linked components, permission for participant exposure, meaning authority, ethical suitability, accessibility, or final eligibility.
 
 ## Candidate summary
 
@@ -29,12 +33,12 @@ An open article or book license does not automatically cover third-party example
 | `OLM-008` | “Indicating verbs as typologically unique constructions” | sign-language typology | Glossa | CC BY 4.0 | conditional |
 | `OLM-009` | “Design sensitivity and statistical power in acceptability judgment experiments” | experimental methodology | Glossa | CC BY 4.0 | high |
 | `OLM-010` | Cologne Corpus of Kiezdeutsch data paper and dataset | corpus/sociolinguistic | Journal of Open Humanities Data | CC BY 4.0 | conditional |
-| `OLM-011` | “Glottography” | geolinguistic/computational | Journal of Open Humanities Data | CC BY 4.0 | high |
+| `OLM-011` | “Glottography” | geolinguistic/computational | Journal of Open Humanities Data | CC BY 4.0 | conditional |
 | `OLM-012` | Global Lexical Database | historical/computational | Journal of Open Humanities Data | CC BY 4.0 | conditional |
-| `OLM-013` | Dative alternation dataset paper | corpus/variationist | Journal of Open Humanities Data | CC BY 4.0 | high |
+| `OLM-013` | Dative alternation dataset paper | corpus/variationist | Journal of Open Humanities Data | CC BY 4.0 | conditional |
 | `OLM-014` | Linguistic Asymmetry Index | multilingual infrastructure | Journal of Open Humanities Data | CC BY 4.0 | high |
-| `OLM-015` | “From accent to content” | language attitudes/experimental | Frontiers in Communication | publisher policy CC BY | conditional |
-| `OLM-016` | “Developing a language screening scale that considers linguistic diversity” | assessment/applied | Frontiers in Communication | publisher policy CC BY | conditional |
+| `OLM-015` | “From accent to content” | language attitudes/experimental | Frontiers in Communication | CC BY | conditional |
+| `OLM-016` | “Developing a language screening scale that considers linguistic diversity” | assessment/applied | Frontiers in Communication | CC BY | conditional |
 
 ## Candidate records
 
@@ -54,13 +58,13 @@ An open article or book license does not automatically cover third-party example
 
 - Status: `candidate—not approved`.
 - Official source: https://langsci-press.org/catalog/book/569
-- Citation locator: Peter Jenks, Elyasir Julima, Angelo Nasir, and Sharon Rose, published 2025.
+- Citation locator: Peter Jenks, Elyasir Julima, Angelo Nasir, and Sharon Rose. The publisher page cites the work as forthcoming while also displaying a publication date of 2025; no DOI is displayed.
 - Source type: collaborative descriptive grammar with elicited, oral-text, written-corpus, lexical, orthographic, and IPA material.
 - Official page license: Creative Commons Attribution 4.0 International.
 - Possible coverage: collaborative authorship, descriptive grammar, elicitation, oral texts, corpus examples, glossing, multilingual representation.
 - Candidate locations only: authorial methodological prose or bounded analysis that does not require reproducing a community text.
 - Possible communication risks: provenance, authority plurality, source-type distinctions, scope, theory-sensitive terminology, relation between example and claim.
-- Human checks: contributor and community authority; rights in oral and written texts; whether examples or corpus material have separate conditions; exact publication status and version; legitimate route for contested meaning.
+- Human checks: contributor and community authority; rights in oral and written texts; whether examples or corpus material have separate conditions; resolution of the publisher page's publication-status ambiguity; exact final version; legitimate route for contested meaning.
 
 ### `OLM-003` — *Directional extensions in Chadic languages*
 
@@ -77,14 +81,15 @@ An open article or book license does not automatically cover third-party example
 ### `OLM-004` — *Grammatical theory: From transformational grammar to constraint-based approaches*
 
 - Status: `candidate—not approved`.
-- Official source: https://langsci-press.org/catalog/book/287
-- Citation locator: Stefan Müller, fourth revised and extended edition, 2020, DOI `10.5281/zenodo.3992307`.
+- Official source: https://langsci-press.org/catalog/book/380
+- Citation locator: Stefan Müller, 2023 edition, DOI `10.5281/zenodo.7376662`.
+- Version note: this replaces the superseded fourth revised and extended edition at book 287.
 - Source type: theoretical linguistics textbook.
 - Official page license: Creative Commons Attribution 4.0 International.
 - Possible coverage: competing frameworks, formal argument, definitions, examples, evidence and counterargument.
 - Candidate locations only: a bounded argument or comparison that can be understood with supplied context and scored without deciding which theory is correct.
 - Possible communication risks: theory-dependent terminology, nested claims, antecedents, contrast structure, distinction between assumption and conclusion.
-- Human checks: exact edition and section; third-party examples or quotations; author authority; whether editing would distort pedagogical sequencing or formal notation.
+- Human checks: exact current edition and section; third-party examples or quotations; author authority; whether editing would distort pedagogical sequencing or formal notation.
 
 ### `OLM-005` — *Grammatical systems without language borders: Lessons from free-range language*
 
@@ -126,7 +131,7 @@ An open article or book license does not automatically cover third-party example
 
 - Status: `candidate—not approved`.
 - Official source: https://www.glossa-journal.org/article/doi/10.5334/gjgl.468/
-- Citation locator: Adam Schembri and collaborators, 2018, DOI `10.5334/gjgl.468`.
+- Citation locator: Adam Schembri, Kearsy Cormier, and Jordan Fenlon, 2018, DOI `10.5334/gjgl.468`.
 - Source type: peer-reviewed sign-language typology and theoretical analysis.
 - Official article license: Creative Commons Attribution 4.0.
 - Possible coverage: signed-language analysis, terminology dispute, typological claim, reassessment of established labels.
@@ -138,21 +143,22 @@ An open article or book license does not automatically cover third-party example
 
 - Status: `candidate—not approved`.
 - Official source: https://www.glossa-journal.org/articles/abstract/10.5334/gjgl.236/
-- Citation locator: Jon Sprouse and colleagues, DOI `10.5334/gjgl.236`.
+- Citation locator: Jon Sprouse and Diogo Almeida, 2017, DOI `10.5334/gjgl.236`.
 - Source type: peer-reviewed experimental-methodology article.
 - Official article license: Creative Commons Attribution 4.0.
 - Possible coverage: acceptability judgments, study design, sensitivity, statistical power, methodological claims.
 - Candidate locations only: method or interpretation prose with sufficient statistical context.
 - Possible communication risks: conditional claim, population and design scope, probability language, limitation, difference between null evidence and absence.
-- Human checks: author or method expert authority; whether tables or equations are necessary; version; statistical-review suitability.
+- Human checks: author or method expert authority; whether tables or equations are necessary; exact article version; statistical-review suitability.
 
 ### `OLM-010` — Cologne Corpus of Kiezdeutsch data paper and dataset
 
 - Status: `candidate—not approved`.
 - Official source: https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.342
+- Citation locator: Nicholas Catasso and Antonia Marie Neubauer, 2025, article DOI `10.5334/johd.342`.
 - Dataset locator: DOI `10.5281/zenodo.15465769`.
 - Source type: peer-reviewed data paper and pseudonymized annotated conversational corpus.
-- Official page and dataset license: Creative Commons Attribution 4.0.
+- Official article and dataset license: Creative Commons Attribution 4.0.
 - Possible coverage: sociolinguistics, multilingual urban speech, conversation transcription, metadata, corpus design, reuse limitations.
 - Candidate locations only: data-paper prose. Do not select transcript or audio content without a separate human rights, privacy, community, and participant-use review.
 - Possible communication risks: data provenance, annotation scope, representativeness, pseudonymization limits, distinction between resource description and language claim.
@@ -161,9 +167,9 @@ An open article or book license does not automatically cover third-party example
 ### `OLM-011` — “Glottography: an open-source geolinguistic data platform for mapping the world’s languages”
 
 - Status: `candidate—not approved`.
-- Official source: https://openhumanitiesdata.metajnl.com/en/articles/10.5334/johd.459
-- Citation locator: 2026, DOI `10.5334/johd.459`.
-- Source type: peer-reviewed platform and data-method paper.
+- Official source: https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.459
+- Citation locator: Peter Ranacher et al., 2026, DOI `10.5334/johd.459`.
+- Source type: peer-reviewed discussion paper describing a geolinguistic platform and data method.
 - Official article license: Creative Commons Attribution 4.0.
 - Possible coverage: geolinguistic representation, speaker-area data, language mapping, Glottolog, open geospatial data, technical limitations.
 - Candidate locations only: platform-method, data-model, or limitation prose. Do not assume map layers or upstream records share one license.
@@ -174,6 +180,7 @@ An open article or book license does not automatically cover third-party example
 
 - Status: `candidate—not approved`.
 - Official source: https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.96
+- Citation locator: Tiago Tresoldi, 2023, article DOI `10.5334/johd.96`.
 - Dataset locator: DOI `10.5281/zenodo.7368116`.
 - Source type: peer-reviewed data paper and computational historical-linguistics resource.
 - Official article page states CC BY 4.0; the database is described as available under CC BY.
@@ -182,54 +189,55 @@ An open article or book license does not automatically cover third-party example
 - Possible communication risks: machine output versus linguistic judgment, coverage quantification, derived-data provenance, uncertainty, family and doculect scope.
 - Human checks: ASJP and upstream licenses; language/community concerns; database version; author/data-steward authority; reuse of lexical forms.
 
-### `OLM-013` — “Data from ‘The Dative Alternation Revisited’”
+### `OLM-013` — “Data from ‘The Dative Alternation Revisited: Fresh Insights from Contemporary British Spoken Data’”
 
 - Status: `candidate—not approved`.
 - Official source: https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.11
-- Dataset locator: Figshare record linked from the article.
-- Citation locator: 2019, DOI `10.5334/johd.11`.
+- Citation locator: Gard B. Jenset and Barbara McGillivray, 2019, article DOI `10.5334/johd.11`.
+- Dataset locator: Figshare record `https://figshare.com/articles/BNCspoken2014_dative_dataset_v1_csv/7353164`, dataset version 1.
 - Source type: peer-reviewed data paper and contemporary spoken-British-English dataset.
-- Official article license: Creative Commons Attribution 4.0.
+- Official article and recorded dataset license: Creative Commons Attribution 4.0.
 - Possible coverage: corpus extraction, alternation coding, spoken data, variationist analysis, reproducibility.
-- Candidate locations only: data-paper prose or human-authorized method description. Do not assume the underlying BNC material can be reproduced under the article license.
+- Candidate locations only: data-paper prose or human-authorized method description. Do not assume the underlying BNC material can be reproduced under the article or dataset license.
 - Possible communication risks: corpus-versus-dataset distinction, sampling, annotation criteria, negative findings, provenance.
 - Human checks: BNC2014 and CQPweb terms; quoted speech rights; author/data-steward authority; exact dataset version; participant exposure restrictions.
 
-### `OLM-014` — “The Linguistic Asymmetry Index: Benchmarking Equity in Multilingual Research Infrastructures”
+### `OLM-014` — “The Linguistic Asymmetry Index (LAI): Benchmarking Equity in Multilingual Research Infrastructures”
 
 - Status: `candidate—not approved`.
-- Official source: https://openhumanitiesdata.metajnl.com/en/articles/10.5334/johd.474
-- Dataset locator: DOI `10.5281/zenodo.17597231`.
-- Source type: peer-reviewed data/workflow paper with Python, JSON, Markdown, and derived outputs.
-- Official dataset license: Creative Commons Attribution 4.0 International.
+- Official source: https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.474
+- Citation locator: Elena Battaner and Paul Spence, 2026, article DOI `10.5334/johd.474`.
+- Dataset locator: DOI `10.5281/zenodo.17597231`, dataset and workflow version 1.0.
+- Source type: peer-reviewed discussion paper with an associated dataset and reproducible workflow.
+- Official article and dataset license: Creative Commons Attribution 4.0 International.
 - Possible coverage: multilingual infrastructure, composite scores, benchmarking, reproducible workflow, equity claims.
 - Candidate locations only: method, operational definition, interpretation, or limitation prose.
 - Possible communication risks: normative versus descriptive claim, index construction, weighting, infrastructure scope, uncertainty, bias.
-- Human checks: author authority; upstream harvested metadata terms; ethical framing; whether simplification could erase political or methodological nuance; dataset version.
+- Human checks: author authority; upstream harvested metadata terms; ethical framing; whether simplification could erase political or methodological nuance; exact dataset version.
 
 ### `OLM-015` — “From accent to content: the effect of Spanish accents on message credibility”
 
 - Status: `candidate—not approved`.
-- Official source listing: https://www.frontiersin.org/journals/communication/articles?publication-date=01%2F01%2F2007-09%2F01%2F2025
-- Citation locator: Ana María González-Martín, Rachid Berd-Gómez, Alejandro Marín-Gutiérrez, and Elger Abrahamse, 2025, DOI `10.3389/fcomm.2024.1497131`.
+- Official source: https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2024.1497131/full
+- Citation locator: Ana María González-Martín, Rachid Berd-Gómez, Alejandro Marín-Gutiérrez, and Elger Abrahamse, published 2025, DOI `10.3389/fcomm.2024.1497131`.
 - Source type: original experimental language-attitudes research.
-- Publisher policy: Frontiers states that its research publications use the Creative Commons Attribution license; the exact article notice must be rechecked before use.
+- Official article license: Creative Commons Attribution.
 - Possible coverage: accent perception, credibility ratings, experimental method, social evaluation, interpretation limits.
 - Candidate locations only: method, registered result, or limitation prose. Do not use audio stimuli or participant material without separate review.
 - Possible communication risks: causal language, population scope, stereotype amplification, distinction between accent effect and speaker trait, uncertainty.
-- Human checks: article-specific license; stimulus rights; participant consent; social-harm and bias review; author authority; language and accent expertise.
+- Human checks: stimulus rights; participant consent; supplementary-material terms; social-harm and bias review; author authority; language and accent expertise.
 
 ### `OLM-016` — “Developing a language screening scale that considers linguistic diversity in pre-school children”
 
 - Status: `candidate—not approved`.
-- Official source listing: https://www.frontiersin.org/journals/communication/articles?publication-date=01%2F01%2F2007-01%2F05%2F2025
+- Official source: https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1532948/full
 - Citation locator: Antri Kanikli, George Charilaos Spanoudis, and Elena Theodorou, 2025, DOI `10.3389/fcomm.2025.1532948`.
 - Source type: original applied language-assessment research.
-- Publisher policy: Frontiers states that its research publications use the Creative Commons Attribution license; the exact article notice must be rechecked before use.
+- Official article license: Creative Commons Attribution.
 - Possible coverage: linguistic diversity, screening, scale development, child-language assessment, validity and limitations.
-- Candidate locations only: methodological or interpretive prose. Do not reproduce test items, child data, or proprietary instruments without separate authorization.
+- Candidate locations only: methodological or interpretive prose. Do not reproduce test items, child data, or instruments without separate authorization.
 - Possible communication risks: population and diagnostic scope, validity claim, fairness, operational definition, clinical versus linguistic inference.
-- Human checks: article-specific license; instrument rights; child-data protections; clinical and statistical authority; accessibility; risk of harmful simplification.
+- Human checks: instrument rights; child-data protections; data-access restrictions; clinical and statistical authority; accessibility; risk of harmful simplification.
 
 ## Coverage and concentration
 
@@ -252,9 +260,9 @@ This distribution is acceptable only for discovery. It is not an approved final 
 
 ### Priority logic
 
-`high` means the source appears to offer a clear official CC BY notice and authorial prose that may be screened without immediately requiring restricted participant content.
+`high` means the source has a clear official work-level CC BY notice and appears to contain bounded authorial prose that may be screened without immediately requiring restricted participant or community material.
 
-`conditional` means the source has an additional likely dependency, such as community authority, linked dataset terms, visual or audio material, translation authority, participant data, or article-specific license verification.
+`conditional` means the source has an additional prominent dependency, such as community authority, ambiguous publication state, linked dataset terms, visual or audio material, translation authority, participant data, or instrument rights.
 
 Neither priority is an approval state.
 
