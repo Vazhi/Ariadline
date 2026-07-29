@@ -9,35 +9,32 @@ tags: [ariadline, evaluation, synthetic, readiness]
 ---
 # Ariadline Compact Kill-Test Synthetic Readiness Checklist v0.1
 
-## Automated dry-run result
+## Synthetic procedure result
 
-- [x] Twelve synthetic meaning records span four domain families.
-- [x] Paired P/S condition records exist for every material.
-- [x] Twenty-four synthetic participants receive 144 assignments.
-- [x] Seed, algorithm, schedule version, restricted mapping, and schedule hash are recorded.
-- [x] No participant sees both conditions for one meaning record.
-- [x] Eligible P/S exposure is exactly balanced.
-- [x] Correct, incorrect, uncertain, missing, and technical-failure states are generated.
-- [x] Scoring is masked and includes an independent route.
-- [x] Every answer key traces to a synthetic meaning record.
-- [x] Preservation failures remain visible outside benefit analysis.
-- [x] Mechanical exclusions and deviations remain linked to exact records.
-- [x] Adverse S and inconclusive scenarios are retained.
-- [x] Ordinary editing can outperform S.
-- [x] Continue, revise, stop, and insufficient-evidence routes all execute.
-- [x] Exact expected outputs reproduce without hash differences.
-- [x] Synthetic outcomes remain labelled procedure-only.
+- [x] Twelve fictional meaning records span four domain families.
+- [x] Paired P/S records exist for every fictional material.
+- [x] Twenty-four fictional participants receive a deterministic counterbalanced schedule.
+- [x] No participant receives both conditions for one meaning record.
+- [x] Every eligible material has eight P and eight S exposures.
+- [x] Scoring keys identify their material and meaning record explicitly.
+- [x] Reader and scorer records omit restricted condition and editor metadata.
+- [x] Every analyzable response has two scorers, including an independent route.
+- [x] Excluded missing or technical records have no scores or adjudications.
+- [x] Preservation failure remains non-compensable.
+- [x] Adverse, inconclusive, bias, applicability-disagreement, exclusion, and deviation cases remain visible.
+- [x] Continue, revise, stop, and insufficient-evidence branches all derive.
+- [x] Exact compact outputs reproduce with zero mismatches.
 
-## Human blockers that remain
+## Human launch blockers
 
-- [ ] Human issue #40 approves or revises the candidate core.
-- [ ] Human issue #42 supplies authentic lawful-use and authorized meaning records.
-- [ ] Human issue #44 creates fair authentic P/S conditions and preservation records.
-- [ ] Human issue #46 approves oversight, consent, privacy, accessibility, compensation, assignment, statistics, retention, deletion, and recruitment.
-- [ ] Human issue #48 remains the only final project-disposition authority.
+- [ ] Human issue #40 approves or revises the candidate core and project framing.
+- [ ] Human issue #42 supplies authentic passages, lawful-use records, and authorized meaning records.
+- [ ] Human issue #44 produces fair P/S conditions and independent preservation results.
+- [ ] Human issue #46 approves oversight, consent, privacy, accessibility, retention, withdrawal, compensation, assignment, statistics, and immutable registration.
+- [ ] The human-approved execution package replaces all synthetic assumptions, probabilities, thresholds, identities, and gate states.
 
-## Readiness result
+## Status
 
-**Ready for human protocol and launch review; not ready for participant launch.**
+**Synthetic procedure package complete; human study not ready.**
 
-The synthetic package shows that the workflow can run and expose adverse outcomes. It cannot satisfy any human gate.
+A completed synthetic checklist cannot authorize authentic materials, recruitment, participant contact, data collection, unmasking, analysis of human evidence, or project disposition.
