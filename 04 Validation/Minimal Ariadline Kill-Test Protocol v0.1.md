@@ -84,7 +84,7 @@ Before editor assignment, freeze one shared packet for P and S. It must include:
 
 The shared brief must not contain `SLE-RULE-*` IDs, Ariadline terminology, expected direction, or a condition-specific diagnosis.
 
-An independent coordinator may preregister candidate-rule applicability for later analysis. That mapping is restricted administrative metadata and is not shown to either editor, task designer, reader, scorer, or preservation reviewer before the relevant records are frozen.
+An independent coordinator may register candidate-rule applicability for later analysis. That mapping is restricted administrative metadata and is not shown to either editor, task designer, reader, scorer, or preservation reviewer before the relevant records are frozen.
 
 ## Conditions
 
@@ -96,7 +96,7 @@ A qualified editor receives the shared rule-neutral packet and an ordinary profe
 
 The legacy code `S` is retained for compatibility. A comparably qualified editor receives the same substantive packet and professional resources as P, plus only the human-approved 8–12-rule candidate core.
 
-The S editor determines and records rule applicability independently and does not receive the coordinator's preregistered mapping. S must not receive extra substantive information.
+The S editor determines and records rule applicability independently and does not receive the coordinator's registered mapping. S must not receive extra substantive information.
 
 ### U — optional source baseline
 
@@ -135,7 +135,9 @@ Use `preserved`, `not preserved`, or `not determined`.
 - Any unresolved material dimension requires overall `not determined`, unless another material dimension already requires `not preserved`.
 - Overall `preserved` is permitted only when every applicable material dimension is preserved and every minor or editorial difference is explicitly confirmed nonmaterial.
 
-A material preservation failure excludes the condition from benefit analysis and remains an adverse result. If either member of a P/S pair is `not preserved` or `not determined`, that pair cannot enter the primary benefit comparison.
+A material preservation failure makes the condition and pair ineligible for reader exposure or benefit analysis and remains an adverse result. If either member of a P/S pair is `not preserved` or `not determined`, that pair cannot enter the primary benefit comparison.
+
+Every proposed, rejected, repaired, selected, failed, and unresolved condition version must remain available in the restricted audit record with its exact hash, action log, preservation and comparability results, disposition reason, and relationship to any replacement. Ineligibility never authorizes deletion, overwriting, or omission from adverse reporting.
 
 ## Participant assignment
 
@@ -172,6 +174,8 @@ Task constructs and scoring keys must be derived only from the source, authorize
 
 Every scored answer must trace to an authorized meaning record through a frozen question ID and scoring-key version. The scorer-facing key must identify accepted elements, prohibited unsupported elements, partial-credit rules, critical error classes, `not determined` treatment, and adjudication triggers without revealing condition or rule metadata.
 
+Ariadline or Canto-span developers must not supply the entire scoring or adjudication chain. Every scored task family must include at least one scorer or adjudicator independent of Ariadline development. Record scorer and adjudicator contributor status, expertise, conflicts, calibration, masking, and unmasking. Preserve initial independent scores after adjudication.
+
 ## Outcomes
 
 The primary publication-relevant contrast is S versus P. Register no more than three primary outcomes before launch. Candidate primary outcomes include:
@@ -184,11 +188,15 @@ Meaning preservation is a safety outcome and cannot be traded away for reader be
 
 Supporting outcomes include evidence identification, limitation detection, logical-scope accuracy, evidence-force calibration, editing and response time, naturalness, cohesion, repetition, fragmentation, burden, scorer agreement, applicability agreement, `not determined` frequency, and qualitative theory, method, language, community, translation, and accessibility concerns.
 
-## Mechanical exclusions and deviations
+## Mechanical exclusions, pair ineligibility, and deviations
 
-Freeze exact exclusion codes before exposure. Apply only objective registered rules for consent or eligibility, duplicate participation or exposure, withdrawal, technical failure, frozen missingness requirements, masking or assignment failure, condition comparability, preservation failure, and outcome-visible protocol violations.
+Freeze exact codes before exposure.
 
-Do not exclude disagreement with Ariadline, preference for P, adverse ratings, criticism, uncertainty, `not determined`, null results, or bias reports.
+Participant or response exclusions may use only objective registered rules for consent or eligibility, duplicate participation or exposure, withdrawal, technical failure, frozen missingness requirements, masking or assignment failure, and outcome-visible protocol violations.
+
+Condition-pair ineligibility may follow preservation failure, comparability failure, unresolved permission or meaning authority, prohibited contamination, or another approved non-compensable integrity failure. Pair ineligibility removes the pair from exposure or the primary benefit comparison; it does not remove the condition or adverse record from the audit, safety report, or project disposition evidence.
+
+Do not exclude disagreement with Ariadline, preference for P, adverse ratings, criticism, uncertainty, `not determined`, null results, bias reports, or a condition merely because it harms the project hypothesis.
 
 Record every unregistered exclusion or protocol departure in the versioned deviation log defined in [[Ariadline Kill-Test Data, Assignment, and Analysis Plan v0.1]]. Preserve the original frozen protocol and state whether condition-labelled outcomes were visible.
 
@@ -197,8 +205,8 @@ Record every unregistered exclusion or protocol departure in the versioned devia
 The analysis must:
 
 - retain item-level and rule-level results before package conclusions;
-- retain P successes and S-created problems;
-- report uncertainty, missingness, scorer disagreement, exclusions, and deviations;
+- retain P successes, S-created problems, failed conditions, and rejected variants;
+- report uncertainty, missingness, scorer disagreement, exclusions, ineligible pairs, and deviations;
 - distinguish hard safety failures, descriptive warnings, and insufficient evidence;
 - avoid unsupported numerical thresholds and universal population claims;
 - avoid inferring rule benefit from package averages when the rule was not applicable;
@@ -216,7 +224,7 @@ Actively search for cases where:
 - S erases deliberate ambiguity or terminological plurality;
 - a rule is theory-, method-, language-, or genre-dependent;
 - an authorized meaning record is disputed or incomplete;
-- editors or reviewers cannot agree that a rule applies;
+- editors, scorers, or reviewers cannot agree that a rule applies or an answer is correct;
 - community, translation, or accessibility requirements conflict with a control;
 - governance burden makes competent ordinary editing more practical.
 
