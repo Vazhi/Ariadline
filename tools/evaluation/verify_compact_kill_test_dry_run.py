@@ -13,8 +13,18 @@ from run_compact_kill_test_dry_run import OUTPUT_FILES, build, digest
 def storage_view(filename: str, value: dict[str, Any]) -> dict[str, Any]:
     """Return the compact, lossless representation committed as an expected fixture."""
     if filename == "assignments.json":
-        assignment_columns = ["assignment_id", "participant_id", "masked_text_code", "order_position", "domain_family"]
-        mapping_columns = ["assignment_id", "material_id", "meaning_record_id", "condition", "condition_output_hash"]
+        public = {row["assignment_id"]: row for row in value["assignments"]}
+        restricted = {row["assignment_id"]: row for row in value["restricted_condition_mapping"]}
+        material_manifest: dict[str, list[Any]] = {}
+        by_participant: dict[str, list[list[Any]]] = {}
+        for assignment_id, row in public.items():
+            mapping = restricted[assignment_id]
+            material_id = mapping["material_id"]
+            manifest = material_manifest.setdefault(material_id, [mapping["meaning_record_id"], row["domain_family"], None, None])
+            manifest[2 if mapping["condition"] == "P" else 3] = mapping["condition_output_hash"]
+            by_participant.setdefault(row["participant_id"], []).append([
+                row["order_position"], material_id, mapping["condition"], row["masked_text_code"]
+            ])
         return {
             "fixture_id": value["fixture_id"],
             "synthetic_only": value["synthetic_only"],
@@ -24,29 +34,52 @@ def storage_view(filename: str, value: dict[str, Any]) -> dict[str, Any]:
             "eligible_material_count": value["eligible_material_count"],
             "schedule_version": "SYN-SCHEDULE-0.1",
             "schedule_hash": value["schedule_hash"],
-            "assignment_columns": assignment_columns,
-            "assignments": [[row[column] for column in assignment_columns] for row in value["assignments"]],
-            "mapping_columns": mapping_columns,
-            "restricted_condition_mapping": [[row[column] for column in mapping_columns] for row in value["restricted_condition_mapping"]],
+            "derivation": "assignment_id=SYN-ASG-<participant number>-<order>; condition mapping is restricted metadata in each entry",
+            "material_columns": ["material_id", "meaning_record_id", "domain_family", "P_output_hash", "S_output_hash"],
+            "materials": [[material_id, *manifest] for material_id, manifest in sorted(material_manifest.items())],
+            "entry_columns": ["order_position", "material_id", "condition", "masked_text_code"],
+            "participant_schedules": [[participant_id, sorted(entries)] for participant_id, entries in sorted(by_participant.items())],
         }
     if filename == "scoring_and_adjudication.json":
-        response_columns = ["response_id", "assignment_id", "masked_text_code", "question_id", "answer_class", "response_value", "completion_state", "mechanical_exclusion_code"]
-        score_columns = ["score_id", "response_id", "scorer_id", "independent_of_ariadline", "scoring_key_hash", "score", "critical_error"]
-        adjudication_columns = ["response_id", "adjudicator_id", "independent_of_ariadline", "initial_scores", "final_score", "reason"]
-        exclusion_columns = ["response_id", "assignment_id", "code", "frozen_mechanical_rule", "reason"]
+        scores_by_response: dict[str, list[dict[str, Any]]] = {}
+        for row in value["scores"]:
+            scores_by_response.setdefault(row["response_id"], []).append(row)
+        adjudications = {row["response_id"]: row for row in value["adjudications"]}
+        by_participant: dict[str, list[list[Any]]] = {}
+        key_manifest: dict[str, list[str]] = {}
+        for response in value["responses"]:
+            participant_id = response["assignment_id"].replace("SYN-ASG-", "SYN-PART-").rsplit("-", 1)[0]
+            order_position = int(response["assignment_id"].rsplit("-", 1)[1])
+            scorer_rows = sorted(scores_by_response[response["response_id"]], key=lambda item: item["scorer_id"])
+            adjudication = adjudications.get(response["response_id"])
+            material_number = response["question_id"].rsplit("-", 1)[1]
+            material_id = f"MAT-{material_number}"
+            key_manifest[material_id] = [response["question_id"], scorer_rows[0]["scoring_key_hash"]]
+            by_participant.setdefault(participant_id, []).append([
+                order_position,
+                response["answer_class"],
+                response["response_value"],
+                response["completion_state"],
+                response["mechanical_exclusion_code"],
+                scorer_rows[0]["score"],
+                scorer_rows[1]["score"],
+                scorer_rows[0]["critical_error"],
+                scorer_rows[1]["critical_error"],
+                adjudication["final_score"] if adjudication else None,
+            ])
         return {
             "fixture_id": value["fixture_id"],
             "synthetic_only": value["synthetic_only"],
             "masking_assertions": {"condition_identity_absent": True, "rule_metadata_absent": True, "editor_metadata_absent": True},
-            "response_columns": response_columns,
-            "responses": [[row[column] for column in response_columns] for row in value["responses"]],
-            "score_columns": score_columns,
-            "scores": [[row[column] for column in score_columns] for row in value["scores"]],
-            "adjudication_columns": adjudication_columns,
-            "adjudications": [[row[column] for column in adjudication_columns] for row in value["adjudications"]],
+            "derivation": "assignment_id and response_id derive from participant number and order; masked code and material/condition come from assignments.json",
+            "scorers": [["SYN-SCORER-A", False], ["SYN-SCORER-I", True]],
+            "adjudicator": ["SYN-ADJ-I", True],
+            "key_columns": ["material_id", "question_id", "scoring_key_hash"],
+            "scoring_keys": [[material_id, *manifest] for material_id, manifest in sorted(key_manifest.items())],
+            "entry_columns": ["order_position", "answer_class", "response_value", "completion_state", "mechanical_exclusion_code", "score_A", "score_I", "critical_A", "critical_I", "adjudicated_final"],
+            "participant_results": [[participant_id, sorted(entries)] for participant_id, entries in sorted(by_participant.items())],
             "planned_exclusions": value["planned_exclusions"],
-            "applied_exclusion_columns": exclusion_columns,
-            "applied_exclusions": [[row[column] for column in exclusion_columns] for row in value["applied_exclusions"]],
+            "applied_exclusions": [[row["assignment_id"], row["response_id"], row["code"], row["reason"]] for row in value["applied_exclusions"]],
             "planned_deviations": value["planned_deviations"],
         }
     return value
