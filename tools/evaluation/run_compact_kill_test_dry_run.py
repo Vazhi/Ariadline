@@ -1,570 +1,146 @@
 #!/usr/bin/env python3
-"""Run and validate the fictional Ariadline compact kill-test dry run.
-
-The tool uses only deterministic synthetic records. It cannot approve human gates
-or provide evidence that Ariadline is effective or safe for authentic writing.
-"""
+"""Deterministic, synthetic-only Ariadline compact kill-test rehearsal."""
 from __future__ import annotations
-
-import argparse
-import hashlib
-import json
+import argparse, hashlib, json
 from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import mean
 from typing import Any
 
-OUTPUT_FILES = (
-    "assignments.json",
-    "scoring_and_adjudication.json",
-    "analysis.json",
-)
-ALLOWED_DOMAINS = {
-    "theoretical_typological",
-    "descriptive_community",
-    "corpus_experimental",
-    "computational_resource",
-}
-ALLOWED_PRESERVATION = {"preserved", "not_preserved", "not_determined"}
-MECHANICAL_EXCLUSION_CODES = {
-    "TECHNICAL_FAILURE",
-    "FROZEN_MISSINGNESS_LIMIT",
-    "DUPLICATE_PARTICIPATION",
-    "WITHDRAWAL",
-    "ASSIGNMENT_INTEGRITY_FAILURE",
-    "MISSING_RESPONSE",
-}
-
-
-def canonical(value: Any) -> str:
-    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
-
-
-def digest(value: Any) -> str:
-    return hashlib.sha256(canonical(value).encode("utf-8")).hexdigest()
-
-
-def unit(seed: int, *parts: str) -> float:
-    payload = "|".join((str(seed), *parts)).encode("utf-8")
-    return int.from_bytes(hashlib.sha256(payload).digest()[:8], "big") / 2**64
-
-
-def require(condition: bool, code: str, message: str, findings: list[dict[str, str]]) -> None:
-    if not condition:
-        findings.append({"code": code, "message": message})
-
-
-def eligible_pair(material: dict[str, Any]) -> bool:
-    conditions = material["conditions"]
-    return (
-        conditions["P"]["preservation"] == "preserved"
-        and conditions["S"]["preservation"] == "preserved"
-        and material["comparability"] == "comparable"
-        and material["authority_state"] == "simulated_approved"
-    )
-
-
-def validate_source(data: dict[str, Any]) -> list[dict[str, str]]:
-    findings: list[dict[str, str]] = []
-    require(data.get("synthetic_only") is True, "SYNTHETIC_FLAG", "synthetic_only must be true", findings)
-    require(data.get("evidence_claim") == "procedure_only", "EVIDENCE_BOUNDARY", "evidence_claim must be procedure_only", findings)
-    require(data.get("study_state") == "synthetic_rehearsal", "STUDY_STATE", "study_state must remain synthetic_rehearsal", findings)
-
-    design = data.get("design", {})
-    participant_count = design.get("participant_count")
-    require(isinstance(participant_count, int) and 20 <= participant_count <= 30, "PARTICIPANT_RANGE", "participant_count must be 20-30", findings)
-    require(design.get("items_per_participant") == 6, "ITEM_COUNT", "items_per_participant must be 6", findings)
-    require(isinstance(design.get("seed"), int), "SEED_REQUIRED", "deterministic seed required", findings)
-
-    materials = data.get("materials", [])
-    require(isinstance(materials, list) and 10 <= len(materials) <= 12, "MATERIAL_RANGE", "10-12 materials required", findings)
-    material_ids = [m.get("material_id") for m in materials if isinstance(m, dict)]
-    require(len(material_ids) == len(set(material_ids)), "MATERIAL_IDS", "material IDs must be unique", findings)
-    domains = {m.get("domain_family") for m in materials if isinstance(m, dict)}
-    require(len(domains) >= 3 and domains <= ALLOWED_DOMAINS, "DOMAIN_COVERAGE", "at least three registered domains required", findings)
-
-    s_worse = False
-    inconclusive = False
-    adverse_preservation = False
-    for material in materials:
-        conditions = material.get("conditions", {})
-        for label in ("P", "S"):
-            condition = conditions.get(label, {})
-            require(condition.get("preservation") in ALLOWED_PRESERVATION, "PRESERVATION_STATE", f"{material.get('material_id')} {label} preservation invalid", findings)
-        if conditions.get("S", {}).get("correct_probability", 1) < conditions.get("P", {}).get("correct_probability", 0):
-            s_worse = True
-        if material.get("scenario_class") == "inconclusive":
-            inconclusive = True
-        if any(conditions.get(label, {}).get("preservation") != "preserved" for label in ("P", "S")):
-            adverse_preservation = True
-        require(material.get("scoring_key", {}).get("meaning_record_id") == material.get("meaning_record_id"), "KEY_TRACEABILITY", f"{material.get('material_id')} key must trace to meaning record", findings)
-
-    require(s_worse, "S_ADVERSE_SCENARIO", "at least one material must make S worse", findings)
-    require(inconclusive, "INCONCLUSIVE_SCENARIO", "at least one inconclusive material required", findings)
-    require(adverse_preservation, "PRESERVATION_ADVERSE", "at least one preservation failure or unresolved case required", findings)
-
-    deviations = data.get("planned_deviations", [])
-    exclusions = data.get("planned_exclusions", [])
-    require(bool(deviations), "DEVIATION_REQUIRED", "at least one synthetic deviation required", findings)
-    require(bool(exclusions), "EXCLUSION_REQUIRED", "at least one synthetic exclusion required", findings)
-    for exclusion in exclusions:
-        require(exclusion.get("code") in MECHANICAL_EXCLUSION_CODES, "EXCLUSION_CODE", "exclusion code must be frozen and mechanical", findings)
-
-    return sorted(findings, key=lambda item: (item["code"], item["message"]))
-
-
-def make_assignments(data: dict[str, Any]) -> dict[str, Any]:
-    design = data["design"]
-    seed = design["seed"]
-    participants = [f"SYN-PART-{index:02d}" for index in range(1, design["participant_count"] + 1)]
-    eligible = [m for m in data["materials"] if eligible_pair(m)]
-    eligible.sort(key=lambda m: m["material_id"])
-    item_count = design["items_per_participant"]
-    assignments: list[dict[str, Any]] = []
-    restricted_mapping: list[dict[str, Any]] = []
-
-    require_shape = len(eligible) == 9 and item_count == 6 and len(participants) % 3 == 0
-    if not require_shape:
-        raise ValueError("cyclic-balanced-v1 requires 9 eligible materials, 6 items, and participant count divisible by 3")
-
-    group_material_indexes = (
-        (0, 1, 2, 3, 4, 5),
-        (3, 4, 5, 6, 7, 8),
-        (6, 7, 8, 0, 1, 2),
-    )
-    condition_by_group = (
-        {0: "P", 1: "P", 2: "P", 3: "S", 4: "S", 5: "S"},
-        {3: "P", 4: "P", 5: "P", 6: "S", 7: "S", 8: "S"},
-        {6: "P", 7: "P", 8: "P", 0: "S", 1: "S", 2: "S"},
-    )
-
-    for p_index, participant_id in enumerate(participants):
-        group = (p_index + seed % 3) % 3
-        block = p_index // 3
-        material_indexes = list(group_material_indexes[group])
-        rotation = (block + seed % item_count) % item_count
-        material_indexes = material_indexes[rotation:] + material_indexes[:rotation]
-        selected = [eligible[index] for index in material_indexes]
-        for order_position, material in enumerate(selected, start=1):
-            m_index = eligible.index(material)
-            condition = condition_by_group[group][m_index]
-            assignment_id = f"SYN-ASG-{p_index + 1:02d}-{order_position:02d}"
-            masked_text_code = f"SYN-TXT-{digest([assignment_id, material['material_id']])[:10]}"
-            assignments.append({
-                "assignment_id": assignment_id,
-                "participant_id": participant_id,
-                "masked_text_code": masked_text_code,
-                "order_position": order_position,
-                "domain_family": material["domain_family"],
-                "schedule_version": "SYN-SCHEDULE-0.1",
-                "schedule_hash": "pending",
-            })
-            restricted_mapping.append({
-                "assignment_id": assignment_id,
-                "material_id": material["material_id"],
-                "meaning_record_id": material["meaning_record_id"],
-                "condition": condition,
-                "condition_output_hash": material["conditions"][condition]["output_hash"],
-            })
-
-    schedule_hash = digest({
-        "seed": seed,
-        "algorithm": "cyclic-balanced-v1",
-        "assignments": [
-            {"assignment_id": row["assignment_id"], "participant_id": row["participant_id"], "masked_text_code": row["masked_text_code"], "order_position": row["order_position"]}
-            for row in assignments
-        ],
-        "restricted_condition_mapping": restricted_mapping,
-    })
-    for row in assignments:
-        row["schedule_hash"] = f"sha256:{schedule_hash}"
-
-    return {
-        "fixture_id": data["fixture_id"],
-        "synthetic_only": True,
-        "seed": seed,
-        "algorithm": "cyclic-balanced-v1",
-        "participant_count": len(participants),
-        "eligible_material_count": len(eligible),
-        "assignments": assignments,
-        "restricted_condition_mapping": restricted_mapping,
-        "schedule_hash": f"sha256:{schedule_hash}",
-    }
-
-
-def response_class(seed: int, assignment_id: str, condition: dict[str, Any]) -> str:
-    value = unit(seed, "response", assignment_id)
-    missing = condition["missing_probability"]
-    uncertain = condition["uncertain_probability"]
-    correct = condition["correct_probability"]
-    if value < missing:
-        return "missing"
-    if value < missing + uncertain:
-        return "uncertain"
-    if value < missing + uncertain + correct:
-        return "correct"
-    return "incorrect"
-
-
-def make_scoring(data: dict[str, Any], assignment_output: dict[str, Any]) -> dict[str, Any]:
-    seed = data["design"]["seed"]
-    materials = {m["material_id"]: m for m in data["materials"]}
-    mapping = {row["assignment_id"]: row for row in assignment_output["restricted_condition_mapping"]}
-    responses: list[dict[str, Any]] = []
-    scores: list[dict[str, Any]] = []
-    adjudications: list[dict[str, Any]] = []
-    applied_exclusions: list[dict[str, Any]] = []
-
-    exclusions_by_assignment = {item["assignment_id"]: item for item in data["planned_exclusions"]}
-
-    for assignment in assignment_output["assignments"]:
-        assignment_id = assignment["assignment_id"]
-        restricted = mapping[assignment_id]
-        material = materials[restricted["material_id"]]
-        condition_label = restricted["condition"]
-        condition = material["conditions"][condition_label]
-        answer_class = response_class(seed, assignment_id, condition)
-        response_id = assignment_id.replace("SYN-ASG", "SYN-RESP")
-        excluded = exclusions_by_assignment.get(assignment_id)
-        exclusion_code = excluded["code"] if excluded else "MISSING_RESPONSE" if answer_class == "missing" else None
-        response = {
-            "response_id": response_id,
-            "assignment_id": assignment_id,
-            "masked_text_code": assignment["masked_text_code"],
-            "question_id": material["scoring_key"]["question_id"],
-            "answer_class": answer_class,
-            "response_value": None if answer_class == "missing" else f"synthetic-{answer_class}",
-            "condition_identity_absent": True,
-            "rule_metadata_absent": True,
-            "completion_state": "technical_failure" if exclusion_code == "TECHNICAL_FAILURE" else "missing" if answer_class == "missing" else "complete",
-            "mechanical_exclusion_code": exclusion_code,
-        }
-        responses.append(response)
-        if exclusion_code:
-            applied_exclusions.append({
-                "response_id": response_id,
-                "assignment_id": assignment_id,
-                "code": exclusion_code,
-                "frozen_mechanical_rule": True,
-                "reason": excluded["reason"] if excluded else "synthetic missing response",
-            })
-
-        base_score = {"correct": 1.0, "uncertain": 0.5, "incorrect": 0.0, "missing": 0.0}[answer_class]
-        scorer_a = base_score
-        disagree = answer_class != "missing" and unit(seed, "disagreement", assignment_id) < 0.12
-        scorer_b = (0.5 if base_score in {0.0, 1.0} else 1.0) if disagree else base_score
-        for scorer_id, score_value, independent in (
-            ("SYN-SCORER-A", scorer_a, False),
-            ("SYN-SCORER-I", scorer_b, True),
-        ):
-            scores.append({
-                "score_id": f"{response_id}-{scorer_id[-1]}",
-                "response_id": response_id,
-                "scorer_id": scorer_id,
-                "independent_of_ariadline": independent,
-                "condition_identity_absent": True,
-                "editor_metadata_absent": True,
-                "scoring_key_hash": material["scoring_key"]["key_hash"],
-                "score": score_value,
-                "critical_error": answer_class == "incorrect" and unit(seed, "critical", assignment_id) < condition["critical_error_probability"],
-            })
-        if scorer_a != scorer_b:
-            adjudications.append({
-                "response_id": response_id,
-                "adjudicator_id": "SYN-ADJ-I",
-                "independent_of_ariadline": True,
-                "condition_identity_absent": True,
-                "initial_scores": [scorer_a, scorer_b],
-                "final_score": base_score,
-                "reason": "synthetic deterministic adjudication",
-            })
-
-    return {
-        "fixture_id": data["fixture_id"],
-        "synthetic_only": True,
-        "responses": responses,
-        "scores": scores,
-        "adjudications": adjudications,
-        "planned_exclusions": data["planned_exclusions"],
-        "applied_exclusions": applied_exclusions,
-        "planned_deviations": data["planned_deviations"],
-    }
-
-
-def derive_disposition(summary: dict[str, Any]) -> str:
-    if summary.get("s_preservation_failures", 0) > summary.get("p_preservation_failures", 0):
-        return "stop"
-    if summary.get("critical_preservation_failures", 0) > 0 and summary.get("s_critical_failures", 0) > summary.get("p_critical_failures", 0):
-        return "stop"
-    if summary.get("eligible_pairs", 0) < 6 or summary.get("analyzable_responses", 0) < 80:
-        return "insufficient_evidence"
-    advantage = summary.get("mean_score_S", 0) - summary.get("mean_score_P", 0)
-    burden = summary.get("mean_burden_S", 0) - summary.get("mean_burden_P", 0)
-    naturalness = summary.get("mean_naturalness_S", 0) - summary.get("mean_naturalness_P", 0)
-    if advantage >= 0.08 and burden <= 1.0 and naturalness >= -0.25 and summary.get("unresolved_bias_flags", 0) == 0:
-        return "continue"
-    return "revise"
-
-
-def make_analysis(data: dict[str, Any], assignments: dict[str, Any], scoring: dict[str, Any]) -> dict[str, Any]:
-    materials = {m["material_id"]: m for m in data["materials"]}
-    mapping = {row["assignment_id"]: row for row in assignments["restricted_condition_mapping"]}
-    response_by_id = {r["response_id"]: r for r in scoring["responses"]}
-    final_scores: dict[str, float] = {}
-    score_groups: defaultdict[str, list[float]] = defaultdict(list)
-    for score in scoring["scores"]:
-        score_groups[score["response_id"]].append(score["score"])
-    adjudicated = {a["response_id"]: a["final_score"] for a in scoring["adjudications"]}
-    for response_id, values in score_groups.items():
-        final_scores[response_id] = adjudicated.get(response_id, mean(values))
-
-    by_condition: defaultdict[str, list[float]] = defaultdict(list)
-    critical_by_condition: Counter[str] = Counter()
-    exposure_by_material_condition: Counter[tuple[str, str]] = Counter()
-    missing_by_condition: Counter[str] = Counter()
-    exclusions_by_condition: Counter[str] = Counter()
-
-    for response_id, final_score in final_scores.items():
-        response = response_by_id[response_id]
-        restricted = mapping[response["assignment_id"]]
-        condition = restricted["condition"]
-        exposure_by_material_condition[(restricted["material_id"], condition)] += 1
-        if response["answer_class"] == "missing":
-            missing_by_condition[condition] += 1
-        if response["mechanical_exclusion_code"]:
-            exclusions_by_condition[condition] += 1
-            continue
-        by_condition[condition].append(final_score)
-        if any(s["critical_error"] for s in scoring["scores"] if s["response_id"] == response_id):
-            critical_by_condition[condition] += 1
-
-    eligible_materials = [m for m in data["materials"] if eligible_pair(m)]
-    mean_burden = {
-        label: mean(m["conditions"][label]["burden_minutes"] for m in eligible_materials)
-        for label in ("P", "S")
-    }
-    mean_naturalness = {
-        label: mean(m["conditions"][label]["naturalness"] for m in eligible_materials)
-        for label in ("P", "S")
-    }
-    adverse_items = [
-        {
-            "material_id": m["material_id"],
-            "scenario_class": m["scenario_class"],
-            "P_preservation": m["conditions"]["P"]["preservation"],
-            "S_preservation": m["conditions"]["S"]["preservation"],
-            "S_worse_probability": m["conditions"]["S"]["correct_probability"] < m["conditions"]["P"]["correct_probability"],
-            "bias_flags": m.get("bias_flags", []),
-            "rule_ids": m.get("candidate_rule_ids", []),
-            "applicability_agreement": m.get("applicability_agreement"),
-        }
-        for m in data["materials"]
-        if m["scenario_class"] in {"adverse_S", "inconclusive"}
-        or not eligible_pair(m)
-        or m.get("bias_flags")
-    ]
-
-    summary = {
-        "eligible_pairs": len(eligible_materials),
-        "participant_count": data["design"]["participant_count"],
-        "assignment_count": len(assignments["assignments"]),
-        "analyzable_responses": sum(len(values) for values in by_condition.values()),
-        "mean_score_P": round(mean(by_condition["P"]), 4),
-        "mean_score_S": round(mean(by_condition["S"]), 4),
-        "mean_burden_P": round(mean_burden["P"], 3),
-        "mean_burden_S": round(mean_burden["S"], 3),
-        "mean_naturalness_P": round(mean_naturalness["P"], 3),
-        "mean_naturalness_S": round(mean_naturalness["S"], 3),
-        "p_critical_failures": critical_by_condition["P"],
-        "s_critical_failures": critical_by_condition["S"],
-        "p_preservation_failures": sum(m["conditions"]["P"]["preservation"] == "not_preserved" for m in data["materials"]),
-        "s_preservation_failures": sum(m["conditions"]["S"]["preservation"] == "not_preserved" for m in data["materials"]),
-        "critical_preservation_failures": sum(
-            m["conditions"][label]["preservation"] == "not_preserved"
-            for m in data["materials"] for label in ("P", "S")
-        ),
-        "applicability_agreement_rate": round(mean(1.0 if m.get("applicability_agreement") else 0.0 for m in eligible_materials), 4),
-        "missing_P": missing_by_condition["P"],
-        "missing_S": missing_by_condition["S"],
-        "excluded_P": exclusions_by_condition["P"],
-        "excluded_S": exclusions_by_condition["S"],
-        "unresolved_bias_flags": sum(bool(m.get("bias_flags")) for m in data["materials"]),
-    }
-    mock_disposition = derive_disposition(summary)
-
-    disposition_scenarios = [
-        {"scenario": "continue", "expected": "continue", "derived": derive_disposition({"eligible_pairs": 10, "analyzable_responses": 130, "mean_score_P": 0.60, "mean_score_S": 0.72, "mean_burden_P": 8.0, "mean_burden_S": 8.5, "mean_naturalness_P": 4.0, "mean_naturalness_S": 3.9, "p_preservation_failures": 0, "s_preservation_failures": 0, "critical_preservation_failures": 0, "p_critical_failures": 0, "s_critical_failures": 0, "unresolved_bias_flags": 0})},
-        {"scenario": "revise", "expected": "revise", "derived": derive_disposition({"eligible_pairs": 9, "analyzable_responses": 120, "mean_score_P": 0.65, "mean_score_S": 0.68, "mean_burden_P": 8.0, "mean_burden_S": 11.0, "mean_naturalness_P": 4.1, "mean_naturalness_S": 3.5, "p_preservation_failures": 0, "s_preservation_failures": 0, "critical_preservation_failures": 0, "p_critical_failures": 0, "s_critical_failures": 0, "unresolved_bias_flags": 1})},
-        {"scenario": "stop", "expected": "stop", "derived": derive_disposition({"eligible_pairs": 8, "analyzable_responses": 110, "mean_score_P": 0.70, "mean_score_S": 0.58, "mean_burden_P": 8.0, "mean_burden_S": 12.0, "mean_naturalness_P": 4.2, "mean_naturalness_S": 3.1, "p_preservation_failures": 0, "s_preservation_failures": 2, "critical_preservation_failures": 2, "p_critical_failures": 0, "s_critical_failures": 2, "unresolved_bias_flags": 2})},
-        {"scenario": "insufficient_evidence", "expected": "insufficient_evidence", "derived": derive_disposition({"eligible_pairs": 4, "analyzable_responses": 50, "mean_score_P": 0.60, "mean_score_S": 0.72, "mean_burden_P": 8.0, "mean_burden_S": 8.5, "mean_naturalness_P": 4.0, "mean_naturalness_S": 3.9, "p_preservation_failures": 0, "s_preservation_failures": 0, "critical_preservation_failures": 0, "p_critical_failures": 0, "s_critical_failures": 0, "unresolved_bias_flags": 0})},
-    ]
-
-    validation = validate_outputs(data, assignments, scoring, summary, disposition_scenarios)
-    return {
-        "fixture_id": data["fixture_id"],
-        "synthetic_only": True,
-        "evidence_claim": "procedure_only",
-        "summary": summary,
-        "mock_disposition": mock_disposition,
-        "adverse_and_inconclusive_items": adverse_items,
-        "exposure_by_material_condition": [
-            {"material_id": material_id, "condition": condition, "count": count}
-            for (material_id, condition), count in sorted(exposure_by_material_condition.items())
-        ],
-        "disposition_scenarios": disposition_scenarios,
-        "validation": validation,
-        "non_generalization": "Synthetic operational output only; not evidence of Ariadline effectiveness, safety, or representativeness.",
-    }
-
-
-def validate_outputs(
-    data: dict[str, Any],
-    assignments: dict[str, Any],
-    scoring: dict[str, Any],
-    summary: dict[str, Any],
-    disposition_scenarios: list[dict[str, str]],
-) -> dict[str, Any]:
-    findings: list[dict[str, str]] = []
-    assignment_rows = assignments["assignments"]
-    restricted = assignments["restricted_condition_mapping"]
-    restricted_by_assignment = {row["assignment_id"]: row for row in restricted}
-
-    by_participant: defaultdict[str, list[str]] = defaultdict(list)
-    for row in restricted:
-        by_participant[next(a["participant_id"] for a in assignment_rows if a["assignment_id"] == row["assignment_id"])].append(row["material_id"])
-    require(all(len(items) == len(set(items)) for items in by_participant.values()), "DUPLICATE_MEANING_EXPOSURE", "participant saw both or duplicate underlying record", findings)
-
-    materials = {m["material_id"]: m for m in data["materials"]}
-    require(all(eligible_pair(materials[row["material_id"]]) for row in restricted), "INELIGIBLE_EXPOSURE", "ineligible pair entered assignment", findings)
-
-    counts = Counter((row["material_id"], row["condition"]) for row in restricted)
-    balance_ok = True
-    for material_id in {row["material_id"] for row in restricted}:
-        if abs(counts[(material_id, "P")] - counts[(material_id, "S")]) > 1:
-            balance_ok = False
-    require(balance_ok, "CONDITION_IMBALANCE", "P/S exposure differs by more than one for a material", findings)
-
-    domain_counts = Counter(row["domain_family"] for row in assignment_rows)
-    eligible_domain_materials = Counter(m["domain_family"] for m in data["materials"] if eligible_pair(m))
-    normalized_domain_exposure = {
-        domain: domain_counts[domain] / eligible_domain_materials[domain]
-        for domain in eligible_domain_materials
-    }
-    require(max(normalized_domain_exposure.values()) - min(normalized_domain_exposure.values()) <= 1, "DOMAIN_IMBALANCE", "domain exposure per eligible material is not acceptably balanced", findings)
-
-    assignment_ids = {row["assignment_id"] for row in assignment_rows}
-    require(all(r["assignment_id"] in assignment_ids for r in scoring["responses"]), "RESPONSE_ASSIGNMENT_TRACE", "response lacks assignment", findings)
-    require(all(s["response_id"] in {r["response_id"] for r in scoring["responses"]} for s in scoring["scores"]), "SCORE_RESPONSE_TRACE", "score lacks response", findings)
-    require(all(r["condition_identity_absent"] and r["rule_metadata_absent"] for r in scoring["responses"]), "RESPONSE_MASKING", "response packet leaked condition or rule metadata", findings)
-    require(all(s["condition_identity_absent"] and s["editor_metadata_absent"] for s in scoring["scores"]), "SCORER_MASKING", "scorer packet leaked restricted metadata", findings)
-    require(any(s["independent_of_ariadline"] for s in scoring["scores"]), "INDEPENDENT_SCORER", "no independent scorer", findings)
-
-    for row in restricted:
-        material = materials[row["material_id"]]
-        require(material["scoring_key"]["meaning_record_id"] == row["meaning_record_id"], "ANSWER_KEY_TRACE", "answer key does not trace to meaning record", findings)
-
-    adverse = [m for m in data["materials"] if not eligible_pair(m)]
-    require(bool(adverse) and all(m.get("adverse_record_retained") for m in adverse), "ADVERSE_RETENTION", "preservation adverse record hidden", findings)
-    require(all(e["code"] in MECHANICAL_EXCLUSION_CODES and e.get("frozen_mechanical_rule") is True for e in scoring["applied_exclusions"]), "MECHANICAL_EXCLUSIONS", "non-mechanical exclusion used", findings)
-    require({"correct", "incorrect", "uncertain", "missing"} <= {r["answer_class"] for r in scoring["responses"]}, "RESPONSE_CLASS_COVERAGE", "correct, incorrect, uncertain, and missing responses are all required", findings)
-    require(all(item.get("material_id") and item.get("rule_ids") for item in [
-        {"material_id": m["material_id"], "rule_ids": m.get("candidate_rule_ids", [])}
-        for m in data["materials"] if m["scenario_class"] in {"adverse_S", "inconclusive"} or not eligible_pair(m) or m.get("bias_flags")
-    ]), "QUALITATIVE_TRACEABILITY", "qualitative failures must link exact materials and rules", findings)
-    require(all(item["derived"] == item["expected"] for item in disposition_scenarios), "DISPOSITION_BRANCHES", "continue/revise/stop/insufficient route failed", findings)
-    require(summary["participant_count"] == data["design"]["participant_count"], "PARTICIPANT_COUNT", "participant count mismatch", findings)
-    require(data["evidence_claim"] == "procedure_only", "OVERCLAIM", "analysis overstates synthetic evidence", findings)
-
-    checks = {
-        "no_duplicate_meaning_exposure": not any(f["code"] == "DUPLICATE_MEANING_EXPOSURE" for f in findings),
-        "condition_balance": not any(f["code"] == "CONDITION_IMBALANCE" for f in findings),
-        "domain_balance": not any(f["code"] == "DOMAIN_IMBALANCE" for f in findings),
-        "scoring_masked": not any(f["code"] == "SCORER_MASKING" for f in findings),
-        "answer_key_traceability": not any(f["code"] == "ANSWER_KEY_TRACE" for f in findings),
-        "preservation_failures_retained": not any(f["code"] == "ADVERSE_RETENTION" for f in findings),
-        "mechanical_exclusions": not any(f["code"] == "MECHANICAL_EXCLUSIONS" for f in findings),
-        "all_disposition_routes": not any(f["code"] == "DISPOSITION_BRANCHES" for f in findings),
-        "small_pilot_boundary": not any(f["code"] == "OVERCLAIM" for f in findings),
-        "ordinary_editing_can_outperform": any(m["conditions"]["P"]["correct_probability"] > m["conditions"]["S"]["correct_probability"] for m in data["materials"]),
-        "inconclusive_case_retained": any(m["scenario_class"] == "inconclusive" for m in data["materials"]),
-        "deviation_case_retained": bool(data["planned_deviations"]),
-        "independent_scoring_route": not any(f["code"] == "INDEPENDENT_SCORER" for f in findings),
-    }
-    return {
-        "status": "pass" if not findings else "fail",
-        "check_count": len(checks),
-        "checks": checks,
-        "findings": sorted(findings, key=lambda item: (item["code"], item["message"])),
-    }
-
-
-def build(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    source_findings = validate_source(data)
-    if source_findings:
-        raise ValueError(json.dumps({"status": "source_invalid", "findings": source_findings}, indent=2))
-    assignments = make_assignments(data)
-    scoring = make_scoring(data, assignments)
-    analysis = make_analysis(data, assignments, scoring)
-    if analysis["validation"]["status"] != "pass":
-        raise ValueError(json.dumps({"status": "output_invalid", "validation": analysis["validation"]}, indent=2))
-    return {
-        "assignments.json": assignments,
-        "scoring_and_adjudication.json": scoring,
-        "analysis.json": analysis,
-    }
-
-
-def write_outputs(outputs: dict[str, dict[str, Any]], output_dir: Path) -> None:
-    output_dir.mkdir(parents=True, exist_ok=True)
-    for filename, value in outputs.items():
-        (output_dir / filename).write_text(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n", encoding="utf-8")
-
-
-def compare_expected(outputs: dict[str, dict[str, Any]], expected_dir: Path) -> list[dict[str, str]]:
-    findings: list[dict[str, str]] = []
-    for filename in OUTPUT_FILES:
-        expected_path = expected_dir / filename
-        if not expected_path.exists():
-            findings.append({"code": "EXPECTED_OUTPUT_MISSING", "message": filename})
-            continue
-        expected = json.loads(expected_path.read_text(encoding="utf-8"))
-        if expected != outputs[filename]:
-            findings.append({"code": "OUTPUT_MISMATCH", "message": filename})
-    return findings
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("source", type=Path)
-    parser.add_argument("--output-dir", type=Path)
-    parser.add_argument("--expect-dir", type=Path)
-    args = parser.parse_args()
-
-    data = json.loads(args.source.read_text(encoding="utf-8"))
-    try:
-        outputs = build(data)
-    except ValueError as exc:
-        print(str(exc))
-        return 2
-
-    if args.output_dir:
-        write_outputs(outputs, args.output_dir)
-
-    comparison = compare_expected(outputs, args.expect_dir) if args.expect_dir else []
-    status = "expected_outputs_matched" if args.expect_dir and not comparison else "generated" if not comparison else "self_test_failed"
-    result = {
-        "status": status,
-        "fixture_id": data["fixture_id"],
-        "output_hashes": {name: f"sha256:{digest(value)}" for name, value in outputs.items()},
-        "validation": outputs["analysis.json"]["validation"],
-        "mock_disposition": outputs["analysis.json"]["mock_disposition"],
-        "comparison_findings": comparison,
-        "synthetic_only": True,
-        "evidence_claim": "procedure_only",
-    }
-    print(json.dumps(result, indent=2))
-    return 0 if not comparison else 2
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+ALLOWED_DOMAINS={"theoretical_typological","descriptive_community","corpus_experimental","computational_resource"}
+ALLOWED_PRESERVATION={"preserved","not_preserved","not_determined"}
+EXCLUSION_CODES={"TECHNICAL_FAILURE","FROZEN_MISSINGNESS_LIMIT","DUPLICATE_PARTICIPATION","WITHDRAWAL","ASSIGNMENT_INTEGRITY_FAILURE","MISSING_RESPONSE"}
+OUTPUT_FILES=("assignments.json","scoring_and_adjudication.json","analysis.json")
+
+def canonical(v:Any)->str:return json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(",",":"))
+def digest(v:Any)->str:return hashlib.sha256(canonical(v).encode()).hexdigest()
+def unit(seed:int,*parts:str)->float:return int.from_bytes(hashlib.sha256("|".join((str(seed),*parts)).encode()).digest()[:8],"big")/2**64
+def eligible(m:dict[str,Any])->bool:return m["conditions"]["P"]["preservation"]==m["conditions"]["S"]["preservation"]=="preserved" and m["comparability"]=="comparable" and m["authority_state"]=="simulated_approved"
+def add(ok:bool,code:str,msg:str,out:list[dict[str,str]])->None:
+    if not ok:out.append({"code":code,"message":msg})
+
+def validate_source(d:dict[str,Any])->list[dict[str,str]]:
+    f=[]; design=d.get("design",{}); mats=d.get("materials",[])
+    add(d.get("synthetic_only") is True,"SYNTHETIC_FLAG","synthetic_only must be true",f)
+    add(d.get("study_state")=="synthetic_rehearsal","STUDY_STATE","study_state must remain synthetic_rehearsal",f)
+    add(d.get("evidence_claim")=="procedure_only","EVIDENCE_BOUNDARY","evidence_claim must be procedure_only",f)
+    add(d.get("human_gates_simulated_only") is True,"SIMULATED_GATES","human gates must be simulated only",f)
+    add(isinstance(design.get("seed"),int),"SEED","integer seed required",f)
+    add(isinstance(design.get("participant_count"),int) and 20<=design["participant_count"]<=30,"PARTICIPANTS","20-30 participants required",f)
+    add(design.get("items_per_participant")==6,"ITEMS","six items per participant required",f)
+    add(design.get("primary_comparison")=="S_vs_P","COMPARISON","S versus P must be primary",f)
+    add(10<=len(mats)<=12,"MATERIALS","10-12 materials required",f)
+    add(len({m.get("material_id") for m in mats})==len(mats),"MATERIAL_IDS","material IDs must be unique",f)
+    add(len({m.get("meaning_record_id") for m in mats})==len(mats),"MEANING_IDS","meaning IDs must be unique",f)
+    add(len({m.get("domain_family") for m in mats})>=3 and {m.get("domain_family") for m in mats}<=ALLOWED_DOMAINS,"DOMAINS","registered domain coverage required",f)
+    questions=set(); s_worse=inconclusive=adverse=False
+    for m in mats:
+        mid=m.get("material_id"); key=m.get("scoring_key",{})
+        for label in ("P","S"):
+            c=m.get("conditions",{}).get(label,{})
+            add(c.get("preservation") in ALLOWED_PRESERVATION,"PRESERVATION",f"{mid}/{label} invalid preservation",f)
+            probs=[c.get(k) for k in ("correct_probability","uncertain_probability","missing_probability")]
+            add(all(isinstance(x,(int,float)) for x in probs) and 0<=sum(probs)<=1,"PROBABILITY",f"{mid}/{label} invalid probabilities",f)
+        s_worse|=m["conditions"]["S"]["correct_probability"]<m["conditions"]["P"]["correct_probability"]
+        inconclusive|=m.get("scenario_class")=="inconclusive"
+        adverse|=any(m["conditions"][x]["preservation"]!="preserved" for x in ("P","S"))
+        q=key.get("question_id"); add(bool(q) and q not in questions,"QUESTION_ID",f"{mid} question ID missing or duplicate",f); questions.add(q)
+        add(key.get("material_id")==mid and key.get("meaning_record_id")==m.get("meaning_record_id"),"KEY_TRACEABILITY",f"{mid} key identity mismatch",f)
+        add(str(key.get("key_hash","")).startswith("sha256:"),"KEY_HASH",f"{mid} key hash required",f)
+        add(bool(m.get("candidate_rule_ids")),"RULE_IDS",f"{mid} rule IDs required",f)
+    add(s_worse,"S_ADVERSE","at least one S-adverse material required",f);add(inconclusive,"INCONCLUSIVE","inconclusive material required",f);add(adverse,"ADVERSE_PRESERVATION","preservation failure/unresolved case required",f)
+    seen=set()
+    for x in d.get("planned_exclusions",[]):
+        aid=x.get("assignment_id");add(bool(aid) and aid not in seen,"EXCLUSION_ID","planned exclusion IDs must be unique",f);seen.add(aid);add(x.get("code") in EXCLUSION_CODES,"EXCLUSION_CODE","frozen mechanical code required",f)
+    add(bool(d.get("planned_exclusions")),"EXCLUSIONS","planned exclusion required",f);add(bool(d.get("planned_deviations")),"DEVIATIONS","planned deviation required",f)
+    return sorted(f,key=lambda x:(x["code"],x["message"]))
+
+def make_assignments(d:dict[str,Any])->dict[str,Any]:
+    seed=d["design"]["seed"]; people=[f"SYN-PART-{i:02d}" for i in range(1,d["design"]["participant_count"]+1)]; mats=sorted((m for m in d["materials"] if eligible(m)),key=lambda m:m["material_id"])
+    if len(mats)!=9 or len(people)%3:raise ValueError("cyclic-balanced-v2 requires 9 eligible materials and participant count divisible by 3")
+    groups=((0,1,2,3,4,5),(3,4,5,6,7,8),(6,7,8,0,1,2));conds=({0:"P",1:"P",2:"P",3:"S",4:"S",5:"S"},{3:"P",4:"P",5:"P",6:"S",7:"S",8:"S"},{6:"P",7:"P",8:"P",0:"S",1:"S",2:"S"})
+    public=[];restricted=[]
+    for pi,pid in enumerate(people):
+        g=(pi+seed%3)%3; idx=list(groups[g]);r=(pi//3+seed%6)%6;idx=idx[r:]+idx[:r]
+        for order,mi in enumerate(idx,1):
+            m=mats[mi];c=conds[g][mi];aid=f"SYN-ASG-{pi+1:02d}-{order:02d}";mask=f"SYN-TXT-{digest([aid,m['material_id'],c,seed])[:12]}"
+            public.append({"assignment_id":aid,"participant_id":pid,"masked_text_code":mask,"order_position":order,"domain_family":m["domain_family"],"schedule_version":"SYN-SCHEDULE-0.2","schedule_hash":"pending"})
+            restricted.append({"assignment_id":aid,"material_id":m["material_id"],"meaning_record_id":m["meaning_record_id"],"condition":c,"condition_output_hash":m["conditions"][c]["output_hash"]})
+    h="sha256:"+digest({"seed":seed,"algorithm":"cyclic-balanced-v2","assignments":[{k:x[k] for k in ("assignment_id","participant_id","masked_text_code","order_position","domain_family")} for x in public],"restricted_condition_mapping":restricted})
+    for x in public:x["schedule_hash"]=h
+    return {"fixture_id":d["fixture_id"],"synthetic_only":True,"seed":seed,"algorithm":"cyclic-balanced-v2","participant_count":len(people),"eligible_material_count":len(mats),"assignments":public,"restricted_condition_mapping":restricted,"schedule_hash":h}
+
+def response_class(seed:int,aid:str,c:dict[str,Any])->str:
+    u=unit(seed,"response",aid);m=c["missing_probability"];q=c["uncertain_probability"];p=c["correct_probability"]
+    return "missing" if u<m else "uncertain" if u<m+q else "correct" if u<m+q+p else "incorrect"
+
+def make_scoring(d:dict[str,Any],a:dict[str,Any])->dict[str,Any]:
+    seed=d["design"]["seed"]; mats={m["material_id"]:m for m in d["materials"]}; mp={x["assignment_id"]:x for x in a["restricted_condition_mapping"]}; planned={x["assignment_id"]:x for x in d["planned_exclusions"]}
+    responses=[];scores=[];adjs=[];excluded=[]
+    for pub in a["assignments"]:
+        aid=pub["assignment_id"];r=mp[aid];m=mats[r["material_id"]];c=m["conditions"][r["condition"]];plan=planned.get(aid);ans=response_class(seed,aid,c)
+        if plan and plan["code"] in {"TECHNICAL_FAILURE","FROZEN_MISSINGNESS_LIMIT"}:ans="missing";code=plan["code"]
+        else:code="MISSING_RESPONSE" if ans=="missing" else plan["code"] if plan else None
+        rid=aid.replace("SYN-ASG","SYN-RESP");state="technical_failure" if code=="TECHNICAL_FAILURE" else "missing" if ans=="missing" else "excluded" if code else "complete"
+        responses.append({"response_id":rid,"assignment_id":aid,"masked_text_code":pub["masked_text_code"],"material_id":m["material_id"],"meaning_record_id":m["meaning_record_id"],"question_id":m["scoring_key"]["question_id"],"answer_class":ans,"response_value":None if ans=="missing" else f"synthetic-{ans}","condition_identity_absent":True,"rule_metadata_absent":True,"completion_state":state,"mechanical_exclusion_code":code})
+        if code:
+            excluded.append({"response_id":rid,"assignment_id":aid,"code":code,"frozen_mechanical_rule":True,"reason":plan["reason"] if plan else "synthetic missing response"});continue
+        base={"correct":1.0,"uncertain":0.5,"incorrect":0.0}[ans];b=(0.5 if base in {0.0,1.0} else 1.0) if unit(seed,"disagreement",aid)<.12 else base;critical=ans=="incorrect" and unit(seed,"critical",aid)<c["critical_error_probability"]
+        for sid,val,ind in (("SYN-SCORER-A",base,False),("SYN-SCORER-I",b,True)):
+            scores.append({"score_id":f"{rid}-{sid.rsplit('-',1)[1]}","response_id":rid,"question_id":m["scoring_key"]["question_id"],"scorer_id":sid,"independent_of_ariadline":ind,"condition_identity_absent":True,"editor_metadata_absent":True,"scoring_key_hash":m["scoring_key"]["key_hash"],"score":val,"critical_error":critical})
+        if base!=b:adjs.append({"response_id":rid,"question_id":m["scoring_key"]["question_id"],"adjudicator_id":"SYN-ADJ-I","independent_of_ariadline":True,"condition_identity_absent":True,"initial_scores":[base,b],"final_score":base,"reason":"synthetic deterministic adjudication"})
+    return {"fixture_id":d["fixture_id"],"synthetic_only":True,"responses":responses,"scores":scores,"adjudications":adjs,"planned_exclusions":d["planned_exclusions"],"applied_exclusions":excluded,"planned_deviations":d["planned_deviations"]}
+
+def disposition(s:dict[str,Any])->str:
+    if s.get("s_preservation_failures",0)>s.get("p_preservation_failures",0) or (s.get("critical_preservation_failures",0)>0 and s.get("s_critical_failures",0)>s.get("p_critical_failures",0)):return "stop"
+    if s.get("eligible_pairs",0)<6 or s.get("analyzable_responses",0)<80:return "insufficient_evidence"
+    return "continue" if s.get("mean_score_S",0)-s.get("mean_score_P",0)>=.08 and s.get("mean_burden_S",0)-s.get("mean_burden_P",0)<=1 and s.get("mean_naturalness_S",0)-s.get("mean_naturalness_P",0)>=-.25 and s.get("unresolved_bias_flags",0)==0 else "revise"
+
+def make_analysis(d:dict[str,Any],a:dict[str,Any],sc:dict[str,Any])->dict[str,Any]:
+    mats={m["material_id"]:m for m in d["materials"]};mp={x["assignment_id"]:x for x in a["restricted_condition_mapping"]};sg=defaultdict(list)
+    for x in sc["scores"]:sg[x["response_id"]].append(x)
+    adj={x["response_id"]:x["final_score"] for x in sc["adjudications"]};final={rid:adj.get(rid,mean(x["score"] for x in rows)) for rid,rows in sg.items()};by=defaultdict(list);crit=Counter();exp=Counter();miss=Counter();exc=Counter();classes=Counter()
+    for x in sc["responses"]:
+        r=mp[x["assignment_id"]];c=r["condition"];exp[(r["material_id"],c)]+=1;classes[x["answer_class"]]+=1;miss[c]+=x["answer_class"]=="missing"
+        if x["mechanical_exclusion_code"]:exc[c]+=1;continue
+        by[c].append(final[x["response_id"]]);crit[c]+=any(y["critical_error"] for y in sg[x["response_id"]])
+    em=[m for m in d["materials"] if eligible(m)];adv=[{"material_id":m["material_id"],"meaning_record_id":m["meaning_record_id"],"scenario_class":m["scenario_class"],"P_preservation":m["conditions"]["P"]["preservation"],"S_preservation":m["conditions"]["S"]["preservation"],"S_worse_probability":m["conditions"]["S"]["correct_probability"]<m["conditions"]["P"]["correct_probability"],"bias_flags":m.get("bias_flags",[]),"rule_ids":m["candidate_rule_ids"],"applicability_agreement":m["applicability_agreement"],"adverse_record_retained":m["adverse_record_retained"]} for m in d["materials"] if m["scenario_class"]!="neutral" or m.get("bias_flags") or not m["applicability_agreement"]]
+    s={"participant_count":d["design"]["participant_count"],"assignment_count":len(a["assignments"]),"raw_response_count":len(sc["responses"]),"analyzable_responses":len(final),"initial_score_count":len(sc["scores"]),"adjudication_count":len(sc["adjudications"]),"applied_exclusion_count":len(sc["applied_exclusions"]),"eligible_pairs":len(em),"mean_score_P":round(mean(by["P"]),4),"mean_score_S":round(mean(by["S"]),4),"mean_burden_P":round(mean(m["conditions"]["P"]["burden_minutes"] for m in em),3),"mean_burden_S":round(mean(m["conditions"]["S"]["burden_minutes"] for m in em),3),"mean_naturalness_P":round(mean(m["conditions"]["P"]["naturalness"] for m in em),3),"mean_naturalness_S":round(mean(m["conditions"]["S"]["naturalness"] for m in em),3),"missing_P":miss["P"],"missing_S":miss["S"],"excluded_P":exc["P"],"excluded_S":exc["S"],"p_critical_failures":crit["P"],"s_critical_failures":crit["S"],"p_preservation_failures":sum(m["conditions"]["P"]["preservation"]=="not_preserved" for m in d["materials"]),"s_preservation_failures":sum(m["conditions"]["S"]["preservation"]=="not_preserved" for m in d["materials"]),"critical_preservation_failures":sum(any(m["conditions"][x]["preservation"]=="not_preserved" for x in ("P","S")) for m in d["materials"]),"unresolved_bias_flags":sum(len(m.get("bias_flags",[])) for m in d["materials"]),"applicability_agreement_rate":round(sum(m["applicability_agreement"] for m in em)/len(em),4),"response_class_counts":dict(sorted(classes.items()))}
+    routes=[{"scenario":"continue","expected":"continue","derived":disposition({"eligible_pairs":9,"analyzable_responses":120,"mean_score_P":.6,"mean_score_S":.72,"mean_burden_P":8,"mean_burden_S":8.4,"mean_naturalness_P":4,"mean_naturalness_S":3.9,"unresolved_bias_flags":0})},{"scenario":"revise","expected":"revise","derived":disposition({"eligible_pairs":9,"analyzable_responses":120,"mean_score_P":.7,"mean_score_S":.72,"mean_burden_P":7,"mean_burden_S":9.5,"mean_naturalness_P":4.2,"mean_naturalness_S":3.4,"unresolved_bias_flags":1})},{"scenario":"stop","expected":"stop","derived":disposition({"eligible_pairs":9,"analyzable_responses":120,"p_preservation_failures":0,"s_preservation_failures":1})},{"scenario":"insufficient_evidence","expected":"insufficient_evidence","derived":disposition({"eligible_pairs":4,"analyzable_responses":40})}]
+    val=validate_outputs(d,a,sc,s,adv,routes)
+    return {"fixture_id":d["fixture_id"],"synthetic_only":True,"evidence_claim":"procedure_only","summary":s,"mock_disposition":disposition(s),"adverse_and_inconclusive_items":adv,"exposure_by_material_condition":[{"material_id":m,"condition":c,"count":n} for (m,c),n in sorted(exp.items())],"disposition_scenarios":routes,"validation":val,"non_generalization":"Synthetic operational output only; not evidence of Ariadline effectiveness, safety, or representativeness."}
+
+def validate_outputs(d,a,sc,s,adv,routes):
+    f=[];src=validate_source(d);mp={x["assignment_id"]:x for x in a["restricted_condition_mapping"]};mats={m["material_id"]:m for m in d["materials"]};by_p=defaultdict(list)
+    for x in a["assignments"]:by_p[x["participant_id"]].append(x)
+    no_dup=all(len({mp[x["assignment_id"]]["meaning_record_id"] for x in rows})==len(rows) for rows in by_p.values());dom=all(max(Counter(x["domain_family"] for x in rows).values())-min(Counter(x["domain_family"] for x in rows).values())<=1 for rows in by_p.values());ex=Counter((mp[x["assignment_id"]]["material_id"],mp[x["assignment_id"]]["condition"]) for x in a["assignments"]);bal=all(ex[(m["material_id"],c)]==8 for m in d["materials"] if eligible(m) for c in ("P","S"))
+    sg=defaultdict(list);ag=defaultdict(list)
+    for x in sc["scores"]:sg[x["response_id"]].append(x)
+    for x in sc["adjudications"]:ag[x["response_id"]].append(x)
+    masked=all(x["condition_identity_absent"] and x["editor_metadata_absent"] for x in sc["scores"]);trace=all(x["material_id"] in mats and x["meaning_record_id"]==mats[x["material_id"]]["meaning_record_id"] and x["question_id"]==mats[x["material_id"]]["scoring_key"]["question_id"] and all(y["scoring_key_hash"]==mats[x["material_id"]]["scoring_key"]["key_hash"] for y in sg[x["response_id"]]) for x in sc["responses"])
+    unscored=routes_ok=True
+    for x in sc["responses"]:
+        rows=sg[x["response_id"]];ads=ag[x["response_id"]]
+        if x["mechanical_exclusion_code"]:unscored&=not rows and not ads
+        else:
+            routes_ok&=len(rows)==2 and len({r["scorer_id"] for r in rows})==2 and any(r["independent_of_ariadline"] for r in rows)
+            routes_ok&=(len(ads)==1 and ads[0]["independent_of_ariadline"] if len({r["score"] for r in rows})>1 else not ads)
+    qg=defaultdict(list)
+    for x in sc["scores"]:qg[x["question_id"]].append(x)
+    qs={m["scoring_key"]["question_id"] for m in d["materials"] if eligible(m)};indq=all(qg[q] and any(x["independent_of_ariadline"] for x in qg[q]) for q in qs);mech=all(x["code"] in EXCLUSION_CODES and x["frozen_mechanical_rule"] for x in sc["applied_exclusions"]) and {x["assignment_id"] for x in sc["applied_exclusions"]}>={x["assignment_id"] for x in d["planned_exclusions"]}
+    checks={"source_valid":not src,"no_duplicate_meaning_exposure":no_dup,"condition_balance":bal,"domain_balance":dom,"scoring_masked":masked,"answer_key_traceability":trace,"excluded_responses_unscored":unscored,"per_response_scoring_routes":routes_ok,"independent_scoring_route_per_question":indq,"mechanical_exclusions":mech,"preservation_failures_retained":all(x["adverse_record_retained"] and x["rule_ids"] for x in adv),"all_disposition_routes":all(x["derived"]==x["expected"] for x in routes),"small_pilot_boundary":d["synthetic_only"] and d["evidence_claim"]=="procedure_only" and d["study_state"]=="synthetic_rehearsal","ordinary_editing_can_outperform":any(x["S_worse_probability"] for x in adv),"inconclusive_case_retained":any(x["scenario_class"]=="inconclusive" for x in adv),"deviation_case_retained":bool(sc["planned_deviations"]) and all(x.get("affected_record_id") for x in sc["planned_deviations"])}
+    for k,v in checks.items():add(v,k.upper(),f"operational check failed: {k}",f)
+    add(s["analyzable_responses"]*2==s["initial_score_count"],"SCORE_COUNT","two scores required per analyzable response",f);add(s["raw_response_count"]-s["analyzable_responses"]==s["applied_exclusion_count"],"EXCLUSION_COUNT","raw minus analyzable must equal exclusions",f)
+    return {"status":"pass" if not f else "fail","check_count":len(checks),"checks":checks,"findings":sorted(f,key=lambda x:(x["code"],x["message"]))}
+
+def build(d):
+    f=validate_source(d)
+    if f:raise ValueError(f"invalid source fixture: {f}")
+    a=make_assignments(d);sc=make_scoring(d,a);an=make_analysis(d,a,sc);return {"assignments.json":a,"scoring_and_adjudication.json":sc,"analysis.json":an}
+def main():
+    p=argparse.ArgumentParser();p.add_argument("source",type=Path);p.add_argument("--output-dir",type=Path);x=p.parse_args();d=json.loads(x.source.read_text());o=build(d)
+    if x.output_dir:
+        x.output_dir.mkdir(parents=True,exist_ok=True)
+        for n,v in o.items():(x.output_dir/n).write_text(json.dumps(v,ensure_ascii=False,indent=2,sort_keys=True)+"\n")
+    r={"status":o["analysis.json"]["validation"]["status"],"fixture_id":d["fixture_id"],"output_hashes":{n:"sha256:"+digest(v) for n,v in o.items()},"summary":o["analysis.json"]["summary"],"mock_disposition":o["analysis.json"]["mock_disposition"],"synthetic_only":True,"evidence_claim":"procedure_only"};print(json.dumps(r,indent=2,sort_keys=True));return 0 if r["status"]=="pass" else 2
+if __name__=="__main__":raise SystemExit(main())
